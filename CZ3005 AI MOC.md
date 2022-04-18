@@ -1,0 +1,13 @@
+# CZ3005 Artificial Intelligence
+- [[Intelligent Agents]]
+- Search
+	- [[Uninformed Search]]
+		- [[Uniform Cost Search]]
+	- [[Informed Search]]
+		- [[A-Star Search]]
+- [[Constraint Satisfaction Problem]]
+- [[Games as Search Problems]]
+- [[Markov Decision Process]]
+- Reinforcement Learning
+	- [[Monte Carlo Policy]]
+	- [[Q-Learning]]
