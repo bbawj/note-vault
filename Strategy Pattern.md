@@ -2,7 +2,8 @@
 #design-patterns 
 
 ## Problems we want to solve
-1. A set of **interchangeable** algorithms or objects
+1. A set of **interchangeable** algorithms or objects that can be decided at run-time
+2. Extensible set of strategies: [[Open-Closed Principle]]
 
 ![](https://i.imgur.com/iL2Zc46.png)
 

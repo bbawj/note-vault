@@ -1,7 +1,7 @@
 # CZ3005 Artificial Intelligence
 - [[Intelligent Agents]]
 - Search
-	- [[Uninformed Search]]
+	- [[Search Strategies]]
 		- [[Uniform Cost Search]]
 	- [[Informed Search]]
 		- [[A-Star Search]]

@@ -1,6 +1,4 @@
 # A* Search
-[[Informed Search]]
-
 Combines [[Greedy Best First Search]] h(n) with [[Uniform Cost Search]] g(n)
 
 Evaluation function $$f(n)=g(n)+h(n)$$

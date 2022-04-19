@@ -32,7 +32,8 @@ Testing of implementation details, internal paths and structure. Contrast to [[B
 > 	1. Change the outcome
 > 	2. This is the new basis path
 
-Infeasible paths may exist due to application logic: minimize them by changing multiple decision points at once.
+> [!important]
+> Infeasible paths may exist due to application logic: minimize them by changing multiple decision points at once.
 
 #### Path Coverage
 ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/79909ad3-336d-4fd4-94e1-2eda5533c461/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220417%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220417T144444Z&X-Amz-Expires=86400&X-Amz-Signature=a03bc1bb8e8c99a9822d68b1e0956b907cfe8612ad536f2f59e0e7d2c3cc8fa8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
