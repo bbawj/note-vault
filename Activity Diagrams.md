@@ -7,3 +7,5 @@ Flow chart of activities performed by the system.
 ![](https://i.imgur.com/6F88TWQ.png)
 
 ![](https://i.imgur.com/edaWTvS.png)
+
+![](https://i.imgur.com/AYMzwqw.png)
