@@ -1,7 +1,7 @@
 # CZ3005 Artificial Intelligence
 - [[Intelligent Agents]]
 - Search
-	- [[Search Strategies]]
+	- [[002 Search Strategies MOC]]
 		- [[Uniform Cost Search]]
 	- [[Informed Search]]
 		- [[A-Star Search]]

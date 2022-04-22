@@ -1,4 +1,5 @@
 # Search Strategies
+#moc
 ## Factors for search
 - Completeness: Does it always find a solution if one exists?
 - Optimality: Does it always find the best solution?

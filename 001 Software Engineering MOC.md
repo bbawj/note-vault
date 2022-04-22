@@ -13,6 +13,7 @@
 	- [[Observer Pattern]]
 	- [[Factory Pattern]]
 	- [[Façade Pattern]]
+	- [[Dynamic Loading]]
 - ## Software Architecture
 	- [[Layered Architecture]]
 	- [[Model-View-Controller Architecture]]

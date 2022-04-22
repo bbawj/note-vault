@@ -21,7 +21,6 @@
 
 ![](https://i.imgur.com/30K0QRU.png)
 
-
 ## Associations
 ![](https://i.imgur.com/6joWlEo.png)
 

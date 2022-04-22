@@ -7,9 +7,9 @@
 3. We need an object to notify a number of other objects
 
 ## Push / Pull Mechanisms
-Pull
+**Pull
 - 2-way communication: Subject sends a notification and the observer calls back for details explicitly (can be used for selective notification based on interest)
-Push
+**Push
 - 1-way communication: Subject sends the detailed information whether the observer wants it or not (can be used for sending updates based on location etc.)
 
 ![](https://i.imgur.com/DMskQSb.png)
