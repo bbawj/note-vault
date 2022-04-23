@@ -2,7 +2,7 @@
 #moc
 ## Factors for search
 - Completeness: Does it always find a solution if one exists?
-- Optimality: Does it always find the best solution?
+- Optimality: Does it always find the best solution? [[Shortest Path Problem]]
 - Average Branching Factor: average number of successors of any node $$ABF=No.of\ Nodes/No.of\ non\ leaf\ nodes$$
 - ## Uninformed Search
 	- [[Depth First Search]]

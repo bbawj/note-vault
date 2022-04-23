@@ -1,13 +1,10 @@
 # CZ3005 Artificial Intelligence
 - [[Intelligent Agents]]
-- Search
-	- [[002 Search Strategies MOC]]
-		- [[Uniform Cost Search]]
-	- [[Informed Search]]
-		- [[A-Star Search]]
+- [[002 Search Strategies MOC]]
 - [[Constraint Satisfaction Problem]]
 - [[Games as Search Problems]]
 - [[Markov Decision Process]]
 - Reinforcement Learning
 	- [[Monte Carlo Policy]]
 	- [[Q-Learning]]
+- [[First Order Logic]]
