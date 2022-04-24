@@ -7,4 +7,6 @@
 - Reinforcement Learning
 	- [[Monte Carlo Policy]]
 	- [[Q-Learning]]
-- [[First Order Logic]]
+- [[Game Theory]]
+- [[Knowledge Representation]]
+	- [[First Order Logic]]

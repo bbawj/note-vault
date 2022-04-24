@@ -22,6 +22,7 @@ $$ V_{i+s}(s) =max_a(\sum P(s'|s,a)(r(s,a,s')+\gamma V(s')) $$
 #### Obtain the optimal policy
 ![[Pasted image 20220415211535.png]]
 Calculate V(s) for each state and action to obtain the best policy.
+![](https://i.imgur.com/Z8mwlad.png)
 
 ### Policy iteration
 Steps

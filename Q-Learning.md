@@ -1,4 +1,8 @@
+# Q Learning
+Use temporal difference to update Q values at each time difference when the agent interacts with the environment.
+
 ![[Pasted image 20220415193044.png]]
+_New sample_: This refers to the maximum utility that can be achieved in the state we are entering, i.e. $V(S_{t+1})$
 
 [[Grid World Scenario]]:
 Trial 1

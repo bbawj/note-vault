@@ -15,5 +15,5 @@ Discount factor $\gamma = 1$
 Monte Carlo Estimates Q for (1,1): $\frac{5+5-5}{3}=\frac{5}{3}$
 Monte Carlo Estimates Q for (2,2): $\frac{5+5}{2}=5$
 
-[[Q-Learning]]
+This only works when we have the entire path ending in a goal state, what if we do not have this whole path? Use [[Q-Learning]]
 

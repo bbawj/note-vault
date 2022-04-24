@@ -17,5 +17,8 @@
 	
 
 ![](https://i.imgur.com/GJgz8dM.png)
+d: depth of the optimal solution
+m: maximum depth
+l: cut off maximum depth
 
 ![](https://i.imgur.com/PwqLQTV.png)
