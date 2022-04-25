@@ -9,4 +9,6 @@
 	- [[Q-Learning]]
 - [[Game Theory]]
 - [[Knowledge Representation]]
+	- [[Propositional Logic]]
 	- [[First Order Logic]]
+	- [[Default Logic]]

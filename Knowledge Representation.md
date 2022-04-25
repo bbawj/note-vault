@@ -5,11 +5,9 @@ Entailment: generates sentences that are necessarily true given that existing se
 
 Inference: process to implement entailment
 
-Soundness: only generate entailed sentences. If we start with valid premises, no invalid conclusions can be drawn and the system is sound. 
+Soundness: only generate entailed sentences. If we start with valid premises, no invalid conclusions can be drawn and the system is sound. Everything that is provable is in fact true. 
 
-Completeness: if we are able to prove all true sentences. __Sound inference does not have to be complete__.
-
-
+Completeness: Everything that is true has a proof. __Sound inference does not have to be complete__.
 
 ![](https://i.imgur.com/2W1p0tF.png)
 

@@ -11,7 +11,7 @@ Maximize own utility and minimize opponent's
 
 Tic-Tac-Toe Tree Example:
 
-Reflective and rotational symmetries: https://courses.cs.duke.edu/cps100e/current/assign/ttt/#:~:text=There%20are%20four%20reflective%20symmetries,the%20board%20on%20the%20left.&text=This%20means%20there%20are%20eight,board%20on%20each%20line%20above.
+[Reflective and rotational symmetries:](https://courses.cs.duke.edu/cps100e/current/assign/ttt/#:~:text=There%20are%20four%20reflective%20symmetries,the%20board%20on%20the%20left.&text=This%20means%20there%20are%20eight,board%20on%20each%20line%20above)
 
 ![](https://i.imgur.com/MAQHRXu.png)
 

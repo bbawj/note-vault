@@ -1,3 +1,4 @@
+# Monte Carlo
 ![[Pasted image 20220415190047.png]]
 Estimate the value function from sampling:
 ![[Pasted image 20220415190342.png]]

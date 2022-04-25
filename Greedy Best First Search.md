@@ -3,6 +3,8 @@ Expands the node that appears to be closest to the goal based on the evaluation 
 
 Completeness: No
 Optimality: No
+Time Complexity: $O(b^m)$
+Space Complexity: $O(b^m)$
 
 ### Graph Traversal
 ![](https://i.imgur.com/syk9okN.png)

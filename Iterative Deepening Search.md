@@ -1,2 +1,2 @@
 # Iterative Deepening Search
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/24d64a39-db14-4405-9dc2-56472729ba6f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220418T130740Z&X-Amz-Expires=86400&X-Amz-Signature=6095960543320eaefbb0cb14cfc1bd4a5756dd75b4ffb926870c9aaa1aa7b01a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![](https://i.imgur.com/yG53iG4.png)

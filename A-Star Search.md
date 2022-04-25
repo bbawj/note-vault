@@ -5,6 +5,8 @@ Evaluation function $$f(n)=g(n)+h(n)$$
 **Remember to take the full path cost in calculating g(n) for a node**
 
 Optimality: Optimal with a *admissible heuristic*
+Time Complexity: Exponential in length of solution
+Space Complexity: Exponential in length of solution
 
 [Admissible Heuristic](https://en.wikipedia.org/wiki/Admissible_heuristic) for every node n, it underestimates the cost of getting from n to the closest goal node __there is no path from n to a goal that has path cost less than h(n)__. It prevents A* from skipping the optimal solution.
 
