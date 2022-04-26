@@ -1,14 +1,17 @@
 # Bonds
+### Terminologies
+Callability: Issuer can redeem the bond before maturity _leads to higher risk to the investor, will mean that the bond will have **relatively higher YTM_.
+
+Putability: Buyer can redeem the bond before maturity _leads to higher risk to the __issuer__, will mean that the bond will have **relatively lower YTM_.
 ### Prices
 > [!NOTE] The relationship between bond prices and interest rates
 > When interest rate increases, people are able to obtain bonds with higher YTM, this makes the current bond which offers a lower YTM __worth less__: becomes a discount bond.
 > Vice versa for when interest rates decreases
 
-
-> [!NOTE] Relationships
+> [!NOTE] Price Relationships
 > - Higher coupon payments will have less sensitivity to changes in interest rates
 > - Longer maturities will have higher sensitivity to interest rate changes
-> - Riskier bonds ($r_e$ is higher) will have lower price
+> - Riskier bonds ($\beta\ is\ higher\ hence\ r_e$ is higher) will have lower price
 
 ### Yield To Maturity
 The expected return if one was to hold the bond till maturity
@@ -20,13 +23,21 @@ The expected return if one was to hold the bond till maturity
 	
 ![](https://i.imgur.com/LXaqAUv.png)
 
-Depends only on the maturity and risk. If these are the same across 2 bonds, they will have the same YTM with differing coupon payments.
+Depends only on the maturity and risk. If these are the same across 2 bonds, they will have the same effective yield with differing coupon payments.
 
 #### Current Yield
 
 $$ Current\ Yield=\frac{Annual\ Interest\ Payments}{Current\ Bond\ Price} $$
 Zero coupon bonds: Bonds which give out no coupons
 - Current yield = 0
+
+> [!NOTE]
+> For all par bonds:
+> $$YTM=Current\ Yield=Coupon\ Rate$$
+> For all discount bonds:
+> $$YTM>Current\ Yield> Coupon\ Rate$$
+> For all premium bonds:
+> $$YTM<Current\ Yield< Coupon\ Rate$$
 
 ### Term Structure (Yield Curve)
 ![](https://i.imgur.com/M1KyPdL.png)
