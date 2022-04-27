@@ -1,6 +1,7 @@
 # CZ3005 Artificial Intelligence
+#moc 
 - [[Intelligent Agents]]
-- [[002 Search Strategies MOC]]
+- [[002 Search Strategies]]
 - [[Constraint Satisfaction Problem]]
 - [[Games as Search Problems]]
 - [[Markov Decision Process]]

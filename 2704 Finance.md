@@ -1,4 +1,5 @@
-# 2704 Finance MOC
+# 2704 Finance 
+#moc 
 - [[Bonds]]
 - [[Stock Valuation]]
 - [[Capital Budgeting]]
