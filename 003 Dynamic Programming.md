@@ -4,9 +4,11 @@ _Dynamic Programming is a tool to solve problems which satisfy the [[Principle o
 ## Well Known Problems
 - [[Fibonacci Sequence]]
 - [[Longest Common Subsequence]]
+- [[Longest Increasing Subsequence]]
 - [[Chain Matrix Multiplication]]
 - [[Knapsack Problem]]
 - [[Making Change]]
+- [[Travelling Salesman Problem]]
 ## Strategies
 Both strategies will achieve the same time complexity but bottom up is usually more CPU time efficient due to the simplicity of the code
 ### Top Down Approach
@@ -31,3 +33,13 @@ Example with Fib DP:
 
 Example with Fib DP:
 ![](https://i.imgur.com/0OgEhHu.png)
+
+## Exercises
+#### Binomial Coefficients 
+![](https://i.imgur.com/FiqSnSZ.png)
+b. ![](https://i.imgur.com/b6X5HDI.png)
+c. A top down approach:![](https://i.imgur.com/J1XxTUV.png)
+d. A bottom up approach ![](https://i.imgur.com/4zzRPuZ.png)
+
+## References
+- https://www2.seas.gwu.edu/~ayoussef/cs6212/dynamicprog.html
