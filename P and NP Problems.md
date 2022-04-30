@@ -8,14 +8,20 @@ _Hard Problems_: the best-known algorithm for the problem is expensive in terms 
 ![](https://i.imgur.com/pndAEOL.png)
 
 ### P Problems
+Polynomial time problems.
+
 The class of __decision problems__ that are bounded by [[Polynomial Time Complexity]].
 
 ![](https://i.imgur.com/O6SIZkD.png)
 
 ### NP Problems
-The class of decision problems for which there is a __polynomially bounded nondeterministic algorithm.__ It can be _verified_ in polynomial time.
+Non-deterministic polynomial time problems.
 
-Nondeterministic algorithm: ![](https://i.imgur.com/jqsNr81.png)
+The class of decision problems for which there is a __polynomially bounded nondeterministic algorithm.__ i.e. 
+- It can be _verified_ in polynomial time.
+- It cannot be solved by a deterministic algorithm in polynomial time
+
+What is a nondeterministic algorithm: ![](https://i.imgur.com/jqsNr81.png)
 
 ![](https://i.imgur.com/Sc32KDc.png)
 

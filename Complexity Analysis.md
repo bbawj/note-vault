@@ -17,8 +17,18 @@ $$\begin{align}\lim_{n\to \infty}\frac{f(n)}{g(n)}=C \\ C=\infty \ or\ 0<C<\inft
 The limits when taking the 2 functions to infinity produces a constant C that 
 $$\begin{align}\lim_{n\to \infty}\frac{f(n)}{g(n)}=C \\ 0<C<\infty \end{align}$$
 
-### Examples
+### Properties
+![](https://i.imgur.com/En4IxYe.png)
+
+$$f(n)\in O(h(n)),g(n)\in O(h(n)) \implies f(n)+g(n)\in O(h(n))$$
+![](https://i.imgur.com/h7PQDHK.png)
+
+### Example function comparisons
 ![](https://i.imgur.com/1Ngf1uk.png)
 
 ### Order of Common Functions
 ![](https://i.imgur.com/LurnRaE.png)
+
+## Specific Complexities
+- [[Polynomial Time Complexity]]
+- [[Pseudo-Polynomial Time Complexity]]
