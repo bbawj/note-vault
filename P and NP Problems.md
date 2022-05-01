@@ -44,15 +44,13 @@ What is a nondeterministic algorithm: ![](https://i.imgur.com/jqsNr81.png)
 - NP complete problems are equal to each other in difficulty
 - Hardest problems in NP
 - If a polynomial time solution can be found for an NP complete problem: P = NP
-
-
 ### NP Hard Problems
 "At least as hard as the hardest problems in NP".
 
 A problem D is NP-Hard when for every problem L in NP, there is a polynomial time reduction from L to D. Equivalently:
 - There is a polynomial time reduction from an NP-Complete problem G to D. _Since all problems in NP can be reduced to G in polynomial time, G is also reducible to D in polynomial time_.
 
-NP-Hard problems do not have to be in NP and do not have to be decidable.
+__NP-Hard problems do not have to be in NP and do not have to be decidable.__
 
 ## Too hard...use greedy heuristics
 - [[Knapsack Problem#Greedy Heuristics]]

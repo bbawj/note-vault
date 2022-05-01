@@ -1,9 +1,12 @@
 # Dijkstra's Algorithm
 [[Shortest Path Problem]]
-Find the shortest path from source to another vertex
+Find the shortest path from source to another vertex. 
+
+> [!NOTE]
+> Dijkstra finds the shortest path in terms of the edge weights and not the number of edges. Hence, the shortest path may contain many edges. __This means that a change in edge weights will result in a different shortest path unless the number of edges in each path is the same.__
 
 Features:
-Shortest path from a single source to all nodes in weighted and directed graph
+Shortest path from a single source to all nodes in weighted and directed graph.
 
 Assumptions:
 **Weights must be nonnegative**
