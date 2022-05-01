@@ -9,7 +9,7 @@ This is the basis for [[Markov Decision Process]].
 
 __The shortest path problem satisfies the principle:__
 
-If $a,x1,x2,...,xn,b$ is a shortest path from node a to node b in a graph, then the portion of $xi \to xj$ on that path is a shortest path from $xi \to x$j. _Can be proven by contradiction._
+If $a,x1,x2,...,xn,b$ is a shortest path from node a to node b in a graph, then the portion of $xi \to xj$ on that path is a shortest path from $xi \to x$j. [[Dijkstra's Algorithm#^c4528f |Can be proven by contradiction.]] 
 
 __The longest path problem does not satisfy:__
 

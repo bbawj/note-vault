@@ -10,6 +10,8 @@ Divide and Conquer
 
 ![](https://i.imgur.com/FjYLTRc.png)
 
+**Case 3 shows how Mergesort achieves [[005 Sorting Algorithms#^85ee66 |stability]].
+
 ![](https://i.imgur.com/uLjOcjg.png)
 
 

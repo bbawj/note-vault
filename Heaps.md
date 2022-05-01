@@ -1,14 +1,15 @@
 # Heaps
 A specialized tree based data structure.
-## Definition
+
+Efficient data structure to implement a priority queue.
+## Implementations
 Binary Heap built with a [[Binary Tree]]:
 ![](https://i.imgur.com/TQ7v9f2.png)
 
-## Implementation
-Create a binary tree (can be represented with an array)
 ![](https://i.imgur.com/YlmhOMz.png)
 
-### Fix Heap
+## Operations
+### Fix Heap (maximising)
 Method to obtain retain the heap structure after the root is removed. Assumes both left and right subtrees are already maximising heaps.
 
 ```java
@@ -42,3 +43,4 @@ Method to obtain the maximising heap property from an arbitrary tree.
 
 Fix the heap from the bottom up:
 ![](https://i.imgur.com/kFeTu7T.png)
+
