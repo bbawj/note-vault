@@ -25,12 +25,13 @@ Complexity at each recursive call is due to the application of the merge functio
 > - At least 1 element is moved to the new merged list after each comparison
 > - The final comparison will result in 2 elements moving to the merged list
 > - Hence, key comparisons needed to merge n elements is at most n-1
+> - ![](https://i.imgur.com/NQwgyjU.png)	
 
 > [!NOTE] Best Case
 > - When both subarrays are already sorted relative to each other, each comparison will move one element from the smaller array into the merged list until it is empty
+> 	- [1,2,...,n-1, n] or [n,n-1,...,2,1] increasing or decreasing ordered arrays
 > - The bigger array will be appended to the end without further comparisons
 > - If both arrays are equal size (n/2), there will be at best $\frac{n}{2}$ key comparisons
+> - ![](https://i.imgur.com/Bl84J7j.png)
 
-
-![](https://i.imgur.com/NQwgyjU.png)	
 ## Examples

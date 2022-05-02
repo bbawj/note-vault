@@ -75,3 +75,6 @@ Final order: $A_1*((A_2*A_3)*A_4)$
 ![](https://i.imgur.com/x5CyjBB.png)
 
 ![](https://i.imgur.com/AEoBKW9.png)
+
+## Greedy heuristic
+![](https://i.imgur.com/VOcanZm.png)

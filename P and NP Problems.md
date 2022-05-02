@@ -10,6 +10,10 @@ _Hard Problems_: the best-known algorithm for the problem is expensive in terms 
 
 ![](https://i.imgur.com/pndAEOL.png)
 
+Additionally:
+- What is the minimum number of colours needed to colour a given undirected graph G such that each node is assigned a different colour from all its neighbours?
+	- Given an undirected graph G and a natural number k, can G be coloured with more than k colours such that each node is assigned a different colour from all its neighbours?
+
 ### P Problems
 Polynomial time problems.
 
@@ -19,6 +23,9 @@ The class of __decision problems__ that are bounded by [[Polynomial Time Complex
 $P\in NP$ because if a problem is solvable in polynomial time then a solution is also verifiable in polynomial time by simply solving the problem.
 
 ![](https://i.imgur.com/O6SIZkD.png)
+
+![](https://i.imgur.com/iWsqJ99.png)
+
 
 ### NP Problems
 Non-deterministic polynomial time problems.
@@ -38,11 +45,15 @@ What is a nondeterministic algorithm: ![](https://i.imgur.com/jqsNr81.png)
 > However, given a guess of a subset: to check this subset we would need $O(n)$ time.
 > Solution:
 > DP Solution is [[Pseudo-Polynomial Time Complexity]]
+
+![](https://i.imgur.com/qK3LtxT.png)
+
+
 ### NP Complete Problems
 ![](https://i.imgur.com/ikXAvIN.png)
 
 - NP complete problems are equal to each other in difficulty
-- Hardest problems in NP
+- Hardest problems in NP: if an NP-complete problem D can be solved in a certain amount of time, e.g. $O(f(n))$, every NP problem can be solved in $O(f(n))$ time. Hence no NP problem is harder than an NP-complete problem D.
 - If a polynomial time solution can be found for an NP complete problem: P = NP
 ### NP Hard Problems
 "At least as hard as the hardest problems in NP".
@@ -51,6 +62,11 @@ A problem D is NP-Hard when for every problem L in NP, there is a polynomial tim
 - There is a polynomial time reduction from an NP-Complete problem G to D. _Since all problems in NP can be reduced to G in polynomial time, G is also reducible to D in polynomial time_.
 
 __NP-Hard problems do not have to be in NP and do not have to be decidable.__
+
+## Example reductions
+_Show that the [[Longest Path Problem]] is NP-Hard_.
+
+Reduction from the [[Travelling Salesman Problem]]: For a weighted complete graph G with non negative weights, the path that passes through all the vertices once must also be one of the longest paths because the longest path must include all vertices. Forgo the shortest path optimization in TSP and we obtain LPP.
 
 ## Too hard...use greedy heuristics
 - [[Knapsack Problem#Greedy Heuristics]]

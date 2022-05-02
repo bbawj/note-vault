@@ -13,5 +13,10 @@ It is a greedy algorithm to generate a [[Minimum Spanning Tree]].
 ## Complexity
 
 ## Proof
+Combine with proof of [[Minimum Spanning Tree#A tree is a MST if and only if it has the MST property|Theorem 1]]
+![](https://i.imgur.com/4sfUAW9.png)
 
 ## Examples
+![](https://i.imgur.com/i02q3xQ.png)
+
+![](https://i.imgur.com/C4Rltcn.png)

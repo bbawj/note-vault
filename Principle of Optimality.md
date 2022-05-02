@@ -7,9 +7,9 @@ This is the basis for [[Markov Decision Process]].
 > [!NOTE] Paraphrasing...
 > A problem is said to satisfy the principle of optimality if the subsolutions of an optimal solution of the problem are themselves optimal solutions for their subproblems.
 
-__The shortest path problem satisfies the principle:__
+__The [[Shortest Path Problem]] satisfies the principle:__
 
-If $a,x1,x2,...,xn,b$ is a shortest path from node a to node b in a graph, then the portion of $xi \to xj$ on that path is a shortest path from $xi \to x$j. [[Dijkstra's Algorithm#^c4528f |Can be proven by contradiction.]] 
+If $a,x1,x2,...,xn,b$ is a shortest path from node a to node b in a graph, then the portion of $xi \to xj$ on that path is a shortest path from $xi \to x$j. [[Shortest Path Problem#^c4528f|Can be proven by contradiction.]] 
 
 __The longest path problem does not satisfy:__
 

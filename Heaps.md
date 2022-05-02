@@ -32,6 +32,8 @@ fixHeap(H,k){
 }
 ```
 
+![](https://i.imgur.com/Iufls5t.png)
+
 #### Example
 If there are 2 child nodes, this operation will take 2 comparisons:
 ![](https://i.imgur.com/Oxe7sU2.png)
@@ -44,3 +46,6 @@ Method to obtain the maximising heap property from an arbitrary tree.
 Fix the heap from the bottom up:
 ![](https://i.imgur.com/kFeTu7T.png)
 
+Complexity for heap construction:
+![](https://i.imgur.com/isoTd0Z.png)
+![](https://i.imgur.com/C7xbBCa.png)

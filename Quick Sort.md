@@ -17,6 +17,17 @@ The middle element is usually chosen as the pivot:
 ![](https://i.imgur.com/F8TKAUu.png)
 ![](https://i.imgur.com/s4gxfuU.png)
 
+
+> [!NOTE] Key equality
+> Note that when a key $x$ is equal to the pivot, we do not perform any swaps or increment the lastsmall counter; __we simply treat it as it was bigger.__
+> 
+> This means that at the end of the partition, $x$ will be placed on the right of pivot. <u>Leaving the right subarray non-empty.</u>
+> 
+> If we want the left subarray to be empty, the pivot must be $\le$ all keys.
+> If we want the right subarray to be empty, the pivot must be $>$ all keys
+
+
+
 ## Complexity
 ![](https://i.imgur.com/3libTLv.png)
 ![](https://i.imgur.com/5VTznYZ.png)

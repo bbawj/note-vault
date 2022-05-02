@@ -19,7 +19,6 @@ Assumptions:
 ![](https://i.imgur.com/7e5woJm.png)
 
 ### Proof of Correctness
-Proof of the Shortest Path Property:![](https://i.imgur.com/miAeAtI.png) ^c4528f
 Why the greedy choice is optimal:![](https://i.imgur.com/MPkx0vS.png)
 
 > [!important]
