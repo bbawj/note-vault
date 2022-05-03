@@ -21,7 +21,12 @@ Guess and check strategy
 ## Master Method
 ![](https://i.imgur.com/fxJmBZY.png)
 
+### Examples
 ![](https://i.imgur.com/p9H4sLx.png)
+
+![](https://i.imgur.com/6oXy3sh.png)
+
+![](https://i.imgur.com/ZvPZsLt.png)
 
 ## Linear Homogeneous Recurrence Relations
 ![](https://i.imgur.com/q45S1fq.png)

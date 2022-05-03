@@ -1,4 +1,6 @@
 # Heap Sort
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2DmK_H7IdTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## General Idea
 Data structure based sorting algorithm using [[Heaps]].
 
@@ -12,7 +14,7 @@ A tree is a maximising partial order tree if and only if each node has a key val
 ## Pseudocode
 ![](https://i.imgur.com/admXX0H.png)
 
-Remove the max element and retain the heap structure using [[Heaps#Fix Heap]]
+Remove the max element and retain the heap structure using [[Heaps#Fix Heap maximising]]
 ![](https://i.imgur.com/CUBKrov.png)
 
 ## Complexity

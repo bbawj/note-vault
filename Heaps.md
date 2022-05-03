@@ -46,6 +46,8 @@ Method to obtain the maximising heap property from an arbitrary tree.
 Fix the heap from the bottom up:
 ![](https://i.imgur.com/kFeTu7T.png)
 
-Complexity for heap construction:
+![](https://i.imgur.com/wHMcaX4.png)
+
+#### Complexity for heap construction:
 ![](https://i.imgur.com/isoTd0Z.png)
 ![](https://i.imgur.com/C7xbBCa.png)

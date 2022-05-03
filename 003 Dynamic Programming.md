@@ -4,10 +4,11 @@ _Dynamic Programming is a tool to solve problems which satisfy the [[Principle o
 ## Well Known Problems
 - [[Fibonacci Sequence]]
 - [[Longest Common Subsequence]]
-- [[Longest Increasing Subsequence]]
+	- [[Longest Increasing Subsequence]]
+	- [[Alignment Problem]]
 - [[Chain Matrix Multiplication]]
 - [[Knapsack Problem]]
-- [[Making Change]]
+	- [[Making Change]]
 - [[Travelling Salesman Problem]]
 ## Strategies
 Both strategies will achieve the same time complexity but bottom up is usually more CPU time efficient due to the simplicity of the code

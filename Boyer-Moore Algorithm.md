@@ -22,6 +22,14 @@ Case 2 (mismatched character is found in the rest of the pattern):
 ### Pseudocode
 ![](https://i.imgur.com/gtsvjfQ.png)
 Right most occurrence such that we do not over slide.
+
+### Simple BM scan
+When using charJump only, taking the max of charJump and $m-k+1$ will ensure that we do not _left  shift_ the pattern and that we always at least move by 1 character.
+![](https://i.imgur.com/NHcbWYL.png)
+
+Example of where we could have made a _left shift_ of the pattern, which is not what we want:
+![](https://i.imgur.com/wsmOIaK.png)
+
 ## Good suffix rule (matchJump)
 Derive maximum shift from the structure of the pattern.
 Run through each case below in order (1 -> 2 -> 3) so as to shift by the least amount such that a suffix is matched.
@@ -48,3 +56,8 @@ The last character array entry is always 1. We have no information about matchin
 
 ## Pseudocode
 ![](https://i.imgur.com/ws3S3db.png)
+
+## Examples
+![](https://i.imgur.com/0V5xsxb.png)
+
+![](https://i.imgur.com/OuyvZnO.png)

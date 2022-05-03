@@ -27,3 +27,7 @@ Observe that the time complexity is $O(n+I)$ where $I$ is the number of inversio
 ![](https://i.imgur.com/ziRUDDA.png)
 
 ## Examples
+![](https://i.imgur.com/RvTrICu.png)
+
+## Overall Evaluation
+![](https://i.imgur.com/DSvfcbw.png)

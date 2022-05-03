@@ -5,6 +5,9 @@ A data structure to represent dynamic equivalence relations
 ## Operations
 ![](https://i.imgur.com/jhhDWZD.png)
 
+These operations make it an efficient data structure to verify if a cycle exists in some graph.
+![](https://i.imgur.com/Tv7KgtB.png)
+
 ## Implementations
 ### Quick Find
 ![](https://i.imgur.com/Katri54.png)
