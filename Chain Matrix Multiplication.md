@@ -63,6 +63,7 @@ Suppose the dimensions of the matrices A, B, C, and D are 20x2, 2x15, 15x40, and
 | 3   |     |     |     |                                                                                              | 0                                                                                                                                                                                                                 |
 | 4   |     |     |     |                                                                                              |                                                                                                                                                                                                                   |
 Last Table
+
 |     | 0   | 1   | 2   | 3   | 4   |
 | --- | --- | --- | --- | --- | --- |
 | 0   | -   | -   | 1   | 1   | 1   |

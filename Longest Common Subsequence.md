@@ -20,7 +20,9 @@ $$LCS(i,j)=max(LCS(i-1,j), LCS(i,j-1)) $$
 ## Pseudocode
 ![](https://i.imgur.com/J0RXXZu.png)
 
-#### Obtaining the subsequence characters
+## Examples: Obtaining the subsequence characters
 ![[Pasted image 20220502231603.png]]
+
+![](https://i.imgur.com/5u32FFZ.png)
 
 ![](https://i.imgur.com/zOAFyUO.png)

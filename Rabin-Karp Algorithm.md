@@ -1,5 +1,6 @@
 # Rabin-Karp Algorithm
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qQ8vS2btsxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## General Idea
 1. Convert the pattern (length m) to a number p
 2. Convert the first m-characters (the first text window) to a number t with a hash function
