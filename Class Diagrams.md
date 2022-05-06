@@ -1,6 +1,20 @@
 # Class Diagrams
-## Conceptual Model
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/56ef3854-7a1b-4eb4-a66a-bdf5e2db2a88/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220418%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220418T063747Z&X-Amz-Expires=86400&X-Amz-Signature=22f200d77b729f674f44724517f6428df265388033770ccdcdd385bcb5eaf808&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+## Basic Notation
+![](https://i.imgur.com/wP2mGKP.png)
+
+![](https://i.imgur.com/epJI95o.png)
+
+## Visibility Modifiers
+\+ : public
+\- : private 
+\# : protected
+~ : package private
+## Associations
+![](https://i.imgur.com/6joWlEo.png)
+
+![](https://i.imgur.com/98E6kbI.png)
+## Stereotypes
+![](https://i.imgur.com/pNajniM.png)
 
 > [!NOTE] Heuristics for identifying entity objects 
 > - Terms that developers or users need to clarify in order to understand the use case • Recurring nouns in the use cases (e.g., Incident) 
@@ -21,7 +35,3 @@
 
 ![](https://i.imgur.com/30K0QRU.png)
 
-## Associations
-![](https://i.imgur.com/6joWlEo.png)
-
-![](https://i.imgur.com/98E6kbI.png)
