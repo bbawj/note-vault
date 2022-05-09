@@ -15,6 +15,7 @@
 	- [[Factory Pattern]]
 	- [[Façade Pattern]]
 	- [[Dynamic Loading]]
+	- [[Dependency Injection]]
 - ## Software Architecture
 	- [[Layered Architecture]]
 	- [[Model-View-Controller Architecture]]
@@ -23,3 +24,4 @@
 	- [[White Box Testing]]
 - ## Tooling
 	- [[TypeScript]]
+	- [[Angular]]
