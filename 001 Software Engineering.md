@@ -25,3 +25,5 @@
 - ## Tooling
 	- [[TypeScript]]
 	- [[Angular]]
+- ## Software Methodologies
+	- [[Test Drven Development]]
