@@ -82,9 +82,34 @@ They alter the appearance or behavior of an existing element. In templates they 
 
 
 ## Services
+```
+ng generate service <name>
+
+ng g s <name>
+```
 
 ### Dependency Injection
 Angular uses [[Dependency Injection]] to increase modularity.
 
+Use [[Dependency Injection#Constructor injection |Constructor Injection]] to utilize a service:
+```typescript
+export class ProductDetailsComponent implements OnInit {
+
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService
+  ) { }
+}
+```
+
+### Hitting APIs
+Configure [HTTPModule](https://angular.io/start/start-data#configure-appmodule-to-use-httpclient)
+
+Data is passed from services to components via [Observables](https://angular.io/guide/observables)
+#### [Get](https://angular.io/guide/http#requesting-data-from-a-server)
+#### [Post](https://angular.io/guide/http#making-a-post-request)
+#### [Delete](https://angular.io/guide/http#making-a-delete-request)
+#### [Put](https://angular.io/guide/http#making-a-put-request)
+#### [Error handling](https://angular.io/guide/http#handling-request-errors)
 
 
