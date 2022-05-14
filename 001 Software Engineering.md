@@ -23,7 +23,6 @@
 	- [[Black Box Testing]]
 	- [[White Box Testing]]
 - ## Tooling
-	- [[TypeScript]]
-	- [[Angular]]
+	- [[Tools]]
 - ## Software Methodologies
-	- [[Test Drven Development]]
+	- [[Test Driven Development]]

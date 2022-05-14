@@ -113,3 +113,9 @@ Data is passed from services to components via [Observables](https://angular.io/
 #### [Error handling](https://angular.io/guide/http#handling-request-errors)
 
 
+
+## RxJS Observables
+Makes use of the [[Observer Pattern]].
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T9wOu11uU6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
