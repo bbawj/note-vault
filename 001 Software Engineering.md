@@ -23,6 +23,6 @@
 	- [[Black Box Testing]]
 	- [[White Box Testing]]
 - ## Tooling
-	- [[Tools]]
+	- [[006 Tools]]
 - ## Software Methodologies
 	- [[Test Driven Development]]

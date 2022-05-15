@@ -107,15 +107,25 @@ Configure [HTTPModule](https://angular.io/start/start-data#configure-appmodule-t
 
 Data is passed from services to components via [Observables](https://angular.io/guide/observables)
 #### [Get](https://angular.io/guide/http#requesting-data-from-a-server)
+```typescript
+class SomeService{
+	constructor(private http: HttpClient){}
+	get(): Observable<Task[]>{
+		return this.http.get<Task[]>(this.apiUrl)
+	}
+}
+```
 #### [Post](https://angular.io/guide/http#making-a-post-request)
 #### [Delete](https://angular.io/guide/http#making-a-delete-request)
 #### [Put](https://angular.io/guide/http#making-a-put-request)
 #### [Error handling](https://angular.io/guide/http#handling-request-errors)
-
-
 
 ## RxJS Observables
 Makes use of the [[Observer Pattern]].
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T9wOu11uU6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+We use `Observables` when there is some stream of data that is changing and we have multiple subscribers that want to change when there is some new data.
+![500](https://i.imgur.com/aoiTL89.png)
+
+RxJS provides multiple functions to modify how often we want to call next(), in what ways to format the data etc. 
