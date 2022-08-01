@@ -5,7 +5,9 @@ A data structure to represent dynamic equivalence relations
 ## Operations
 ![](https://i.imgur.com/jhhDWZD.png)
 
-These operations make it an efficient data structure to verify if a cycle exists in some graph.
+These operations make it an efficient data structure to verify if a cycle exists in some __undirected__ graph.
+- Union find is unable to detect cycles in directed graphs: union operation cannot distinguish between the subcomponent that makes the edge from a -> b and that which makes the edge b->a
+
 ![](https://i.imgur.com/Tv7KgtB.png)
 
 ## Implementations
