@@ -14,6 +14,9 @@ Speed-up is the factor over the original machine of improved performance
 $$\text{Speedup} = \frac{Perf_a}{Perf_b}$$
 We can define the execution time of an enhanced machine by the proportion of the program _E_ that is improved and _T_ the original time taken and _S_ the enhancement factor
 $$T' = (T\times (1-E))+\frac{T\times E}{S}$$
+#### Example
+![](https://i.imgur.com/pM0zGxx.png)
+
 ### Amdahl's Law
 __If the program is of a fixed workload:__
 Let _E_ be the fraction of program that is enhanced via _parallelism_, with maximum enhancement factor $S = \infty$, the maximum speedup is $$\text{Max Speedup} =lim_{s\rightarrow \infty}\frac{1}{1-E+\frac{E}{S}}=\frac{1}{1-E}$$
