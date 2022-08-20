@@ -2,14 +2,14 @@
 ## Disk Mechanics
 A disk is made up of multiple cylinders (platters) each with a set of tracks
 ![](https://i.imgur.com/qm4b2xs.png)
-> ![NOTE]
+> [!NOTE]
 > Each platter consists of 2 surfaces which data can be read/written
 
 Disk capacity calculation:
 ![](https://i.imgur.com/wMSn43v.png)
 
 ## Disk Access
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Data can only be accessed in units of blocks. Each block must be loaded from the disk into main memory. Only in main memory can we individually address each word. 
 
 ![](https://i.imgur.com/EXdyzUk.png)
@@ -28,5 +28,16 @@ Average rotational delay: half circle rotation time
 Average seek time is approximately 0 as the block to be accessed is likely to be in same cylinder
 Average rotational delay is approximately 0 as the head points to the next block after current access
 
-
 ![](https://i.imgur.com/M0ylOeH.png)
+## Storing relational data
+![](https://i.imgur.com/T38v3NN.png)
+### Fields to Record
+![](https://i.imgur.com/imcZwDT.png)
+
+![](https://i.imgur.com/sAwIdeR.png)
+### Record to Block
+There a a few considerations when storing a record into a block
+#### Supporting record separation
+![](https://i.imgur.com/e0tWpq7.png)
+#### Order of records
+We can store records in the order of the primary key. Order can be maintained either physically (in memory) or logically (through a pointer)
