@@ -1,5 +1,5 @@
 # Processes
-A program in execution, also known as a job.
+A program in execution, also known as a job. One process can have multiple [[Threads |threads]].
 ## Process in memory
 ![](https://i.imgur.com/DnW6ijk.png)
 
