@@ -14,3 +14,16 @@ Similar to [[Cache Replacement Policies]].
 
 1. [[Least Recently Used Policy]]
 2. [[Clock (or Second Chance) Policy]]
+## Practice Problems
+![](https://i.imgur.com/H5D6bBe.png)
+Process flow:
+1. Fetch block 1
+2. Process block 1 and Fetch block 2
+3. Process block 2 and Fetch block 3
+4. Process block 3
+a. Total time is 4P; only 4 cycles needed
+b. R + P + 2R = 3R + P
+c. R + P + 2P = 3P + R
+
+If no pre-fetching:
+3(R+P) = 3R + 3P

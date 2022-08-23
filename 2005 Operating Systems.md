@@ -6,7 +6,8 @@ Essentially a piece of code which controls and coordinates the use of hardware a
 	- Only 1 job in memory at any time
 	- When job waits for IO, the CPU is idle
 2. Multiprogram / Time-sharing Systems: several jobs are kept in main memory at the same time
-	- Different from multiprocessing which is a hardware capability
+	- Goal: Improve CPU utilization by running more than one program concurrently even in a single-core CPU
+	- Different from multiprocessing: increase computing power with parallel architectures
 	- __Requires OS to be able to handle memory management, CPU and I/O scheduling for efficiency
 3. Embedded Systems: physical systems where operations are controlled by computing
 	- Examples:

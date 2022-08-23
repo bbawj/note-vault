@@ -41,3 +41,34 @@ There a a few considerations when storing a record into a block
 ![](https://i.imgur.com/e0tWpq7.png)
 #### Order of records
 We can store records in the order of the primary key. Order can be maintained either physically (in memory) or logically (through a pointer)
+## Practice Problems
+![](https://i.imgur.com/bRiV76y.png)
+a. 10 + 35 + 20 + 18 + 25 + 3 = 111
+b. Order: 11->12->9->16->1->34->36
+	1+3+7+15+33+2 = 61
+c. Order: 11->12->16->34->36->9->1
+	1+4+18+2+27+8 = 60
+![](https://i.imgur.com/3Sg3EMf.png)
+Total bytes per tuple = 8+17+1+4+4+4+1 = 39
+Block contains meta data of 40bytes
+a. 
+Total byte without block meta data: $8\times 1024-40=8152$
+Records: $8152\div 39=209.03$
+209 records can be stored
+b.
+Total bytes per tuple:
+17 byte character string needs to pad additional 3 bytes: 20 byte
+1 byte needs to pad additional 3 bytes: 4 byte
+$8+20+4+4+4+4+1=45$ bytes
+Records: $8152\div 45 = 181.2$
+181 Records
+c.
+Total bytes per tuple:
+17 byte character string needs to pad additional 7 bytes: 24 byte
+1 byte needs to pad additional 7 bytes: 8 byte
+$8+24+8+8+4+4+1=57$ bytes
+Records: $8152\div 57 = 143.02$
+143 Records
+![](https://i.imgur.com/zXULRoB.png)
+a.
+b. One block consists of multiple sectors. If these sectors are not sequential, the transfer time will be directly proportional to the RPM which the seek head is able to reach each sector.

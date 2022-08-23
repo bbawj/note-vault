@@ -16,3 +16,6 @@ OS needs to set the range of legal addresses a program may access. This is done 
 Base register: holds the first legal memory address
 Limit register: contains the size of the legal range
 ![](https://i.imgur.com/gNNgytr.png)
+## Practice Problems
+Given a base register value of 0x1000 and a limit register value of 0x1000, access to memory location 0x1FFF will generate a trap.
+False. Each access to memory by a process must be in the range [base, base+limit-1]. In this case, it translates to the range [0x1000, 0x1FFF].

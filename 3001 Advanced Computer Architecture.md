@@ -4,3 +4,4 @@
 - [[Computer Power]]
 - [[Instruction Set Architecture]]
 - [[Datapath and Control Design]]
+- [[Pipelining]]
