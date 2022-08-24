@@ -7,6 +7,7 @@
 ## Backend
 - [[NodeJS]]
 - [[ASP.NET Web API]]
+- [[Go]]
 ## Databases
 - [[SQL]]
 - [[MongoDB]]
