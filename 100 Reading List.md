@@ -8,3 +8,9 @@
 
 ## Distributed Systems
 1. [Understanding Distributed Systems](https://www.amazon.com/Understanding-Distributed-Systems-Second-applications/dp/1838430210?keywords=understanding+distributed+systems&qid=1656280535&sprefix=understanding+dis,aps,118&sr=8-1&linkCode=sl1&tag=utsavized0d-20&linkId=a920b5dfb493c084cd500eb954527f5c&language=en_US&ref_=nav_signin&)
+
+## Under the Hood
+1. [Writing An Interpreter In Go](https://interpreterbook.com/)
+2. [Writing A Compiler In Go](https://compilerbook.com/)
+## Databases
+1. High Performance MySQL
