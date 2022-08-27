@@ -20,3 +20,4 @@ The OS is typically [[Interrupts]] driven.
 1. [[Direct Memory Access]]
 2. [[Hardware Protection]]
 3. Handle [[Processes]]
+4. [[Process scheduling]]
