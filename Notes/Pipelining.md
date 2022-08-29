@@ -60,6 +60,11 @@ $\text{Pipeline Stall Cycles per Instruction due to Branches} = \text{Branch fre
 ![](https://i.imgur.com/TCYnvwC.png)
 Delayed Branching: schedule an independent instruction in the branch delay slot. If branch penalty is 1, we will have 1 branch delay slot.
 ![](https://i.imgur.com/uCzBjHJ.png)
+#### Dynamic Prediction
+Rely on some measure of past behaviour to predict the future
+![](https://i.imgur.com/sYQCIaK.png)
+![](https://i.imgur.com/Y7NNWYA.png)
+![](https://i.imgur.com/k13iMgt.png)
 ### Structural hazard
 When two instructions require the use of a given hardware resource at the same time that will lead to a stall in the pipeline (one instruction has to wait at least for a clock cycle). 
 

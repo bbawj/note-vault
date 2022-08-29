@@ -73,3 +73,28 @@ __Symmetric scheduling__: one scheduling strategy/algorithm across all cores
 ## Practice Problems
 Under Round-Robin scheduling, if quantum size is q, average CPU burst length is B, average number of CPU bursts per process is N, and average number of processes in the ready queue is R, then the average response time for a process is?
 $$\frac{0+q+2q+3q+...+(R-1)q}{R} = \frac{\frac{R}{2}(R-1)q}{R}=(R-1)q$$
+![](https://i.imgur.com/KuJF3Ze.png)
+a. False. If the CPU cannot be removed from the process, it is non-preemptive
+b. False. Only need to run scheduler when a process exits or changes to waiting
+c. False. Response time is time to first start of execution. Turnaround time is time to finish the process. Turnaround - waiting time is just the CPU burst length.
+d. True.
+![](https://i.imgur.com/w1gOgdk.png)
+abc.
+![[Drawing 2022-08-28 21.06.51.excalidraw| 800]]
+d.
+Uni-core: RR
+Duo-core: RR
+
+![](https://i.imgur.com/SyhdEDn.png)
+Efficiency is total process time over total process time + total overhead: $\frac{T}{T+kS}$
+where k is the total number of context switches
+a. If $Q->\infty$, there will be 0 context switches 
+$Efficiency=\frac{T}{T} = 1$
+b. If Q >T, average process will run without context switching
+$Efficiency=\frac{T}{T}= 1$
+c. S < Q < T. Average process will switch 2 times.
+$Efficiency=\frac{T}{T+2S}$
+c. Q = S. Average process will switch T/S times.
+$Efficiency=\frac{T}{T+\frac{T}{S}S} = \frac{T}{2T}=0.5$
+d. Q -> 0, k will be close to T
+$Efficiency=\frac{T}{T+TS}$

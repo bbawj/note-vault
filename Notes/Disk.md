@@ -59,16 +59,21 @@ b.
 Total bytes per tuple:
 17 byte character string needs to pad additional 3 bytes: 20 byte
 1 byte needs to pad additional 3 bytes: 4 byte
-$8+20+4+4+4+4+1=45$ bytes
-Records: $8152\div 45 = 181.2$
-181 Records
+$8+20+4+4+4+4+4=48$ bytes
+Records: $8152\div 48 = 169$
+169 Records
 c.
+Total bytes for block header:
+$10\times 8 = 80$
 Total bytes per tuple:
 17 byte character string needs to pad additional 7 bytes: 24 byte
 1 byte needs to pad additional 7 bytes: 8 byte
-$8+24+8+8+4+4+1=57$ bytes
-Records: $8152\div 57 = 143.02$
-143 Records
+Record header: $2\times 8 + 8 = 24$
+$24+8+24+8+8=72$ bytes
+Records: $8192-80\div 72 = 112$
+112 Records
 ![](https://i.imgur.com/zXULRoB.png)
-a.
+a. A “sector” is a physical unit of the disk and a “block” is a logical unit, a creation of whatever software system – operation systems or database systems, for example – is using the disk. As we mentioned, it is typical today for blocks to be at least as large as sectors and to consist of one or more sectors. However, there is no reason why a block cannot be a fraction of a sector, with several blocks packed into one sector. In fact, some older systems did use this strategy.
+
+With the block size increases, the # of blocks to be accessed for a relational table decreases but the transfer time then increases.
 b. One block consists of multiple sectors. If these sectors are not sequential, the transfer time will be directly proportional to the RPM which the seek head is able to reach each sector.
