@@ -6,9 +6,12 @@ An example using the ARM ISA
 All data values are located in registers  
 Addressing Mode: __register addressing mode__
 ![](https://i.imgur.com/dGc0feL.png)
+Rm: First source register
+Rn: Second source register
+Rd: Destination register
+shamt: Shift amount for use in shift operations
 ### Datapath
 ![](https://i.imgur.com/Ce5IY8W.png)
-
 ## Data transfer type
 Addressing Mode: __Base/Displacement addressing__
 ![](https://i.imgur.com/k1DenbQ.png)
@@ -56,3 +59,42 @@ Notes:
 ![](https://i.imgur.com/FZM5SNF.png)
 Notes:
 - Additional OR-gate to always select the address for branching
+## Practice Problems
+![](https://i.imgur.com/YdSUUkp.png)
+i. All instructions
+ii. All instructions
+iii. All except unconditional branch instructions
+	iv. ALU instructions, Load/Store instructions and Conditional Branch. _Why unconditional branch don't need?_
+v. Load/Store instructions
+![](https://i.imgur.com/fyYJqgz.png)
+PC++, PCin -> PCout and I-MEM is used for all datapaths
+Propagation delay is the time delay for the signal to reach its destination.
+Some signals are sent out in parallel (e.g. PC++) and the delay there is overshadowed by the overall delay by main logic.
+i.
+Reg2Loc Mux -> 2 x REG(read) -> ALUSrc Mux -> ALU -> Mem2Reg Mux -> REG(write)
+2 Reg read signals are done in parallel.
+$500+50+200+50+2000+50+200=3050ps$
+ii.
+Reg2Loc Mux -> REG(read) -> Sign Extend -> ALUSrc Mux -> ALU -> Mem2Reg Mux -> REG(write)
+We do not need to wait for sign extend signal while reading REG
+$500+50+200+50+2000+200+50=3050ps$
+iii.
+REG(read) -> ALUSrc Mux -> ALU -> D-MEM -> Mem2Reg Mux -> REG(write)
+ALUSrc MUX delay is overshadowed by the delay in REG(read)
+![[Drawing 2022-08-29 15.35.16.excalidraw]]
+$500+200+2000+2000+50+200=4950$
+iv.
+STUR is LDUR but without the Mem2Reg Mux and REG write
+$4950-200-50=4750ps$
+v.
+Reg2Loc Mux -> REG(read) -> ALUSrc Mux -> ALU -> BranchMUX -> PCin/out
+$500+50+200+50+2000+50+100=2950$
+vi.
+Sign extend -> Shift -> Add -> BranchMUX -> PCin/out
+$500+25+0+1500+50+100=2175$
+![](https://i.imgur.com/cdmzkTj.png)
+i. 
+Minimum clock period must allow types of instructions to complete without that clock period.
+Hence the minimum clock period is the time needed to complete the longest instruction: 4950ps
+ii.
+Minimum clock period of a specific cycle must allow the longest stage to complete. Hence, the longest stage is EX or MA which has 2000ps.
