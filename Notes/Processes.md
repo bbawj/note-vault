@@ -16,7 +16,7 @@ Information related to each process is then stored in a Process Control Block (P
 > - Timer interrupt is used in multiprogramming systems to switch between ready processes
 > - Running -> waiting is due to some interrupt source from the currently running process
 > - Process always goes through the ready state before running (no direct from waiting to running)
-## Process scheduling
+## [[Process scheduling]]
 All processes are stored in queue structures
 Job queue: set of all processes with the same state in the system
 - ready queue: processes in the ready state

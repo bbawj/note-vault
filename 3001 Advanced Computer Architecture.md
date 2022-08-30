@@ -5,3 +5,4 @@
 - [[Instruction Set Architecture]]
 - [[Datapath and Control Design]]
 - [[Pipelining]]
+- [[Instruction Level Parallelism]]
