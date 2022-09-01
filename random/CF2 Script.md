@@ -16,13 +16,18 @@ These are problem-solving skills which will help them through a myriad of challe
 
 The best way to do this, is through the direct application of technology to problem solving. KidsCode will offer a program focused on coding and tinkering to hone these skills, but at the same time aim to inculcate other important values such as resilience and confidence through mentorship and project presentations.
 
-KidsCode will run with the support of volunteers. We will start with volunteers from Singapore's local universities. Student interest groups with a passion for technology and wish to be part of the kid's learning journey will form the backbone of our curriculum. As the technical director in NTU Open Source Society, our team will be the first to contribute to this initiative.
-
 _types of classes_
-To begin with, we will offer 2 types of classes which will cater to different age groups. For 8-12 year olds, we will offer lessons in Scratch, a kid friendly but still powerful programming language. 
- For 13-16 year olds, we will offer lessons in python, a simple yet extremely powerful programming language capable of building complex systems.
+To begin with, we will offer 2 types of classes which will cater to different age groups. For 8-12 year olds, we will offer lessons in Scratch. Scratch is an introductory language which provides many inbuilt features for creating games and animations. This visual element is key to keeping younger kids engaged.
 
-_maybe might not have time for this_
-Each class will also be split into different difficulty levels, such that kids can  
+ For 13-16 year olds, we will offer lessons in python, a simple yet extremely powerful programming language capable of building complex systems. This will provide natural progression for kids who are already more familiar with technology.
+
+KidsCode will run with the support of volunteers. We will start with volunteers from Singapore's local universities. Student interest groups with a passion for technology and wish to be part of the children's learning journey will form the backbone of our curriculum. As the technical director in NTU Open Source Society, our team will be the first to take the lead to contribute to this initiative.
 
 _KidsCode schedule_
+KidsCode will run once a week, with each session being 1 hour long. Due to manpower being sourced from student volunteers, we will run the classes over the course of the regular school semester. This means classes will run for 4-5 months at a time.
+
+To conclude, I would like to share a quote from Alvin Toffler, a famous American futurist. "The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn." 
+The digital age has offered a chance, a chance for those who are willing and capable to learn, unlearn and relearn, to thrive. Together, KidsCode can be that first stepping stone for these bright children to realize their full potential, regardless of their starting point in life. Thank you!
+
+  
+I implore you to join me to equip every Singaporean with the opportunity to thrive, grow and realise their aspirations, regardless of their starting point in life. Thank you!
