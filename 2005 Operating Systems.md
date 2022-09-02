@@ -21,3 +21,4 @@ The OS is typically [[Interrupts]] driven.
 2. [[Hardware Protection]]
 3. Handle [[Processes]]
 4. [[Process scheduling]]
+5. [[Process Synchronization]]
