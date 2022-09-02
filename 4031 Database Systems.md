@@ -3,3 +3,4 @@
 - [[Storage]]
 - [[Buffer Pools]]
 - [[Indexes]]
+- [[B+ Tree Index]]

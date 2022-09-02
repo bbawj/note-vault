@@ -19,6 +19,19 @@ Clustered indexes will not be as good if the database goes through many update o
 ![](https://i.imgur.com/AeFICtg.png)
 ## Multi-layer Index
 ![](https://i.imgur.com/DosKPnI.png)
+## B+ Tree Index
+Idea: build a multi-layer index in the structure of a binary tree
+> [!Properties]
+> 1. Each tree node is stored within a *block*
+> 2. Each node stores at most n+1 pointers and n keys
+> 3. Each level is an index
+> 	- sorted within each node
+> 	- sorted across nodes at the same level
+
+> [!Leaf Node Properties]
+> Consider a leaf node storing k+1 pointers (k <= n)
+> 1. First k pointers are to records and last one is to the next leaf node
+> 2. There are k keys, each key is equal to the key that its corresponding pointer is pointing to in the record
 ## Practice Problems
 ![](https://i.imgur.com/t9W5FRr.png)
 a. 
