@@ -69,3 +69,23 @@ Rely on some measure of past behaviour to predict the future
 When two instructions require the use of a given hardware resource at the same time that will lead to a stall in the pipeline (one instruction has to wait at least for a clock cycle). 
 
 Consider we have only one memory. For a case when write stage access the memory for writing the result and the instruction fetch stage tries to fetch the instruction from the memory at the same time.
+## Practice Problems
+![](https://i.imgur.com/dyOmM4b.png)
+a. Pipelined minimum is the max of all the stages: 500ps
+	Non-pipelined min is the sum of all stages: 1650ps
+b. LDUR: IF -> ID -> EX -> MEM -> WB
+	Non-pipelined sum all stages: 1650ps
+	Pipelined: Each stage must take 500ps leading to 2500ps
+c. MEM stage. Clock period: 400ps
+d.
+1. MEM stage is 20% of entire instruction execution. Used in LDUR and STUR
+$0.2*0.15 + 0.2+0.1 = 0.05=5\%$
+2. WB stage is also 20% of entire instruction execution. Used in ALU and LDUR
+$0.2*0.5 + 0.2*0.15=0.13=13\%$
+![](https://i.imgur.com/pPz8itY.png)
+a. 2 stall cycles per hazard = 6 total
+![[Drawing 2022-09-03 00.35.07.excalidraw|800]]
+b. Not sure why this question answer is 1 stall
+1. LDUR instruction requires X0 latest at the execute stage, where the ALU calculates the memory address value. X0 is known at the E stage of ADDI: 0 stalls required
+2. 
+Mem stage of LDUR can go to execute stage of ADD with 1 stall

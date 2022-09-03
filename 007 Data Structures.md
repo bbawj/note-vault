@@ -4,4 +4,5 @@
 - [[Heaps]]
 - [[Binary Tree]]
 - [[Binary Search Tree]]
+- [[B-tree]]
 - [[Union Find]]
