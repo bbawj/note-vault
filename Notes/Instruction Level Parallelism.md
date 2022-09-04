@@ -15,3 +15,6 @@ We can introduce previous techniques to reduce data hazard and improve overall C
 ![](https://i.imgur.com/NV8jkzd.png)
 
 ![](https://i.imgur.com/at4qsxH.png)
+
+## Practice Problems
+![](https://i.imgur.com/TonQ5Bf.png)

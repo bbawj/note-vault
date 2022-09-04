@@ -85,7 +85,10 @@ $0.2*0.5 + 0.2*0.15=0.13=13\%$
 ![](https://i.imgur.com/pPz8itY.png)
 a. 2 stall cycles per hazard = 6 total
 ![[Drawing 2022-09-03 00.35.07.excalidraw|800]]
-b. Not sure why this question answer is 1 stall
+b. 
 1. LDUR instruction requires X0 latest at the execute stage, where the ALU calculates the memory address value. X0 is known at the E stage of ADDI: 0 stalls required
-2. 
-Mem stage of LDUR can go to execute stage of ADD with 1 stall
+2. ADD instruction requires X2 latest at the E stage. X2 is known at the MEM stage of LDUR when it is loaded from data memory. Forward from M -> E: **1 stall
+3. STUR instruction requires X3 latest at the Mem stage where it is put into data memory. X3 is updated at the E stage of ADD: 0 stalls required
+c.
+No Forwarding CPI: $(6+6)/6 =2$
+Forwarding CPI: $(6+1)/6 =1.17$

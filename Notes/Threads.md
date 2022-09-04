@@ -15,5 +15,7 @@ Ways to map logical to physical:
 - Many to many: not easy to decide an efficient mapping
 
 ## Practice Problems
-Explain the difference between a single-threaded and a multi-threaded process.
-Multi-threaded process splits up its resources into individuals components that have its own registers and stack. This allows 1 process to be able to carry out multiple sub-tasks and share memory efficiently.
+*Explain the difference between a single-threaded and a multi-threaded process.*
+- Threads in a process share code, data and heap regions of memory, whereas stack space is unique to each thread. Also, each thread has its own Thread Control Block (TCB), similar to a PCB.
+- In a single-threaded process, there is only one thread of execution, and hence it is identical to a process. 
+- In a multi-threaded process, the individual threads can execute concurrently, thus increasing system throughput; when one thread of a process is blocked (“waiting” state), another thread can continue its execution (“running” state).

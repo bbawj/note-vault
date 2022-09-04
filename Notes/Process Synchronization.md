@@ -38,3 +38,4 @@ TestAndSet is now an assembly instruction which can be used to acquire a lock:
 - No context switches can occur while setting the lock value
 - This means that whoever runs this instruction first will run first, no other process will be able to enter critical region
 ![](https://i.imgur.com/zwFGrJq.png)
+## Practice Problems
