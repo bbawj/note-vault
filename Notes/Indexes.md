@@ -22,17 +22,17 @@ Clustered indexes will not be as good if the database goes through many update o
 ## Practice Problems
 ![](https://i.imgur.com/t9W5FRr.png)
 a. 
-We need 300 key pointer pairs. Each block can hold 10 pairs. Total blocks = 300 / 10 = 30
+Dense: We need 300 key pointer pairs. Each block can hold 10 pairs. Total blocks = 300 / 10 = 30
+Sparse: 1 index pointer can point to a block of 3 records. Each block can hold 10 pointers. 1 index block represents 30 records. $300/30=10$ blocks needed
 b. 
-Number of blocks for all records: 300/3 = 100 blocks
-Each index will point to 1 block.
-An index block can hold 3 index pairs.
-Number of index blocks: 100 / 3 = 33.333 = 34
-Worst case: retrieve the last record -> 34 I/O
+Worst case: retrieve the last record -> 10 I/O
 c.
 Another sparse index to point to a block of sparse index
-Total 2nd level index blocks: 34/3 = 12
-12 I/O
+Since the initial sparse index needs 10 blocks to represent, the second level index can use 1 block (10 pointers) to fully represent it.
+I/O for 2nd level: 1
+I/O for 1st level: 1
+I/O to read record: 1
+Total 3 I/O
 ![](https://i.imgur.com/lhbhUXz.png)
 a. 
 Best case when inserting a record in the not full block with record 9. Insert 10

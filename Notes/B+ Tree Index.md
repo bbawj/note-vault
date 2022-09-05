@@ -55,4 +55,22 @@ Leaves will be stored sequentially, will work for static data (all data is known
 1. Sort all data entries based on search key
 2. Start by creating all leaf nodes by packing the keys
 3. Insert internal nodes bottom up
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lTJy2MXI4lY?start=438" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HJgXVxsO5YU?start=160" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Practice Problems
+![](https://i.imgur.com/WLEaTv1.png)
+a.
+1. 5
+2. 5
+3. 4
+4. 4
+b.
+1. Min key + 1 = 3
+2. Min key + 1 = 3
+3. Original keys: n. After split at least  $\lfloor(n/2)\rfloor=2$
+4. $\lfloor(n+1)/2\rfloor=2$
+![](https://i.imgur.com/6QXYSgP.png)
+
+![[Drawing 2022-09-05 10.35.50.excalidraw]]
+![](https://i.imgur.com/Bu5oJA2.png)
+Height of the B+tree will be $log_{150}1000000=2.75$
+At most will take 3 I/O
