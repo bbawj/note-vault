@@ -26,5 +26,9 @@ KidsCode will run with the support of volunteers. We will start with volunteers 
 _KidsCode schedule_
 KidsCode will run once a week, with each session being 1 hour long. Due to manpower being sourced from student volunteers, we will run the classes over the course of the regular school semester. This means classes will run for 4-5 months at a time. I hope that such a schedule will provide a well-paced learning environment where the kids can take time to understand difficult concepts without adding too much pressure to their lifestyle.
 
+With your support, we hope to expand KidsCode in 2 ways.
+Firstly, with increased funding, we hope to provide training for our volunteers. This will allow us to accept volunteers with less of a technical background and increase our impact through greater manpower.
+Secondly, your support will also allow us to work with commercial partners from the industry.
+
 To conclude, I would like to share a quote from Alvin Toffler, a famous American futurist. "The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn." 
 The digital age has offered a chance, a chance for those who are willing and capable to learn, unlearn and relearn, to thrive and grow. Together, KidsCode can be that first stepping stone for these bright children to gain these skills and realize their full potential, regardless of their starting point in life. Thank you!
