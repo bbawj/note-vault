@@ -1,10 +1,10 @@
-**Good morning Minister Chan Chun Sing and fellow members of the team. I am Brendan, a computer science and business student from NTU and I am here today to share with you about my idea to equip every Singaporean with the opportunity to thrive.
+**Good morning Minister Tan Kiat How and fellow members of the Forward Singapore team. I am Brendan, a computer science and business student from NTU and I am here today to share with you about my idea to equip every Singaporean with the opportunity to thrive.
 
 Singapore is increasing its emphasis on digitization for much of our core systems. In this year's National Day Rally, Prime Minister LHL gave an update on the Tuas Port. It will incorporate the use of Artificial Intelligence in order to streamline port services such as vessel traffic management and port clearance. Effective development and application of technology will allow it to support upwards of 65 million TEUs of cargo. (include some stats)
 
 Moreover, Mr Lee also spoke about the importance of top talent to the prosperity and success of SG's future. And without a doubt, building up home grown talent in the field of information technology will be key to sustaining the backbone of much of the services which keeps Singapore running. (maybe stats here is better?)
 
-To achieve this, I believe that we must start young. Your ministry also believes the same, and have already started its own enrichment programme, Code For Fun, which offers a 10 hour curriculum to all primary and secondary school students. 
+To achieve this, I believe that we must start young. Your ministry also believes the same, and have already started its own enrichment programme, Code For Fun, which offers a 10 hour curriculum focused on digital literacy to all primary and secondary school students. 
 
 This programme is a good start, but more needs to be done in terms of offering a more in-depth curriculum that is also widely available. Currently, one solution for children wanting to learn more is through external commercial centers which offers children focused coding programmes. 
 
@@ -14,9 +14,9 @@ _What will CITC do?_
 KidsCode will aim to develop computational thinking skills in the children that participate. What is computational thinking? Simply put, it is the ability to think like a computer. Fret not, this does not mean that we will be stifling the creative minds of our youth, but rather the opposite. Computational thinking is the ability to use logical and structured ways to break down difficult problems, and to encourage the use creativity to come up with novel solutions. 
 These are problem-solving skills which will help them through a myriad of challenges that they will face later in life. 
 
-The best way to do this, is through the direct application of technology to problem solving. KidsCode will offer a program focused on coding and tinkering to hone these skills, but at the same time aim to inculcate other important values such as resilience and confidence through mentorship and project presentations.
+I believe the best way to do this, is through the direct application of technology to problem solving. KidsCode will offer a program focused on coding and tinkering to hone these skills, but at the same time aim to inculcate other important values such as resilience and confidence through mentorship and project presentations.
 
-_types of classes_
+_types of classes_ (add Scratch example animation in Slide)
 To begin with, we will offer 2 types of classes which will cater to different age groups. For 8-12 year olds, we will offer lessons in Scratch. Scratch is an introductory language which provides many inbuilt features for creating games and animations. This visual element is key to keeping younger kids engaged.
 
  For 13-16 year olds, we will offer lessons in python, a simple yet extremely powerful programming language capable of building complex systems. This will provide natural progression for kids who are already more familiar with technology.
