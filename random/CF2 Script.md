@@ -38,4 +38,8 @@ Question and Answer
 1. You mentioned that you want to work with industry partners, why?
 	- Industry partners will be able to bring in the expertise and special internal tools that may improve the children's learning. These are aspects which student volunteers do not have. 
 	- By meeting and interacting with people from the industry, we also hope that the children become inspired to discover more about the possibilities of technology.
-Due to manpower being sourced from student volunteers, we will run the classes over the course of the regular school semester. This means classes will run for 4-5 months at a time. 
+2. How long will KidsCode run for? Is it throughout the year?
+	- Due to manpower being sourced from student volunteers, we will run the classes over the course of the regular school semester. This means classes will run for 4-5 months at a time. 
+3. How would u inculcate resilience and confidence?
+	- Resilience: our volunteers will act as mentors to help the kids through difficult problems that they face. For example, when their program does not work as they expect and have to make iterations, these situations will teach them the importance of not giving up, and when to seek help.
+	- Confidence: each lesson is part of a larger project which the children are working on. By providing opportunities for them to showcase their work to the class as well as talk through their ideas and processes, we hope to build up their speaking confidence.
