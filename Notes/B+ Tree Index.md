@@ -73,4 +73,8 @@ b.
 ![[Drawing 2022-09-05 10.35.50.excalidraw]]
 ![](https://i.imgur.com/Bu5oJA2.png)
 Height of the B+tree will be $log_{150}1000000=2.75$
-At most will take 3 I/O
+Need at least 3 levels in the btree
+At most will take 3 I/O + 1 I/O to access data block
+![](https://i.imgur.com/yhicZvc.png)
+- Each internal node can index 151 children
+- Last level indexes 150 records

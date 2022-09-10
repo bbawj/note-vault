@@ -8,10 +8,10 @@ To achieve this, I believe that we must start young. Your ministry also believes
 
 This programme is a good start, but more needs to be done in terms of offering a more in-depth curriculum that is also widely available. Currently, one solution for children wanting to learn more is through external commercial centers which offers children focused coding programmes. 
 
-However, this means that some kids are being left behind. Underprivileged families, who may find these skills important but yet cannot afford to send their children for commercial classes are stuck. Here I would like to introduce my idea for KidsCode. The aim of KidsCode is to fill this gap by providing a free, professional and in-depth curriculum for children of disadvantaged backgrounds.
+However, this means that some children are being left behind. Underprivileged families, who may find these skills important but yet cannot afford to send their children for commercial classes are stuck. Here I would like to introduce my idea for KidsCode. The aim of KidsCode is to fill this gap by providing a free, professional and in-depth curriculum for children of disadvantaged backgrounds.
 
 _What will CITC do?_
-KidsCode will aim to develop computational thinking skills in the children that participate. What is computational thinking? Simply put, it is the ability to think like a computer. Fret not, this does not mean that we will be stifling the creative minds of our youth, but rather the opposite. Computational thinking is the ability to use logical and structured ways to break down difficult problems, and to encourage the use creativity to come up with novel solutions. 
+KidsCode will aim to develop computational thinking skills in the children that participate. Now what is computational thinking? Simply put, it is the ability to think like a computer. Fret not, this does not mean that we will be stifling the creative minds of our youth, but rather the opposite. Computational thinking is the ability to use logical and structured ways to break down difficult problems, and to encourage the use creativity to come up with novel solutions. 
 
 At the same time we aim to inculcate other important values such as resilience through guided mentorship, and confidence through project presentations.
  
@@ -27,7 +27,7 @@ KidsCode will run once a week, with each session being 1 hour long. I hope that 
 
 With your support, we hope to expand KidsCode in 2 ways.
 Firstly, with increased funding, we want to provide training for our volunteers. This will allow us to accept volunteers with weaker technical backgrounds and increase our impact through greater manpower.
-Secondly, your support will also allow us to work with industry partners. 
+Secondly, we hope that your support will unlock opportunities to work with key industry partners like Google. 
 
 To conclude, I would like to share a quote from Alvin Toffler, a famous American futurist. "The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn." 
 The digital age has offered a chance, a chance for those who are willing and capable to learn, unlearn and relearn, to thrive and grow. Together, KidsCode can be that first stepping stone for these bright children to gain these skills and realize their full potential, regardless of their starting point in life. Lets move forward Singapore! Thank you!

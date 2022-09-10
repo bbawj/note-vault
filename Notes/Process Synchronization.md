@@ -19,8 +19,9 @@ Following examples show how it is possible for 2 processes. *For more processes,
 ![](https://i.imgur.com/K9rspxV.png)
 Progress is violated:
 1. P1 finish critical section and pass the turn over to P0
-2. P0 runs in a long remainder section
-3. Context switch occurs, P1 needs to enter critical section but P0 is stuck running remainder for a long period and does not return the turn back to P1
+2. P0 finish its critical section and pass the turn over to P1
+3. P1 runs in a long remainder section and never passes turn back to P0
+4. Context switch occurs, P0 needs to enter critical section but P1 is stuck running remainder for a long period 
 ![](https://i.imgur.com/2jrBrZ2.png)
 ### Flag variable
 ![](https://i.imgur.com/wU8koJx.png)
@@ -38,6 +39,78 @@ TestAndSet is now an assembly instruction which can be used to acquire a lock:
 - No context switches can occur while setting the lock value
 - This means that whoever runs this instruction first will run first, no other process will be able to enter critical region
 ![](https://i.imgur.com/zwFGrJq.png)
+Hardware has no memory of process trying to access the lock. P0 able to indefinitely take the lock without giving P1 a chance.
+## Operating System Solution
+### Semaphore
+![](https://i.imgur.com/NFRVyYv.png)
+#### Busy waiting *solution*
+Atomicity is not possible for this solution on a single-core. If a process P0 must loop to execute `Wait(S)`, no other processes can execute `Signal(S)` in order to allow P0 to continue. If we cannot context switch then there is no solution.
+![](https://i.imgur.com/aPAwIXL.png)
+#### Blocking Solution
+![](https://i.imgur.com/tiVca7I.png)
+
+![](https://i.imgur.com/IgHj0f5.png)
+- Process is in the waiting state because the process cannot use the CPU (and following which enter its critical section) if another process is currently in its critical section
+![](https://i.imgur.com/Mc1Ihj1.png)
+Atomicity need for these system calls:
+![](https://i.imgur.com/YRNgQVD.png)
+## Classical Problems of Synchronization
+### Bounded Buffer
+![](https://i.imgur.com/Y7Jf4tR.png)
+![](https://i.imgur.com/1R40zE1.png)
+Producer:
+```go
+do 
+{
+    // wait until empty > 0 and then decrement 'empty'
+    wait(empty);   
+    // acquire lock
+    wait(mutex);  
+    
+    /* perform the insert operation in a slot */
+    
+    // release lock
+    signal(mutex);  
+    // increment 'full'
+    signal(full);   
+} 
+while(TRUE)
+```
+Consumer:
+```go
+do 
+{
+    // wait until full > 0 and then decrement 'full'
+    wait(full);
+    // acquire the lock
+    wait(mutex);  
+    
+    /* perform the remove operation in a slot */ 
+    
+    // release the lock
+    signal(mutex); 
+    // increment 'empty'
+    signal(empty); 
+} 
+while(TRUE);
+```
+### Dining Philosophers
+![](https://i.imgur.com/xeUVrNj.png)
+
+![](https://i.imgur.com/zTf3nWu.png)
+- If each process executes the first `wait(chopstick)` and context switches, every process only has 1 chopstick and is stuck in a deadlock
+Solutions:
+![](https://i.imgur.com/q9Gp6b0.png)
+### Readers-Writers
+![](https://i.imgur.com/mobJGtN.png)
+
+![](https://i.imgur.com/23qQMhV.png)
+Writer:
+```go
+wait(wrt);
+//write
+signal(wrt);
+```
 ## Practice Problems
 ![](https://i.imgur.com/APBjxa2.png)
 a. 
