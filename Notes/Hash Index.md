@@ -25,3 +25,17 @@ Delete implementations:
 ### Duplicate Keys
 Unable to allocate different directory for duplicate keys:
 ![](https://i.imgur.com/u7dl7Gs.png)
+## Practice Problems
+![[Pics/Pasted image 20220910143851.png]]
+![[Excalidraw/Drawing 2022-09-10 14.41.50.excalidraw|400x400]]
+i. 2 I/O
+ii. All blocks needs to be searched: 11 I/O
+![](https://i.imgur.com/1y39vic.png)
+![[Excalidraw/Drawing 2022-09-10 14.52.53.excalidraw|400x400]]
+![](https://i.imgur.com/O5QA06H.png)
+a. Hash index on ID
+b. B+ tree index on ID to support better range query
+c. Multi key index on ID and name
+![](https://i.imgur.com/lfjgONP.png)
+
+![](https://i.imgur.com/tP2mU1d.png)

@@ -76,25 +76,25 @@ $$\frac{0+q+2q+3q+...+(R-1)q}{R} = \frac{\frac{R}{2}(R-1)q}{R}=(R-1)q$$
 ![](https://i.imgur.com/KuJF3Ze.png)
 a. False. If the CPU cannot be removed from the process, it is non-preemptive
 b. False. Only need to run scheduler when a process exits or changes to waiting
-c. False. Response time is time to first start of execution. Turnaround time is time to finish the process. Turnaround - waiting time is just the CPU burst length.
-d. True.
+c. False. Response time is time to first start of execution. Turnaround time is time to finish the process. Waiting time is time in the ready state. Turnaround - waiting time is just the time in the waiting and running states combined.
+d. False. Migration overheads occur in global scheduling when a process partially executes on one core and then migrates to another. In partitioned scheduling processes don’t migrate between cores. However, partitioned scheduling has the problem of unbalanced loading of the cores depending on the process-core mapping.
 ![](https://i.imgur.com/w1gOgdk.png)
 abc.
 ![[Drawing 2022-08-28 21.06.51.excalidraw| 800]]
 d.
 Uni-core: RR
-Duo-core: RR
-
+Duo-core: RR, SRTF
 ![](https://i.imgur.com/SyhdEDn.png)
 Efficiency is total process time over total process time + total overhead: $\frac{T}{T+kS}$
 where k is the total number of context switches
+*we should also include the 1st context switch needed to start process*
 a. If $Q->\infty$, there will be 0 context switches 
-$Efficiency=\frac{T}{T} = 1$
+$Efficiency=\frac{T}{T+S} = 1$
 b. If Q >T, average process will run without context switching
-$Efficiency=\frac{T}{T}= 1$
-c. S < Q < T. Average process will switch 2 times.
-$Efficiency=\frac{T}{T+2S}$
+$Efficiency=\frac{T}{T+S}= 1$
+c. S < Q < T. Average process will switch T/Q times.
+$Efficiency=\frac{T}{S\times\lceil\frac{T}{Q}\rceil}$
 c. Q = S. Average process will switch T/S times.
 $Efficiency=\frac{T}{T+\frac{T}{S}S} = \frac{T}{2T}=0.5$
-d. Q -> 0, k will be close to T
-$Efficiency=\frac{T}{T+TS}$
+d. Q -> 0, number of switches tend to infinity
+$Efficiency=0$

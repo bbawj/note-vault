@@ -130,7 +130,7 @@ idea:
 3. Poll the register value to see if flag is true
 4. If true, we successfully acquired the lock (the first process that manages to run step 2 will get the lock)
 5. Exit: Swap back the original register value and flag
-```
+```go
 while(1){
 	int processId = 1
 	originalVal = swapMemAndReg(processId)
@@ -138,5 +138,32 @@ while(1){
 	critical section...
 	swapMemAndReg(originalVal) // exit section
 	remainder section...
+}
+```
+![](https://i.imgur.com/lNZUTeX.png)
+a. -4
+b. -6. All `Wait(S)` runs before a single `Signal(S)`. Each process is added to blocked queue until OS chooses to execute a critical region.
+c. 1. Every process has decremented S before able to increment S. When S is 1, it means that the process executes wait, S -> 0, able to enter critical region without being blocked and executes Signal: S->1. 
+![](https://i.imgur.com/Mu27bAq.png)
+```go
+wait(A)
+apple++
+wait(O)
+if (at least 2 oranges in basket){
+	oranges += 2
+	signal(O)
+	signal(A)
+} else {
+	apple--	
+	signal(O)
+	signal(A)
+}
+```
+![](https://i.imgur.com/wHtLNOo.png)
+not too sure about this:
+```go
+Wait(S){
+	TestAndSet(S.value)	
+	TestAndSet(S.process)	
 }
 ```
