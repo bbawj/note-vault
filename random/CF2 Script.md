@@ -8,7 +8,7 @@ To achieve this, I believe that we must start young. Your ministry also believes
 
 This programme is a good start, but more needs to be done in terms of offering a more in-depth curriculum that is also widely available. Currently, one solution for children wanting to learn more is through external commercial centers which offers children focused coding programmes. 
 
-However, this means that some children are being left behind. Underprivileged families, who may find these skills important but yet cannot afford to send their children for commercial classes are stuck. Here I would like to introduce my idea for KidsCode. The aim of KidsCode is to fill this gap by providing a free, professional and in-depth curriculum for children of disadvantaged backgrounds.
+However, this means that some children are being left behind. Underprivileged families, who may find these skills important but yet cannot afford to send their children for commercial classes are stuck. Here I would like to introduce my idea for KidsCode. Our slogan is creating opportunities through code and we want to to fill this gap by providing a free and in-depth curriculum for children of disadvantaged backgrounds.
 
 _What will CITC do?_
 KidsCode will aim to develop computational thinking skills in the children that participate. Now what is computational thinking? Simply put, it is the ability to think like a computer. Fret not, this does not mean that we will be stifling the creative minds of our youth, but rather the opposite. Computational thinking is the ability to use logical and structured ways to break down difficult problems, and to encourage the use creativity to come up with novel solutions. 
@@ -30,7 +30,7 @@ Firstly, with increased funding, we want to provide training for our volunteers.
 Secondly, we hope that your support will unlock opportunities to work with key industry partners like Google. 
 
 To conclude, I would like to share a quote from Alvin Toffler, a famous American futurist. "The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn." 
-The digital age has offered a chance, a chance for those who are willing and capable to learn, unlearn and relearn, to thrive and grow. Together, KidsCode can be that first stepping stone for these bright children to gain these skills and realize their full potential, regardless of their starting point in life. Lets move forward Singapore! Thank you!
+We at KidsCode want to create an opportunity for those who are willing and capable to learn, unlearn and relearn, to thrive and to grow. Together, KidsCode can be that first stepping stone for these bright children to gain these skills and realize their full potential, regardless of their starting point in life. Lets move forward Singapore! Thank you!
 
 
 Question and Answer
@@ -43,3 +43,7 @@ Question and Answer
 3. How would u inculcate resilience and confidence?
 	- Resilience: our volunteers will act as mentors to help the kids through difficult problems that they face. For example, when their program does not work as they expect and have to make iterations, these situations will teach them the importance of not giving up, and when to seek help.
 	- Confidence: each lesson is part of a larger project which the children are working on. By providing opportunities for them to showcase their work to the class as well as talk through their ideas and processes, we hope to build up their speaking confidence.
+4. Are the children obligated to join every lesson? What if they miss some.
+	- The children encouraged to join every lesson, but there is no obligation for them to attend all. This is because we want to promote a culture of self-paced learning. 
+5. Where is KidsCode held?
+	- It will take place at various libraries, community centres and other public buildings around Singapore. Venues may change from run to run.

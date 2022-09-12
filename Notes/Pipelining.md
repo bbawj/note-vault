@@ -47,6 +47,8 @@ BNE R1,R2,Loop //overhead
 ![](https://i.imgur.com/fncX13C.png)
 Combine unrolling with dynamic scheduling:
 ![](https://i.imgur.com/OaYIm4y.png)
+Example of 4 factor unrolling:
+![](https://i.imgur.com/jlNkMYu.png)
 ### Control hazard
 Conditional and unconditional jumps, subroutine calls, and other program control instructions can stall a pipeline because of a delay in the availability of an instruction.
 
@@ -92,3 +94,23 @@ b.
 c.
 No Forwarding CPI: $(6+6)/6 =2$
 Forwarding CPI: $(6+1)/6 =1.17$
+![](https://i.imgur.com/t8JyCXO.png)
+a.
+Always taken: 75%, 60%
+Always not taken: 25%, 40%
+b.
+1. 0%
+2. 20%
+c.
+1. Only 1 not taken states, resulting in predictor staying in the 11 and 10 states. 75%
+2. 40%. Cycle from 11->10->01
+![](https://i.imgur.com/aF3LbdX.png)
+a. How to do this one?
+![[Pics/Pipelining 2022-09-12 10.49.44.excalidraw]]
+Number of stalls per loop = 2 + 2 + 1 = 5
+Total useful instructions: $1+6\times x= 1+6x$
+Total instructions: $1+(6+5)\times x=1+11x$
+x = 5: $\frac{31}{56}=0.55$
+x = 100: $\frac{601}{1101}=
+b.
+![[Pics/Pipelining 2022-09-12 11.33.33.excalidraw|]]
