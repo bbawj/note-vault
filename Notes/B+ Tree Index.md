@@ -78,3 +78,19 @@ At most will take 3 I/O + 1 I/O to access data block
 ![](https://i.imgur.com/yhicZvc.png)
 - Each internal node can index 151 children
 - Last level indexes 150 records
+![](https://i.imgur.com/06CoAso.png)
+a.
+i. Data level: 1,000,000 records -> 100,000 blocks
+Leaf level will have 1,000,000 pointers = $1000000/70\approx14286$ blocks
+2nd level will have $14286/70\approx205$ blocks
+3rd level will have $205/70\approx3$ blocks
+Root will have 1 block 
+Total blocks: $100000+14286+205+3=114494$
+Height of the B-tree will at least be: $log_{70}1000000=3.25\approx4$
+Number of I/O = 4+1 = 5
+b. Same as a. Since dense index, order of the data record does not matter
+c. What if a) but sparse index?
+Leaf level will have 100,000 pointers to each data record block: $100000/70=1429$ blocks
+2nd level: $1429/70\approx21$
+Root: 1
+Total blocks: $100,000+1429+21+1=101451$

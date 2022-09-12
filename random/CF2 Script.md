@@ -47,3 +47,6 @@ Question and Answer
 	- The children encouraged to join every lesson, but there is no obligation for them to attend all. This is because we want to promote a culture of self-paced learning. 
 5. Where is KidsCode held?
 	- It will take place at various libraries, community centres and other public buildings around Singapore. Venues may change from run to run.
+6. How will you promote KidsCode to the community?
+	- For a start, we will promote this initiative through social media as well as through public advertisements or brochures in selected community centers.
+	- In terms of convincing parents of the importance of these skills, we will offer chances for parents to sit in and take a look at the work we do. This ensures transparency and allows the parents to make an informed decision about whether this programme is right for their child.
