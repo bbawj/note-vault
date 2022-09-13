@@ -7,7 +7,6 @@ A disk is made up of multiple cylinders (platters) each with a set of tracks
 
 Disk capacity calculation:
 ![](https://i.imgur.com/wMSn43v.png)
-
 ## Disk Access
 > [!IMPORTANT]
 > Data can only be accessed in units of blocks. Each block must be loaded from the disk into main memory. Only in main memory can we individually address each word. 
@@ -18,6 +17,7 @@ Seek time depends on the total number of cylinders. However, it is not linear as
 ![](https://i.imgur.com/u4VI4Vj.png)
 ### Rotational Delay
 $$t = \frac{Angle}{Rotation \ Speed}$$
+On average the rotational delay is 0.5 * t
 ### Transfer Time
 $$t = \frac{block\ size}{transfer\ rate}$$
 ### Random Disk Access
@@ -27,7 +27,6 @@ Average rotational delay: half circle rotation time
 ### Sequential Disk Access
 Average seek time is approximately 0 as the block to be accessed is likely to be in same cylinder
 Average rotational delay is approximately 0 as the head points to the next block after current access
-
 ![](https://i.imgur.com/M0ylOeH.png)
 ## Storing relational data
 ![](https://i.imgur.com/T38v3NN.png)
@@ -77,3 +76,23 @@ a. A “sector” is a physical unit of the disk and a “block” is a logical 
 
 With the block size increases, the # of blocks to be accessed for a relational table decreases but the transfer time then increases.
 b. One block consists of multiple sectors. If these sectors are not sequential, the transfer time will be directly proportional to the RPM which the seek head is able to reach each sector.
+![](https://i.imgur.com/R6TPaEL.png)
+a. 
+Capacity: $8\times2^{13}\times2^8\times2^9=2^{33}$bytes = 8GB
+b.
+1 round around the track is 256 sectors and 256 gaps, can be completed in $\frac{1}{3840}min$ or 1/64 seconds
+To navigate 1 sector and 1 gap: $\frac{1}{64\times256}=0.061ms$
+Min time to 1 sector and 0 gap: $0.061\times0.9=0.0549ms$ 
+Min time for 8 sector and 7 gaps: 0.482ms
+
+Max rotational delay occurs when we need to traverse 256-8 sectors and gaps to find the block
+Max cylinder access occurs when we need to traverse all the tracks
+Max time: $0.061\times248+0.482+17.4=33.01ms$
+c.
+There are 8192 cylinders.
+If access is on cylinder 1000: block access time = average rotational delay
+If access is on cylinder 1001: block access time = 1 track seek time + avg rotational delay
+Average cylinder access: (1000+999...+0+1+...+7192)/8192 = 3218
+Average cylinder access time: $3218/500+1=7.44ms$
+Average  rotational delay: $\frac{1}{64\times2}=7.8ms$
+Average total block access time: 15.24ms

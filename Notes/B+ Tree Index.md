@@ -94,3 +94,4 @@ Leaf level will have 100,000 pointers to each data record block: $100000/70=1429
 2nd level: $1429/70\approx21$
 Root: 1
 Total blocks: $100,000+1429+21+1=101451$
+![](https://i.imgur.com/OSwkx7i.png)

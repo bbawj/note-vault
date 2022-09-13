@@ -1,4 +1,4 @@
-**Good morning Minister Chan Chun Sing, Senior Minister of State Tan Kiat How and fellow members of the Forward Singapore team. I am Brendan, a computer science and business student from NTU and I am here today to share with you about my idea to equip every Singaporean with the opportunity to thrive.
+**Good morning Senior Minister of State Tan Kiat How and fellow members of the Forward Singapore team. I am Brendan, a computer science and business student from NTU and I am here today to share with you about my idea to equip every Singaporean with the opportunity to thrive.
 
 Singapore is increasing its emphasis on digitization for much of our core systems. In this year's National Day Rally, Prime Minister LHL gave an update on the Tuas Port. It will incorporate the use of Artificial Intelligence in order to streamline port services such as vessel traffic management and port clearance. Effective development and application of technology will allow it to support upwards of 65 million TEUs of cargo. (include some stats)
 
