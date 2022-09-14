@@ -95,3 +95,4 @@ Leaf level will have 100,000 pointers to each data record block: $100000/70=1429
 Root: 1
 Total blocks: $100,000+1429+21+1=101451$
 ![](https://i.imgur.com/OSwkx7i.png)
+![[Pics/B+ Tree Index 2022-09-13 21.06.04.excalidraw]]

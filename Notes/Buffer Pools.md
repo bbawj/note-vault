@@ -27,3 +27,17 @@ c. R + P + 2P = 3P + R
 
 If no pre-fetching:
 3(R+P) = 3R + 3P
+![](https://i.imgur.com/06YYaaD.png)
+![](https://i.imgur.com/SAiKBBL.png)
+| Reference | LRU     | Optimal |
+| --------- | ------- | ------- |
+| 5         | ABCDE   | ABCDE   |
+| 6         | ABCED   | ABCDE   |
+| 7         | BCEDF/A | ABCDF/E |
+| 8         | BCEFD   | ABCDF   |
+| 9         | CEFDG/B | ABCDG/F |
+| 10        | CEFGD   | ABCDG   |
+| 11        | EFGDH/C | ABCDH/G |
+| 12        | EFGHD   | ABCDH   |
+| 13        | FGHDC/E   | ABCDH   |
+The LRU is suboptimal in this case because it chooses to replace useful pages like B/C which are needed later. A more optimal strategy is to choose pages for replacement based on the corresponding level of the page in the B-Tree.

@@ -3,7 +3,7 @@
 - [[Storage]]
 - [[Buffer Pools]]
 ## Indexes
-- [[Indexes]]
+- [[Notes/Conventional Indexes]]
 - [[B+ Tree Index]]
 - [[Hash Index]]
 - [[Multi Key Index]]

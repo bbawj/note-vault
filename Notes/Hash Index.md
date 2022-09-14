@@ -1,9 +1,14 @@
 # Hash Index
 Idea: use a [[Notes/Hash Tables|hash table]]
+1. Take a search key and hash it into an integer in the range of 0 to B-1 where B is the number of buckets
+2. A bucket array holds the headers of B linked lists, one for each bucket
+3. If a record has search key K, store the record by linking it to bucket list number h(K)
+Implementations
 1. We can directly hash a key which points to the record
-2. We hash a key that points to a pointer to the record (keeps the index small)
-Rather than a 1-1 mapping of hash to record/pointer, we use a bucket to store a set of records/pointers which share same hash value.
-## Simple Hash
+- ![](https://i.imgur.com/RR2MGif.png)
+2. Add a level of indirection: use an array of pointers to blocks to represent the buckets rather than an array holding data itself
+- ![](https://i.imgur.com/FSUVAYH.png)
+## Static Hash
 ### Insertion and Deletion
 Bucket overflow can be handled naively by adding additional pointer to a separate block.
 ![](https://i.imgur.com/t1kBxL9.png)
