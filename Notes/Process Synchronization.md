@@ -1,6 +1,5 @@
 # Process Synchronization
 [[Race Condition]]
-
 ## Critical Section Problem
 One method to solve the race condition is to divide processes into critical sections which are segments that shared data is accessed. **One process must be writing.**
 
