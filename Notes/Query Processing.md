@@ -1,9 +1,9 @@
 # Query Processing
 Given a query, we need to devise an algorithm to obtain the desired result
-
-## Example: `Select B, D From R, S Where R.A = “c” AND S.E = 2 AND R.C=S.C`
+## Example
+`Select B, D From R, S Where R.A = “c” AND S.E = 2 AND R.C=S.C`
 Some possible solutions:
-1. Cartesian product -> Select tuple -> Project![](https://i.imgur.com/VuY8jzL.png)
+1. Cartesian product -> Select tuple -> Project ![](https://i.imgur.com/VuY8jzL.png)
 2. Select tuple -> Natural join ->Project ![](https://i.imgur.com/pIvJyQj.png)
 3. Index to select R tuples -> Use S.C index to select found R.C values -> Remove S.E != 2 -> Join matching![](https://i.imgur.com/otMOPCy.png)
 ## Operator Analysis
@@ -19,6 +19,7 @@ Assumptions for analysis:
 	- We assume R is clustered. If not clustered, it may take T(R) disk I/Os rather than B(R) to read all the tuples
 3. Ignore the final I/O cost for writing result in output buffer back to disk. Irrelevant to our calculations.
 ### One Pass Algorithms
+Algorithms where the data is read only once from the disk.
 #### Select
 ![](https://i.imgur.com/WgOKFsA.png)
 - I/O Cost: B(R)
@@ -32,7 +33,7 @@ Assumptions for analysis:
 - I/O Cost: B(R) + B(S)
 - Space: $M-1 \ge min(B(R),B(S))$
 ### Nested Loop Join
-One argument is read only once while another is read repeatedly
+Can be considered "one and a half pass algorithm": One argument is read only once while another is read repeatedly
 #### Simple Nested Loop Join
 Sacrifice some I/O time in order to save on memory:
 ![](https://i.imgur.com/Rt4LHH6.png)

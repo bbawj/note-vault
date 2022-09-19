@@ -7,5 +7,6 @@
 - [[B+ Tree Index]]
 - [[Hash Index]]
 - [[Multi Key Index]]
-## Queries
+## Query Processing
 - [[Query Processing]]
+- [[Two Pass Algorithms]]

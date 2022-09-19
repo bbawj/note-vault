@@ -6,3 +6,4 @@
 - [[Datapath and Control Design]]
 - [[Pipelining]]
 - [[Instruction Level Parallelism]]
+- [[Custom Computing]]
