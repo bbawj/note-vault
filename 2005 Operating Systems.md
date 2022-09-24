@@ -23,3 +23,5 @@ The OS is typically [[Interrupts]] driven.
 4. [[Process scheduling]]
 5. [[Process Synchronization]]
 6. [[Deadlocks]]
+7. [[Real Time Operating Systems]]
+8. [[Virtualization]]
