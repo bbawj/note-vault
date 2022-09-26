@@ -51,7 +51,7 @@ Atomicity is not possible for this solution on a single-core. If a process P0 mu
 ![](https://i.imgur.com/IgHj0f5.png)
 - Process is in the waiting state because the process cannot use the CPU (and following which enter its critical section) if another process is currently in its critical section
 ![](https://i.imgur.com/Mc1Ihj1.png)
-Atomicity need for these system calls:
+Atomicity needed for these system calls:
 ![](https://i.imgur.com/YRNgQVD.png)
 ## Classical Problems of Synchronization
 ### Bounded Buffer
@@ -116,34 +116,41 @@ a.
 1. Mutual exclusion
 2. Progression
 3. Bounded waiting
-b. Progress is not satisfied. P1 can only run if flag = false but flag is only set to false after the critical section of P1.
+b. 
+- Mx not satisfied: 
+	- P1: turn = 0, while(flag and turn == 0) *flag is false*, critical section 
+	- context switch
+	- P2: flag = true, while(turn == 1), critical section
+- Progress is not satisfied. P1 can only run if flag = false but flag is only set to false after the critical section of P1.
 ![](https://i.imgur.com/9ZAwLZl.png)
-a. True. If all instructions can complete in 1 cycle, there will not be instructions being executed halfway before context switch occurs.
+a. False. If all instructions can complete in 1 cycle, there will not be instructions being executed halfway before context switch occurs. There are also other reasons for race condition, not only due to translation. If implementation using a temporary variable, a race condition can also occur.
 b. True. If no context switch can occur during critical section, only 1 process will be in its critical section at one time.
 c. False. Satisfies progress only means that 1 program will always be chosen to enter critical section. To satisfy bounded waiting, each program must have a chance to enter its critical section. A program where only 1 process always enter critical section while another is waiting indefinitely satisfies progress but not bounded waiting.
 ![](https://i.imgur.com/rpsqnqG.png)
 hmm not too sure abt this question
 idea:
-1. Initialize a process flag to be true
-2. Entry: Swap the flag with register
-3. Poll the register value to see if flag is true
-4. If true, we successfully acquired the lock (the first process that manages to run step 2 will get the lock)
-5. Exit: Swap back the original register value and flag
+1. use a boolean lock value initialized to false as a shared variable, and a register boolean as a flag
+2. continuously try to swap `true` into the lock
+3. if register becomes false, we got the lock
+4. critical section
+5. set the lock to false 
 ```go
 while(1){
-	int processId = 1
-	originalVal = swapMemAndReg(processId)
-	while (registerVal != processId);  //entry section
+	register = true
+	while (register) {
+		swap(&lock, register)
+	}  //entry section
 	critical section...
-	swapMemAndReg(originalVal) // exit section
+	lock = false
 	remainder section...
 }
 ```
 ![](https://i.imgur.com/lNZUTeX.png)
 a. -4
 b. -6. All `Wait(S)` runs before a single `Signal(S)`. Each process is added to blocked queue until OS chooses to execute a critical region.
-c. 1. Every process has decremented S before able to increment S. When S is 1, it means that the process executes wait, S -> 0, able to enter critical region without being blocked and executes Signal: S->1. 
+c. 2. There can be at most 2 processes holding S simultaneously as 2 processes are able to complete `wait(S)` (*not blocked*) before the block list starts to increase.
 ![](https://i.imgur.com/Mu27bAq.png)
+To ensure there is no deadlock, there should not be any nesting i.e. two semaphores are not acquired together:
 ```go
 wait(A)
 apple++

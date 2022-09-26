@@ -7,3 +7,4 @@
 - [[Pipelining]]
 - [[Instruction Level Parallelism]]
 - [[Custom Computing]]
+- [[Notes/Cache|Cache]]
