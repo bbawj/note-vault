@@ -60,8 +60,8 @@ Allow the system to enter deadlock state, invoke detection and recovery algorith
 ## Practice Problems
 ![](https://i.imgur.com/I4IuswX.png)
 a. False. If there are only 4 people, the circular wait condition is broken
-b. True. A single process will not be in a deadlock as there are no other processes which it is sharing resources with
-c. False. Not all cycles indicate a deadlock.
+b. True. A single process will not be in a deadlock as there are no other processes which it is sharing resources with. *Hold and wait condition can never be satisfied.*
+c. False. Not all cycles indicate a deadlock. Depends on the number of resource instances
 ![](https://i.imgur.com/oLMMgoT.png)
 
 ![[Pics/Deadlocks 2022-09-18 10.53.26.excalidraw]]
@@ -73,6 +73,6 @@ x = 0
 | Process | Allocation | Need  | Available | Completed    |
 | ------- | ---------- | ----- | --------- | ------------ |
 | P0      | 2 1 1      | 0 1 0 | 0 1 0     | P0 Completed |
-| P1      | 1 1 0      | 2 1 2 | 3 3 2     | P1 Completed |
-| P2      | 1 1 1      | 2 0 1 | 2 2 1     | P2 Completed |
+| P1      | 1 1 0      | 2 1 2 |  2 2 1    | P2 Completed |
+| P2      | 1 1 1      | 2 0 1 |  3 3 2    | P1 Completed |
 | P3      | 1 1 1      | 4 1 0 | 4 4 2     | P3 Completed             |

@@ -37,6 +37,8 @@ TestAndSet is now an assembly instruction which can be used to acquire a lock:
 ![](https://i.imgur.com/ML23PqH.png)
 - No context switches can occur while setting the lock value
 - This means that whoever runs this instruction first will run first, no other process will be able to enter critical region
+- If lock == true, someone is in the critical section: we are blocked
+- If lock == false, we set lock to true and move into the critical section
 ![](https://i.imgur.com/zwFGrJq.png)
 Hardware has no memory of process trying to access the lock. P0 able to indefinitely take the lock without giving P1 a chance.
 ## Operating System Solution
@@ -154,22 +156,43 @@ To ensure there is no deadlock, there should not be any nesting i.e. two semapho
 ```go
 wait(A)
 apple++
+signal(A)
 wait(O)
 if (at least 2 oranges in basket){
 	oranges += 2
-	signal(O)
-	signal(A)
 } else {
-	apple--	
 	signal(O)
+	wait(A)
+	apple--	
 	signal(A)
 }
 ```
 ![](https://i.imgur.com/wHtLNOo.png)
-not too sure about this:
+Identify critical section for each function and use TestAndSet to acquire lock into the section:
+![](https://i.imgur.com/mEBJuch.png)
+
 ```go
 Wait(S){
-	TestAndSet(S.value)	
-	TestAndSet(S.process)	
+	while (TestAndSet(&lock));
+	S.value--
+	if (S.value < 0) {
+		S.L = append(S.L, process)
+		*lock = false
+		sleep(process)
+	} else {
+		*lock = false
+	}
+}
+
+Signal(S) {
+	while (TestAndSet(&lock));
+	S.value++
+	if (S.value <= 0) {
+		p = S.L[0]
+		*lock = false
+		//add to ready queue
+	} else {
+		*lock = false
+	}
 }
 ```

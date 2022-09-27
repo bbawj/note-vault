@@ -27,3 +27,16 @@ Priority is based on the instance level rather than the process level.
 ![](https://i.imgur.com/TNHIVzZ.png)
 
 ![](https://i.imgur.com/sQZTbLD.png)
+## Practice Problems
+![](https://i.imgur.com/uAaZPVd.png)
+a. True.
+b. True.
+c. False. Hypervisor provides interface between H/W and Guest OS
+d. False. Hypervisor manages interactions between H/W and guest OS
+e. True.
+![](https://i.imgur.com/Aob93mN.png)
+Yes:
+![[Pics/Real Time Operating Systems 2022-09-26 18.02.14.excalidraw]]
+![](https://i.imgur.com/RSodmxP.png)
+Yes?
+![[Pics/Real Time Operating Systems 2022-09-26 18.34.23.excalidraw]]
