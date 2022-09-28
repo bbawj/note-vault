@@ -42,3 +42,31 @@ We need a way to measure the performance of cache, standalone from the performan
 AMAT is the average time to access memory considering both hits and misses
 $$AMAT=\text{Time for hit}+\text{Miss Rate}\times\text{Miss Penalty}$$
 ![](https://i.imgur.com/4RDpPr0.png)
+## Practice Problems
+![](https://i.imgur.com/bo5A0np.png)
+3 bit index, 2bit tag with 0 bit offset.
+| Addr  | Index | Tag | H/M | State  |
+| ----- | ----- | --- | --- | ------ |
+| 10011 | 011   | 10  | M   | 001,10 |
+| 00001 | 001   | 00  | H   |        |
+| 00110 | 110   | 00  | H   |        |
+| 01010 | 010   | 01  | M   | 010,01 |
+| 01110 | 110   | 01  | M   | 110,01 |
+| 11001 | 001   | 11  | M   | 001,11 |
+| 00001 | 001   | 00  | M   | 001,00 |
+| 11100 | 100   | 11  | M   | 100,11 |
+| 10100 | 100   | 10  | M   |   100,10     |
+![](https://i.imgur.com/8uzwhdW.png)
+Bits for offset = $log_24=2$
+2 way set associative cache: Each set contains 2 cache lines -> 2 blocks per set -> 8 bytes per set -> 2 sets
+Bits for index -> 1
+| Access | 10001101 | 10110010 | 10111111 | 100001100 | 10011100 | 11101001 | 11111110 | 11101001 |
+| ------ | -------- | -------- | -------- | --------- | -------- | -------- | -------- | -------- |
+| Tag    | 10001    | 10110    | 10111    | 10001     | 10011    | 11101    | 11111    | 11101    |
+| Offset | 01       | 10       | 11       | 00        | 00       | 01       | 10       | 01       |
+| Index  | 1        | 0        | 1        | 1         | 1        | 0        | 1        | 0        |
+| H/M    | M        | M        | M        | H         | M        | M        | M        | H        |
+| LRU1   | 10001    | 10110    | 10111    | 10001     | 10011    | 11101    | 11111    | 11101         |
+| LRU2   | NA       | NA       | 10001    | 10111     | 10001    | 10110    | 10001    | 10110         |
+
+Hit rate: 2/8 = 25%

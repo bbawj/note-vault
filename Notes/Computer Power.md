@@ -17,8 +17,7 @@ When voltage is reduced, the threshold that is used to differentiate between a l
 4. Reduce data movement, number of memory access and register transfer
 ### The problem between power and energy
 ![](https://i.imgur.com/89jDDi7.png)
-
-## Problems
+## Practice Problems
 ![](https://lh3.googleusercontent.com/Sf-kXoA3oxFIRLiK1iNx2GDOwkOTj2jqEnJ8UDBHWEv6oNce1CIu5uc08o4DdkXaCwpQxbFF3G5NlKheJgCumElgdgDplXXXZRCgFGKdiXR_7IuC7SSEHvfjR0TXkCh2c3dC9Z2QoZl99jgrz6B0Cg0)
 
 __Case 1__:
