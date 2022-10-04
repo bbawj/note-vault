@@ -7,8 +7,9 @@ Indexes are needed to reduce the I/O required to find a record.
 2. Update data file
 3. Update index
 ## Clustered and Non-Clustered Indexes
+Clustering index: indexes on an attribute is such that all the tuples with a fixed value for the search key of this index appear on as few blocks as can hold them.
 ![](https://i.imgur.com/etCAqtL.png)
-
+If a relation is clustered (it must be sorted and packed together according to some attribute a) another index on another attribute _b_ would likely be non-clustered unless _a_ and _b_ are highly correlated.
 ![](https://i.imgur.com/QAhs451.png)
 ### Comparisons
 #### Read
