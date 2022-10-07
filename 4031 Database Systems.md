@@ -11,4 +11,5 @@
 - [[Query Processing]]
 - [[One Pass Algorithms]]
 - [[Two Pass Algorithms]]
+- [[Index Based Algorithms]]
 - [[Query Execution]]

@@ -21,3 +21,6 @@ Assumptions for analysis:
 ## Notable Algorithms:
 - [One Pass Algorithms](Notes/One%20Pass%20Algorithms.md)
 - [Two Pass Algorithms](Notes/Two%20Pass%20Algorithms.md)
+- [[Notes/Index Based Algorithms|Index Based Algorithms]]
+## Comparisons
+![](https://i.imgur.com/YlB9izb.png)
