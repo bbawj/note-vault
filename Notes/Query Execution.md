@@ -1,5 +1,8 @@
 # Query Execution
 How do database management systems execute a particular query plan?
+## Expression Evaluation
+Represent queries in the form of an expression tree.
+![](https://i.imgur.com/ql7hzHH.png)
 ## Processing Models
 The processing model defines the organisation and execution of the operators.
 ### Iterator Model - Top Down Approach
@@ -12,3 +15,22 @@ Each operator processes its input all at once and then emits the output all at o
 ### Vectorisation Model - Hybrid
 Each operator implements a next function similar to the iterator model, but each operator emits a batch of tuples rather than just 1 by 1.
 ![](https://i.imgur.com/Z7HmgMN.png)
+## Data Access Methods
+How can the database management system access the data stored in tables?
+### Sequential Scan
+Simply iterate through each page in the table. However, not all blocks need to be accessed.
+Optimisation strategies:
+#### Zone Maps
+![](https://i.imgur.com/Etn6fxL.png)
+#### Heap Clustering
+![](https://i.imgur.com/iCoSEtY.png)
+### Index Scan
+Pick an index to find the tuples needed.
+Dependent on:
+-  What attributes the index contains
+-  What attributes the query references
+-  The attribute's value domains
+-  Predicate composition
+-  Whether the index has unique or non-unique keys
+#### Multi Index
+![](https://i.imgur.com/BjBtOtS.png)
