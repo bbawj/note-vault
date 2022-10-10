@@ -81,3 +81,27 @@ Average bucket size is $B(S)/k$. We save write and read of $t\times B/k$ blocks 
 Total cost: $3(B(R) + B(S)) - \frac{2\times t}{k}(B(R)+B(S))$
 ## Comparison
 ![](https://i.imgur.com/oxbKLxs.png)
+## Practice Problems
+![](https://i.imgur.com/zirdVdQ.png)
+We can eliminate duplicates through sorting.
+1. Divide data into M-1 buffers
+2. Sort each buffer and write it back to the disk.
+3. 2nd pass: read all the sorted sublists into M-1 buffers
+4. Move the smallest of the heads of each sublist into the output if the max of the current output does not already contain this incoming value.
+![](https://i.imgur.com/aFtQUQT.png)
+a. M = 2. External merge sort of S and T. Sort merge join of S and T. Sort merge join of R and the result of S and T.
+![](https://i.imgur.com/OzmoV03.png)
+b. 
+II: $M > B_T$
+III: $M > B_T+(\text{Number of sorted sublists of S})+1$. Need all sorted sublists in buffer, and need 1 additional buffer to comb through R
+![](https://i.imgur.com/R8RCdvQ.png)
+Yes. Only refined sort merge join has comparable cost. In this case, refined sort merge join will not be applicable as both relations share multiple common values of attribute Y. Hence we are not able to fully load all tuples with the same attribute value into M buffers.
+![](https://i.imgur.com/8v4AFJU.png)
+a.
+Keep 1 hash bucket in memory. Need to be able to load all hash buckets from one of the relations into the remaining memory.
+Buckets in memory: 1 bucket from S, all buckets from R.
+39 blocks of MM must fit 400 blocks of S data. 39 buckets??
+b.
+We save the cost of writing and reading 1 bucket to/from disk during the hashing process.
+Each bucket contains $(500+400)/39=30blocks$
+Total cost: $3(B_R+B_S)-2\times30=2640$

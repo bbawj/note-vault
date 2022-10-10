@@ -32,3 +32,9 @@ With a sorted index on both relations, we can just perform the final step of [[N
 Index allows us to ignore retrieving data blocks where there are no matching keys.
 #### Cost
 From example 15.12, the number of disk I/O's if R and S both have sorted indexes, the total cost would simply be that cost to read all blocks of R and S: 1500. Consider that a large fraction of R or S cannot match tuples of the other relation, then the total cost will be considerably less than 1500.
+## Practice Problems
+![[Pics/Pasted image 20221010171512.png]]
+Cost of access the data blocks:
+There are $\frac{k}{10}$ distinct values that we must access.
+Each distinct value is stored in approximately $B_R/\frac{k}{10}$blocks
+Total block access = $1000k$
