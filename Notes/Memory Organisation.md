@@ -49,4 +49,22 @@ A page table can be large. Not efficient to have to fetch the entire page table 
 - The root level represents the index to the 2nd level page: Since 1 block can store 4KB, to store information about the 4MB page table in 1 block will require $2^{20}\times4/2^{12}=2^{10}$ entries
 Hence, 10 bits to access 1 out of $2^{10}$ pages which itself contains 10 bits to access 1 out of $2^{10}$ pages. Total of $2^{20}$ pages.
 ![](https://i.imgur.com/dhOBFTt.png)
+## Practice Problems
+![](https://i.imgur.com/YwvOJ6S.png)
 
+![[Pics/Memory Organisation 2022-10-10 23.41.06.excalidraw|600]]
+c. First fit lower overhead. Only moved 1 block compared to 3 blocks in best fit.
+![](https://i.imgur.com/mv4UR97.png)
+a. Fixed partitioning
+b. Process memory is based on absolute addresses and is unable to be relocated for memory compaction. 
+![](https://i.imgur.com/exWOYRb.png)
+a. 200ns to access the page table. Another 200ns to access the memory frame. Total time: 400ns
+b. $$\text{Total time}=0.75\times200+0.25\times400=250ns$$
+![](https://i.imgur.com/2Wu9M80.png)
+a.
+To address a byte in a 1-Kbyte page will require 10 bits
+Logical address: 22 bit page index, 10 bit offset
+1 Gigabyte ($2^{30}$) physical memory will require, 30 bits to represent each byte address
+b.
+$2^{22}$ pages.
+c.

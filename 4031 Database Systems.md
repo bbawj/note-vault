@@ -13,3 +13,4 @@
 - [[Two Pass Algorithms]]
 - [[Index Based Algorithms]]
 - [[Query Execution]]
+- [[Query Compiler]]
