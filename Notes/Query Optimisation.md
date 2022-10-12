@@ -33,6 +33,10 @@ It includes:
 We need a way to make choices for each of these components.
 ### Cost estimation
 The cost of a plan is the sum of the cost of each operator in the tree. However, to know the cost of an operator often requires the input sizes to be known. This is often not available for intermediary operators which are executed after other operators such as `SELECT` are done.
+Assumptions:
+1. Uniform distribution of values in domain
+2. Independent distribution of values in different columns
+3. Independence of predicates for select and join
 ![](https://i.imgur.com/69FO4mE.png)
 #### Estimating Selection
 ![](https://i.imgur.com/kLBr1UB.png)
@@ -50,3 +54,15 @@ Assumptions:
 ![](https://i.imgur.com/y5mkPC7.png)
 ![](https://i.imgur.com/EAwXdkf.png)
 ![](https://i.imgur.com/oPDMzqE.png)
+#### Using Statistics
+The assumption of uniform distribution is not accurate since real data is not uniformly distributed.
+We can maintain a histogram for each relation to help us improve the estimation:
+![](https://i.imgur.com/PcMR1ga.png)
+Statistics from each bucket can be used to determine the number of tuples in a range:
+![](https://i.imgur.com/HPXoFGg.png)
+Example:
+![](https://i.imgur.com/Tou8AKE.png)
+Example for join:
+![](https://i.imgur.com/1iQ4kdj.png)
+Sampling can be used to increase performance:
+![](https://i.imgur.com/lE0yNfb.png)
