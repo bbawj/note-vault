@@ -66,3 +66,23 @@ Example for join:
 ![](https://i.imgur.com/1iQ4kdj.png)
 Sampling can be used to increase performance:
 ![](https://i.imgur.com/lE0yNfb.png)
+## Practice Problems
+![](https://i.imgur.com/dSCheOj.png)
+$$
+\begin{aligned}
+T(R\Join S)&=T(R)\times T(S)/max(V(R,a),V(S,a))
+\\T(R_1\Join R_2\Join R_3) &=T(T(R_1\Join R_2)\Join R_3)
+\\&=(1000\times1500/1100)\times750/100
+\\&=10227.27
+\end{aligned}
+$$
+![](https://i.imgur.com/n4C5J07.png)
+$$
+\begin{aligned}
+\text{Size of Y}=20\times128=2560B
+\\B(Y) =5
+\\ \text{Size of X}=60\times64=3840B
+\\B(X) =7.5
+\\\text{Load all blocks o}
+\end{aligned}
+$$
