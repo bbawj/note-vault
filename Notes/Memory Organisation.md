@@ -8,6 +8,11 @@ Possible binding stages:
 	![](https://i.imgur.com/48kWnKH.png)
 3. Execution time: binding is delayed until run time and the process can be moved during its execution from one memory segment to another. Uses a logical address that is relative to a starting 0 point.
 ![](https://i.imgur.com/RAMNzgU.png)
+## Fragmentation
+>[! ]
+>Internal Fragmentation: allocated memory may be larger than requested memory, this results in unusable memory within the partition
+>
+>External Fragmentation : unusable memory between partitions
 # Memory Allocation
 How to assign memory to different processes?
 ## Contiguous allocation
@@ -20,6 +25,8 @@ Memory is partitioned into regions with fixed boundaries. OS decides which parti
 Do not partition the memory. Rather, the OS allocates the exact chunk of memory which a process requires, and keeps tracks of *holes* or available blocks of memory.
 ![](https://i.imgur.com/vEdUH9c.png)
 *External fragmentation*: memory space between partitions (the holes) may be enough to satisfy a new request but is not contiguous and cannot be used. This can be solved by performing compaction, which shuffles memory contents to produce contiguous block of available memory.
+### Dynamic Allocation Policies
+![](https://i.imgur.com/QYCVh9D.png)
 ## Non Contiguous allocation (Paging)
 - Allow process to be allocated physical memory whenever it is available. 
 - Eliminating external fragmentation as every available physical memory space can be utilised. 
