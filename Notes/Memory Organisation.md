@@ -12,6 +12,7 @@ Possible binding stages:
 How to assign memory to different processes?
 ## Contiguous allocation
 Logical address space of process remains contiguous in physical memory.
+![](https://i.imgur.com/ZKxu4vz.png)
 ### Fixed partitioning
 Memory is partitioned into regions with fixed boundaries. OS decides which partition to assign a process to depending on the available partitions. 
 ![400x400](https://i.imgur.com/8l3OiKG.png)
@@ -21,13 +22,14 @@ Do not partition the memory. Rather, the OS allocates the exact chunk of memory 
 ![](https://i.imgur.com/vEdUH9c.png)
 *External fragmentation*: memory space between partitions (the holes) may be enough to satisfy a new request but is not contiguous and cannot be used. This can be solved by performing compaction, which shuffles memory contents to produce contiguous block of available memory.
 ## Non Contiguous allocation (Paging)
-- Allow process to be allocated physical memory whenever it is available. 
+Allow process to be allocated physical memory whenever it is available. 
+> [!Idea:]
+> 1. Divide the physical memory into fixed sized *frames*.
+> 2. Divide logical memory of the **process** into *pages*.
+> 3. Use a page table to map the logical memory to physical memory.
+### Fragmentation
 - Eliminating external fragmentation as every available physical memory space can be utilised. 
 - Internal fragmentation still possible as the last page may not use up the entire frame.
-Idea:
-1. Divide the physical memory into fixed sized *frames*.
-2. Divide logical memory of the process into *pages*.
-3. Use a page table to map the logical memory to physical memory.
 ### Address Translation
 Split the logical address to map page to frame:
 ![](https://i.imgur.com/3pFbZJN.png)
@@ -49,6 +51,23 @@ A page table can be large. Not efficient to have to fetch the entire page table 
 - The root level represents the index to the 2nd level page: Since 1 block can store 4KB, to store information about the 4MB page table in 1 block will require $2^{20}\times4/2^{12}=2^{10}$ entries
 Hence, 10 bits to access 1 out of $2^{10}$ pages which itself contains 10 bits to access 1 out of $2^{10}$ pages. Total of $2^{20}$ pages.
 ![](https://i.imgur.com/dhOBFTt.png)
+### Inverted Page Table
+> [! Idea:]
+> Rather than each process having its own page table, we only keep a single table with 1 entry for each physical frame.
+> 1. Each entry contains the `process-id` and `page-number` 
+> 2. To find a matching entry for a logical address, we need to find the entry that has the equivalent proces_id and page_number pair
+
+![](https://i.imgur.com/1syY6Pr.png)
+We gain in terms of memory, as we no longer have a page table size that is proportional to logical addressing space. We lose in terms of speed, as we need to search the page table rather than addressing it directly with a page index.
+## Non Contiguous Allocation (Segmentation)
+![](https://i.imgur.com/r7Z4FUg.png)
+### Addressing
+Similar logic as with a regular paging scheme:
+![](https://i.imgur.com/eTJ6naG.png)
+
+![](https://i.imgur.com/KECm1QL.png)
+### Fragmentation
+- *External fragmentation*: as processes leave the system, occupied segments become holes in the memory
 ## Practice Problems
 ![](https://i.imgur.com/YwvOJ6S.png)
 
