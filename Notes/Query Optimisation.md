@@ -78,11 +78,26 @@ T(R\Join S)&=T(R)\times T(S)/max(V(R,a),V(S,a))
 $$
 ![](https://i.imgur.com/n4C5J07.png)
 $$
-\begin{aligned}
+\begin{align}
 \text{Size of Y}=20\times128=2560B
 \\B(Y) =5
 \\ \text{Size of X}=60\times64=3840B
 \\B(X) =7.5
-\\\text{Load all blocks o}
-\end{aligned}
+\\\text{Block access for Sort merge join with 2PMMS}=5\times(5+8)
+\\=65
+\\\text{Block access for selection}=0.5\times(5+8)=7
+\\\text{Total Disk Access}=7+65=72
+\end{align}
 $$
+![](https://i.imgur.com/J4jwXGW.png)
+a.
+1. Select movie with year > 1990 and rating = 10
+2. Join Movie and Studio
+b.
+$$\begin{align}
+P(Year>1990)=1/3,P(Rating=10)=1/10
+\\\text{Size after Select}=0.1\times
+\end{align}
+$$
+
+
