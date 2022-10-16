@@ -12,7 +12,8 @@ If R is not a set (it is a bag which can contain duplicates) then the union oper
 ![](https://i.imgur.com/q584Z29.png)
 ### Projection Laws
 Pushing projection is less useful than pushing selection. This is because projection keeps the number of tuples the same and only reduces the length of the tuples.
-> [! Basic idea: can introduce a projection anywhere in an expression tree, as long as  it eliminates only attributes that are neither used by an operator above  nor are in the result of the entire expression. ]
+> [! Basic idea:] 
+> can introduce a projection anywhere in an expression tree, as long as  it eliminates only attributes that are neither used by an operator above  nor are in the result of the entire expression.
 
 ![](https://i.imgur.com/kMU6jVT.png)
 ## Logical Query Plan
@@ -66,6 +67,42 @@ Example for join:
 ![](https://i.imgur.com/1iQ4kdj.png)
 Sampling can be used to increase performance:
 ![](https://i.imgur.com/lE0yNfb.png)
+### Join Order Selection
+Many  [[Notes/Two Pass Algorithms#Sort-Merge Join|join algorithms]] are asymmetric, the role played by the two argument relations are different and the cost depends on which relation plays which role. 
+- Build relation: the relation stored in main memory
+- Probe relation: relation which is read a block at a time to match the tuples in the build relation
+*Assumptions: the left argument is the build relation and the right argument is the probe relation*
+As the number of relations involved in the query increases, the number of possible join orders increases rapidly. We can use *join trees* to represent each of these possibilities:
+![](https://i.imgur.com/HEfAxlR.png)
+#### Left-deep tree
+It has a few advantages that make it a good default option:
+- The number of possible left-deep trees with a given number of leaves is  large, but not nearly as large as the number of all trees. Thus, searches  for query plans can be used for larger queries if we limit the search to  left-deep trees. 
+- Left-deep trees for joins interact well with common join algorithms —  nested-loop joins and one-pass joins in particular. 
+- Intermediate results are not written to temporary files.
+Example from the above image:
+*Left-deep tree*:
+1. Right children are the probe relations, we start building the join from the left leaf node R3
+2. We keep R3 in main memory and perform R3 $\Join$ R1. This uses B(R) + B($R3\Join R1$) buffers
+3. No need to keep R3 in main memory anymore, can use the space to store the result from B($R3\Join R1\Join R5$).
+*Right-deep tree*:
+1. R3 is the build relation from the root, load R3 into memory
+2. Need $R3\Join R1\Join R5\Join R2\Join R4$ as the probe relation. To compute this, we need R1 to be loaded into main memory to compute $R1\Join R5\Join R2\Join R4$ as the probe relation.
+3. So on and so forth...
+The right-deep tree will require alot more space for the intermediate relations.
+### Join Algorithm Selection
+#### Heuristics
+![](https://i.imgur.com/BXJGc0o.png)
+#### Dynamic Programming
+Since we are concerned about minimising the cost of the query plan, we can utilise [[003 Dynamic Programming|DP]] to remember the costs at each intermediate step for each enumeration. **The cost is the size of the intermediate relation.**
+Example:
+![](https://i.imgur.com/fVflcof.png)
+![400](https://i.imgur.com/VzFz2K9.png)
+The cost for 2 relations is still 0, as no intermediate results are generated:
+![](https://i.imgur.com/gKWxzfs.png)
+There are $4\choose{3}$ ways to select 3 out of 4 of the relations. If we only consider left-deep trees, each option has $3\choose2$ permutations. We use the cost of the double relations to find the min cost of each permutation.
+![](https://i.imgur.com/NVT9vIg.png)
+Finally, when we consider all 4 relations, there are only 4 permutations if we only select left-deep trees. That is $4\choose2$$\times$ $2\choose1$. The first 4 rows represent these options:
+![400](https://i.imgur.com/yTnb9Jx.png)
 ## Practice Problems
 ![](https://i.imgur.com/dSCheOj.png)
 $$
@@ -79,14 +116,17 @@ $$
 ![](https://i.imgur.com/n4C5J07.png)
 $$
 \begin{align}
-\text{Size of Y}=20\times128=2560B
-\\B(Y) =5
-\\ \text{Size of X}=60\times64=3840B
-\\B(X) =7.5
-\\\text{Block access for Sort merge join with 2PMMS}=5\times(5+8)
-\\=65
-\\\text{Block access for selection}=0.5\times(5+8)=7
-\\\text{Total Disk Access}=7+65=72
+\text{Size of Y}=20\times128&=2560B
+\\B(Y) &=5
+\\ \text{Size of X}&=60\times64=3840B
+\\B(X)&=7.5=8
+\\\text{Nested loop join}&=5+(5/5-1)\times8=15
+\\\text{Joined tuple size}&=128+64=192
+\\\text{T(T)}&=20\text{(because b is key in X,there can be at most 20 matching values)}
+\\\text{Write B(T) to disk: }&20/(512//192)=10
+\\\text{Read B(T) for selection}=&10
+\\\text{Block access for selection}&=0.5\times10=5
+\\\text{Total Disk Access}&=15+10+10+5=40
 \end{align}
 $$
 ![](https://i.imgur.com/J4jwXGW.png)
@@ -96,8 +136,26 @@ a.
 b.
 $$\begin{align}
 P(Year>1990)=1/3,P(Rating=10)=1/10
-\\\text{Size after Select}=0.1\times
+\\\text{Size after Select Movie}=\frac{1}{10\times3}\times 24000=800
+\\\text{Size after Join}=T(M)\times T(S)/max(V(M,name),V(S,name))
+\\=800\times1000/800=1000
 \end{align}
 $$
+![](https://i.imgur.com/D6ueV2a.png)
+![](https://i.imgur.com/yjTZKmm.png)
+i. $6000/20=300$
+ii. Tuples in $\sigma_{c>25}(S)=6000/3=2000$
+Tuples in $R\Join \sigma_{c>25}(S)=10000\times2000/200=100000$
+iii.
+Number of tuples of S which satisfy the condition: $\frac{2}{100}\times6000=120$
+These tuples will fit at best in $120/4=30$ blocks
+At worst, each key will take up additional 1 tuple block: $30+1+1=32$
+Number of block access to find the 2 keys: $2\times3=6$
+Total I/O: $32+6=38$
+iv.
+1. Use $101-1=100$ buffers to repeatedly load blocks of R.
+2. Join every block of S with these 100 blocks of R
+3. Repeat until all blocks of R are loaded
+Cost: $1000+1500\times(1000/100)=16000$
 
 

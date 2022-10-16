@@ -36,5 +36,5 @@ From example 15.12, the number of disk I/O's if R and S both have sorted indexes
 ![[Pics/Pasted image 20221010171512.png]]
 Cost of access the data blocks:
 There are $\frac{k}{10}$ distinct values that we must access.
-Each distinct value is stored in approximately $B_R/\frac{k}{10}$blocks
-Total block access = $1000k$
+There are a total of $B(R)/k=1000/k$ blocks having distinct values
+Total block access = $\frac{1000}{k}\times\frac{k}{10}=1000$

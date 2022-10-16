@@ -6,3 +6,4 @@
 - [[Binary Search Tree]]
 - [[B-tree]]
 - [[Union Find]]
+- [[Bitmap]]

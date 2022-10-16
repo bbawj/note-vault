@@ -94,3 +94,4 @@ Logical address: 22 bit page index, 10 bit offset
 b.
 $2^{22}$ pages.
 c.
+Number of entries = Number of physical frames: $2^{30}/2^{10}=2^{20}$

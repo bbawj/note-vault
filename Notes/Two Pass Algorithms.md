@@ -89,19 +89,29 @@ We can eliminate duplicates through sorting.
 3. 2nd pass: read all the sorted sublists into M-1 buffers
 4. Move the smallest of the heads of each sublist into the output if the max of the current output does not already contain this incoming value.
 ![](https://i.imgur.com/aFtQUQT.png)
-a. M = 2. External merge sort of S and T. Sort merge join of S and T. Sort merge join of R and the result of S and T.
+a. M = 3. Sort merge join of S and T. Sort merge join of R and the result of S and T. 1 block to read R, 1 block to read S, 1 block to hold intermediate result of $R\Join S$
 ![](https://i.imgur.com/OzmoV03.png)
 b. 
 II: $M > B_T$
 III: $M > B_T+(\text{Number of sorted sublists of S})+1$. Need all sorted sublists in buffer, and need 1 additional buffer to comb through R
 ![](https://i.imgur.com/R8RCdvQ.png)
-Yes. Only refined sort merge join has comparable cost. In this case, refined sort merge join will not be applicable as both relations share multiple common values of attribute Y. Hence we are not able to fully load all tuples with the same attribute value into M buffers.
+~~Yes. Only refined sort merge join has comparable cost. In this case, refined sort merge join will not be applicable as both relations share multiple common values of attribute Y. Hence we are not able to fully load all tuples with the same attribute value into M buffers.~~
+No. Hash join works by partitioning the relations based on the distinct keys. Since there are very few distinct values of Y, there will be very little partitions. 2nd pass will not work well since each partition must be loaded fully into memory buffer.
 ![](https://i.imgur.com/8v4AFJU.png)
 a.
-Keep 1 hash bucket in memory. Need to be able to load all hash buckets from one of the relations into the remaining memory.
-Buckets in memory: 1 bucket from S, all buckets from R.
-39 blocks of MM must fit 400 blocks of S data. 39 buckets??
+Strategy:
+1. Use R as the outer relation as it is smaller.
+2. Keep 1 hash bucket in memory. Need to be able to load all hash buckets from one of the relations into the remaining memory.
+$$\begin{aligned}
+\\\text{Let k be the number of hash buckets}
+\\\text{No. of buffers for S}=1
+\\\text{No. of buffers to write k-1 buckets to disk}=k-1
+\\\text{No. of buffers to keep 1 bucket on memory}=B(R)/k
+\\M\ge 1+k-1+B(R)/k=k+B(R)/k
+\end{aligned}
+$$
+![](https://i.imgur.com/Z5Xc1G6.png)
 b.
-We save the cost of writing and reading 1 bucket to/from disk during the hashing process.
-Each bucket contains $(500+400)/39=30blocks$
-Total cost: $3(B_R+B_S)-2\times30=2640$
+We save the cost of writing and reading 1 bucket of R to/from disk during the hashing process.
+Each bucket contains $(400)/20=20blocks$
+Total cost: $3(B_R+B_S)-2\times20=2660$

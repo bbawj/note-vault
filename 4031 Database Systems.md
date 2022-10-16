@@ -9,8 +9,9 @@
 - [[Multi Key Index]]
 ## Query Processing
 - [[Query Processing]]
-- [[One Pass Algorithms]]
-- [[Two Pass Algorithms]]
-- [[Index Based Algorithms]]
+	- [[One Pass Algorithms]]
+	- [[Two Pass Algorithms]]
+	- [[Index Based Algorithms]]
 - [[Query Execution]]
 - [[Query Compiler]]
+- [[Transaction Management]]
