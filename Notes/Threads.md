@@ -2,7 +2,7 @@
 A thread (or lightweight process) consists of its own thread id, program counter, registers and stack space
 
 __Multithreading__: A process can have multiple threads: this allows efficient sharing of memory for the program without having to create additional processes which has high overhead.
-![](https://i.imgur.com/2wnSSnO.png)
+![](https://i.imgur.com/2wnSSnO.png) ^7d353c
 ## Implementation models
 Want to support an arbitrary number of threads but the OS can only support a limited number due to physical constraints
 

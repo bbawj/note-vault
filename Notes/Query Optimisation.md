@@ -157,5 +157,73 @@ iv.
 2. Join every block of S with these 100 blocks of R
 3. Repeat until all blocks of R are loaded
 Cost: $1000+1500\times(1000/100)=16000$
+![](https://i.imgur.com/7z0WEN7.png)
+$(Emp \Join_{Dno}Dept)\Join_{Job}Job$ 
+$Job\Join_{Job}(Emp \Join_{Dno}Dept)$ 
+$(Emp \Join_{Job}Job)\Join_{Dno}Dept$ 
+$Dept\Join_{Dno}(Emp \Join_{Job}Job)$ 
+![](https://i.imgur.com/1PvbCHq.png)
+i. The join order for a set of relations can be built with the sub problem of the set of relations -1. Can use DP to store the information of the minimal cost of each set of relations.
+ii.
+| Relation | {A,B}                     | {A,C} | {A,D} | {B,C}                   | {B,D}                   | {C,D}                   |
+| -------- | ------------------------- | ----- | ----- | ----------------------- | ----------------------- | ----------------------- |
+| Size     | $1500\times1000/50=30000$ | -     | -     | $1000\times2000/50=40000$ | $1000\times1000/50=20000$ | $2000\times1000/50=40000$ |
 
+| Relation | {A,B,C}                        | {A,B,D}                      | {B,C,D}                      |
+| -------- | ------------------------------ | ---------------------------- | ---------------------------- |
+| Size     | $30000\times2000/50=1,200,000$ | $30000\times1000/50=600,000$ | $40000\times1000/50=800,000$ |
+| Min Cost | (BC)A: 40000                   | (BD)A:20000                  | (BC)D                             |
 
+| Relation | {A,B,C,D}                      |
+| -------- | ------------------------------ |
+| Size     | $1,200,000\times1000/50=24,000,000$ |
+| Min Cost | (ABD)C: 600,000                   |
+
+Final order: $((B\Join D)\Join A)\Join C$
+![](https://i.imgur.com/DFs3lGE.png)
+i.
+Selectivity on condition a: $B(R)/V(R,a)=1000/20=50$
+Selectivity on condition b: $T(R)/V(R,b)=5000/1000=5$
+Selectivity on condition c = 3: $T(R)/V(R,c)=5000/5000=1$
+Best query plan: select on condition c=3 -> b=2 -> a = 1
+ii.
+Selectivity on condition c < 3: $T(R)/3=5000/3=1666$
+Best query plan: select on condition b=2 -> a=1 -> c < 3
+![400](https://i.imgur.com/3oMNPTP.png)
+![](https://i.imgur.com/RueI6DK.png)
+i.
+$$\begin{aligned}
+S\Join_{sid} R&=T(S)\times T(R)/max(V(S,sid),V(R,sid))
+\\&=1000\times10000/1000=10,000
+\\(S\Join_{sid}R)\Join_{bid}B&=10000\times100/100=10000
+\\\sigma_{size>5 \& \ day=''}&=10000/(3\times500)=6.66
+\end{aligned}$$
+ii.
+```mermaid
+graph TB
+	J4((Join))-->J5((Join))
+	J4-->B2((B))
+	J5-->R2((R))
+	J5-->S((S))
+	
+	J6((Join))-->J7((Join))
+	J6-->S2((S))
+	J7-->R3((R))
+	J7-->B3((B))
+```
+iii.
+Grace hash join
+![](https://i.imgur.com/wJCej3R.png)
+![](https://i.imgur.com/Y5ldYbY.png)
+$$
+\begin{aligned}
+\sigma_{scity=Seattle}&=100/20=5
+\\\sigma_{srank<10}&=10/3=3.33\approx4
+\\IO\Join_{sid=sid}&=3(5+4)=27
+\\T(\Join_{sid=sid})&=2000\times100/100=2000
+\\&\text{We can ignore the cost of the index lookup}
+\\IO\Join_{id=id}&=2000+(2000\times1)=4000
+\\T(\Join_{id=id})&=2000\times3000/2000=3000
+\\\text{Total Cost}&=27+4000
+\end{aligned}
+$$

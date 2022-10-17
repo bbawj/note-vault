@@ -9,3 +9,5 @@
 - [[Custom Computing]]
 - [[Notes/Cache|Cache]]
 - [[GPU Architecture]]
+- [[Data Level Parallelism]]
+- [[Thread Level Parallelism]]
