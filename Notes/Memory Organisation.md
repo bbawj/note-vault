@@ -95,3 +95,31 @@ b.
 $2^{22}$ pages.
 c.
 Number of entries = Number of physical frames: $2^{30}/2^{10}=2^{20}$
+![](https://i.imgur.com/zciAu6J.png)
+a.
+There are 8 pages, 3 bits are required to determine the page index.
+Remaining 7 bits are used for the page offset, to address the individual byte in the page.
+1000011011 -> Page 100 Offset 0011011 -> Page = 4, Offset = 15
+b.
+There are 4 segments, 2 bits required to determine segment number
+Remaining 8 bits used to address the physical memory unit
+1000011011 -> Segment 10 Offset 00011011 -> Segment = 2, Offset = 15
+![](https://i.imgur.com/M0XVmUz.png)
+a. 1024 Bytes
+b.
+Outmost page table is = 4bytes
+$$
+\begin{align}
+\text{Number of entries 1st level}=1024/4=256\\
+\text{Number of pages 1st level}=256/4=64\\
+\text{Number of entries 2nd level}=64\\
+\text{Number of pages 2nd level}=64/4=16\\
+\text{Number of entries 3rd level}=16\\
+\text{Number of pages 3rd level}=16/4=4\\
+\text{Number of entries 4th level}=4\\
+\text{Number of pages 4th level}=4/4=1\\
+\text{Total no. of levels}=log_4256=4
+\end{align}
+$$
+c.
+![[Pics/Memory Organisation 2022-10-18 14.12.16.excalidraw]]
