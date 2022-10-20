@@ -18,8 +18,16 @@ To support implementation of virtual memory, demand paging is used. Each process
 ## Page Replacement
 If there are no empty frames, OS needs to locate a victim to evict:
 ![](https://i.imgur.com/AfKxz30.png)
-
-![](https://i.imgur.com/ubzcJYj.png)
+### Belady's Anomaly
+![500](https://i.imgur.com/ubzcJYj.png)
+> [!Inclusion Property]
+> Pages loaded in *n* frames is always a subset of pages in *n+1* frames
+>
+> An algorithm does not suffer from Belady's anomaly if it satisfies the inclusion property. This is because such an algorithm will only increase its total coverage of available frames and does not replace any frame that was previously loaded.
+>
+> An example with FIFO:
+>
+> ![400](https://i.imgur.com/Z2DZRrv.png)
 ### FIFO
-![](https://i.imgur.com/f6t69Lk.png)
 
+### Least Recently Used
