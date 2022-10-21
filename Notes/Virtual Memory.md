@@ -15,6 +15,22 @@ To support implementation of virtual memory, demand paging is used. Each process
 - 2,6: incurs context switch costs by the OS
 - 4: incurs disk I/O cost to bring in the page
 ![](https://i.imgur.com/GjawaYa.png)
+### Thrashing
+As the degree of multi-programming increases, there comes a point where CPU utilisation drops dramatically due to more frequent page faults.
+![](https://i.imgur.com/swSweEg.png)
+#### Working Set Model
+Based on the concept of locality of reference: processes tend to refer to pages in a localised manner
+Temporal locality: locations referred to recently are likely to be referenced again
+Spatial locality: code and data are usually clustered physically
+![](https://i.imgur.com/8KemQbT.png)
+Implementation:
+![](https://i.imgur.com/6dzOR3i.png)
+![](https://i.imgur.com/64zPdG0.png)
+Additional metrics:
+![](https://i.imgur.com/hcbkUG6.png)
+#### Page Fault Frequency
+![](https://i.imgur.com/rnLcCTo.png)
+- Establish an upper and lower bound for acceptable page-fault rate and allocate and deallocate frames accordingly
 ## Page Replacement
 If there are no empty frames, OS needs to locate a victim to evict:
 ![](https://i.imgur.com/AfKxz30.png)
@@ -28,6 +44,18 @@ If there are no empty frames, OS needs to locate a victim to evict:
 > An example with FIFO:
 >
 > ![400](https://i.imgur.com/Z2DZRrv.png)
-### FIFO
-
-### Least Recently Used
+### Policies
+[[Notes/Page Replacement Policies|Page Replacement Policies]]
+### Allocation of Frames
+#### Fixed allocation
+Give a process a fixed number of frames in memory for execution.
+#### Variable allocation
+Allow the number of frames allocated to the process to vary across its execution lifetime.
+### Scope of Replacement
+#### Global
+Process selects a replacement frame from the set of all frames; one process can take a frame from another process. Implication: performance of the process depends on external processes.
+#### Local
+Each process selects only from its own set of allocated frame. Implication: may hinder other processes by not making available its less used pages/frames
+![](https://i.imgur.com/BEphKf6.png)
+## Practice Problems
+![](https://i.imgur.com/4ukwOxR.png)

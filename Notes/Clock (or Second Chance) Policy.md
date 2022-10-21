@@ -8,3 +8,5 @@
 5. When choosing item to be evicted:
 	1. If the item has use-bit = 1, we reset it back to 0 (this item has used its second chance)
 	2. Else we evict it (no second chance, replace it)
+![](https://i.imgur.com/BhmQ5Ll.png)
+At the worst case, the algorithm behaves the same as FIFO. E.g. when all the pages have their used bit set to 1, eventually the clock hand will return back to the oldest page and replace. 
