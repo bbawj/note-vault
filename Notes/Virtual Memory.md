@@ -59,3 +59,73 @@ Each process selects only from its own set of allocated frame. Implication: may 
 ![](https://i.imgur.com/BEphKf6.png)
 ## Practice Problems
 ![](https://i.imgur.com/4ukwOxR.png)
+a. FIFO will replace the earliest loaded page. Page 2
+b. Replace the first page with R=0. Page 0.
+c. Replace the oldest accessed page. Page 1.
+![](https://i.imgur.com/zybj7sG.png)
+| Tick | Page Ref | FIFO      | Clock     | LRU       | Loaded     | R       | Accessed   |
+| ---- | -------- | --------- | --------- | --------- | ---------- | ------- | ---------- |
+| 1    | 0        | 0         | 0         | 0         | 1          | 0       | 1          |
+| 2    | 1        | 0,1       | 0,1       | 0,1       | 1,2        | 0,0     | 1,2        |
+| 3    | 6        | 0,1,6     | 0,1,6     | 0,1,6     | 1,2,3      | 0,0,0   | 1,2,3      |
+| 4    | 0        | 0,1,6     | 0,1,6     | 0,1,6     | 1,2,3      | 1,0,0   | 4,2,3      |
+| 5    | 3        | 0,1,6,3   | 0,1,6,3   | 0,1,6,3   | 1,2,3,5    | 1,0,0,0 | 4,2,3,5    |
+| 6    | 4        | 4,1,6,3 F | 0,4,6,3 F | 0,4,6,3 F | 6,2,3,5    | 0,0,0,0 | 4,6,3,5    |
+| 7    | 0        | 4,0,6,3 F | 0,4,6,3   | 0,4,6,3   | 6,7,3,5    | 1,0,0,0 | 7,6,3,5    |
+| 8    | 1        | 4,0,1,3 F | 0,1,6,3 F | 0,4,1,3 F | 6,7,8,5    | 0,0,0,0 | 7,6,8,5    |
+| 9    | 0        | 4,0,1,3   | 0,1,6,3   | 0,4,1,3   | 6,7,8,5    | 1,0,0,0 | 9,6,8,5    |
+| 10   | 3        | 4,0,1,3   | 0,1,6,3   | 0,4,1,3   | 6,7,8,5    | 1,0,0,1 | 9,6,8,10   |
+| 11   | 4        | 4,0,1,3   | 0,4,6,3 F | 0,4,1,3   | 6,7,8,5    | 0,0,0,1 | 9,11,8,10  |
+| 12   | 6        | 4,0,1,6 F | 0,4,6,3   | 0,4,6,3 F | 6,7,8,12   | 0,0,1,1 | 9,11,12,10 |
+| 13   | 3        | 3,0,1,6 F | 0,4,6,3   | 0,4,6,3   | 13,7,8,12  | 0,0,1,1 | 9,11,12,13 |
+| 14   | 4        | 3,4,1,6 F | 0,4,6,3   | 0,4,6,3   | 13,14,8,12 | 0,1,1,1 | 9,14,12,13           |
+The first 4 page loads are always page faults.
+a. $4+6=10$
+b. $4+3=7$
+c. $4+3=7$
+![](https://i.imgur.com/Br1EZaM.png)
+a.
+Lower bound occurs on the minimum number of page faults. Every unique page will result in a page fault = N
+Upper bound occurs when every page reference is a page fault = L
+b. No. LRU does not guarantee optimality.
+![](https://i.imgur.com/As7tUFf.png)
+a.
+| Page Ref | LRU     | Accessed        | Fault |
+| -------- | ------- | --------------- | ----- |
+| -        | 1,0,3,2 | 161,160,162,163 | N     |
+| 4        | 1,4,3,2 | 161,164,162,163 | Y     |
+| 0        | 0,4,3,2 | 165,164,162,163 | Y     |
+| 0        | 0,4,3,2 | 166,164,162,163 | N      |
+| 0        | 0,4,3,2 | 167,164,162,163 | N      |
+| 2        | 0,4,3,2 | 166,164,162,167 | N      |
+| 4        | 0,4,3,2 | 166,168,162,167 | N      |
+| 2        | 0,4,3,2 | 166,168,162,169 | N      |
+| 1        | 0,4,1,2 | 166,168,170,169 | Y      |
+| 0        | 0,4,1,2 | 171,168,170,169 | N      |
+| 3        | 0,3,1,2 | 171,172,170,169 | Y      |
+| 2        | 0,3,1,2 | 171,172,170,173 | N      |
+4 Page Faults.
+b.
+| Page Ref | Working Set | Fault |
+| -------- | ----------- | ----- |
+| 4        | 1,0,3,2     | Y     |
+| 0        | 1,0,3,2     | N     |
+| 0        | 1,0,3,2     | N     |
+| 0        | 1,0,3,2     | N     |
+| 2        | 1,0,3,2     | N     |
+| 4        | 1,0,3,2     | Y     |
+| 2        | 1,0,3,2     | N     |
+| 1        | 1,0,3,2     | N     |
+| 0        | 1,0,3,2     | N     |
+| 3        | 1,0,3,2     | N     |
+| 2        | 1,0,3,2     | N     |
+2 page faults.
+![](https://i.imgur.com/oAKQN2f.png)
+Illustrates a thrashing situation.
+a. F. CPU is already under utilised
+b. T. Increase available memory for pages to be loaded for processes
+c. F. Already not enough memory for existing programs
+d. T. Swap out some programs to the backing store to allow for more pages for existing programs
+e. T?
+f. T. Less time spent in I/O
+g. F. Increase page size without increasing paging disk will have a negative effect.
