@@ -187,9 +187,11 @@ Selectivity on condition a: $B(R)/V(R,a)=1000/20=50$
 Selectivity on condition b: $T(R)/V(R,b)=5000/1000=5$
 Selectivity on condition c = 3: $T(R)/V(R,c)=5000/5000=1$
 Best query plan: select on condition c=3 -> b=2 -> a = 1
+Expected disk i/o : 1
 ii.
 Selectivity on condition c < 3: $T(R)/3=5000/3=1666$
 Best query plan: select on condition b=2 -> a=1 -> c < 3
+Expected disk i/o : 5
 ![400](https://i.imgur.com/3oMNPTP.png)
 ![](https://i.imgur.com/RueI6DK.png)
 i.
@@ -207,13 +209,30 @@ graph TB
 	J5-->R2((R))
 	J5-->S((S))
 	
+	J1((Join))-->J2((Join))
+	J1-->B1((B))
+	J2-->S1((S))
+	J2-->R1((R))
+	
 	J6((Join))-->J7((Join))
 	J6-->S2((S))
 	J7-->R3((R))
 	J7-->B3((B))
+	
+	J8((Join))-->J9((Join))
+	J8-->S3((S))
+	J9-->B4((B))
+	J9-->R4((R))
 ```
 iii.
-Grace hash join
+For {R,S}:
+Hash join: $3(B_R+B_S)=3(250+50)=900$
+Sort merge join: $3(B_R+B_S)=3(250+50)=900$
+Block based NL join:
+R outer loop = $B_R+B_S\times B_R/(M-1)=250+50\times250/(50-1)=506$
+S outer loop = $B_S+B_R\times B_S/(M-1)=50+250\times50/(50-1)=306$
+
+Blocked based NL join would work best
 ![](https://i.imgur.com/wJCej3R.png)
 ![](https://i.imgur.com/Y5ldYbY.png)
 $$
