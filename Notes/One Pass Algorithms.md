@@ -12,14 +12,14 @@ Algorithms where the data is read only once from the disk.
 ![](https://i.imgur.com/excURMh.png)
 - I/O Cost: B(R) + B(S)
 - Space: $M-1 \ge min(B(R),B(S))$
-### Nested Loop Join
+## Nested Loop Join
 Can be considered "one and a half pass algorithm": One argument is read only once while another is read repeatedly
-#### Simple Nested Loop Join
+### Simple Nested Loop Join
 Sacrifice some I/O time in order to save on memory:
 ![](https://i.imgur.com/Rt4LHH6.png)
 - I/O Cost: $B(R) + B(S)\times B(R)$
 - Space: $M \ge2$
-#### Block based nested loop join
+### Block based nested loop join
 We can improve the I/O cost by utilizing all the buffers available:
 ![](https://i.imgur.com/UZwOtmQ.png)
 - I/O Cost: $B(R) + B(S)\times (B(R)/(M-1))$
@@ -42,3 +42,5 @@ $Cost = (20000/999)\times5000+20000\approx120101$
 
 ![](https://i.imgur.com/AiLTw99.png)
 
+![](https://i.imgur.com/iXWNoK9.png)
+![[Pics/One Pass Algorithms 2022-10-23 14.55.37.excalidraw]]

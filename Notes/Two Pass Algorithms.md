@@ -19,7 +19,7 @@ Idea:
 > [! Note]
 > Suppose R fits on B blocks. With M buffers each of 1 block, we can effectively sort M blocks of data each time. We can form $B(R)/M$ sorted sublists. In total we will only read and write B(R) blocks for this step.
 > 
-> Since we need 1 input buffer to represent each head of a sublist, we will need $B(R)/M \le(M-1), \ or\  B(R)\le M\times (M-1)$
+> Since we need 1 input buffer to represent each head of a sublist, we will need $B(R)/M \le(M-1), \ or\  B(R)\le M\times (M-1)\approx M^2$
 >
 > E.g. Suppose blocks are 64K bytes, and we have one gigabyte of  main memory. Then we can afford M  of 16K. Thus, a relation fitting in B  blocks can be sorted as long as B is no more than (16K)2 = 228. Since blocks  are of size 64K = 214, a relation can be sorted as long as its size is no greater  than 242 bytes, or 4 terabytes.  
 
@@ -115,3 +115,29 @@ b.
 We save the cost of writing and reading 1 bucket of R to/from disk during the hashing process.
 Each bucket contains $(400)/20=20blocks$
 Total cost: $3(B_R+B_S)-2\times20=2660$
+![](https://i.imgur.com/VRlK61d.png)
+i. Set union operation involves duplicate elimination. Disk I/O = $B(R)+ B(R)\times B(S)=100010000$
+ii. 
+For refined sort merge join:
+1. Read all blocks to perform 2PMMS: $2(B_R + B_S)=40000$
+2. Perform join on merge phase: $1(B_R + B_S)=20000$
+Total = 60000 i/o
+![](https://i.imgur.com/hSue1Sr.png)
+i. The minimum number of main memory blocks needed is that the relation with smaller number of hashed blocks must fit entirely into the main memory. Assuming that each block hashes to its own hash bucket, we need $M=10000$
+![](https://i.imgur.com/HT6UlMm.png)
+i. $3\times (B_R + B_S) =4500$
+ii. $3\times (B_R + B_S) =4500$
+![](https://i.imgur.com/4kcfjW9.png)
+Procedure:
+1. Sort R and S according to the attribute $x$ using two phase multiway merge sort
+2. Load the first block of sorted R and S into main memory
+3. Find tuple with the smallest value of $x$ and find matching tuples and write them to the output buffer
+4. Repeatedly find the smallest value of $x$ once all tuples with the current smallest value are considered
+5. Reload new blocks when either relation's blocks are fully considered
+Cost:
+$B_R=30000/30=1000$
+$B_S=9000/10=900$
+Sorting: $3(B_R+B_S)=57000$
+Joining: $2(B_R+B_S)=38000$
+Total: 95000
+x = 1:

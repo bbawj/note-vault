@@ -158,10 +158,11 @@ iv.
 3. Repeat until all blocks of R are loaded
 Cost: $1000+1500\times(1000/100)=16000$
 ![](https://i.imgur.com/7z0WEN7.png)
+Left deep plans:
 $(Emp \Join_{Dno}Dept)\Join_{Job}Job$ 
-$Job\Join_{Job}(Emp \Join_{Dno}Dept)$ 
+$(Dept \Join_{Dno}Job)\Join_{Job}Job$ 
 $(Emp \Join_{Job}Job)\Join_{Dno}Dept$ 
-$Dept\Join_{Dno}(Emp \Join_{Job}Job)$ 
+$(Job \Join_{Job}Emp)\Join_{Dno}Dept$ 
 ![](https://i.imgur.com/1PvbCHq.png)
 i. The join order for a set of relations can be built with the sub problem of the set of relations -1. Can use DP to store the information of the minimal cost of each set of relations.
 ii.
@@ -227,3 +228,19 @@ $$
 \\\text{Total Cost}&=27+4000
 \end{aligned}
 $$
+![](https://i.imgur.com/Q1rqC4H.png)
+i. $100/(3\times10)=3.33\approx4$
+ii. 
+$P(b!=25)=9/10$
+$P(d!=13)=49/50$
+$100\times(1-\frac{9}{10}\times\frac{49}{50})=28$
+iii.
+$100\times500\times(\frac{1}{50}\times\frac{1}{100})=10$
+![](https://i.imgur.com/Xu30AOg.png)
+i. 
+b=0: $10\times30/1=300$
+$1\le b\le10$: $40\times100\times\frac{1}{10}=400$
+$11\le b\le30$:$100\times200\times\frac{1}{20}=1000$
+Total = 1700
+ii.
+$300\times600\times\frac{1}{30}=6000$

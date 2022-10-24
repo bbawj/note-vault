@@ -14,4 +14,5 @@
 	- [[Index Based Algorithms]]
 - [[Query Execution]]
 - [[Query Compiler]]
+## Transactions
 - [[Transaction Management]]
