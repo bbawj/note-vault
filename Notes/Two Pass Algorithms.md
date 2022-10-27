@@ -54,6 +54,11 @@ If we do not need to worry about large number of tuples sharing common sort key,
 Step 1 will require 2 I/O per block in order to read, form the sorted sublists and write back to disk
 Step 2 will require 1 I/O per block in order to read and merge
 Total: $3(B(R) + B(S))$ disk I/O
+#### Implications
+We need all sorted sublists from both relations to be able to fit in memory. 
+Number of sorted sublists = $(B_R+B_S)/M$
+$(B_R+B_S)/M \le M$
+$(B_R+B_S) \le M^2$
 ![](https://i.imgur.com/pbW2M5z.png)
 ## Hash Based Algorithms
 Idea: hash the data into M buckets in order to fit into M main memory buffers for operations.
@@ -137,7 +142,23 @@ Procedure:
 Cost:
 $B_R=30000/30=1000$
 $B_S=9000/10=900$
-Sorting: $3(B_R+B_S)=57000$
-Joining: $2(B_R+B_S)=38000$
-Total: 95000
-x = 1:
+Sorting: $3(B_R+B_S)=5700$
+Joining: $2(B_R+B_S)=3800$
+Total: 9500
+![](https://i.imgur.com/u0VLkYZ.png)
+![](https://i.imgur.com/vib08yl.png)
+i.
+$B_R=50$
+$(B_R+B_S)/10 \le10$
+$50+\frac{2000}{x}\le100$
+$x\ge40$
+ii.
+$3(B_R+B_S)=3(50+50)=300$
+iii.
+Use 9 buffers for one relation.
+$B_R+B_R\times B_S/9=328$
+iv.
+$3(B_R+B_S)=3(50+50)=300$
+v.
+Choose between refined sort merge join and grace hash join as they have the smallest I/O cost. Choose refined sort merge join because the output will also be sorted.
+

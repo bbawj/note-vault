@@ -237,14 +237,20 @@ Blocked based NL join would work best
 ![](https://i.imgur.com/Y5ldYbY.png)
 $$
 \begin{aligned}
-\sigma_{scity=Seattle}&=100/20=5
-\\\sigma_{srank<10}&=10/3=3.33\approx4
-\\IO\Join_{sid=sid}&=3(5+4)=27
-\\T(\Join_{sid=sid})&=2000\times100/100=2000
+IO(\sigma_{scity=Seattle})&=100
+\\B(\sigma_{scity=Seattle})&=100/20=5
+\\T(\sigma_{scity=Seattle})&=5\times20=100
+\\IO(\sigma_{srank<10})&=10
+\\B(\sigma_{srank<10})&=10/3=3.33\approx4
+\\T(\sigma_{srank<10})&=10/3=100/3\approx34
+\\&\text{Sort-merge join in-memory:}
+\\IO\Join_{sid=sid}&=0 \ \text{(inputs are in memory)}
+\\T(\Join_{sid=sid})&=100\times34/100=34
 \\&\text{We can ignore the cost of the index lookup}
-\\IO\Join_{id=id}&=2000+(2000\times1)=4000
-\\T(\Join_{id=id})&=2000\times3000/2000=3000
-\\\text{Total Cost}&=27+4000
+\\&\text{But we still need to access data pages for Major}
+\\&\text{We assume each input tuple needs 1 Major page}
+\\IO\Join_{id=id}&=34
+\\\text{Total Cost}&=100+10+34=144
 \end{aligned}
 $$
 ![](https://i.imgur.com/Q1rqC4H.png)
@@ -252,14 +258,39 @@ i. $100/(3\times10)=3.33\approx4$
 ii. 
 $P(b!=25)=9/10$
 $P(d!=13)=49/50$
-$100\times(1-\frac{9}{10}\times\frac{49}{50})=28$
+$100\times(1-\frac{9}{10}\times\frac{49}{50})=11.8\approx12$
 iii.
 $100\times500\times(\frac{1}{50}\times\frac{1}{100})=10$
 ![](https://i.imgur.com/Xu30AOg.png)
 i. 
-b=0: $10\times30/1=300$
-$1\le b\le10$: $40\times100\times\frac{1}{10}=400$
-$11\le b\le30$:$100\times200\times\frac{1}{20}=1000$
-Total = 1700
+$(10\times30)+(40\times100)+(100\times200)/30=810$
 ii.
 $300\times600\times\frac{1}{30}=6000$
+![](https://i.imgur.com/mlIvxGp.png)
+![](https://i.imgur.com/dAO2I4e.png)
+$$
+\begin{align}
+&T(Student)=10,000
+\\&IO(Student)=1000
+\\&T(Checkout)=300,000
+\\&IO(Checkout)=15,000
+\\&T(\text{Nested Loop})=10,000\times300,000/10,000=300,000
+\\&IO(\text{Nested Loop})=1000+1000\times15000=15,001,000
+\\&T(Book)=50,000
+\\&IO(Book)=5000
+\\&T(\text{Tupled Based})=50000\times300,000/50,000=300,000
+\\&IO(\text{Tupled based})=0 \text{ (inputs are in memory)}
+\\&T(\sigma)=\frac{300,000}{500}\times\frac{20-12-1}{24-7}\approx234
+\end{align}
+$$
+![](https://i.imgur.com/zCqYH1T.png)
+
+```mermaid
+graph TB;
+	J1-->J2((Join S.b=T.b))
+	J1((Join R.b = S.b))-->R
+	J2-->J3((Join T.b = U.b))
+	J2-->S
+	J3-->T
+	J3-->U
+```
