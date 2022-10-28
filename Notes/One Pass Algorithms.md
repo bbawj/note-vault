@@ -20,7 +20,7 @@ Sacrifice some I/O time in order to save on memory:
 - I/O Cost: $B(R) + B(S)\times B(R)$
 - Space: $M \ge2$
 ### Block based nested loop join
-We can improve the I/O cost by utilizing all the buffers available:
+We can improve the I/O cost by utilising all the buffers available:
 ![](https://i.imgur.com/UZwOtmQ.png)
 - I/O Cost: $B(R) + B(S)\times (B(R)/(M-1))$
 - Space: $M \ge2$

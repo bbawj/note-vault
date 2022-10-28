@@ -10,7 +10,7 @@ Since each run may not fully fit inside memory, we can load segments of pairs of
 ### Two-Phase Multiway Merge Sort
 We do not fully utilise all the buffers in external merge sort if M > 3. 
 Idea:
-1. Divide data until each chunk fits into M buffers
+1. Divide data into $\frac{B}{M}$ sublists each of size $M$.
 2. Sort each chunk and write it back to the disk
 3. Use 1 input buffer for each sorted sublist. Implication: *hence there can only be M-1 sublists*
 	1. Take the smallest of the head of each sublist (each in 1 buffer) and move into output
@@ -21,9 +21,9 @@ Idea:
 > 
 > Since we need 1 input buffer to represent each head of a sublist, we will need $B(R)/M \le(M-1), \ or\  B(R)\le M\times (M-1)\approx M^2$
 >
-> E.g. Suppose blocks are 64K bytes, and we have one gigabyte of  main memory. Then we can afford M  of 16K. Thus, a relation fitting in B  blocks can be sorted as long as B is no more than (16K)2 = 228. Since blocks  are of size 64K = 214, a relation can be sorted as long as its size is no greater  than 242 bytes, or 4 terabytes.  
+> E.g. Suppose blocks are 64K bytes, and we have one gigabyte of  main memory. Then we can afford M  of 16K. Thus, a relation fitting in B  blocks can be sorted as long as B is no more than $(16K)^2 = 2^{28}$. Since blocks  are of size $64K = 2^{14}$, a relation can be sorted as long as its size is no greater  than $2^{42}$ bytes, or 4 terabytes.  
 
-If B(R) cannot be split into M sorted lists, first split B(R) into M chunks of M sorted lists. Apply algorithm to each of these M chunks to get M sorted lists. This forms the input for a third pass to form a fully sorted relation.
+If B(R) cannot be split into sublists of size M $i.e. B(R)/M \ge M$, first split B(R) into  sublists of size $M(M-1)$. Apply 2PMMS to each of these $\frac{B(R)}{M(M-1)}$ chunks to get M sorted sublists. This forms the input for a third pass to form a fully sorted relation.
 #### Cost
 Let B be the number of blocks. B disk I/O to read in the first pass. B disk I/O to write sorted sublists. B disk I/O to read sorted sublists in second pass. **Total 3B disk I/O**.
 ### Sort-Merge Join
@@ -81,10 +81,13 @@ We can leave some buckets of S in memory without writing to disk such that we ca
 1. Partition S into k buckets, keep $t$ buckets in memory and $k-t$ buckets in the disk
 2. Partition R into k buckets, first $t$ buckets are joined with S
 3. Join $k-t$ pairs of buckets
+#### Implications
+The $t$ hash buckets saved in memory + the blocks for each head of each hash bucket written to disk must fit entirely in memory.
+$$t\times\frac{B(R)}{k}+k-t\le M$$
 #### Cost
 Average bucket size is $B(S)/k$. We save write and read of $t\times B/k$ blocks for each relation
 Total cost: $3(B(R) + B(S)) - \frac{2\times t}{k}(B(R)+B(S))$
-## Comparison
+## Comparison between Hash & Sort based Join
 ![](https://i.imgur.com/oxbKLxs.png)
 ## Practice Problems
 ![](https://i.imgur.com/zirdVdQ.png)
