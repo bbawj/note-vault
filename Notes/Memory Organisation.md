@@ -29,6 +29,7 @@ Do not partition the memory. Rather, the OS allocates the exact chunk of memory 
 ### Dynamic Allocation Policies
 ![](https://i.imgur.com/QYCVh9D.png)
 ## Non Contiguous allocation (Paging)
+^b8969e
 Allow process to be allocated physical memory whenever it is available. 
 > [!Idea:]
 > 1. Divide the physical memory into fixed sized *frames*.
