@@ -44,7 +44,7 @@ Recovery must kick in to ensure the database satisfies the ACID properties in th
 1. Actions during normal transaction processing to ensure that the DBMS can recover from a failure.
 2. Actions after a failure to recover to a state that ensures atomicity, consistency and durability
 
-> Logging:
+> Ensuring atomicity and durability -- Logging:
 > The database stores additional files called *log files*. Logs record every action of each transaction and are append only.
 ### Undo Logging
 Idea: undo the effects of transactions that may not have completed before failure.
@@ -69,7 +69,7 @@ Start checkpointing at any time using the current incomplete transactions.
 #### Limitations
 Cannot commit a transaction without first writing all its changed data to disk. This means we will need many disk I/O for each transaction.
 ### Redo Logging
-Do not write all changed data to disk before committing. Write to the main memory log file all the changes to the DB, and perform recovery by redoing effects of committed transactions before the crash.
+Do not write all changed data to disk before committing. Write to the main memory log file all the changes to the DB, and commit before any changes are written to disk. Perform recovery by redoing effects of committed transactions before the crash.
 ![](https://i.imgur.com/Zhule0H.png)
 > [!Rules]
 > If a transaction modifies X, then both <T,x,v> and COMMIT T must be written to disk before OUTPUT(X). Order of writing to disk:
@@ -83,7 +83,19 @@ Do not write all changed data to disk before committing. Write to the main memor
 Start checkpointing for all active transactions. When we see an `START CHECKPOINT`, we can be sure that all prior transactions have been recorded to the disk and there is no need to redo them. 
 *Example where we do not need to redo the actions for T1:*
 ![](https://i.imgur.com/MCReHYm.png)
-
+#### Limitations
+It requires all modified blocks to be kept in buffers until the transaction commits and the log records have been flushed. This increases the average number of buffers needed by transactions.
+### Undo/Redo Logging
+Increase flexibility by maintaining more information on the log. <T,X,v,w> now stores both old and new values in the log. Before modifying any DB element X, this log record must be written to the disk.
+![](https://i.imgur.com/3BiSNNV.png)
+We can commit at any time after the <T,B,8,6> record has been written to the disk. 
+Recovery process:
+1. Redo all committed transactions top-down
+2. Undo all uncommitted transactions bottom-up
+This is because we may have committed transactions with some of the changes not on disk as well as uncommitted transactions with some of the changes on disk.
+#### Checkpointing
+![](https://i.imgur.com/WBdr1xt.png)
+We are sure we do not need to check any further than the `START CHECKPOINT` as the corresponding `END CHECKPOINT` ensures that all changes prior have been flushed to the disk.
 
 
 
