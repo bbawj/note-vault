@@ -45,8 +45,9 @@ Hardware has no memory of process trying to access the lock. P0 able to indefini
 ### Semaphore
 ![](https://i.imgur.com/NFRVyYv.png)
 #### Busy waiting *solution*
-Atomicity is not possible for this solution on a single-core. If a process P0 must loop to execute `Wait(S)`, no other processes can execute `Signal(S)` in order to allow P0 to continue. If we cannot context switch then there is no solution.
+Also known as a *spinlock*, where a thread trying to acquire a lock is caused to wait in a loop ("spin") while repeatedly checking if the lock is available.
 ![](https://i.imgur.com/aPAwIXL.png)
+Atomicity is not possible for this solution on a single-core. If a process P0 must loop to execute `Wait(S)`, no other processes can execute `Signal(S)` in order to allow P0 to continue. If we cannot context switch then there is no solution.
 #### Blocking Solution
 ![](https://i.imgur.com/tiVca7I.png)
 

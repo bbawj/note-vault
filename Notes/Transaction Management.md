@@ -96,6 +96,17 @@ This is because we may have committed transactions with some of the changes not 
 #### Checkpointing
 ![](https://i.imgur.com/WBdr1xt.png)
 We are sure we do not need to check any further than the `START CHECKPOINT` as the corresponding `END CHECKPOINT` ensures that all changes prior have been flushed to the disk.
-
-
-
+## Practice Problems
+![](https://i.imgur.com/J2UHbco.png)
+a. We know that at an `END CHKPNT`, all dirty buffers are written to disk
+A: 21
+B: 41
+C: 31,32,33
+D: 50,51,52
+b. All uncommitted transactions. T1, T6
+c. All committed transactions. T3, T5
+d. 
+A: 21
+B: 41
+C: 31. T1 undone, T3 redone
+D: 52. T5 redone.

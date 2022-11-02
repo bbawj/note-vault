@@ -18,6 +18,10 @@ We can use a precedence graph to determine if a set of transactions are conflict
 ![](https://i.imgur.com/PzNgNGH.png)
 
 ![](https://i.imgur.com/hqlUQN3.png)
+### Recoverable Schedule
+A schedule is recoverable if transactions commit only after all transactions whose changes they read have committed.
+Else, the DBMS is unable to guarantee that transactions read data that will be the same as before the crash and after the crash.
+![](https://i.imgur.com/mC9bKDu.png)
 ## Locks
 Ensure that data items that are shared by conflicting operations are accessed one operation at a time. Same as with [Process Synchronization](Notes/Process%20Synchronization.md). 
 ![](https://i.imgur.com/0IiEBMH.png)
@@ -41,4 +45,84 @@ Deadlocks can occur when transactions are unable to upgrade their shared locks t
 ![](https://i.imgur.com/8zwE14N.png)
 1. Part 1: Inserts appropriate lock actions ahead of all DB access operations and release the locks held by the Transaction when it aborts/commits
 2. Part 2: maintains a waiting list of transactions that need to acquire locks
+## Deadlock Detection & Prevention
+### Timeout
+Place a limit on how long a transaction may be active, if it exceeds this time, it is forced to release its locks and other resources and roll back.
+### Waits-For Graph
+Utilises the [[Notes/Deadlocks#Cyclic Properties of Deadlocks|cyclic properties of deadlocks]] to detect them.
+- Each transaction holding a lock or waiting for one is a node
+- An edge exists from T1 to T2 if there is some element A where:
+	- T2 holds a lock on A
+	- T1 is waiting for lock on A
+	- T1 cannot get the lock on A unless T2 releases it
+![](https://i.imgur.com/4GcWNC7.png)
+This graph can become very large ad analysing this graph for every action can take a long time.
+### Timestamps
+Assign each transaction with a timestamp. This timestamp never changes for the transaction even if it is rolled back.
+![](https://i.imgur.com/f1MbRut.png)
+![](https://i.imgur.com/RLvfh5T.png)
+### Comparison
+![](https://i.imgur.com/gslOHOC.png)
+## Timestamp Ordering
+An optimistic approach. Use the timestamps of transactions to determine the serialisability of transactions. 
+- Each transaction receives a unique timestamp TS(T). 
+- If TS(Ti ) < TS(Tj ), then the DBMS must ensure that the execution schedule is equivalent to a serial schedule where Ti appears before Tj .
+![](https://i.imgur.com/aIy3ZQn.png)
+### Rules
+![](https://i.imgur.com/Gl6dz77.png)
+- A transaction wants to read, but the element has already been written to by another transaction
+![](https://i.imgur.com/iOeaFDw.png)
+- A transaction wants to write, but the element has already been read by another transaction or written by another transaction
+![](https://i.imgur.com/ku6Zq5d.png)
+### Thomas Write Rule
+When a transaction wants to write, and TS(T) < WT(X), ignore the write and allow the transaction to continue without aborting. 
+![](https://i.imgur.com/jggXLS7.png)
+- Timestamp ordering creates conflict serialisable schedules when this rule is not used
+- Schedules are not recoverable as TO does not have any checks
+## Comparisons
+![](https://i.imgur.com/OvQkJJm.png)
+## Practice Problems
+![](https://i.imgur.com/bg5zD3I.png)
+![](https://i.imgur.com/d7wWbX9.png)
+![](https://i.imgur.com/Wa44loe.png)
+```mermaid
+graph LR;
+	T3 --> T2;
+	T1 --> T2;
+	T3 --> T1;
+		
+```
+| Time | T1       | T2       | T3      |
+| ---- | -------- | -------- | ------- |
+| t1   |          |          | Read(A) |
+| t2   |          |          | Read(B) |
+| t3   | Read(A)  |          |         |
+| t4   | Read(C)  |          |         |
+| t5   | Write(A) |          |         |
+| t6   |          | Read(C)  |         |
+| t7   |          | Read(B)  |         |
+| t8   |          | Write(C) |         |
+| t9   |          | Write(B)         |         |
+![](https://i.imgur.com/IJx9TNc.png)
+In 2PL, all locks must be acquired by the transaction, operations are done and then all locks are released at once.
+This is schedule is not consistent with 2PL.
+T1 takes ul(B), xl(B), ul(D), xl(D). T2 reads and writes item B at step 6, this is not possible if T1 still has the exclusive lock on B. Hence, T1 must have released all locks by step 6. However, T1 still takes read and write actions on D at step 13,14.
+The minimal set of actions to remove:
+- 5
+- 6
+![](https://i.imgur.com/0KehkE6.png)
+| Time | T1              | T2             |
+| ---- | --------------- | -------------- |
+| 1    | Read(Savings)   |                |
+| 2    |                 | Read(Checking) |
+| 3    | Write(Checking) |                | 
+| 4    |                 | Write(Savings)                |
+![](https://i.imgur.com/RPcVyJs.png)
+| Time | T1    | T2   | R(X) | W(X) | R(Y) | W(Y) |
+| ---- | ----- | ---- | ---- | ---- | ---- | ---- |
+| 1    | r1(x) |      | 1    | 0    | 0    | 0    |
+| 2    |       | r(x) | 2    | 0    | 0    | 0    |
+| 3    |       | w(x) | 2    | 2    | 0    | 0    |
+| 4    | r(y)  |      | 2    | 2    | 1    | 0    |
+| 5    |       | r(y) | 2    | 2    | 2    | 0     |
 

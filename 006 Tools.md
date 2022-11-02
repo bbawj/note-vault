@@ -8,6 +8,7 @@
 - [[NodeJS]]
 - [[ASP.NET Web API]]
 - [[Go]]
+- [[C]]
 ## Databases
 - [[SQL]]
 - [[MongoDB]]

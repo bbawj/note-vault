@@ -9,6 +9,9 @@ A file is an unstructured sequence of bytes. Each byte is individually addressab
 - Owner: Permissions used by the assigned owner of the file or directory
 - Group: Permissions used by members of the group that owns the file or directory
 - Other: Permissions used by all users other than the file owner, and members of the group that owns the file or the directory
+### File Descriptor
+A file descriptor is a non-negative integer which indexes into a per-process file descriptor table which is maintained by the kernel. This in turn indexes into a system-wide open file table. It also indexes into the inode table that describes the actual underlying files.
+![](https://i.imgur.com/YG1FRQs.png)
 ### Storage allocation
 File-Organisation Module: allocates storage space for files, translates logical block addresses to physical block addresses, and manages free disk space.
 #### Contiguous
