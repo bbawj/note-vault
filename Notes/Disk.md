@@ -23,11 +23,58 @@ $$t = \frac{block\ size}{transfer\ rate}$$
 ### Random Disk Access
 Average seek time: let i be the cylinder of the block just accessed and j be the cylinder of the block to be accessed, N be the total number of cylinders
 $$t = \frac{\sum_{i=1}^{N}\sum_{j=1}^{N}seektime(i-j)}{N^2}$$
-Average rotational delay: half circle rotation time
 ### Sequential Disk Access
 Average seek time is approximately 0 as the block to be accessed is likely to be in same cylinder
 Average rotational delay is approximately 0 as the head points to the next block after current access
 ![](https://i.imgur.com/M0ylOeH.png)
+## Disk Scheduling
+### First Come First Serve
+![](https://i.imgur.com/pvvLUwZ.png)
+### Shortest Seek Time First
+Similar to [[Notes/Process scheduling#Shortest Job First (SJF)|shortest job first]]. Selects the request with the minimum seek time
+from the current head position. It is susceptible to starvation.
+![](https://i.imgur.com/GUJ7jRj.png)
+### Elevator / Scan
+Disk arm starts at one end of the disk, and moves toward the other end, servicing requests until it gets to the other end of the disk, where the head movement is reversed: 
+![](https://i.imgur.com/0zMIHDP.png)
+### C-Scan
+Variant of elevator: after reversing direction, may not need to service requests immediately as more requests would be on the other end (uniform distribution)
+![](https://i.imgur.com/6kbfmik.png)
+### C-Look
+Rather than reversing only when reaching one end of the disk, reverse after servicing the last request in the current direction.
+![](https://i.imgur.com/SV3sASO.png)
+### Comparison
+- SSTF is common and has a natural appeal
+- SCAN and C-SCAN (or LOOK and C-LOOK) perform better for systems that place a heavy load on the disk (since starvation is unlikely)
+- Performance depends on the number and types of requests
+- [[Notes/File Systems#Storage allocation|File allocation methods]] also affect the effectiveness of the algorithm. A linked or indexed file may generate requests wide apart.
+## Disk Management
+Formatting
+- Divide the disk into sectors which the controller can read and write
+Partitioning
+- separating the disk into 1 or more groups of cylinders
+Logical formatting
+- Making a new file system by creating data structures to support file access across different partitions
+![](https://i.imgur.com/l1rUNxA.png)
+## Disk Reliability
+### Striping
+Uses a group of disks as one storage unit
+- Each block is broken into several sub-blocks, with one sub-block stored on each disk
+- Time to transfer a block into memory is faster because all sub-blocks are transferred in parallel
+![](https://i.imgur.com/e1URc4E.png)
+### Mirroring
+Keeps a duplicate of each disk by using 2 physical disks in 1 logical disk. If one fails data can still be read by the other.
+![](https://i.imgur.com/5eWJTR2.png)
+### Redundant Array of Independent Disks (RAID)
+Raid 0: Striping
+Raid 1: Mirroring
+Raid 0 + 1: Mirror of Stripes
+![](https://i.imgur.com/U1dHjtf.png) 
+Raid 1 + 0: Strip of Mirror
+![](https://i.imgur.com/OnqoqHq.png)
+- A difference occurs if there are at least 6 disks involved.
+- Raid 10 has better fault tolerance: allows for disk 1,3,5 to be down and still functional
+- Raid 01 degrades to Raid 0 when any disk fails. i.e. Will only be able to read a file from one group.
 ## Storing relational data
 ![](https://i.imgur.com/T38v3NN.png)
 ### Fields to Record
