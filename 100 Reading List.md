@@ -12,6 +12,7 @@
 ## Under the Hood
 1. [Writing An Interpreter In Go](https://interpreterbook.com/)
 2. [Writing A Compiler In Go](https://compilerbook.com/)
+3. Ian McLoughlin, Computer Architecture: An Embedded Approach, McGraw-Hill Education (Asia), 2011, ISBN: 978-0071311182.
 ## Databases
 1. High Performance MySQL
 ## Software Engineering

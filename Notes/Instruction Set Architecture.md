@@ -22,23 +22,22 @@ This is done using [[Combinational Circuits#Multiplexer|multiplexers]] to choose
 ![](https://i.imgur.com/L0PnDz1.png)
 ### Instructions
 Based on the system we can design a set of computer [[Instructions]].
-
 ## Practice Problems
 ![](https://i.imgur.com/jgFhIqL.png)
 ```
-1 LOAD 0 into X2
-2 SUBIS X2, X2, 101
-3 BZ to exit
-4 LDUR X3, X11, X2
-5 ADD X4, X3, X1
-6 STUR X4, [X10, X2]
-7 ADDI X2, X2, 1
-8 B L2
+ADDI X2, X3, #101 ;save loop termination index
+loop: 
+	LDUR X4, [X11, #0] ;x4 = b[i]
+	ADDI X11, X11, #8 ;x11 = x11 + 8
+	ADD X4, X4, X1 ;x4 = b[i] + c
+	STUR X4, X10, #8 ;a[i] = x4
+	ADDI X10, X10, #8 ;a[i] = a[i+1]
+	SUBI X2, X2, 1 ;x2 = x2-1
+	CBNZ X2, loop
 exit END
 ```
 ii. 
 1 is run once: 1
 2 -> 8 is run 101 times = 1 + 707 = 708
-2 and 3 is run 1 extra time. 708 + 2 = 710
 iii.
-Line 4 and 6 are memory references, each done 101 times: 202 references.
+Line 1 and 4 are memory references, each done 101 times: 202 references.

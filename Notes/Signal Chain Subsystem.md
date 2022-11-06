@@ -42,6 +42,8 @@ Uses UART protocol transmission but
 - uses a different electrical standard interface. i.e. Logic 1 is represented by a voltage smaller than Logic 0.
 - Logic 1 can be -15V while Logic 0 can be +15V
 Invert the receiving signal and we are able to read the data using the UART protocol equivalently.
+An excellent tutorial:
+https://www.youtube.com/watch?v=AHYNxpqKqwo
 ## Data Transfer Mechanism
 ### Polling
 ![](https://i.imgur.com/O1pP4YN.png)

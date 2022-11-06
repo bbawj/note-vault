@@ -29,9 +29,9 @@ Priority is based on the instance level rather than the process level.
 ![](https://i.imgur.com/sQZTbLD.png)
 ## Practice Problems
 ![](https://i.imgur.com/uAaZPVd.png)
-a. True.
+a. False. Real time does not mean fast or very short time, but rather to guarantee response times within a pre-defined deadline in the worst case
 b. True.
-c. False. Hypervisor provides interface between H/W and Guest OS
+c. False. It is the host OS that does this. The guest OS interacts with the hypervisor and provides services to the applications running on it.
 d. False. Hypervisor manages interactions between H/W and guest OS
 e. True.
 ![](https://i.imgur.com/Aob93mN.png)
@@ -40,3 +40,4 @@ Yes:
 ![](https://i.imgur.com/RSodmxP.png)
 Yes?
 ![[Pics/Real Time Operating Systems 2022-09-26 18.34.23.excalidraw]]
+![](https://i.imgur.com/zBnpTVf.png)

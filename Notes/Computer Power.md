@@ -19,7 +19,6 @@ When voltage is reduced, the threshold that is used to differentiate between a l
 ![](https://i.imgur.com/89jDDi7.png)
 ## Practice Problems
 ![](https://lh3.googleusercontent.com/Sf-kXoA3oxFIRLiK1iNx2GDOwkOTj2jqEnJ8UDBHWEv6oNce1CIu5uc08o4DdkXaCwpQxbFF3G5NlKheJgCumElgdgDplXXXZRCgFGKdiXR_7IuC7SSEHvfjR0TXkCh2c3dC9Z2QoZl99jgrz6B0Cg0)
-
 __Case 1__:
 Change in voltage = 3.3 - 3 / 3 = 10%
 i. 
@@ -30,7 +29,7 @@ iii. Perf is directly proportional to freq. Change in perf = 10%
 iv.
 $$
 \begin{aligned}
-&\text{Perf is = 1/Time} \newline
+&\text{Perf is = 1/Time} \\
 &\text{Dynamic energy} \\
 &\text{Increase in performance by 10\% means that the change in time is 1/1.1}\\
 &\text{Consumption change} = 1.331 P * 1/1.1T - P*T = 21\%increase\\ 

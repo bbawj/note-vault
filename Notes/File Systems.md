@@ -87,5 +87,23 @@ Disadvantage:
 - Inefficient to look up this bitmap unless the entire map is kept in memory
 #### Linked list
 ![](https://i.imgur.com/habWC4G.png)
-
-
+## Practice Problems
+![](https://i.imgur.com/q4C26Gf.png)
+a. False. Owner and the group which owner belongs to is able to read.
+b. True.
+c. False. Using linked file allocation, any free data block can be used.
+![](https://i.imgur.com/3BDfuQU.png)
+a. The previous links will now point to the data of the new file. To avoid this, dangling links need to be cleaned up.
+b. By maintaining a single copy, it is easier to keep the data synchronised between users. With several copies, it allows ??
+![](https://i.imgur.com/VEuDidH.png)
+a. 1 disk read to load inode into system open file table
+b. Seek: no disk reads needed ??
+Current position is 5900: Logical block 5, byte 900.
+read(100): 1 disk read by following direct pointer
+read(200): 2 disk read by following single indirect pointer
+3 disk reads total
+c. 
+Number of pointers in 1 index block = $1000/2=500$
+File size supported = $(6+500) \times 1000=506,000B$
+![](https://i.imgur.com/VB9xuM7.png)
+File data can be stored across different physical storage blocks. A smaller physical block helps to reduce internal fragmentation as the last block occupied by the file can is only 512B compared to 4KB

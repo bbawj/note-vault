@@ -81,6 +81,30 @@ When a transaction wants to write, and TS(T) < WT(X), ignore the write and allow
 - Schedules are not recoverable as TO does not have any checks
 ## Comparisons
 ![](https://i.imgur.com/OvQkJJm.png)
+## Multi Version Concurrency Control
+A misnomer as it is not actually a concurrency control protocol.
+DBMS maintains multiple physical versions of a single object in the database:
+- When transaction writes to an object, the DBMS creates a new version
+- When transaction reads an object, it reads the newest version that exists when the transaction started
+Each user connected to the database sees a _snapshot_ of the database at a particular instant in time. Any changes made by a writer will not be seen by other users of the database until the changes have been completed, providing isolation
+![](https://i.imgur.com/rxyuTCY.png)
+![](https://i.imgur.com/hMcMZuF.png)
+### Concurrency Protocol
+Able to use any concurrency protocol to underly its implementation. MVCC is simply another layer on top of these protocols to provide transactional memory.
+### Version Storage
+DBMS creates a version chain per tuple, which allows it to find version that is visible to a particular transaction at runtime. There are indexes which point to the head of the chain.
+Version ordering:
+- Oldest to Newest: append new version at the end of chain -> the entire chain has to be traversed for look ups
+- Newest to Oldest: append new version at the head of the chain, update index pointers to the head for every new version
+#### Append only
+![](https://i.imgur.com/nkFmNRj.png)
+#### Time travel storage
+![](https://i.imgur.com/Ug9aDBy.png)
+#### Delta storage
+![](https://i.imgur.com/zU5zSIj.png)
+### Garbage Collection
+![](https://i.imgur.com/vdwgroe.png)
+![](https://i.imgur.com/cArxcjN.png)
 ## Practice Problems
 ![](https://i.imgur.com/bg5zD3I.png)
 ![](https://i.imgur.com/d7wWbX9.png)
