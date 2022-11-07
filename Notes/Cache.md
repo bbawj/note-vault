@@ -31,6 +31,12 @@ When useful blocks are displaced due to placement policies. E.g. fully associati
 	- Increases miss penalty as more data needs to be replaced on a miss.
 ![](https://i.imgur.com/PKhDsDq.png)
 ### Measuring Impact with CPI
+$$
+\begin{align}
+&CPU_{time}=(CPU_{\text{execution cycles}}+\text{Memory stall cycles})\times\text{Cycle Time}\\
+&CPU_{time}=((IC\times CPI)+(IC\times\%\text{Memory Access}\times\text{Miss Rate}\times\text{Miss Penalty}))\times \text{Cycle Time}
+\end{align}
+$$
 ![](https://i.imgur.com/38DnZ86.png)
 L1 cache hit can be considered to be part of CPI ideal as it is often possible to complete the data access within the ideal clock cycles.
 #### Example
@@ -70,3 +76,21 @@ Bits for index -> 1
 | LRU2   | NA       | NA       | 10001    | 10111     | 10001    | 10110    | 10001    | 10110         |
 
 Hit rate: 2/8 = 25%
+![](https://i.imgur.com/ZUWtOC2.png)
+a.
+$$
+\begin{align}
+&T=IC\times CPI\times Period\\
+&CPI_{ideal}=1.25\\
+&\text{L1 stall cycles}=0.2\times0.2\times8=0.32\\
+&\text{L2 stall cycles}=0.2\times0.2\times0.1\times30=0.12\\
+&\text{CPI stall}=1.25+0.32+0.12=1.69\\
+\end{align}
+$$
+b.
+$$
+\begin{align}
+&\text{L1 stall cycles}=0.2\times0.2\times30=1.2\\
+&\text{CPI stall}=1.25+1.2=2.45
+\end{align}
+$$

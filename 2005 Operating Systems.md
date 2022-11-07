@@ -29,3 +29,9 @@ The OS is typically [[Interrupts]] driven.
 10. [[Virtual Memory]]
 11. [[File Systems]]
 12. [[I/O Subsystem]]
+## References
+### Operating Systems Concepts
+Exercise solutions:
+- https://codex.cs.yale.edu/avi/os-book/OS10/practice-exercises/index-solu.html
+Instructor's Manual:
+- http://web.uettaxila.edu.pk/CMS/AUT2011/seOSbs/tutorial/Sol.%20-%20Silberschatz.Galvin%20-%20Operating.System.Concepts.7th.pdf

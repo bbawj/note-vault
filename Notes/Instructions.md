@@ -36,27 +36,57 @@ STUR
 ![](https://i.imgur.com/cL7BQNZ.png)
 ### Datapath
 ![](https://i.imgur.com/e3nbpwz.png)
-
 ## Unconditional Branch type
 ![](https://i.imgur.com/clXQze5.png)
-
 ## Combine all types into a single datapath
 ![](https://i.imgur.com/Wmjc1KN.png)
+Critical path:
+```mermaid
+graph LR;
+	A(Reg2Loc Mux) --> T("2 x REG(read)") --> C(ALUSrc Mux) --> ALU --> E("Mem2Reg Mux") --> F("REG(write)")
+```
 Notes:
 - Reg2Loc (0) used to select Rm as a source register
 - ALUSrc (0) to select register data rather than sign-extended address
 - Mem2Reg (0) to select data from ALU rather than memory
+### I-Type
+![](https://i.imgur.com/MGZnj1s.png)
+Critical path: 
+```mermaid
+graph LR;
+	A("REG(read)") --> T(Zero Extend) --> C(ALUSrc Mux) --> ALU --> E("Mem2Reg Mux") --> F("REG(write)")
+```
+- Immediate address is zero extended and hence there is no delay here
+### Load
 ![](https://i.imgur.com/yaQJzIZ.png)
+Critical path: 
+```mermaid
+graph LR;
+	A("REG(read)")  --> C(ALUSrc Mux) --> ALU --> T(D-MEM)--> E("Mem2Reg Mux") --> F("REG(write)")
+```
 Notes:
 - Reg2Loc not used as only 1 read
 - ALUSrc (1) to select  sign-extended address
 - Mem2Reg (1) to select data from memory
+### Store
+![](https://i.imgur.com/HUHMwJN.png)
+### Conditional Branch
 ![](https://i.imgur.com/PLmtZJS.png)
+Critical path:
+```mermaid
+graph LR;
+	T(Reg2Loc Mux)--> A("REG(read)")--> C(ALUSrc Mux) --> ALU -->  E(Branch MUX) -->AND-->OR-->F(PCin/out)
+```
 Notes:
 - Reg2Loc (1) to read Rt
 - ALUSrc (0) to use data from register rather than address
 - Zero-flag in AND-gate together with Branch-flag to select address to add for branching rather than default +4 to load into PC
 ![](https://i.imgur.com/FZM5SNF.png)
+Critical path:
+```mermaid
+graph LR;
+	T(Sign Extend)--> A(Shift left)--> C(ADD)-->E(Branch MUX)-->F(PCin/out)
+```
 Notes:
 - Additional OR-gate to always select the address for branching
 ## Practice Problems
@@ -64,7 +94,7 @@ Notes:
 i. All instructions
 ii. All instructions
 iii. All except unconditional branch instructions
-	iv. ALU instructions, Load/Store instructions and Conditional Branch. _Why unconditional branch don't need?_
+iv. ALU instructions, Load/Store instructions and Conditional Branch. _Why unconditional branch don't need?_
 v. Load/Store instructions
 ![](https://i.imgur.com/fyYJqgz.png)
 PC++, PCin -> PCout and I-MEM is used for all datapaths
@@ -75,9 +105,9 @@ Reg2Loc Mux -> 2 x REG(read) -> ALUSrc Mux -> ALU -> Mem2Reg Mux -> REG(write)
 2 Reg read signals are done in parallel.
 $500+50+200+50+2000+50+200=3050ps$
 ii.
-Reg2Loc Mux -> REG(read) -> Sign Extend -> ALUSrc Mux -> ALU -> Mem2Reg Mux -> REG(write)
-We do not need to wait for sign extend signal while reading REG
-$500+50+200+50+2000+200+50=3050ps$
+REG(read) -> Zero Extend -> ALUSrc Mux -> ALU -> Mem2Reg Mux -> REG(write)
+The delay from ALUSrcMux is overshadowed by the REG(R)
+$500+200+2000+200+50=2950ps$
 iii.
 REG(read) -> ALUSrc Mux -> ALU -> D-MEM -> Mem2Reg Mux -> REG(write)
 ALUSrc MUX delay is overshadowed by the delay in REG(read)

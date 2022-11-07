@@ -92,6 +92,7 @@ a.
 To address a byte in a 1-Kbyte page will require 10 bits
 Logical address: 22 bit page index, 10 bit offset
 1 Gigabyte ($2^{30}$) physical memory will require, 30 bits to represent each byte address
+![](https://i.imgur.com/bD0lkow.png)
 b.
 $2^{22}$ pages.
 c.
@@ -100,27 +101,33 @@ Number of entries = Number of physical frames: $2^{30}/2^{10}=2^{20}$
 a.
 There are 8 pages, 3 bits are required to determine the page index.
 Remaining 7 bits are used for the page offset, to address the individual byte in the page.
-1000011011 -> Page 100 Offset 0011011 -> Page = 4, Offset = 15
+1000011011 -> Page 100 Offset 0011011 -> Page = 4 -> Frame number 01001
+Physical address: $010010011011$
 b.
 There are 4 segments, 2 bits required to determine segment number
 Remaining 8 bits used to address the physical memory unit
-1000011011 -> Segment 10 Offset 00011011 -> Segment = 2, Offset = 15
+1000011011 -> Segment 10 Offset 00011011 -> Segment = 2
+![](https://i.imgur.com/873Y5nz.png)
+
 ![](https://i.imgur.com/M0XVmUz.png)
-a. 1024 Bytes
+a.
+Number of pages = $2^{30}/1024=2^{20}$
+Size of table = $2^{20}\times4=2^{22}$
 b.
-Outmost page table is = 4bytes
 $$
 \begin{align}
-\text{Number of entries 1st level}=1024/4=256\\
-\text{Number of pages 1st level}=256/4=64\\
-\text{Number of entries 2nd level}=64\\
-\text{Number of pages 2nd level}=64/4=16\\
-\text{Number of entries 3rd level}=16\\
-\text{Number of pages 3rd level}=16/4=4\\
-\text{Number of entries 4th level}=4\\
-\text{Number of pages 4th level}=4/4=1\\
-\text{Total no. of levels}=log_4256=4
+&\text{Size of page table 1st level}=2^{22}\\
+&\text{Number of pages 2nd level}=2^{22}/2^{10}=2^{12}\\
+&\text{Size of 2nd level}=2^{12}\times4=2^{14}\\
+&\text{Number of pages 3rd level}=2^{14}/2^{10}=2^4\\
+&\text{Size of 3rd level}=2^4\times4=2^6<1024B\\
+&\text{Total no. of levels}=3
 \end{align}
 $$
 c.
-![[Pics/Memory Organisation 2022-10-18 14.12.16.excalidraw]]
+3rd level holds $2^4$ pages and requires 4 bits to index
+Each page table can hold $2^{10}/2^2=2^8$ entries
+8 bits needed to index into the 2nd level
+Each page table in the 2nd level holds $2^8$ entries
+8 bits needed to index into the final level
+![](https://i.imgur.com/tIVXHKn.png)

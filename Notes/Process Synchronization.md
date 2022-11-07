@@ -26,8 +26,15 @@ Progress is violated:
 ![](https://i.imgur.com/wU8koJx.png)
 
 ![](https://i.imgur.com/YPYh9dL.png)
-### Combination
+### Perterson's Solution
 ![](https://i.imgur.com/TaegYbO.png)
+Mutual exclusion:
+- Pi enters its critical section only if either flag[j] == false or turn == i. Also note that, if both processes can be executing in their critical sections at the same time, then flag[0] == flag[1] == true. These two observations imply that P0 and P1 could not have successfully executed their while statements at about the same time, since the value of turn can be either 0 or 1 but cannot be both. Hence, one of the processes—say, Pj —must have successfully executed the while statement, whereas Pi had to execute at least one additional statement (“turn == j”). However, at that time, flag[j] == true and turn == j, and this condition will persist as long as Pj is in its critical section; as a result, mutual exclusion is preserved.
+Progress:
+- Pi can be prevented from entering the critical section only if it is stuck in the while loop with the condition flag[j] == true and turn == j
+- If Pj is not ready to enter the critical section, then flag[j] == false, and Pi can enter its critical section. If Pj has set flag[j] to true and is also executing in its while statement, then either turn == i or turn == j. If turn == i, then Pi will enter the critical section. If turn == j, then Pj will enter the critical section.
+Bounded Waiting:
+- When $P_i$ exits its critical section, flag[j] == false and $P_i$ is allowed to enter its critical section. Assume $P_j$ resets flag[j] == true, it will subsequently set turn == i. Since $P_i$ cannot change the turn value while in the loop, it is allowed to enter the critical section after at most 1 entry by $P_j$
 ## Hardware Solution
 ### Synchronization Hardware
 Race condition is a result of context switches. We can prevent that in hardware to have atomic instructions.

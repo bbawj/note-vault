@@ -66,3 +66,19 @@ __global__ void dot_prod_cu(int *d_c, int *d_a, int *d_b){
 #### Warps
 ![](https://i.imgur.com/ObcIEOG.png)
 ![](https://i.imgur.com/ENSz0mN.png)
+## Practice Problems
+![](https://i.imgur.com/zf3Aapc.png)
+```c
+__global__ void stencil(int N, int *input, int *output) {
+	blockNum = blockIdx.x;
+	i = threadIdx.x + blockNum * N;
+	int sum = input[i];
+	for(int i = 1; i < 3; i++) {
+		sum += input[i-i]
+		sum += input[i+i]
+	}
+}
+int N = len(input) / BLOCK_SIZE
+output = (int *) malloc(N * sizeof(int))
+stencil<<<N, BLOCK_SIZE>>>(N, input, output)
+```

@@ -18,3 +18,23 @@ We can introduce previous techniques to reduce data hazard and improve overall C
 
 ## Practice Problems
 ![](https://i.imgur.com/TonQ5Bf.png)
+a.
+P1 in order:
+| Time | Lane 1 | Lane 2 |
+| ---- | ------ | ------ |
+| 1    | A      |        |
+| 2    | B      |        |
+| 3    | C      | D      |
+| 4    | E      | F      |
+| 5    | G      |        |
+| 6    | H       |        |
+P2 out of order:
+| Time | Lane 1 | Lane 2 |
+| ---- | ------ | ------ |
+| 1    | A      | D      |
+| 2    | B      | E      |
+| 3    | C      | F      |
+| 4    | G      |        |
+| 5    | H      |        |
+
+b. $Speedup = 6/5=1.2$

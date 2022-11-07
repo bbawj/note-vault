@@ -9,9 +9,14 @@ A file is an unstructured sequence of bytes. Each byte is individually addressab
 - Owner: Permissions used by the assigned owner of the file or directory
 - Group: Permissions used by members of the group that owns the file or directory
 - Other: Permissions used by all users other than the file owner, and members of the group that owns the file or the directory
-### File Descriptor
-A file descriptor is a non-negative integer which indexes into a per-process file descriptor table which is maintained by the kernel. This in turn indexes into a system-wide open file table. It also indexes into the inode table that describes the actual underlying files.
+### Data Structures
+#### File Control Block
+![400](https://i.imgur.com/xKpBYnL.png)
+#### Open File Table
+The open file tables saves substantial overhead by serving as a cache for the FCB. Data blocks are *not* kept in memory, instead, when the process is closed, the FCB is entry is removed and the updated data is copied back to the disk.
 ![](https://i.imgur.com/YG1FRQs.png)
+#### File Descriptor
+A file descriptor is a non-negative integer which indexes into a per-process file descriptor table which is maintained by the kernel. This in turn indexes into a system-wide open file table. It also indexes into the inode table that describes the actual underlying files.
 ### Storage allocation
 File-Organisation Module: allocates storage space for files, translates logical block addresses to physical block addresses, and manages free disk space.
 #### Contiguous
@@ -94,10 +99,20 @@ b. True.
 c. False. Using linked file allocation, any free data block can be used.
 ![](https://i.imgur.com/3BDfuQU.png)
 a. The previous links will now point to the data of the new file. To avoid this, dangling links need to be cleaned up.
-b. By maintaining a single copy, it is easier to keep the data synchronised between users. With several copies, it allows ??
+b. 
+Single copy
+- Race conditions, mutual exclusion
+Multiple copy
+- Storage waste
+- Inconsistency
 ![](https://i.imgur.com/VEuDidH.png)
-a. 1 disk read to load inode into system open file table
-b. Seek: no disk reads needed ??
+a. 5 disk accesses
+1. Load inode of usr
+2. Load directory for usr
+3. Load inode for ast
+4. Load directory for ast
+5. Load inode for mbox
+b. Seek: no disk reads needed
 Current position is 5900: Logical block 5, byte 900.
 read(100): 1 disk read by following direct pointer
 read(200): 2 disk read by following single indirect pointer
@@ -106,4 +121,4 @@ c.
 Number of pointers in 1 index block = $1000/2=500$
 File size supported = $(6+500) \times 1000=506,000B$
 ![](https://i.imgur.com/VB9xuM7.png)
-File data can be stored across different physical storage blocks. A smaller physical block helps to reduce internal fragmentation as the last block occupied by the file can is only 512B compared to 4KB
+File data can be stored across different physical storage blocks. A smaller physical block helps to reduce internal fragmentation as the last block occupied by the file can is only 512B compared to 4KB. Using the larger block size would also help to improve throughput.

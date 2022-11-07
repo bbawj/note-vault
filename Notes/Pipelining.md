@@ -80,10 +80,8 @@ b. LDUR: IF -> ID -> EX -> MEM -> WB
 	Pipelined: Each stage must take 500ps leading to 2500ps
 c. MEM stage. Clock period: 400ps
 d.
-1. MEM stage is 20% of entire instruction execution. Used in LDUR and STUR
-$0.2*0.15 + 0.2+0.1 = 0.05=5\%$
-2. WB stage is also 20% of entire instruction execution. Used in ALU and LDUR
-$0.2*0.5 + 0.2*0.15=0.13=13\%$
+1. Used in LDUR and STUR 25%
+2. Used in ALU and LDUR 65%
 ![](https://i.imgur.com/pPz8itY.png)
 a. 2 stall cycles per hazard = 6 total
 ![[Drawing 2022-09-03 00.35.07.excalidraw|800]]
@@ -114,3 +112,14 @@ x = 5: $\frac{31}{56}=0.55$
 x = 100: $\frac{601}{1101}=
 b.
 ![[Pics/Pipelining 2022-09-12 11.33.33.excalidraw|]]
+
+![](https://i.imgur.com/fbYe55h.png)
+$$
+\begin{align}
+&\text{Branch Penalty Unconditional}=1
+&\text{Branch Penalty Conditional}=2\\
+&\text{Stall cycles Unconditional}=0.01\times1=0.01\\
+&\text{Stall cycles Conditional}=0.15\times0.6\times2=0.18\\
+&CPI = 1+0.18+0.1=1.19
+\end{align}
+$$
