@@ -28,7 +28,7 @@ The OS is typically [[Interrupts]] driven.
 9. [[Memory Organisation]]
 10. [[Virtual Memory]]
 11. [[File Systems]]
-12. [[I/O Subsystem]]
+12. [[Notes/IO Subsystem]]
 ## References
 ### Operating Systems Concepts
 Exercise solutions:

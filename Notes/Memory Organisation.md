@@ -28,12 +28,12 @@ Do not partition the memory. Rather, the OS allocates the exact chunk of memory 
 *External fragmentation*: memory space between partitions (the holes) may be enough to satisfy a new request but is not contiguous and cannot be used. This can be solved by performing compaction, which shuffles memory contents to produce contiguous block of available memory.
 ### Dynamic Allocation Policies
 ![](https://i.imgur.com/QYCVh9D.png)
-## Non Contiguous allocation (Paging)
+## Paging
 ^b8969e
 Allow process to be allocated physical memory whenever it is available. 
 > [!Idea:]
 > 1. Divide the physical memory into fixed sized *frames*.
-> 2. Divide logical memory of the **process** into *pages*.
+> 2. Divide logical memory of the **process** into *pages* the same size as frames.
 > 3. Use a page table to map the logical memory to physical memory.
 ### Fragmentation
 - Eliminating external fragmentation as every available physical memory space can be utilised. 
@@ -44,11 +44,19 @@ Split the logical address to map page to frame:
 Offset necessary to locate the byte-addressable piece of physical memory.
 ![](https://i.imgur.com/QPaWk69.png)
 ![](https://i.imgur.com/zOHdEXK.png)
-### Translation Look-aside Buffers (TLB)
-A cache for the page table.
+### Hardware Support
+The page table is stored in main memory with a page table base register (PTBR) pointing to it.
+#### Translation Look-aside Buffers (TLB)
+The page table is stored in memory and thus, to access a piece of physical memory, we require 1 memory access to the page table and 1 memory access to the actual memory. We can speed this up with a specialised cache for the page table.
 ![](https://i.imgur.com/YdHgJgB.png)
 #### Effective access time
+With TLB:
+- 1 TLB access and 1 mem access on hit
+- 1 TLB access and 2 mem access on miss
 ![](https://i.imgur.com/C0yZp2Q.png)
+### Shared Pages
+Reentrant or code which never changes during execution can be shared among processes by having processes used the same pages.
+![500x500](https://i.imgur.com/A6xWe1W.png)
 ### Multi-level Paging
 A page table can be large. Not efficient to have to fetch the entire page table for every memory LOAD/STUR instruction.
 ![](https://i.imgur.com/7pH5hvu.png)

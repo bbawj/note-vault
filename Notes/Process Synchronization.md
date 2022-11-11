@@ -49,8 +49,12 @@ TestAndSet is now an assembly instruction which can be used to acquire a lock:
 ![](https://i.imgur.com/zwFGrJq.png)
 Hardware has no memory of process trying to access the lock. P0 able to indefinitely take the lock without giving P1 a chance.
 ## Operating System Solution
+### Mutex Locks
+![](https://i.imgur.com/pLZl78y.png)
 ### Semaphore
 ![](https://i.imgur.com/NFRVyYv.png)
+- A binary sempahore behaves similar to mutex locks.
+- A counting semaphore is used to control access to a given resource consisting of a finite number of instances. **It is initalised to the number of resources available**.
 #### Busy waiting *solution*
 Also known as a *spinlock*, where a thread trying to acquire a lock is caused to wait in a loop ("spin") while repeatedly checking if the lock is available.
 ![](https://i.imgur.com/aPAwIXL.png)
@@ -60,6 +64,7 @@ Atomicity is not possible for this solution on a single-core. If a process P0 mu
 
 ![](https://i.imgur.com/IgHj0f5.png)
 - Process is in the waiting state because the process cannot use the CPU (and following which enter its critical section) if another process is currently in its critical section
+- Process woken up is changed to ready state but the CPU may not switch from the currently running process to this newly ready process depending on scheduling
 ![](https://i.imgur.com/Mc1Ihj1.png)
 Atomicity needed for these system calls:
 ![](https://i.imgur.com/YRNgQVD.png)
@@ -67,6 +72,7 @@ Atomicity needed for these system calls:
 ### Bounded Buffer
 ![](https://i.imgur.com/Y7Jf4tR.png)
 ![](https://i.imgur.com/1R40zE1.png)
+The order of access to the shared variables matter. Logically, each process should check if the resource is available (in the case of consumer) OR if there is currently no instances (for producers), before trying to access the buffer through the mutex lock.
 Producer:
 ```go
 do 

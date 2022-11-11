@@ -2,7 +2,9 @@
 A program in execution, also known as a job. One process can have multiple [[Threads |threads]].
 ## Process in memory
 ![](https://i.imgur.com/DnW6ijk.png)
-
+- Sizes of text and data sections are fixed
+- Stack can grow and shrink dynamically: each time a function is called, an activation record is pushed to the stack and popped when the function returns
+- Heap can grow and shrink dynamically: changes as memory is dynamically allocated in runtime
 Information related to each process is then stored in a Process Control Block (PCB)
 ![](https://i.imgur.com/K8z95Jd.png)
 ## Process states
@@ -17,13 +19,6 @@ Information related to each process is then stored in a Process Control Block (P
 > - Running -> waiting is due to some interrupt source from the currently running process
 > - Process always goes through the ready state before running (no direct from waiting to running)
 ## [[Process scheduling]]
-All processes are stored in queue structures
-Job queue: set of all processes with the same state in the system
-- ready queue: processes in the ready state
-- device queue: processes waiting for specific I/O device
-
-A scheduler will be in charge of handling these queues
-![](https://i.imgur.com/fjJLGsE.png)
 ## Process Operations
 ### Creation
 ![](https://i.imgur.com/Di9N9yE.png)

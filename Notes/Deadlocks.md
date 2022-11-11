@@ -18,7 +18,7 @@ A deadlock **may** occur if these conditions hold at the same time:
 3. No preemption: A resource can be released only voluntarily by the process holding it, after that process has completed its task
 4. Circular wait: There exists a set {P0, P1, …, Pn} of waiting processes such that P0 is waiting for a resource that is held by P1, P1 is waiting for P2, …, Pn–1 is waiting for Pn, and Pn is waiting for P0
 ## Deadlock Prevention
-If one of the above conditions are not satisfied, a deadlock will not occur.
+As long as we are able to ensure at least one of the following conditions do not hold, we can prevent a deadlock from occurring.
 Example using [[Notes/Process Synchronization#Dining Philosophers|Dining Philosophers Problem]]:
 ![](https://i.imgur.com/6KG4dAv.png)
 ![](https://i.imgur.com/H79K3yy.png)

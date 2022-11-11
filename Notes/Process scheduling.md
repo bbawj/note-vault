@@ -4,6 +4,14 @@ __CPU Burst__: duration of one CPU execution cycle
 __I/O Burst__: duration of one I/O operation (wait time)
 ![](https://i.imgur.com/dztmS0B.png)
 ## Types
+All processes are stored in queue structures
+Job queue: set of all processes with the same state in the system
+- ready queue: processes in the ready state
+- device queue: processes waiting for specific I/O device
+
+A scheduler will be in charge of handling these queues
+![](https://i.imgur.com/fjJLGsE.png)
+
 ![](https://i.imgur.com/JWypMYa.png)
 ## Objectives
 __System__:
@@ -33,7 +41,7 @@ How to handle the convoy effect from FCFS? __Prioritize processes based on CPU b
 __Non pre-emptive__: a process cannot be stopped. Preemption only after a process is completed
 __Pre-emptive__ (Shortest Remaining Time First): processes in the midst of execution can be rescheduled
 ![](https://i.imgur.com/aNa162L.png)
-This algorithm is optimal o achieve minimum average waiting time. _However, this algorithm is often not used in practice as it is difficult to know the burst length of a process._
+This algorithm is optimal to achieve minimum average waiting time. _However, this algorithm is often not used in practice as it is difficult to know the burst length of a process._
 ### Priority Based
 CPU is allocated to the process with highest priority
 1. Priority based on arrival order (FCFS)
