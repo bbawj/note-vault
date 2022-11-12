@@ -58,7 +58,12 @@ Process selects a replacement frame from the set of all frames; one process can 
 #### Local
 Each process selects only from its own set of allocated frame. Implication: may hinder other processes by not making available its less used pages/frames
 ![](https://i.imgur.com/BEphKf6.png)
-## Practice Problems
+## Other Considerations
+### Program Structure
+Specific choice in data structures used and program structure can affect the performance of demand paging. 
+![](https://i.imgur.com/ZSGI7sq.png)
+- Use of data structures like a hash set or linked list might offer *lesser* locality of reference than a data structure like an array, possibly reducing performance
+# Practice Problems
 ![](https://i.imgur.com/4ukwOxR.png)
 a. FIFO will replace the earliest loaded page. Page 2
 b. Replace the first page with R=0. Page 0.

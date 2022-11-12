@@ -30,12 +30,13 @@ This creation process can have 2 types:
 2. Abort: Parent terminates children processes
 ## Inter-Process Communication (IPC)
 ![](https://i.imgur.com/sayPPYP.png)
+### Shared memory
+Can be faster than message passing as less system calls required. Only ones are to establish the shared memory regions after which all access is treated as routine memory access.
 ### Message passing
 No use of shared variables. 
 Works through 2 system calls:
 1. `send(message) 
 2. `receive(message)
-
 Direct: processes must name each other explicitly 
 Indirect: messages are sent and received through a mailbox or port 
 ![](https://i.imgur.com/OZdrt4M.png)

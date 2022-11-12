@@ -32,6 +32,10 @@ Disadvantages:
 - File space is constricted by size of the hole, it might need to be moved to a bigger hole in the future
 - If file space is overestimated there will be internal fragmentation
 ![](https://i.imgur.com/YKfQr9s.png)
+> [! The delete operation]
+> Deleting a data block stored with contiguous allocation requires shifting of the data blocks.
+> *e.g. Delete data block 5 in a file with 10 data blocks*:
+> i.e. Read block 6, write block 5 with data from block 6, read block 7 and write block 6 with block 7 etc.
 #### Linked
 Each file is a linked list of disk blocks and the blocks may be scattered anywhere on the disk.
 Advantages:
@@ -41,9 +45,13 @@ Disadvantages:
 - No random access
 *Assuming 4 bytes is reserved for the pointer to the next block:*
 ![](https://i.imgur.com/seAqKqD.png)
-Why displacement need to + 4? #question
+Why displacement need to + 4? #question i think maybe the first 4 bytes is used for the pointer, so displacement needs to +4 to skip the pointer address.
+> [! The delete operation]
+> Deleting a data block stored with linked allocation requires an update to the connected pointer. 
+> *e.g. Delete data block 5 in a file with 10 data blocks*:
+> 6 reads to reach block 5. 1 write to update the pointer of block 4 to block 6
 #### Indexed allocation
-Each file has an index block which contains all pointers to the allocated blocks. Directory entry contains the block number of the index block. Similar to a [page table](Notes/Memory%20Organisation.md#^b8969e) for memory allocation.  
+Each file has an index block which contains all pointers to the allocated blocks. Directory entry contains the block number of the index block. Similar to a [page table](Notes/Memory%20Organisation.md#^b8969e) for memory allocation.
 Advantages:
 - Supports random access
 - Dynamic storage allocation without external fragmentation
@@ -51,6 +59,10 @@ Disadvantages:
 - Overhead in keeping index blocks
 - Internal fragmentation as the last block that the index is pointing to may not be fully utilised
 ![](https://i.imgur.com/1sYk7IS.png)
+> [! The delete operation]
+> Deleting a data block stored with indexed allocation requires an update to the indexed pointers. 
+> *e.g. Delete data block 5 in a file with 10 data blocks*:
+> 1 read for the index block, 4 writes to update pointers 
 #### inode
 An inode is an index block. For each file and directory there is an inode. The inode contains file attributes, 12 pointers to direct blocks (data blocks) and 3 pointers point to indirect blocks (index blocks) with 3 levels of indirection.
 ![](https://i.imgur.com/0t64Mny.png)
@@ -66,6 +78,14 @@ A directory can be structured in two ways:
 ![](https://i.imgur.com/n5wb4w0.png)
 
 ![](https://i.imgur.com/qw4qB6W.png)
+> [!Disk reads when navigating a directory]
+> Assume that root directory is in memory
+> Open(“/usr/ast/mbox”) will require 5 disk reads
+> 1. load inode of “usr”  
+> 2. load data block of “usr” (i.e., directory “usr”)  
+> 3. load inode for “ast”  
+> 4. load data block of “ast” (i.e., directory “ast”)  
+> 5. load inode for “mbox”
 ### Organisation
 A tree-like structure:
 ![](https://i.imgur.com/7FbJ3PU.png)
@@ -102,7 +122,7 @@ The pointer to the next block is stored in the block itself, hence to read the e
 ## Practice Problems
 ![](https://i.imgur.com/q4C26Gf.png)
 a. False. Owner and the group which owner belongs to is able to read.
-b. True.
+b. False. The OFT caches the FCB rather than the data block.
 c. False. Using linked file allocation, any free data block can be used.
 ![](https://i.imgur.com/3BDfuQU.png)
 a. The previous links will now point to the data of the new file. To avoid this, dangling links need to be cleaned up.
