@@ -48,6 +48,7 @@ Rather than reversing only when reaching one end of the disk, reverse after serv
 - SCAN and C-SCAN (or LOOK and C-LOOK) perform better for systems that place a heavy load on the disk (since starvation is unlikely)
 - Performance depends on the number and types of requests
 - [[Notes/File Systems#Storage allocation|File allocation methods]] also affect the effectiveness of the algorithm. A linked or indexed file may generate requests wide apart.
+- All the discussed algorithms (except for FCFS) do not solve the underlying issue of starvation. e.g. SCAN can be prevented from servicing the requests on the other end if new requests keep arriving at the same place.
 ## Disk Management
 Formatting
 - Divide the disk into sectors which the controller can read and write
