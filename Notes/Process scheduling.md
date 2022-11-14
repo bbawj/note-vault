@@ -69,7 +69,7 @@ __Asymmetric scheduling__: each CPU can have a separate scheduling strategy/algo
 How to map cores to processes?
 - Burst lengths are not easy to know
 - For a CPU capacity, we need to maximize a certain property: similar to [[Knapsack Problem]]
-
+- Thus, partitioned scheduling suffers from unbalanced loading of cores
 ### Global Scheduling
 Maintain 1 or more ready queues for the entire system without mapping any queue to any CPU core
 __Symmetric scheduling__: one scheduling strategy/algorithm across all cores

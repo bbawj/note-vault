@@ -24,7 +24,7 @@ Information related to each process is then stored in a Process Control Block (P
 ![](https://i.imgur.com/Di9N9yE.png)
 This creation process can have 2 types:
 - Parent and child execute concurrently
-- Parent waits for all children to terminate before continuing execution. This is done through system calls `wait()`
+- Parent waits for all children to terminate before continuing execution. This is done through system calls `wait()` aka `join()`
 ### Termination
 1. Exit: Process asks the OS to delete it
 2. Abort: Parent terminates children processes

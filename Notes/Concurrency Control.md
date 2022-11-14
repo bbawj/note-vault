@@ -10,9 +10,13 @@ Result is equivalent to a serial schedule, but actions of one transaction do not
 ![500](https://i.imgur.com/EvCDCZb.png)
 ### Conflict Serializable Schedule
 ![](https://i.imgur.com/sgLNvTW.png)
+If a pair of actions conflict, if their order is interchanged, the behavior of at least one of the transactions can change.
+From this we can draw 2 conclusions about when a pair can be swapped.
+1. Actions involve the same element
+2. At least one is a write
 ![](https://i.imgur.com/hpD2zat.png)
 #### Precedence Graph
-We can use a precedence graph to determine if a set of transactions are conflict serializable: 
+We can use a precedence graph to determine if a set of transactions are conflict serializable. An edge from one node to another represents a constraint on the order of the transactions. i.e. Actions in a transaction t1 cannot be swapped with another transaction t2. If a cycle occurs, the order of transactions become contradictory and no serial schedule can exist.
 ![](https://i.imgur.com/01GqFEg.png)
 
 ![](https://i.imgur.com/PzNgNGH.png)
@@ -59,7 +63,9 @@ Utilises the [[Notes/Deadlocks#Cyclic Properties of Deadlocks|cyclic properties 
 This graph can become very large ad analysing this graph for every action can take a long time.
 ### Timestamps
 Assign each transaction with a timestamp. This timestamp never changes for the transaction even if it is rolled back.
+#### Wait-Die
 ![](https://i.imgur.com/f1MbRut.png)
+#### Wound-Wait
 ![](https://i.imgur.com/RLvfh5T.png)
 ### Comparison
 ![](https://i.imgur.com/gslOHOC.png)
