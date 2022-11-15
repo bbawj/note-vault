@@ -12,7 +12,7 @@
 The middle element is usually chosen as the pivot:
 1. Swap mid with low, placing the pivot at the start of the array
 - ![](https://i.imgur.com/s9rWqhm.png)
-2. If an element is smaller than the pivot: swap the position of a big element $(++lastsmall)$ with this smaller element $(i)$. __(This step results in an [[005 Sorting Algorithms#^85ee66|unstable]] algorithm)__.
+2. If an element is smaller than the pivot: swap the position of a big element $(++lastsmall)$ with this smaller element $(i)$. __(This step results in an [](005%20Sorting%20Algorithms.md#^85ee66%7Cunstable) algorithm)__.
 3. If an element is larger or equal to the pivot: increment the index $(i)$
 4. Once last index is reached: Swap the pivot position $low$ with $lastsmall$, placing the pivot in the middle
 

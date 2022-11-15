@@ -68,7 +68,7 @@ __Asymmetric scheduling__: each CPU can have a separate scheduling strategy/algo
 
 How to map cores to processes?
 - Burst lengths are not easy to know
-- For a CPU capacity, we need to maximize a certain property: similar to [[Knapsack Problem]]
+- For a CPU capacity, we need to maximize a certain property: similar to [Knapsack Problem](Notes/Knapsack%20Problem.md)
 - Thus, partitioned scheduling suffers from unbalanced loading of cores
 ### Global Scheduling
 Maintain 1 or more ready queues for the entire system without mapping any queue to any CPU core
@@ -88,7 +88,7 @@ c. False. Response time is time to first start of execution. Turnaround time is 
 d. False. Migration overheads occur in global scheduling when a process partially executes on one core and then migrates to another. In partitioned scheduling processes don’t migrate between cores. However, partitioned scheduling has the problem of unbalanced loading of the cores depending on the process-core mapping.
 ![](https://i.imgur.com/w1gOgdk.png)
 abc.
-![[Drawing 2022-08-28 21.06.51.excalidraw| 800]]
+![ 800](Excalidraw/Drawing%202022-08-28%2021.06.51.excalidraw.md)
 d.
 Uni-core: RR
 Duo-core: RR, SRTF

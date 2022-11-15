@@ -48,4 +48,4 @@ https://www.youtube.com/watch?v=AHYNxpqKqwo
 ### Polling
 ![](https://i.imgur.com/O1pP4YN.png)
 ### Interrupt Driven
-[[Notes/Interrupts]]
+[Interrupts](Notes/Interrupts.md)

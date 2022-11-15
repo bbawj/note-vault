@@ -1,6 +1,6 @@
 # Arrays and Slices
 ## Arrays
-![[Screenshot 2022-08-24 at 6.33.10 PM.png]]
+![Screenshot 2022-08-24 at 6.33.10 PM](Pics/Screenshot%202022-08-24%20at%206.33.10%20PM.png)
 ## Slices
 ![](https://i.imgur.com/pmb83Wv.png)
 

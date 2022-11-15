@@ -1,5 +1,5 @@
 # 2704 Finance 
 #moc 
-- [[Bonds]]
-- [[Stock Valuation]]
-- [[Capital Budgeting]]
+- [Bonds](Notes/Bonds.md)
+- [Stock Valuation](Notes/Stock%20Valuation.md)
+- [Capital Budgeting](Notes/Capital%20Budgeting.md)

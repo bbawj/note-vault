@@ -1,5 +1,5 @@
 # Processes
-A program in execution, also known as a job. One process can have multiple [[Threads |threads]].
+A program in execution, also known as a job. One process can have multiple [threads](Threads%20).
 ## Process in memory
 ![](https://i.imgur.com/DnW6ijk.png)
 - Sizes of text and data sections are fixed
@@ -18,7 +18,7 @@ Information related to each process is then stored in a Process Control Block (P
 > - Timer interrupt is used in multiprogramming systems to switch between ready processes
 > - Running -> waiting is due to some interrupt source from the currently running process
 > - Process always goes through the ready state before running (no direct from waiting to running)
-## [[Process scheduling]]
+## [Process scheduling](Notes/Process%20scheduling.md)
 ## Process Operations
 ### Creation
 ![](https://i.imgur.com/Di9N9yE.png)
@@ -54,7 +54,7 @@ What are two main differences between the data and stack regions of a process me
 P0: Ready -> Running -> Waiting -> Ready
 P1: Running -> Ready -> Running
 
-[[Context Switch]]
+[Context Switch](Notes/Context%20Switch.md)
 A: Save state of P1 into PCB1
 B: Load state of P0 from PCB0
 C: Save state of P0 into PCB0

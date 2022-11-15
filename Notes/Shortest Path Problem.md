@@ -4,4 +4,4 @@ In [graph theory](https://en.wikipedia.org/wiki/Graph_theory "Graph theory"), t
 
 Shortest can also mean the number of edges.
 
-Proof of the Shortest Path Property (Optimal Substructure Property based on [[Principle of Optimality]]):![](https://i.imgur.com/miAeAtI.png) ^c4528f
+Proof of the Shortest Path Property (Optimal Substructure Property based on [Principle of Optimality](Notes/Principle%20of%20Optimality.md)):![](https://i.imgur.com/miAeAtI.png) ^c4528f

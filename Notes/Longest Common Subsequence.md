@@ -21,7 +21,7 @@ $$LCS(i,j)=max(LCS(i-1,j), LCS(i,j-1)) $$
 ![](https://i.imgur.com/J0RXXZu.png)
 
 ## Examples: Obtaining the subsequence characters
-![[Pasted image 20220502231603.png]]
+![Pasted image 20220502231603](Pics/Pasted%20image%2020220502231603.png)
 
 ![](https://i.imgur.com/5u32FFZ.png)
 

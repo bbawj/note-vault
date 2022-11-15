@@ -84,7 +84,7 @@ d.
 2. Used in ALU and LDUR 65%
 ![](https://i.imgur.com/pPz8itY.png)
 a. 2 stall cycles per hazard = 6 total
-![[Drawing 2022-09-03 00.35.07.excalidraw|800]]
+![800](Excalidraw/Drawing%202022-09-03%2000.35.07.excalidraw.md)
 b. 
 1. LDUR instruction requires X0 latest at the execute stage, where the ALU calculates the memory address value. X0 is known at the E stage of ADDI: 0 stalls required
 2. ADD instruction requires X2 latest at the E stage. X2 is known at the MEM stage of LDUR when it is loaded from data memory. Forward from M -> E: **1 stall
@@ -104,14 +104,14 @@ c.
 2. 40%. Cycle from 11->10->01
 ![](https://i.imgur.com/aF3LbdX.png)
 a. How to do this one?
-![[Pics/Pipelining 2022-09-12 10.49.44.excalidraw]]
+![Pipelining 2022-09-12 10.49.44.excalidraw](Pics/Pipelining%202022-09-12%2010.49.44.excalidraw.md)
 Number of stalls per loop = 2 + 2 + 1 = 5
 Total useful instructions: $1+6\times x= 1+6x$
 Total instructions: $1+(6+5)\times x=1+11x$
 x = 5: $\frac{31}{56}=0.55$
 x = 100: $\frac{601}{1101}=
 b.
-![[Pics/Pipelining 2022-09-12 11.33.33.excalidraw|]]
+![Pipelining 2022-09-12 11.33.33.excalidraw](Pics/Pipelining%202022-09-12%2011.33.33.excalidraw.md)
 
 ![](https://i.imgur.com/fbYe55h.png)
 $$

@@ -1,15 +1,15 @@
 # Tools
 #moc 
 ## Frontend
-- [[TypeScript]]
-- [[Angular]]
-- [[React]]
+- [TypeScript](Notes/TypeScript.md)
+- [Angular](Notes/Angular.md)
+- [React](React)
 ## Backend
-- [[NodeJS]]
-- [[ASP.NET Web API]]
-- [[Go]]
-- [[C]]
+- [NodeJS](NodeJS)
+- [ASP.NET Web API](Notes/ASP.NET%20Web%20API.md)
+- [Go](Notes/Go.md)
+- [C](Notes/C.md)
 ## Databases
-- [[SQL]]
-- [[MongoDB]]
+- [SQL](SQL)
+- [MongoDB](MongoDB)
 - 

@@ -8,7 +8,7 @@
 
 ![](https://i.imgur.com/sHF2nj4.png)
 
-The interface and concrete product classes implement an additional [[Strategy Pattern]] design which allows the algorithms to be instantiated and changed during runtime.
+The interface and concrete product classes implement an additional [Strategy Pattern](Notes/Strategy%20Pattern.md) design which allows the algorithms to be instantiated and changed during runtime.
 
 ## Pros
 1. Encapsulation of object creation

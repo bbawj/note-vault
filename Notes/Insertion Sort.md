@@ -8,7 +8,7 @@ Incremental approach
 ## Pseudocode
 ![](https://i.imgur.com/goWoPyc.png)
 
-_Equal elements are not swapped in position_. This means that Insertion Sort is [[005 Sorting Algorithms#^85ee66 |stable]].
+_Equal elements are not swapped in position_. This means that Insertion Sort is [](005%20Sorting%20Algorithms.md#^85ee66%20%7Cstable).
 ## Complexity
 > [!NOTE] Best Case
 > - Occurs when the array is already sorted

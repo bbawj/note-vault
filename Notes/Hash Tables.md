@@ -17,7 +17,7 @@ _I am not too sure how this works_. Refer to “Introduction to algorithms”, 2
 
 ## Collision Resolution
 ### Linked lists
-We can combine the hash table with a [[Linked Lists]], placing all the elements that hash to the same slot into the same linked list:
+We can combine the hash table with a [Linked Lists](Linked%20Lists), placing all the elements that hash to the same slot into the same linked list:
 ![](https://i.imgur.com/9PRrarD.png)
 
 | Search                                 | Insert | Delete |

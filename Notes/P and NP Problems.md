@@ -38,12 +38,12 @@ What is a nondeterministic algorithm: ![](https://i.imgur.com/jqsNr81.png)
 
 ![](https://i.imgur.com/Sc32KDc.png)
 
-> [!NOTE] Why is the [[Knapsack Problem]] in NP?
+> [!NOTE] Why is the [Knapsack Problem](Notes/Knapsack%20Problem.md) in NP?
 > Verification:
 > There are $2^n$ subsets of n objects: to check all subsets we would need $O(2^n)$ time.
 > However, given a guess of a subset: to check this subset we would need $O(n)$ time.
 > Solution:
-> DP Solution is [[Pseudo-Polynomial Time Complexity]]
+> DP Solution is [Pseudo-Polynomial Time Complexity](Notes/Pseudo-Polynomial%20Time%20Complexity.md)
 
 ![](https://i.imgur.com/qK3LtxT.png)
 
@@ -62,12 +62,12 @@ A problem D is NP-Hard when for every problem L in NP, there is a polynomial tim
 - There is a polynomial time reduction from an NP-Complete problem G to D. _Since all problems in NP can be reduced to G in polynomial time, G is also reducible to D in polynomial time_.
 
 ## Example reductions
-_Show that the [[Longest Path Problem]] is NP-Hard_.
+_Show that the [Longest Path Problem](Notes/Longest%20Path%20Problem.md) is NP-Hard_.
 
-Reduction from the [[Travelling Salesman Problem]]: For a weighted complete graph G with non negative weights, the path that passes through all the vertices once must also be one of the longest paths because the longest path must include all vertices. Forgo the shortest path optimization in TSP and we obtain LPP.
+Reduction from the [Travelling Salesman Problem](Notes/Travelling%20Salesman%20Problem.md): For a weighted complete graph G with non negative weights, the path that passes through all the vertices once must also be one of the longest paths because the longest path must include all vertices. Forgo the shortest path optimization in TSP and we obtain LPP.
 
-Reduction from the [[Hamiltonian Path Problem]]: For an unweighted graph G, it has a Hamiltonian path if and only if its longest path has length n − 1, where n is the number of vertices in G. Because the Hamiltonian path problem is NP-complete, this reduction shows that the decision version of the longest path problem is also NP-complete. In this decision problem, the input is a graph G and a number k; the desired output is "yes" if G contains a path of k or more edges, and no otherwise.
+Reduction from the [Hamiltonian Path Problem](Hamiltonian%20Path%20Problem): For an unweighted graph G, it has a Hamiltonian path if and only if its longest path has length n − 1, where n is the number of vertices in G. Because the Hamiltonian path problem is NP-complete, this reduction shows that the decision version of the longest path problem is also NP-complete. In this decision problem, the input is a graph G and a number k; the desired output is "yes" if G contains a path of k or more edges, and no otherwise.
 
 ## Too hard...use greedy heuristics
-- [[Knapsack Problem#Greedy Heuristics]]
-- [[Travelling Salesman Problem#Greedy Heuristics]]
+- [](Notes/Knapsack%20Problem.md#Greedy%20Heuristics)
+- [](Notes/Travelling%20Salesman%20Problem.md#Greedy%20Heuristics)

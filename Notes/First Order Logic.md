@@ -1,5 +1,5 @@
 # First Order Logic
-[[Propositional Logic]] can only deal with a finite number of propositions:
+[Propositional Logic](Notes/Propositional%20Logic.md) can only deal with a finite number of propositions:
 
 T: Tommy is faithful
 J: Jimmy is faithful

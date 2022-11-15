@@ -1,15 +1,15 @@
 # Principle of Optimality
 Principle of Optimality: An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.
 
-This is the basis for [[Markov Decision Process]].
+This is the basis for [Markov Decision Process](Notes/Markov%20Decision%20Process.md).
 
 ## Application to Dynamic Programming
 > [!NOTE] Paraphrasing...
 > A problem is said to satisfy the principle of optimality if the subsolutions of an optimal solution of the problem are themselves optimal solutions for their subproblems.
 
-__The [[Shortest Path Problem]] satisfies the principle:__
+__The [Shortest Path Problem](Notes/Shortest%20Path%20Problem.md) satisfies the principle:__
 
-If $a,x1,x2,...,xn,b$ is a shortest path from node a to node b in a graph, then the portion of $xi \to xj$ on that path is a shortest path from $xi \to x$j. [[Shortest Path Problem#^c4528f|Can be proven by contradiction.]] 
+If $a,x1,x2,...,xn,b$ is a shortest path from node a to node b in a graph, then the portion of $xi \to xj$ on that path is a shortest path from $xi \to x$j. [](Notes/Shortest%20Path%20Problem.md#^c4528f%7CCan%20be%20proven%20by%20contradiction.) 
 
 __The longest path problem does not satisfy:__
 

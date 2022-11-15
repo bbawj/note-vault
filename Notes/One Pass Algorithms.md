@@ -43,4 +43,4 @@ $Cost = (20000/999)\times5000+20000\approx120101$
 ![](https://i.imgur.com/AiLTw99.png)
 
 ![](https://i.imgur.com/iXWNoK9.png)
-![[Pics/One Pass Algorithms 2022-10-23 14.55.37.excalidraw]]
+![One Pass Algorithms 2022-10-23 14.55.37.excalidraw](Pics/One%20Pass%20Algorithms%202022-10-23%2014.55.37.excalidraw.md)

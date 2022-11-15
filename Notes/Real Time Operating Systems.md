@@ -10,9 +10,9 @@ Usually executes some function or goes through a set of steps in a regular manne
 ### Sporadic RTOS Process
 ![](https://i.imgur.com/W8FOywe.png)
 ## Real Time Process Scheduling
-[[Notes/Process scheduling|Classical scheduling algorithms]] will fail to schedule RTOS processes as they do not take into account the deadlines of the processes.
+[Classical scheduling algorithms](Notes/Process%20scheduling.md) will fail to schedule RTOS processes as they do not take into account the deadlines of the processes.
 ### Fixed priority scheduling
-Priorities are fixed across instances of recurrent processes. Easy to implement with low time complexity. If all types of processes are known and small, a [[Notes/Hash Tables|hash map]] is able to do this in constant time.
+Priorities are fixed across instances of recurrent processes. Easy to implement with low time complexity. If all types of processes are known and small, a [hash map](Notes/Hash%20Tables.md) is able to do this in constant time.
 #### Rate Monotonic Scheduler
 ![](https://i.imgur.com/gWXCXDK.png)
 Since the scheduler is based on periodic time, it still does not prioritise based on deadlines. P3 misses the deadline if it is <20,2,14>: less time to complete the process in first appearance.
@@ -36,8 +36,8 @@ d. False. Hypervisor manages interactions between H/W and guest OS
 e. True.
 ![](https://i.imgur.com/Aob93mN.png)
 Yes:
-![[Pics/Real Time Operating Systems 2022-09-26 18.02.14.excalidraw]]
+![Real Time Operating Systems 2022-09-26 18.02.14.excalidraw](Pics/Real%20Time%20Operating%20Systems%202022-09-26%2018.02.14.excalidraw.md)
 ![](https://i.imgur.com/RSodmxP.png)
 Yes?
-![[Pics/Real Time Operating Systems 2022-09-26 18.34.23.excalidraw]]
+![Real Time Operating Systems 2022-09-26 18.34.23.excalidraw](Pics/Real%20Time%20Operating%20Systems%202022-09-26%2018.34.23.excalidraw.md)
 ![](https://i.imgur.com/zBnpTVf.png)

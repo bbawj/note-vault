@@ -3,7 +3,7 @@ Distribute the workload among a set of concurrently running threads. Uses MIMD m
 ## Multicore Processors
 Not to be confused with *multiprocessors*:
 - Multiprocessors: 2 or more CPUs in the same computer. Executes multiple programs faster.
-- Multicore: 2 or more processors in a single CPU. Executes a single program faster through [[Notes/Threads#^7d353c|multi-threading]]
+- Multicore: 2 or more processors in a single CPU. Executes a single program faster through [](Notes/Threads.md#^7d353c%7Cmulti-threading)
 ![](https://i.imgur.com/fNXcCn7.png)
 ### Challenges
 #### Power wall

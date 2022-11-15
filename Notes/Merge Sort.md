@@ -10,7 +10,7 @@ Divide and Conquer
 
 ![](https://i.imgur.com/FjYLTRc.png)
 
-**Case 3 shows how Mergesort achieves [[005 Sorting Algorithms#^85ee66 |stability]].** Equal elements are placed in the merged array in the order that they appear in:
+**Case 3 shows how Mergesort achieves [](005%20Sorting%20Algorithms.md#^85ee66%20%7Cstability).** Equal elements are placed in the merged array in the order that they appear in:
 ![](https://i.imgur.com/uLjOcjg.png)
 
 ## Pseudocode

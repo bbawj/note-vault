@@ -87,7 +87,7 @@ Similar logic as with a regular paging scheme:
 ## Practice Problems
 ![](https://i.imgur.com/YwvOJ6S.png)
 
-![[Pics/Memory Organisation 2022-10-10 23.41.06.excalidraw|600]]
+![600](Pics/Memory%20Organisation%202022-10-10%2023.41.06.excalidraw.md)
 c. First fit lower overhead. Only moved 1 block compared to 3 blocks in best fit.
 ![](https://i.imgur.com/mv4UR97.png)
 a. Fixed partitioning

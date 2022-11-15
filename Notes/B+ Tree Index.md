@@ -1,5 +1,5 @@
 # B+ Tree Index
-Idea: build a multi-layer index in the structure of a [[B-tree]]
+Idea: build a multi-layer index in the structure of a [B-tree](Notes/B-tree.md)
 > [!Properties]
 > 1. Each tree node is stored within a *block*
 > 2. Each node stores at most n+1 pointers and n keys
@@ -70,7 +70,7 @@ b.
 4. $\lfloor(n+1)/2\rfloor=2$
 ![](https://i.imgur.com/6QXYSgP.png)
 
-![[Drawing 2022-09-05 10.35.50.excalidraw]]
+![Drawing 2022-09-05 10.35.50.excalidraw](Excalidraw/Drawing%202022-09-05%2010.35.50.excalidraw.md)
 ![](https://i.imgur.com/Bu5oJA2.png)
 Height of the B+tree will be $log_{150}1000000=2.75$
 Need at least 3 levels in the btree
@@ -95,4 +95,4 @@ Leaf level will have 100,000 pointers to each data record block: $100000/70=1429
 Root: 1
 Total blocks: $100,000+1429+21+1=101451$
 ![](https://i.imgur.com/OSwkx7i.png)
-![[Pics/B+ Tree Index 2022-09-13 21.06.04.excalidraw]]
+![B+ Tree Index 2022-09-13 21.06.04.excalidraw](Pics/B+%20Tree%20Index%202022-09-13%2021.06.04.excalidraw.md)

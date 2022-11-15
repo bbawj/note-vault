@@ -10,8 +10,8 @@ While the current page is being processed, we can prefetch the next required pag
 ### Scan sharing
 If a query starts a scan and if there is one already doing this, it would attach to that query’s cursor. Once that current query is complete, the new query can continue to scan those pages that were initially skipped.
 ### Buffer Replacement Policies
-Similar to [[Cache Replacement Policies]].
-[[Page Replacement Policies]]
+Similar to [Cache Replacement Policies](Notes/Cache%20Replacement%20Policies.md).
+[Page Replacement Policies](Notes/Page%20Replacement%20Policies.md)
 ## Practice Problems
 ![](https://i.imgur.com/H5D6bBe.png)
 Process flow:

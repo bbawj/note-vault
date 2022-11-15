@@ -18,4 +18,4 @@ Swap used pages to the top of stack. Push out pages at the bottom.
 ![](https://i.imgur.com/ba4zW9K.png)
 ## LRU Approximation
 Hardware support is necessary as exact algorithms are expensive and generally not available. It may be better to simply approximate LRU using an easier more supported implementation.
-### [[Notes/Clock (or Second Chance) Policy]]
+### [Clock (or Second Chance) Policy](Notes/Clock%20(or%20Second%20Chance)%20Policy.md)

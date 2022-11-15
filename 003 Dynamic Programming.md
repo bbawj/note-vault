@@ -1,15 +1,15 @@
 # 003 Dynamic Programming
 #moc 
-_Dynamic Programming is a tool to solve problems which satisfy the [[Principle of Optimality]]._
+_Dynamic Programming is a tool to solve problems which satisfy the [Principle of Optimality](Notes/Principle%20of%20Optimality.md)._
 ## Well Known Problems
-- [[Fibonacci Sequence]]
-- [[Longest Common Subsequence]]
-	- [[Longest Increasing Subsequence]]
-	- [[Alignment Problem]]
-- [[Chain Matrix Multiplication]]
-- [[Knapsack Problem]]
-	- [[Making Change]]
-- [[Travelling Salesman Problem]]
+- [Fibonacci Sequence](Notes/Fibonacci%20Sequence.md)
+- [Longest Common Subsequence](Notes/Longest%20Common%20Subsequence.md)
+	- [Longest Increasing Subsequence](Notes/Longest%20Increasing%20Subsequence.md)
+	- [Alignment Problem](Notes/Alignment%20Problem.md)
+- [Chain Matrix Multiplication](Notes/Chain%20Matrix%20Multiplication.md)
+- [Knapsack Problem](Notes/Knapsack%20Problem.md)
+	- [Making Change](Notes/Making%20Change.md)
+- [Travelling Salesman Problem](Notes/Travelling%20Salesman%20Problem.md)
 ## Strategies
 Both strategies will achieve the same time complexity but bottom up is usually more CPU time efficient due to the simplicity of the code
 ### Top Down Approach

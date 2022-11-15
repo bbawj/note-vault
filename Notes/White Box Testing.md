@@ -1,7 +1,7 @@
 # White Box Testing
 #testing 
 
-Testing of implementation details, internal paths and structure. Contrast to [[Black Box Testing]]
+Testing of implementation details, internal paths and structure. Contrast to [Black Box Testing](Notes/Black%20Box%20Testing.md)
 
 ## Control Flow Testing
 ### The Control Flow Graph

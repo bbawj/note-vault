@@ -21,7 +21,7 @@ A deadlock **may** occur if these conditions hold at the same time:
 4. Circular wait: There exists a set {P0, P1, …, Pn} of waiting processes such that P0 is waiting for a resource that is held by P1, P1 is waiting for P2, …, Pn–1 is waiting for Pn, and Pn is waiting for P0
 ## Deadlock Prevention
 As long as we are able to ensure at least one of the following conditions do not hold, we can prevent a deadlock from occurring.
-Example using [[Notes/Process Synchronization#Dining Philosophers|Dining Philosophers Problem]]:
+Example using [](Notes/Process%20Synchronization.md#Dining%20Philosophers%7CDining%20Philosophers%20Problem):
 ![](https://i.imgur.com/6KG4dAv.png)
 ![](https://i.imgur.com/H79K3yy.png)
 Each process must request for the lower numbered resource first before able to request for the higher numbered resource. This breaks the circular wait as process requests are increasing in their order (no cycle):
@@ -66,7 +66,7 @@ b. True. A single process will not be in a deadlock as there are no other proces
 c. False. Not all cycles indicate a deadlock. Depends on the number of resource instances
 ![](https://i.imgur.com/oLMMgoT.png)
 
-![[Pics/Deadlocks 2022-09-18 10.53.26.excalidraw]]
+![Deadlocks 2022-09-18 10.53.26.excalidraw](Pics/Deadlocks%202022-09-18%2010.53.26.excalidraw.md)
 ![](https://i.imgur.com/2FgBtCS.png)
 a. Available -> 1. P4 allocation = 5. No process can be satisfied with available 1. Unsafe state
 b. Safe state. Completion order: P3, P4, P2, P1

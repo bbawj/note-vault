@@ -5,7 +5,7 @@ Terminate when a goal node is found.
 
 Optimality: True for graph with nonnegative weights
 
-Similar implementation to [[Dijkstra's Algorithm]] but without computing shortest path for all nodes.
+Similar implementation to [Dijkstra's Algorithm](Notes/Dijkstra's%20Algorithm.md) but without computing shortest path for all nodes.
 ### Graph Traversal
 ![](https://i.imgur.com/syk9okN.png)
 
