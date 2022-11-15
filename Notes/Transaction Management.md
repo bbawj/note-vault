@@ -11,7 +11,7 @@ Transactions are the basic unit of change in a DBMS. It is essential for data re
 - `ABORT`: changes are undone
 ![](https://i.imgur.com/rc3m2AF.png)
 ## ACID Properties
-###  Atomicity
+### Atomicity
 A transaction is either performed in its entirety (can be in steps) or not performed at all.
 #### Logging
 DBMS logs all actions so that it can undo the actions of aborted transactions
@@ -55,7 +55,7 @@ Idea: undo the effects of transactions that may not have completed before failur
 > 1. Log records indicating changed database elements
 > 2. Changed database elements themselves
 > 3. COMMIT log record
-
+#### Recovery without checkpoints
 ![](https://i.imgur.com/9i2OUpZ.png)
 All undo commands are idempotent, if failure occurs during recovery, we can simply restart.
 #### Checkpointing
@@ -76,13 +76,17 @@ Do not write all changed data to disk before committing. Write to the main memor
 > 1. Log records indicating the changed elements
 > 2. COMMIT T log record
 > 3. Changes to the elements themselves
-
+#### Recovery without checkpoints
 ![](https://i.imgur.com/WuYLOdQ.png)
 ![](https://i.imgur.com/RMa262e.png)
 #### Checkpointing
 Start checkpointing for all active transactions. When we see an `START CHECKPOINT`, we can be sure that all prior transactions have been recorded to the disk and there is no need to redo them. 
 *Example where we do not need to redo the actions for T1:*
 ![](https://i.imgur.com/MCReHYm.png)
+#### Recovery with checkpoints
+1. If we see a `END CHKPT` in the log, we can be sure that changes made by transactions that have committed before the `START CHKPT` is already in disk, and we can ignore them. If no `END CKPT` in logs, we need to search back to next to last `START CKPT`.
+2. From `START CKPT (T1, ... Tk)` we *cannot* be sure that any transaction that is among the $T_i$ or those started after this checkpoint log have been written to disk. **We must search back until the earliest $T_i$ and redo.**
+3. However, if $T_i$ 's commit message is not found, we write `ABORT Ti` as it must not be redone.
 #### Limitations
 It requires all modified blocks to be kept in buffers until the transaction commits and the log records have been flushed. This increases the average number of buffers needed by transactions.
 ### Undo/Redo Logging
@@ -95,18 +99,22 @@ Recovery process:
 This is because we may have committed transactions with some of the changes not on disk as well as uncommitted transactions with some of the changes on disk.
 #### Checkpointing
 ![](https://i.imgur.com/WBdr1xt.png)
-We are sure we do not need to check any further than the `START CHECKPOINT` as the corresponding `END CHECKPOINT` ensures that all changes prior have been flushed to the disk.
+#### Recovery with checkpoints
+We are sure we do not need to check any further than the `START TRANSACTION` of active transactions in the checkpoint as the corresponding `END CHECKPOINT` ensures that all changes prior to the `START` have been flushed to the disk.
+1. If crash occurs at the end, T2 and T3 are identified as committed and we redo actions starting from `START CKPT`
+2. If crash occurs before `COMMIT T3`, T2 is committed but. T3 is not. Redo T2 from `START CKPT` and undo T3 until `START T3`.
+3. If crash occurs before `END CKPT`, we need to search back to the next to last `START CKPT`, redo committed transactions and undo incomplete ones up till their corresponding `START T` logs.
 ## Practice Problems
 ![](https://i.imgur.com/J2UHbco.png)
-a. We know that at an `END CHKPNT`, all dirty buffers are written to disk
+a. We know that at an `END CHKPNT`, all dirty buffers from the corresponding `START CKPT` are written to disk
 A: 21
-B: 41
-C: 31,32,33
+B: 40, 41
+C: 30,31,32,33
 D: 50,51,52
 b. All uncommitted transactions. T1, T6
-c. All committed transactions. T3, T5
+c. All committed transactions. T3, T4, T5
 d. 
 A: 21
-B: 41
+B: 41. T4 redone
 C: 31. T1 undone, T3 redone
 D: 52. T5 redone.
