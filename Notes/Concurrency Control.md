@@ -33,6 +33,10 @@ Ensure that data items that are shared by conflicting operations are accessed on
 ### Two Phase Locking (2PL)
 Arbitrary assignment of locks do not lead to a serializable schedule. Two transactions can operate on elements in a different order resulting in different results. We can solve this by ensuring that transactions take up all lock actions before all unlock actions.
 ![](https://i.imgur.com/IVf95ET.png)
+#### Why 2PL works?
+Intuitively, each two-phase-locked transaction may be thought to execute in  its entirety at the instant it issues its first unlock request. i.e. a legal schedule can only be such that the transaction completes fully, because otherwise, this means that another transaction is attempting to take a held lock, causing a deadlock. Hence, there is at least one conflict-serialisable schedule: the one in which the transactions appear in the same order as first unlocks.
+![](https://i.imgur.com/4WIMEGr.png)
+Suppose the schedule starts with T1 locking and reading _A_. If T2 locks _B_ before T1 reaches its unlocking phase, then there is a deadlock, and the schedule cannot complete. Thus, if T1 performs an action first, it must perform _all_ its actions before T2 performs any. Likewise, if T2 starts first, it must complete before T1 starts, or there is a deadlock. Thus, only the two serial schedules of these transactions are legal.
 ### Lock mechanisms
 #### Shared and Exclusive locks
 - Shared lock: to allow for multiple transactions to perform `READ`

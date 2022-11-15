@@ -69,7 +69,7 @@ Start checkpointing at any time using the current incomplete transactions.
 #### Recovery with checkpoints
 1. Scan backwards identifying transactions which did not commit.
 2. If we reach END CKPT, we know that the only transactions which may not have committed must be those after the `START CKPT`. Thus, we can stop at `START CKPT`
-3. If we reach `START CKPT` first, we failed during checkpointing and need to search up till the earliest `START T` of those in the checkpoint 
+3. If we reach `START CKPT` first, we failed during checkpointing and need to search up till the earliest `START T` of those in the checkpoint, because we know those are the transactions active at the start of the checkpoint 
 4. Undo uncommitted transactions and ignore those that have committed.
 #### Limitations
 Cannot commit a transaction without first writing all its changed data to disk. This means we will need many disk I/O for each transaction.
@@ -95,7 +95,10 @@ Start checkpointing for all active transactions. When we see an `START CHECKPOIN
 #### Limitations
 It requires all modified blocks to be kept in buffers until the transaction commits and the log records have been flushed. This increases the average number of buffers needed by transactions.
 ### Undo/Redo Logging
-Increase flexibility by maintaining more information on the log. <T,X,v,w> now stores both old and new values in the log. Before modifying any DB element X, this log record must be written to the disk.
+Increase flexibility by maintaining more information on the log. <T,X,v,w> now stores both old and new values in the log. 
+> [!Rule]
+Before modifying any DB element X, the log record must be written to the disk.
+
 ![](https://i.imgur.com/3BiSNNV.png)
 We can commit at any time after the <T,B,8,6> record has been written to the disk. 
 Recovery process:
@@ -104,11 +107,12 @@ Recovery process:
 This is because we may have committed transactions with some of the changes not on disk as well as uncommitted transactions with some of the changes on disk.
 #### Checkpointing
 ![](https://i.imgur.com/WBdr1xt.png)
+- The `END CKPT` can appear anywhere after the `START CKPT`
 #### Recovery with checkpoints
 We are sure we do not need to check any further than the `START TRANSACTION` of active transactions in the checkpoint as the corresponding `END CHECKPOINT` ensures that all changes prior to the `START` have been flushed to the disk.
 1. If crash occurs at the end, T2 and T3 are identified as committed and we redo actions starting from `START CKPT`
 2. If crash occurs before `COMMIT T3`, T2 is committed but. T3 is not. Redo T2 from `START CKPT` and undo T3 until `START T3`.
-3. If crash occurs before `END CKPT`, we need to search back to the next to last `START CKPT`, redo committed transactions and undo incomplete ones up till their corresponding `START T` logs.
+3. If crash occurs before `END CKPT`, any changes made by previous transactions may not have been written to disk. We need to search back to the next to last `START CKPT`, redo committed transactions and undo incomplete ones up till their corresponding `START T` logs.
 ## Practice Problems
 ![](https://i.imgur.com/J2UHbco.png)
 a. We know that at an `END CHKPNT`, all dirty buffers from the corresponding `START CKPT` are written to disk
