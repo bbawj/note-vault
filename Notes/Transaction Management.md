@@ -66,6 +66,11 @@ Problem
 #### Non-quiescent Checkpointing
 Start checkpointing at any time using the current incomplete transactions.
 ![](https://i.imgur.com/3uaHcFg.png)
+#### Recovery with checkpoints
+1. Scan backwards identifying transactions which did not commit.
+2. If we reach END CKPT, we know that the only transactions which may not have committed must be those after the `START CKPT`. Thus, we can stop at `START CKPT`
+3. If we reach `START CKPT` first, we failed during checkpointing and need to search up till the earliest `START T` of those in the checkpoint 
+4. Undo uncommitted transactions and ignore those that have committed.
 #### Limitations
 Cannot commit a transaction without first writing all its changed data to disk. This means we will need many disk I/O for each transaction.
 ### Redo Logging
