@@ -1,7 +1,4 @@
 ---
-title: "_index"
----
----
 title: "What is this?!"
 ---
 #moc 
