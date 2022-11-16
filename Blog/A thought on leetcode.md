@@ -1,6 +1,3 @@
----
-title:"A thought on leetcode"
----
 # A thought on leetcode
 A horrendous bug was discovered at work today. How horrendous? It had to do with concurrency. The bug came as a side effect from a cycle in our service API bug detection program. Our program ran by recursively following the verdict result from failing services. After some debugging, essentially:
 ```mermaid

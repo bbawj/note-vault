@@ -1,6 +1,3 @@
----
-title:"Game Theory"
----
 # Game Theory
 __Any game with a finite number of actions will have a Nash Equilibrium__
 

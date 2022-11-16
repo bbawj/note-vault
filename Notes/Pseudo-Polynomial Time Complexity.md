@@ -1,6 +1,3 @@
----
-title:"Pseudo-Polynomial Time Complexity"
----
 # Pseudo-Polynomial Time Complexity
 The runtime is some polynomial _in the numeric value of the input_, rather than in the number of bits required to represent it.
 

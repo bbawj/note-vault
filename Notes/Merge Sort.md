@@ -1,6 +1,3 @@
----
-title:"Merge Sort"
----
 # Merge Sort
 ## General Idea
 Divide and Conquer

@@ -1,6 +1,3 @@
----
-title:"Use Case Diagrams"
----
 # Use Case Diagram
 ![](https://i.imgur.com/ruK2Qlz.png)
 

@@ -1,6 +1,3 @@
----
-title:"Constraint Satisfaction Problem"
----
 # Constraint Satisfaction Problem
 There are a set of constraints which specify the allowable combinations of values
 

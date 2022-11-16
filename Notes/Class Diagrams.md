@@ -1,6 +1,3 @@
----
-title:"Class Diagrams"
----
 # Class Diagrams
 ## Basic Notation
 ![](https://i.imgur.com/wP2mGKP.png)

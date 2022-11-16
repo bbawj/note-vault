@@ -1,6 +1,3 @@
----
-title:"2005 Operating Systems"
----
 # Operating Systems
 #moc 
 Essentially a piece of code which controls and coordinates the use of hardware among various programs for various users.

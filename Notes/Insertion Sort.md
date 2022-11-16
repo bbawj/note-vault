@@ -1,6 +1,3 @@
----
-title:"Insertion Sort"
----
 # Insertion Sort
 ## General Idea
 Incremental approach

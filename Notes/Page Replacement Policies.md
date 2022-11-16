@@ -1,6 +1,3 @@
----
-title:"Page Replacement Policies"
----
 # Page Replacement Policies
 ## First In First Out
 ![](https://i.imgur.com/f6t69Lk.png)

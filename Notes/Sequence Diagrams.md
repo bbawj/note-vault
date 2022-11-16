@@ -1,6 +1,3 @@
----
-title:"Sequence Diagrams"
----
 # Sequence Diagrams
 A sequence diagram **_captures the interactions between multiple objects for a given scenario._**
 

@@ -1,6 +1,3 @@
----
-title:"Instruction Level Parallelism"
----
 # Instruction Level Parallelism
 ![](https://i.imgur.com/yzE277X.png)
 ## Approaches

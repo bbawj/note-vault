@@ -1,6 +1,3 @@
----
-title:"C"
----
 # C Programming
 ## Special keywords
 ### Volatile

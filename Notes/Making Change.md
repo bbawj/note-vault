@@ -1,6 +1,3 @@
----
-title:"Making Change"
----
 # Making Change
 ![](https://i.imgur.com/9zfeU5i.png)
 

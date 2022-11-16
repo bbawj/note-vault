@@ -1,6 +1,3 @@
----
-title:"001 Software Engineering"
----
 # Software Engineering Map of Contents
 #moc 
 - ## Unified Modelling Language

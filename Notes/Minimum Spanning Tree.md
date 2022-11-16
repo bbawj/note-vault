@@ -1,6 +1,3 @@
----
-title:"Minimum Spanning Tree"
----
 # Minimum Spanning Tree
 A minimum-weight _spanning tree_ in a weighted graph
 

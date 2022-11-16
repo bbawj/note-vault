@@ -1,6 +1,3 @@
----
-title:"Boyer-Moore Algorithm"
----
 # Boyer-Moore Algorithm
 Definitions
 : T denotes the input text to be searched. Its length is n.

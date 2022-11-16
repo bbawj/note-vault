@@ -1,6 +1,3 @@
----
-title:"Instruction Set Architecture"
----
 # Instruction Set Architecture (ISA)
 A set of specifications a programmer must know to write correct and efficient programs for a specific machine
 ## RISC vs CISC

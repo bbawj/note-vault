@@ -1,6 +1,3 @@
----
-title:"Alignment Problem"
----
 # Alignment Problem
 ![](https://i.imgur.com/RVNlE5M.png)
 ![](https://i.imgur.com/q0DPYhS.png)

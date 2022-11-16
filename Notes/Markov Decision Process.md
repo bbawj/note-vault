@@ -1,6 +1,3 @@
----
-title:"Markov Decision Process"
----
 ## Components of MDP
 ![Pasted image 20220415205145](Pics/Pasted%20image%2020220415205145.png)
 

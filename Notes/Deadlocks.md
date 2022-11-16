@@ -1,6 +1,3 @@
----
-title:"Deadlocks"
----
 # Deadlocks
 A set of blocked processes each holding a resource and waiting to acquire a resource held by another process in the set
 *An example with improper semaphore usage:*

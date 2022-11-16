@@ -1,6 +1,3 @@
----
-title:"Direct Memory Access"
----
 # Direct Memory Access (DMA)
 Feature that allows certain hardware subsystems to access main system memory independently of the central processing unit (CPU).
 ![](https://i.imgur.com/v3djnZ9.png)

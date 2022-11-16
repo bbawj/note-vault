@@ -1,6 +1,3 @@
----
-title:"101 Introduction To Algorithms"
----
 # Introduction To Algorithms
 #book #moc 
 This contains the map of contents to my set of notes and solutions to the problems laid out in the Introduction to Algorithms book.

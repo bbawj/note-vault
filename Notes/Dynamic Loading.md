@@ -1,6 +1,3 @@
----
-title:"Dynamic Loading"
----
 # Dynamic Loading
 Mechanism for loading a binary and execute functions from external software.
 

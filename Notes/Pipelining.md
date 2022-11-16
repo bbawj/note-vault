@@ -1,6 +1,3 @@
----
-title:"Pipelining"
----
 # Pipelining
 ![](https://i.imgur.com/q5XIG5f.png)
 ## Datapath

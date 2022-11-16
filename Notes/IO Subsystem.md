@@ -1,6 +1,3 @@
----
-title:"IO Subsystem"
----
 # I/O Subsystem
 ![](https://i.imgur.com/5Y5N0mC.png)
 ## I/O Hardware

@@ -1,6 +1,3 @@
----
-title:"TypeScript"
----
 # TypeScript
 TypeScript is a superset of JavaScript, with all the features of JavaScript + a type checking layer.
 ## Why TypeScript

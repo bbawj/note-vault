@@ -1,6 +1,3 @@
----
-title:"Factory Pattern"
----
 # Factory Pattern
 #design-patterns 
 

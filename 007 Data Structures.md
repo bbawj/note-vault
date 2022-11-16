@@ -1,6 +1,3 @@
----
-title:"007 Data Structures"
----
 # Data Structures
 - [Linked Lists](Linked%20Lists)
 - [Hash Tables](Notes/Hash%20Tables.md)

@@ -1,6 +1,3 @@
----
-title:"Data Level Parallelism"
----
 # Data Level Parallelism
 The same operation is performed on multiple data values concurrently in multiple processing units. Can reduce the Instruction Count to enhance performance
 ![](https://i.imgur.com/He0shTf.png)

@@ -1,6 +1,3 @@
----
-title:"Clock (or Second Chance) Policy"
----
 # Clock Replacement Algorithm
 <iframe width="560" height="315" src="https://www.youtube.com/embed/b-dRK8B8dQk?start=319" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ## Idea

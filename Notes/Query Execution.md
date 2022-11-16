@@ -1,6 +1,3 @@
----
-title:"Query Execution"
----
 # Query Execution
 How do database management systems execute a particular query plan?
 ## Expression Evaluation

@@ -1,6 +1,3 @@
----
-title:"Model-View-Controller Architecture"
----
 # MVC Architecture
 ## Design Problems
 1. Tight coupling between UI and application logic

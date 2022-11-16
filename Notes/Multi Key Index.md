@@ -1,6 +1,3 @@
----
-title:"Multi Key Index"
----
 # Multi Key Indexes
 Motivation: we want to be able to have efficient queries on multiple attributes
 `SELECT * WHERE DEPT = "TOY" AND SAL > 50`

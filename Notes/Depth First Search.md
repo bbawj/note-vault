@@ -1,6 +1,3 @@
----
-title:"Depth First Search"
----
 # Depth First Search
 
 ### Graph Traversal

@@ -1,6 +1,3 @@
----
-title:"Longest Increasing Subsequence"
----
 # Longest Increasing Subsequence
 ![](https://i.imgur.com/ZQvHrc3.png)
 ### Example

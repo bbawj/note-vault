@@ -1,6 +1,3 @@
----
-title:"002 Search Strategies"
----
 # Search Strategies
 #moc
 ## Factors for search

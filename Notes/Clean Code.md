@@ -1,6 +1,3 @@
----
-title:"Clean Code"
----
 # Clean Code - Notes
 ## Comments
 ### Explain yourself in code

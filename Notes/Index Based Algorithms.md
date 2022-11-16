@@ -1,6 +1,3 @@
----
-title:"Index Based Algorithms"
----
 # Index Based Algorithms
 Having an index on 1 or more attributes of a relation makes some algorithms more feasible.
 >[! ] $V(R,a)$

@@ -1,6 +1,3 @@
----
-title:"Longest Common Subsequence"
----
 # Longest Common Subsequence
 ![](https://i.imgur.com/fZELoJ2.png)
 ## Problem Formulation

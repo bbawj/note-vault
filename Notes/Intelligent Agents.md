@@ -1,6 +1,3 @@
----
-title:"Intelligent Agents"
----
 # Intelligent Agents
 Rational agents: make decisions based on maximising a specific value. Based on built-in knowledge about the environment
 

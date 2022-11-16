@@ -1,6 +1,3 @@
----
-title:"Computer Performance"
----
 # Computer Performance
 ## Execution time
 One indicator of performance is __execution time__ of a program

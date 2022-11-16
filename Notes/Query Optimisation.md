@@ -1,6 +1,3 @@
----
-title:"Query Optimisation"
----
 # Query Optimisation
 ## Algebraic Laws for Improving Query Plans
 ### Laws Involving Join

@@ -1,6 +1,3 @@
----
-title:"Query Processing"
----
 # Query Processing
 Given a query, we need to devise an algorithm to obtain the desired result
 ## Example

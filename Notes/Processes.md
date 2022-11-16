@@ -1,6 +1,3 @@
----
-title:"Processes"
----
 # Processes
 A program in execution, also known as a job. One process can have multiple [threads](Threads%20).
 ## Process in memory

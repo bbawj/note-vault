@@ -1,6 +1,3 @@
----
-title:"Quick Sort"
----
 # Quick Sort
 ## General Idea
 1. Select a pivot element

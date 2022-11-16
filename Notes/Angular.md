@@ -1,6 +1,3 @@
----
-title:"Angular"
----
 # Angular
 A frontend development platform built on [TypeScript](Notes/TypeScript.md).
 

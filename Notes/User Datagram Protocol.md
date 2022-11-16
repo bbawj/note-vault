@@ -1,6 +1,3 @@
----
-title:"User Datagram Protocol"
----
 # User Datagram Protocol (UDP)
 UDP offers flexibility and is commonly used for bootstrapping new transport protocols.
 > The appeal of UDP is not in what it introduces, but rather in all the features it chooses to omit.

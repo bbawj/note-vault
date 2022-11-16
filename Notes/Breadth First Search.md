@@ -1,6 +1,3 @@
----
-title:"Breadth First Search"
----
 # Breadth First Search
 ### Graph Traversal
 ![](https://i.imgur.com/syk9okN.png)

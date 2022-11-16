@@ -1,6 +1,3 @@
----
-title:"P and NP Problems"
----
 # P and NP Problems
 _Hard Problems_: the best-known algorithm for the problem is expensive in terms of running time.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eHZifpgyH_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

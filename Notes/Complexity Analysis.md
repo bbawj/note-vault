@@ -1,6 +1,3 @@
----
-title:"Complexity Analysis"
----
 # Complexity Analysis
 ## Asymptotic Notations
 Notations used to describe the order of growth of a given function

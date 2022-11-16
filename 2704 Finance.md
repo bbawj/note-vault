@@ -1,6 +1,3 @@
----
-title:"2704 Finance"
----
 # 2704 Finance 
 #moc 
 - [Bonds](Notes/Bonds.md)

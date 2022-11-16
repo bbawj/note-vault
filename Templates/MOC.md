@@ -1,5 +1,2 @@
----
-title:"MOC"
----
 # {{title}}
 #moc 

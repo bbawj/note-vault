@@ -1,6 +1,3 @@
----
-title:"Longest Path Problem"
----
 # Longest Path Problem
 It is the problem of finding a simple path of maximum length in a given graph. 
 

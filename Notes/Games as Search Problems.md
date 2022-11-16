@@ -1,6 +1,3 @@
----
-title:"Games as Search Problems"
----
 ![](https://i.imgur.com/CZ3e50G.png)
 
 Perfect information also means *fully observable* unlike in Poker where you cannot see the opponent's hand.

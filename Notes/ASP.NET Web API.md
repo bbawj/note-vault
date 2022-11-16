@@ -1,6 +1,3 @@
----
-title:"ASP.NET Web API"
----
 # ASP.NET Web API
 ## Routing
 Routing uses `APIController`

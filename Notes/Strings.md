@@ -1,6 +1,3 @@
----
-title:"Strings"
----
 # Strings
 ## Immutability
 String assignment will not create a new copy of the string. Only string concatenation will create a new buffer for the string.

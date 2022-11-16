@@ -1,6 +1,3 @@
----
-title:"Heaps"
----
 # Heaps
 A specialized tree based data structure.
 

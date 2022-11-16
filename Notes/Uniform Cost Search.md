@@ -1,6 +1,3 @@
----
-title:"Uniform Cost Search"
----
 # Uniform Cost Search
 Take the full path cost to the node as g(n)
 
