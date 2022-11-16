@@ -1,3 +1,6 @@
+---
+title: "Process Synchronization"
+---
 # Process Synchronization
 [Race Condition](Notes/Race%20Condition.md)
 ## Critical Section Problem

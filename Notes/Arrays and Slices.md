@@ -1,3 +1,6 @@
+---
+title: "Arrays and Slices"
+---
 # Arrays and Slices
 ## Arrays
 ![Screenshot 2022-08-24 at 6.33.10 PM](Pics/Screenshot%202022-08-24%20at%206.33.10%20PM.png)

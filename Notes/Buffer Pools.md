@@ -1,3 +1,6 @@
+---
+title: "Buffer Pools"
+---
 # Buffer Pools
 An area of memory used as a buffer between the disk and the database system
 ![](https://i.imgur.com/vISJSv2.png)

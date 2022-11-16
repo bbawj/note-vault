@@ -1,3 +1,6 @@
+---
+title: "Union Find"
+---
 # Union Find
 A data structure to represent dynamic equivalence relations
 ![](https://i.imgur.com/fOnL8Vo.png)

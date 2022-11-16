@@ -1,3 +1,6 @@
+---
+title: "Algorithm Template"
+---
 # {{title}}
 ## General Idea
 

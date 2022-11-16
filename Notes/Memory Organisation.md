@@ -1,3 +1,6 @@
+---
+title: "Memory Organisation"
+---
 # Memory Organisation
 ## Address Binding
 A program needs to be loaded into memory to run. The machine code that is generated needs to be mapped to memory addresses in the system.

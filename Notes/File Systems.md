@@ -1,3 +1,6 @@
+---
+title: "File Systems"
+---
 # File Systems
 ## File
 A file is an unstructured sequence of bytes. Each byte is individually addressable from the beginning of the file.

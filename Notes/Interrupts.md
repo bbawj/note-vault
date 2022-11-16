@@ -1,3 +1,6 @@
+---
+title: "Interrupts"
+---
 # Interrupts
 An interrupt is a request for the processor to interrupt currently executing code so that the event can be processed in a timely manner. 
 

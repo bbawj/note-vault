@@ -1,3 +1,6 @@
+---
+title: "Layered Architecture"
+---
 # Layered Architecture
 ![](https://i.imgur.com/zKXvw5b.png)
 

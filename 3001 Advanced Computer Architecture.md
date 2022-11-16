@@ -1,3 +1,6 @@
+---
+title: "3001 Advanced Computer Architecture"
+---
 # Advanced Computer Architecture
 #moc 
 - [Computer Performance](Notes/Computer%20Performance.md)

@@ -1,3 +1,6 @@
+---
+title: "First Order Logic"
+---
 # First Order Logic
 [Propositional Logic](Notes/Propositional%20Logic.md) can only deal with a finite number of propositions:
 
