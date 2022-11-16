@@ -1,3 +1,6 @@
+---
+title:"Q-Learning"
+---
 # Q Learning
 Use temporal difference to update Q values at each time difference when the agent interacts with the environment.
 

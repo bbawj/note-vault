@@ -1,3 +1,6 @@
+---
+title:"Façade Pattern"
+---
 # Façade Pattern
 #design-patterns 
 

@@ -1,3 +1,6 @@
+---
+title:"Cache Placement Policies"
+---
 # Cache Placement Policies
 We need a way to decide where the data is placed when it is first copied into the cache where in the cache a copy of selected memory block will reside.
 ## Direct Mapped Cache

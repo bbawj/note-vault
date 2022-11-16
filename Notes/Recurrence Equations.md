@@ -1,3 +1,6 @@
+---
+title:"Recurrence Equations"
+---
 # Recurrence Equations
 ## Iteration Method
 Solve using algebra

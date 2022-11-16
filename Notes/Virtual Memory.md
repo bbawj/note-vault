@@ -1,3 +1,6 @@
+---
+title:"Virtual Memory"
+---
 # Virtual Memory
 In [memory organisation](Notes/Memory%20Organisation.md), we assumed that for each program, its entirety has to be loaded into the memory. This means that the overall program size must be restricted to the size of physical memory.
 >[!Aim: size of virtual memory limited by the address scheme of the computer and not the actual size of physical memory]

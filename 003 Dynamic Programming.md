@@ -1,3 +1,6 @@
+---
+title:"003 Dynamic Programming"
+---
 # 003 Dynamic Programming
 #moc 
 _Dynamic Programming is a tool to solve problems which satisfy the [Principle of Optimality](Notes/Principle%20of%20Optimality.md)._

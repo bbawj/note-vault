@@ -1,3 +1,6 @@
+---
+title:"Binary Search Tree"
+---
 # Binary Search Trees
 _BST property: Let x be a node in a binary search tree. If y is a node in the left subtree of x, then y.key $\le$ x.key. If y is a node in the right subtree of x, then y.key $\ge$ x.key._
 

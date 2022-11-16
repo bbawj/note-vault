@@ -1,3 +1,6 @@
+---
+title:"Proof By Contradiction"
+---
 # Proof By Contradiction
 #logic
 

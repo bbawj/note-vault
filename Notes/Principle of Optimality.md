@@ -1,3 +1,6 @@
+---
+title:"Principle of Optimality"
+---
 # Principle of Optimality
 Principle of Optimality: An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.
 

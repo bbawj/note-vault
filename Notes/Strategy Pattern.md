@@ -1,3 +1,6 @@
+---
+title:"Strategy Pattern"
+---
 # Strategy Pattern
 #design-patterns 
 

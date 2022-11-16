@@ -1,3 +1,6 @@
+---
+title:"Design Pattern Template"
+---
 # {{title}}
 #design-patterns 
 

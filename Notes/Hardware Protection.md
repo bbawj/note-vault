@@ -1,3 +1,6 @@
+---
+title:"Hardware Protection"
+---
 # Hardware Protection
 ## Dual mode operation
 Differentiates between at least 2 modes of operations

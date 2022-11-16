@@ -1,3 +1,6 @@
+---
+title:"Signal Chain Subsystem"
+---
 # Signal Chain Subsystem
 The signal chain subsystem is concerned about how hardware in computer systems communicate.
 ## Factors affecting signal transfer

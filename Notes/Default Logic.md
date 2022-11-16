@@ -1,3 +1,6 @@
+---
+title:"Default Logic"
+---
 # Default Logic
 ## Definitions
 ![](https://i.imgur.com/m6Vb0UF.png)

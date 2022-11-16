@@ -1,3 +1,6 @@
+---
+title:"Monte Carlo Policy"
+---
 # Monte Carlo
 ![Pasted image 20220415190047](Pics/Pasted%20image%2020220415190047.png)
 Estimate the value function from sampling:

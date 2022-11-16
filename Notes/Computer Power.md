@@ -1,3 +1,6 @@
+---
+title:"Computer Power"
+---
 # Computer Power
 ## Power dissipation
 ### Dynamic Power

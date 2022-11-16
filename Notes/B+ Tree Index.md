@@ -1,3 +1,6 @@
+---
+title:"B+ Tree Index"
+---
 # B+ Tree Index
 Idea: build a multi-layer index in the structure of a [B-tree](Notes/B-tree.md)
 > [!Properties]

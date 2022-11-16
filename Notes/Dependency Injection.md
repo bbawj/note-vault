@@ -1,3 +1,6 @@
+---
+title:"Dependency Injection"
+---
 # Dependency Injection
 #design-patterns 
 

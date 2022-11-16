@@ -1,3 +1,6 @@
+---
+title:"One Pass Algorithms"
+---
 # One Pass Algorithms
 Algorithms where the data is read only once from the disk.
 ## Example using Select

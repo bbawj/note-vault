@@ -1,3 +1,6 @@
+---
+title:"Polynomial Time Complexity"
+---
 # Polynomial Time Complexity
 _Polynomial Bound: Worst case complexity is bounded by a polynomial function of **input size**_
 > [!NOTE] Sorting algorithm that sorts arrays of 32-bit integers. 

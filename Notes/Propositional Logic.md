@@ -1,3 +1,6 @@
+---
+title:"Propositional Logic"
+---
 # Propositional Logic
 ### Operator Precedence
 ![](https://i.imgur.com/RQ76lgV.png)

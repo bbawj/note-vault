@@ -1,3 +1,6 @@
+---
+title:"3005 AI MOC"
+---
 # CZ3005 Artificial Intelligence
 #moc 
 - [Intelligent Agents](Notes/Intelligent%20Agents.md)
