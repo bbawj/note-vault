@@ -57,7 +57,7 @@ Deadlocks can occur when transactions are unable to upgrade their shared locks t
 ### Timeout
 Place a limit on how long a transaction may be active, if it exceeds this time, it is forced to release its locks and other resources and roll back.
 ### Waits-For Graph
-Utilises the [](Notes/Deadlocks.md#Cyclic%20Properties%20of%20Deadlocks%7Ccyclic%20properties%20of%20deadlocks) to detect them.
+Utilises the [cyclic properties of deadlocks](Notes/Deadlocks.md#Cyclic%20Properties%20of%20Deadlocks) to detect them.
 - Each transaction holding a lock or waiting for one is a node
 - An edge exists from T1 to T2 if there is some element A where:
 	- T2 holds a lock on A
