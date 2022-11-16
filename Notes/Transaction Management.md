@@ -1,3 +1,6 @@
+---
+title: "Transaction Management"
+---
 # Transaction Management
 Transactions are the basic unit of change in a DBMS. It is essential for data recovery and concurrency control.
 >[!Idea:]

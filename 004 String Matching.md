@@ -1,3 +1,6 @@
+---
+title: "004 String Matching"
+---
 # 004 String Matching
 #moc 
 ## Important Algorithms

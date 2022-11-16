@@ -1,3 +1,6 @@
+---
+title: "Virtualization"
+---
 # Virtualization
 A technique that uses software called Hypervisor (virtual machine manager or VMM) to create abstraction of hardware.
 - Hardware is divided into multiple virtual computers, called Virtual Machines (VMs) 

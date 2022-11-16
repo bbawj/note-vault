@@ -1,3 +1,6 @@
+---
+title: "Least Recently Used Policy"
+---
 # Least Recently Used Policy (LRU)
 1. Keep track of when each item is accessed
 2. When an item needs to be replaced, we will choose the one that has the oldest timestamp

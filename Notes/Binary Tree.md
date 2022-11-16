@@ -1,3 +1,6 @@
+---
+title: "Binary Tree"
+---
 # Binary Trees
 A tree structure in which each node has at most 2 children.
 ```javascript

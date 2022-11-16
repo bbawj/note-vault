@@ -1,3 +1,6 @@
+---
+title: "Disk"
+---
 # Disk
 ## Disk Mechanics
 A disk is made up of multiple cylinders (platters) each with a set of tracks

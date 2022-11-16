@@ -1,3 +1,6 @@
+---
+title: "Knowledge Representation"
+---
 # Knowledge Representation
 Representation of knowledge in a computer-tractable form.
 $$\begin{aligned}Logic=Representation+Inference\\ Representation=Syntax+Semantics \end{aligned}$$

@@ -1,3 +1,6 @@
+---
+title: "Cache"
+---
 # Cache
 ## Memory Organisation
 Memory in cache is stored as cache lines. 

@@ -1,3 +1,6 @@
+---
+title: "2101 Algorithm Design and Analysis"
+---
 # 2101 Algorithm Design and Analysis
 #moc 
 - [Insertion Sort](Notes/Insertion%20Sort.md)

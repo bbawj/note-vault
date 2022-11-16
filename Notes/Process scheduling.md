@@ -1,3 +1,6 @@
+---
+title: "Process scheduling"
+---
 # Process Scheduling
 A process execution alternates between CPU executions and I/O operations
 __CPU Burst__: duration of one CPU execution cycle

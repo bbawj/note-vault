@@ -1,3 +1,6 @@
+---
+title: "Knapsack Problem"
+---
 # Knapsack Problem
 Given n items where the $i^{th}$ item has a weight $w_i$ and value $v_i$
 

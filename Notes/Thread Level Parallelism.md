@@ -1,3 +1,6 @@
+---
+title: "Thread Level Parallelism"
+---
 # Thread Level Parallelism
 Distribute the workload among a set of concurrently running threads. Uses MIMD model.
 ## Multicore Processors

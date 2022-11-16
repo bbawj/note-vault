@@ -1,3 +1,6 @@
+---
+title: "Probabilistic Analysis and Randomised Algorithms"
+---
 # Probabilistic Analysis and Randomised Algorithms
 ## Exercises
 ### 5.1.2

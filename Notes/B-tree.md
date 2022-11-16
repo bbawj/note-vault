@@ -1,3 +1,6 @@
+---
+title: "B-tree"
+---
 # B-tree
 A self balancing tree data structure.
 

@@ -1,3 +1,6 @@
+---
+title: "Stock Valuation"
+---
 # Stock Valuation
 
 > [!NOTE] Relationships between stock price

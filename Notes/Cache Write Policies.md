@@ -1,3 +1,6 @@
+---
+title: "Cache Write Policies"
+---
 # Cache Write Policies
 How do we keep memory updated while writing on the cache?
 ## Write-through

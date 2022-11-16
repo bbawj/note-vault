@@ -1,3 +1,6 @@
+---
+title: "Combinational Circuits"
+---
 # Combinational Circuits
 ## Multiplexer
 A multiplexer is used to select 1 out of n inputs.

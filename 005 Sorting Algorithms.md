@@ -1,3 +1,6 @@
+---
+title: "005 Sorting Algorithms"
+---
 # 005 Sorting Algorithms
 #moc 
 ## Important algorithms

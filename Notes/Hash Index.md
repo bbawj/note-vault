@@ -1,3 +1,6 @@
+---
+title: "Hash Index"
+---
 # Hash Index
 Idea: use a [hash table](Notes/Hash%20Tables.md)
 1. Take a search key and hash it into an integer in the range of 0 to B-1 where B is the number of buckets

@@ -1,3 +1,6 @@
+---
+title: "Instructions"
+---
 # Instructions
 An example using the ARM ISA
 ![](https://i.imgur.com/fTodwdd.png)
