@@ -1,3 +1,6 @@
+---
+title: "Activity Diagrams"
+---
 # Activity Diagram
 Flow chart of activities performed by the system.
 

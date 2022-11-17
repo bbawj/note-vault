@@ -1,3 +1,6 @@
+---
+title: "Index Based Algorithms"
+---
 # Index Based Algorithms
 Having an index on 1 or more attributes of a relation makes some algorithms more feasible.
 >[! ] $V(R,a)$
@@ -28,12 +31,12 @@ Step 2: each tuple of R requires a read of the index
 Total cost: $B(R) + \text{index cost}$
 ![](https://i.imgur.com/aNMbZzE.png)
 ### Sorted Index Join - Zig Zag Join
-With a sorted index on both relations, we can just perform the final step of [[Notes/Two Pass Algorithms#Sort Based Algorithms|sort-based joining]]. 
+With a sorted index on both relations, we can just perform the final step of [](Notes/Two%20Pass%20Algorithms.md#Sort%20Based%20Algorithms%7Csort-based%20joining). 
 Index allows us to ignore retrieving data blocks where there are no matching keys.
 #### Cost
 From example 15.12, the number of disk I/O's if R and S both have sorted indexes, the total cost would simply be that cost to read all blocks of R and S: 1500. Consider that a large fraction of R or S cannot match tuples of the other relation, then the total cost will be considerably less than 1500.
 ## Practice Problems
-![[Pics/Pasted image 20221010171512.png]]
+![Pasted image 20221010171512](Pics/Pasted%20image%2020221010171512.png)
 Cost of access the data blocks:
 There are $\frac{k}{10}$ distinct values that we must access.
 There are a total of $B(R)/k=1000/k$ blocks having distinct values

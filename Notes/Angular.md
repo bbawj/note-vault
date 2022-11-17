@@ -1,5 +1,8 @@
+---
+title: "Angular"
+---
 # Angular
-A frontend development platform built on [[TypeScript]].
+A frontend development platform built on [TypeScript](Notes/TypeScript.md).
 
 ## Creating components
 ```console
@@ -89,9 +92,9 @@ ng g s <name>
 ```
 
 ### Dependency Injection
-Angular uses [[Dependency Injection]] to increase modularity.
+Angular uses [Dependency Injection](Notes/Dependency%20Injection.md) to increase modularity.
 
-Use [[Dependency Injection#Constructor injection |Constructor Injection]] to utilize a service:
+Use [](Notes/Dependency%20Injection.md#Constructor%20injection%20%7CConstructor%20Injection) to utilize a service:
 ```typescript
 export class ProductDetailsComponent implements OnInit {
 
@@ -121,7 +124,7 @@ class SomeService{
 #### [Error handling](https://angular.io/guide/http#handling-request-errors)
 
 ## RxJS Observables
-Makes use of the [[Observer Pattern]].
+Makes use of the [Observer Pattern](Notes/Observer%20Pattern.md).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T9wOu11uU6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

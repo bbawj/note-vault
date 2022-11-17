@@ -1,3 +1,6 @@
+---
+title: "Query Optimisation"
+---
 # Query Optimisation
 ## Algebraic Laws for Improving Query Plans
 ### Laws Involving Join
@@ -29,8 +32,8 @@ We can use the algebraic laws to devise a more optimal logical query plan.
 A physical query plan are the actions for which to execute the logical query plan.
 It includes:
 - Order and grouping of operations
-- [[Notes/Query Processing|Algorithms for each operator]]
-- [[Notes/Query Execution|Argument passing from operator to operator: pipelining vs materialisation]]
+- [Algorithms for each operator](Notes/Query%20Processing.md)
+- [Argument passing from operator to operator: pipelining vs materialisation](Notes/Query%20Execution.md)
 We need a way to make choices for each of these components.
 ### Cost estimation
 The cost of a plan is the sum of the cost of each operator in the tree. However, to know the cost of an operator often requires the input sizes to be known. This is often not available for intermediary operators which are executed after other operators such as `SELECT` are done.
@@ -68,7 +71,7 @@ Example for join:
 Sampling can be used to increase performance:
 ![](https://i.imgur.com/lE0yNfb.png)
 ### Join Order Selection
-Many  [[Notes/Two Pass Algorithms#Sort-Merge Join|join algorithms]] are asymmetric, the role played by the two argument relations are different and the cost depends on which relation plays which role. 
+Many  [](Notes/Two%20Pass%20Algorithms.md#Sort-Merge%20Join%7Cjoin%20algorithms) are asymmetric, the role played by the two argument relations are different and the cost depends on which relation plays which role. 
 - Build relation: the relation stored in main memory
 - Probe relation: relation which is read a block at a time to match the tuples in the build relation
 *Assumptions: the left argument is the build relation and the right argument is the probe relation*
@@ -93,7 +96,7 @@ The right-deep tree will require alot more space for the intermediate relations.
 #### Heuristics
 ![](https://i.imgur.com/BXJGc0o.png)
 #### Dynamic Programming
-Since we are concerned about minimising the cost of the query plan, we can utilise [[003 Dynamic Programming|DP]] to remember the costs at each intermediate step for each enumeration. **The cost is the size of the intermediate relation.**
+Since we are concerned about minimising the cost of the query plan, we can utilise [DP](003%20Dynamic%20Programming.md) to remember the costs at each intermediate step for each enumeration. **The cost is the size of the intermediate relation.**
 Example:
 ![](https://i.imgur.com/fVflcof.png)
 ![400](https://i.imgur.com/VzFz2K9.png)

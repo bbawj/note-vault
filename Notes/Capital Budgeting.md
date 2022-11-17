@@ -1,3 +1,6 @@
+---
+title: "Capital Budgeting"
+---
 # Capital Budgeting
 ### NPV
 Net Present Value: calculate the present value of future cash flows in order to whether a project is worth up taking $NPV_1\ge NPV_2$.

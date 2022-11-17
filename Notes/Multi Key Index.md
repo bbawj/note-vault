@@ -1,3 +1,6 @@
+---
+title: "Multi Key Index"
+---
 # Multi Key Indexes
 Motivation: we want to be able to have efficient queries on multiple attributes
 `SELECT * WHERE DEPT = "TOY" AND SAL > 50`
@@ -13,6 +16,6 @@ Issues:
 
 ![](https://i.imgur.com/KXrMNcL.png)
 ## Partitioned Hash
-Idea: combine the hash value of each key from [[Notes/Hash Index|hash index]] to form a single index.
+Idea: combine the hash value of each key from [hash index](Notes/Hash%20Index.md) to form a single index.
 ![](https://i.imgur.com/oCT4h3M.png)
 

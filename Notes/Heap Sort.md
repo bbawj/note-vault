@@ -1,8 +1,11 @@
+---
+title: "Heap Sort"
+---
 # Heap Sort
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2DmK_H7IdTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## General Idea
-Data structure based sorting algorithm using [[Heaps]].
+Data structure based sorting algorithm using [Heaps](Notes/Heaps.md).
 
 Makes use of the Partial Order Tree property:
 A tree is a maximising partial order tree if and only if each node has a key value greater than or equal to each of its child nodes.
@@ -14,7 +17,7 @@ A tree is a maximising partial order tree if and only if each node has a key val
 ## Pseudocode
 ![](https://i.imgur.com/admXX0H.png)
 
-Remove the max element and retain the heap structure using [[Heaps#Fix Heap maximising]]
+Remove the max element and retain the heap structure using [](Notes/Heaps.md#Fix%20Heap%20maximising)
 ![](https://i.imgur.com/CUBKrov.png)
 
 ## Complexity

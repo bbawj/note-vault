@@ -1,3 +1,6 @@
+---
+title: "Signal Chain Subsystem"
+---
 # Signal Chain Subsystem
 The signal chain subsystem is concerned about how hardware in computer systems communicate.
 ## Factors affecting signal transfer
@@ -48,4 +51,4 @@ https://www.youtube.com/watch?v=AHYNxpqKqwo
 ### Polling
 ![](https://i.imgur.com/O1pP4YN.png)
 ### Interrupt Driven
-[[Notes/Interrupts]]
+[Interrupts](Notes/Interrupts.md)

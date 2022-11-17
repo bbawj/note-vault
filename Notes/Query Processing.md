@@ -1,3 +1,6 @@
+---
+title: "Query Processing"
+---
 # Query Processing
 Given a query, we need to devise an algorithm to obtain the desired result
 ## Example
@@ -21,6 +24,6 @@ Assumptions for analysis:
 ## Notable Algorithms:
 - [One Pass Algorithms](Notes/One%20Pass%20Algorithms.md)
 - [Two Pass Algorithms](Notes/Two%20Pass%20Algorithms.md)
-- [[Notes/Index Based Algorithms|Index Based Algorithms]]
+- [Index Based Algorithms](Notes/Index%20Based%20Algorithms.md)
 ## Comparisons
 ![](https://i.imgur.com/YlB9izb.png)

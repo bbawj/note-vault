@@ -1,10 +1,13 @@
+---
+title: "User Datagram Protocol"
+---
 # User Datagram Protocol (UDP)
 UDP offers flexibility and is commonly used for bootstrapping new transport protocols.
 > The appeal of UDP is not in what it introduces, but rather in all the features it chooses to omit.
 
 Datagram: packets delivered via an unreliable service, without delivery guarantees and no failure notifications.
 
-UDP encapsulates user messages into its own packet structure on top of the [[Internet Protocol]]:
+UDP encapsulates user messages into its own packet structure on top of the [Internet Protocol](Notes/Internet%20Protocol.md):
 ![](https://i.imgur.com/DeoXhWu.png)
 > [! Non services]
 > 1. No guarantee of message delivery

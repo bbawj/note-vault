@@ -1,3 +1,6 @@
+---
+title: "Cache Write Policies"
+---
 # Cache Write Policies
 How do we keep memory updated while writing on the cache?
 ## Write-through
@@ -17,4 +20,4 @@ Maintain the state of each cache line as the following
 Update the state bit on modification. 
 ### Disadvantages
 - Cache coherence problem: in multi-processors where each core maintains its own level of cache, if one core needs to access the data that has been modified by another core, they will get the stale data from memory as updated data is still in that core's own cache and has not been propagated.
-- Coherent I/O: I/O devices are able to use [[Notes/Direct Memory Access|DMA]] and access stale copies of data in main memory.
+- Coherent I/O: I/O devices are able to use [DMA](Notes/Direct%20Memory%20Access.md) and access stale copies of data in main memory.

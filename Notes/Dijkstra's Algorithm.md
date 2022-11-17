@@ -1,5 +1,8 @@
+---
+title: "Dijkstra's Algorithm"
+---
 # Dijkstra's Algorithm
-[[Shortest Path Problem]]
+[Shortest Path Problem](Notes/Shortest%20Path%20Problem.md)
 Find the shortest path from source to all other vertices. 
 
 > [!NOTE] Adding a positive constant to all edges

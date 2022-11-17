@@ -1,3 +1,6 @@
+---
+title: "Instructions"
+---
 # Instructions
 An example using the ARM ISA
 ![](https://i.imgur.com/fTodwdd.png)
@@ -111,7 +114,7 @@ $500+200+2000+200+50=2950ps$
 iii.
 REG(read) -> ALUSrc Mux -> ALU -> D-MEM -> Mem2Reg Mux -> REG(write)
 ALUSrc MUX delay is overshadowed by the delay in REG(read)
-![[Drawing 2022-08-29 15.35.16.excalidraw]]
+![Drawing 2022-08-29 15.35.16.excalidraw](Excalidraw/Drawing%202022-08-29%2015.35.16.excalidraw.md)
 $500+200+2000+2000+50+200=4950$
 iv.
 STUR is LDUR but without the Mem2Reg Mux and REG write

@@ -1,8 +1,11 @@
+---
+title: "Model-View-Controller Architecture"
+---
 # MVC Architecture
 ## Design Problems
 1. Tight coupling between UI and application logic
-2. [[Observer Pattern]]: Need for UI to update when state changes
-3. [[Strategy Pattern]]: Need for UI to support different functionalities depending on the user input
+2. [Observer Pattern](Notes/Observer%20Pattern.md): Need for UI to update when state changes
+3. [Strategy Pattern](Notes/Strategy%20Pattern.md): Need for UI to support different functionalities depending on the user input
 
 ![](https://i.imgur.com/bLAeQ9M.png)
 

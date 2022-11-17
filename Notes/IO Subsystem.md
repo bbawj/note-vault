@@ -1,13 +1,16 @@
+---
+title: "IO Subsystem"
+---
 # I/O Subsystem
 ![](https://i.imgur.com/5Y5N0mC.png)
 ## I/O Hardware
-The hardware communication between I/O devices and the CPU is done through the [[Notes/Signal Chain Subsystem|signal chain subsystem]].
+The hardware communication between I/O devices and the CPU is done through the [signal chain subsystem](Notes/Signal%20Chain%20Subsystem.md).
 ## Kernel I/O Subsystem
 - Device drivers are the only aspects which interface directly with the hardware.
 - This layering system allows devices to be added and removed without having to change the kernel
 ### I/O Scheduling
 The OS is responsible for using hardware efficiently. Schedule I/O requests by rearranging the order of services.
-- For disk drives, we need to minimise the seek time as sequential access is much faster. OS needs to perform [[Notes/Disk#Disk Scheduling|disk scheduling]].
+- For disk drives, we need to minimise the seek time as sequential access is much faster. OS needs to perform [](Notes/Disk.md#Disk%20Scheduling%7Cdisk%20scheduling).
 ### Buffering
 Store data in memory while transferring between devices to handle device speed mismatch and transfer size mismatch.
 ### Caching

@@ -1,3 +1,6 @@
+---
+title: "File Systems"
+---
 # File Systems
 ## File
 A file is an unstructured sequence of bytes. Each byte is individually addressable from the beginning of the file.
@@ -86,8 +89,7 @@ A directory can be structured in two ways:
 > 3. load inode for “ast”  
 > 4. load data block of “ast” (i.e., directory “ast”)  
 > 5. load inode for “mbox”
-### Organisation
-A tree-like structure:
+### Tree Structured
 ![](https://i.imgur.com/7FbJ3PU.png)
 Path Name
 - Absolute Path Name: begins at the root and follows a path down to the specific file, e.g., /spell/mail/prt/first
@@ -96,11 +98,23 @@ Characteristics:
 - Efficient Searching: File can be easily located according to the path name.
 - Naming: Files can have the same name under different directories.
 - Grouping: files can be grouped logically according to their properties
-### Linking
+### Acyclic Graph Directories
+The tree structure prohibits sharing of files or directories while an acyclic graph allows this. It is a natural generalisation of the tree structure.
+#### Links as a UNIX implementation
+A link is a directory entry which is a poitner to another file or subdirectory
 ![](https://i.imgur.com/XBiK2Ib.png)
 - A hard link points to the data on storage, while a soft link can point to another link which points to information on storage.
 - Both linking strategies allow a separate file name to be used for the source file name. This source file name will resolve to the target file data by following the link.
 ![500](https://i.imgur.com/1kMzyvA.png)
+#### What happens on deletion?
+One possibility is to remove the file whenever anyone deletes it, but this action may leave dangling pointers to the now-nonexistent file. Worse, if the remaining file pointers contain actual disk addresses, and the space is subsequently reused for other files, these dangling pointers may point into the middle of other files.
+Soft links
+- Search for liks and remove them: expensive unless a list of links is kept with the file OR
+- Leave the links and remove them only when trying to access them
+Hard links
+- Preserve file unless all references are deleted. A count to the number of references is maintained in the file (a new link ++, deleting a link--). 
+#### Why not just duplicate the file?
+Duplicate directory entries make the original and the copy indistinguishable. A major problem with this is maintaining consistency when a file is modified
 ## Disk Space Management
 Block size affects both data rate and disk space utilisation
 - Big block size: file fits into few blocks resulting in fast to find & transfer blocks, but wastes space if file does not occupy the entire last block

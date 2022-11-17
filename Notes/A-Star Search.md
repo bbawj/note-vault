@@ -1,5 +1,8 @@
+---
+title: "A-Star Search"
+---
 # A* Search
-Combines [[Greedy Best First Search]] h(n) with [[Uniform Cost Search]] g(n)
+Combines [Greedy Best First Search](Notes/Greedy%20Best%20First%20Search.md) h(n) with [Uniform Cost Search](Notes/Uniform%20Cost%20Search.md) g(n)
 
 Evaluation function $$f(n)=g(n)+h(n)$$
 **Remember to take the full path cost in calculating g(n) for a node**

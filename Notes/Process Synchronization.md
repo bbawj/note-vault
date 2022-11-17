@@ -1,5 +1,8 @@
+---
+title: "Process Synchronization"
+---
 # Process Synchronization
-[[Race Condition]]
+[Race Condition](Notes/Race%20Condition.md)
 ## Critical Section Problem
 One method to solve the race condition is to divide processes into critical sections which are segments that shared data is accessed. **One process must be writing.**
 
@@ -8,8 +11,8 @@ Problem: design protocol to ensure that no 2 processes are executing their criti
 We need to satisfy 3 properties:
 
 1. **Mutual exclusion**: if process is executing in critical section, no other process can be executing in its critical section at the same time.
-	*Why is mutual exclusion not enough? 
-	- It can be achieved naively by preventing any process from entering critical section
+   *Why is mutual exclusion not enough? 
+   - It can be achieved naively by preventing any process from entering critical section
 2. **Progress**: if no process is executing in its critical section and another process needs to enter their critical section, selection of this process to enter cannot be postponed indefinitely
 3. **Bounded waiting**: if a process needs to enter their critical section, all other processes are allowed to enter their own critical section only a bounded number of times
 ## User-level Solutions

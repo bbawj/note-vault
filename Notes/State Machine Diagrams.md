@@ -1,3 +1,6 @@
+---
+title: "State Machine Diagrams"
+---
 # State Machine Diagrams
 Also called a *Dialog Map*.
 

@@ -1,3 +1,6 @@
+---
+title: "C"
+---
 # C Programming
 ## Special keywords
 ### Volatile
@@ -21,4 +24,4 @@ mov a, @ptr
 loop bz loop
 
 ```
-Same situations can occur for variables that may be modified in [[Notes/Interrupts|ISRs]] or by [[Notes/Thread Level Parallelism|multi-threaded applications]].
+Same situations can occur for variables that may be modified in [ISRs](Notes/Interrupts.md) or by [multi-threaded applications](Notes/Thread%20Level%20Parallelism.md).

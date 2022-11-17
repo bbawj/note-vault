@@ -1,3 +1,6 @@
+---
+title: "Cache"
+---
 # Cache
 ## Memory Organisation
 Memory in cache is stored as cache lines. 
@@ -7,9 +10,9 @@ A CPU will try to access cache through a memory address:
 ### Instruction cache and Data cache
 Storing these separately will allow in better parallelism. CPU is able to fetch instructions from instruction cache while writing to data cache for STUR instructions.
 ![](https://i.imgur.com/tA6cvb2.png)
-## [[Cache Placement Policies]]
-## [[Notes/Cache Replacement Policies|Cache Replacement Policies]]
-## [[Cache Write Policies]]
+## [Cache Placement Policies](Notes/Cache%20Placement%20Policies.md)
+## [Cache Replacement Policies](Notes/Cache%20Replacement%20Policies.md)
+## [Cache Write Policies](Notes/Cache%20Write%20Policies.md)
 ## Performance
 The key factor affecting cache performance is the effects of cache misses. When a cache miss occurs, compute cycles are needed to find a victim, request the appropriate data from memory, fill the cache line with this new block and resume execution.
 ### Types of Misses

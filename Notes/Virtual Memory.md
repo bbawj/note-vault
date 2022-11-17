@@ -1,5 +1,8 @@
+---
+title: "Virtual Memory"
+---
 # Virtual Memory
-In [[Notes/Memory Organisation|memory organisation]], we assumed that for each program, its entirety has to be loaded into the memory. This means that the overall program size must be restricted to the size of physical memory.
+In [memory organisation](Notes/Memory%20Organisation.md), we assumed that for each program, its entirety has to be loaded into the memory. This means that the overall program size must be restricted to the size of physical memory.
 >[!Aim: size of virtual memory limited by the address scheme of the computer and not the actual size of physical memory]
 ![](https://i.imgur.com/bFCvOzP.png)
 ## Swapping
@@ -46,7 +49,7 @@ If there are no empty frames, OS needs to locate a victim to evict:
 >
 > ![400](https://i.imgur.com/Z2DZRrv.png)
 ### Policies
-[[Notes/Page Replacement Policies|Page Replacement Policies]]
+[Page Replacement Policies](Notes/Page%20Replacement%20Policies.md)
 ### Allocation of Frames
 #### Fixed allocation
 Give a process a fixed number of frames in memory for execution.

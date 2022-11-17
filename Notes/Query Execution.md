@@ -1,3 +1,6 @@
+---
+title: "Query Execution"
+---
 # Query Execution
 How do database management systems execute a particular query plan?
 ## Expression Evaluation
@@ -49,7 +52,7 @@ Dependent on:
 #### Multi Index 
 ![](https://i.imgur.com/BjBtOtS.png)
 #### Bitmap Index Scan
-1. Create a [[Notes/Bitmap|bitmap]] while doing an index scan
+1. Create a [bitmap](Notes/Bitmap.md) while doing an index scan
 2. When index key matches the search condition, the heap address pointed to by that index entry is looked up as an offset into the bitmap, and that bit is set to 1
 ```
 Bitmap scan from customers_pkey:

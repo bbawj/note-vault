@@ -1,5 +1,8 @@
+---
+title: "Hash Index"
+---
 # Hash Index
-Idea: use a [[Notes/Hash Tables|hash table]]
+Idea: use a [hash table](Notes/Hash%20Tables.md)
 1. Take a search key and hash it into an integer in the range of 0 to B-1 where B is the number of buckets
 2. A bucket array holds the headers of B linked lists, one for each bucket
 3. If a record has search key K, store the record by linking it to bucket list number h(K)
@@ -31,12 +34,12 @@ Delete implementations:
 Unable to allocate different directory for duplicate keys:
 ![](https://i.imgur.com/u7dl7Gs.png)
 ## Practice Problems
-![[Pics/Pasted image 20220910143851.png]]
-![[Excalidraw/Drawing 2022-09-10 14.41.50.excalidraw|400x400]]
+![Pasted image 20220910143851](Pics/Pasted%20image%2020220910143851.png)
+![400x400](Excalidraw/Drawing%202022-09-10%2014.41.50.excalidraw.md)
 i. 2 I/O
 ii. All blocks needs to be searched: 11 I/O
 ![](https://i.imgur.com/1y39vic.png)
-![[Excalidraw/Drawing 2022-09-10 14.52.53.excalidraw|400x400]]
+![400x400](Excalidraw/Drawing%202022-09-10%2014.52.53.excalidraw.md)
 ![](https://i.imgur.com/O5QA06H.png)
 a. Hash index on ID
 b. B+ tree index on ID to support better range query

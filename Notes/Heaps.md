@@ -1,9 +1,12 @@
+---
+title: "Heaps"
+---
 # Heaps
 A specialized tree based data structure.
 
 Efficient data structure to implement a priority queue.
 ## Implementations
-Binary Heap built with a [[Binary Tree]]:
+Binary Heap built with a [Binary Tree](Notes/Binary%20Tree.md):
 ![](https://i.imgur.com/TQ7v9f2.png)
 
 ![](https://i.imgur.com/YlmhOMz.png)

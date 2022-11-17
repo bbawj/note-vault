@@ -1,3 +1,6 @@
+---
+title: "Complexity Analysis"
+---
 # Complexity Analysis
 ## Asymptotic Notations
 Notations used to describe the order of growth of a given function
@@ -30,5 +33,5 @@ $$f(n)\in O(h(n)),g(n)\in O(h(n)) \implies f(n)+g(n)\in O(h(n))$$
 ![](https://i.imgur.com/LurnRaE.png)
 
 ## Specific Complexities
-- [[Polynomial Time Complexity]]
-- [[Pseudo-Polynomial Time Complexity]]
+- [Polynomial Time Complexity](Notes/Polynomial%20Time%20Complexity.md)
+- [Pseudo-Polynomial Time Complexity](Notes/Pseudo-Polynomial%20Time%20Complexity.md)

@@ -1,3 +1,6 @@
+---
+title: "Concurrency Control"
+---
 # Concurrency Control
 The DBMS needs to ensure consistency during concurrent execution of transactions, as concurrency can result in the database being in an inconsistent state despite preserving the correctness of transactions and without encountering a failure.
 ## Scheduler
@@ -10,9 +13,13 @@ Result is equivalent to a serial schedule, but actions of one transaction do not
 ![500](https://i.imgur.com/EvCDCZb.png)
 ### Conflict Serializable Schedule
 ![](https://i.imgur.com/sgLNvTW.png)
+If a pair of actions conflict, if their order is interchanged, the behavior of at least one of the transactions can change.
+From this we can draw 2 conclusions about when a pair can be swapped.
+1. Actions involve the same element
+2. At least one is a write
 ![](https://i.imgur.com/hpD2zat.png)
 #### Precedence Graph
-We can use a precedence graph to determine if a set of transactions are conflict serializable: 
+We can use a precedence graph to determine if a set of transactions are conflict serializable. An edge from one node to another represents a constraint on the order of the transactions. i.e. Actions in a transaction t1 cannot be swapped with another transaction t2. If a cycle occurs, the order of transactions become contradictory and no serial schedule can exist.
 ![](https://i.imgur.com/01GqFEg.png)
 
 ![](https://i.imgur.com/PzNgNGH.png)
@@ -29,6 +36,10 @@ Ensure that data items that are shared by conflicting operations are accessed on
 ### Two Phase Locking (2PL)
 Arbitrary assignment of locks do not lead to a serializable schedule. Two transactions can operate on elements in a different order resulting in different results. We can solve this by ensuring that transactions take up all lock actions before all unlock actions.
 ![](https://i.imgur.com/IVf95ET.png)
+#### Why 2PL works?
+Intuitively, each two-phase-locked transaction may be thought to execute in  its entirety at the instant it issues its first unlock request. i.e. a legal schedule can only be such that the transaction completes fully, because otherwise, this means that another transaction is attempting to take a held lock, causing a deadlock. Hence, there is at least one conflict-serialisable schedule: the one in which the transactions appear in the same order as first unlocks.
+![](https://i.imgur.com/4WIMEGr.png)
+Suppose the schedule starts with T1 locking and reading _A_. If T2 locks _B_ before T1 reaches its unlocking phase, then there is a deadlock, and the schedule cannot complete. Thus, if T1 performs an action first, it must perform _all_ its actions before T2 performs any. Likewise, if T2 starts first, it must complete before T1 starts, or there is a deadlock. Thus, only the two serial schedules of these transactions are legal.
 ### Lock mechanisms
 #### Shared and Exclusive locks
 - Shared lock: to allow for multiple transactions to perform `READ`
@@ -49,7 +60,7 @@ Deadlocks can occur when transactions are unable to upgrade their shared locks t
 ### Timeout
 Place a limit on how long a transaction may be active, if it exceeds this time, it is forced to release its locks and other resources and roll back.
 ### Waits-For Graph
-Utilises the [[Notes/Deadlocks#Cyclic Properties of Deadlocks|cyclic properties of deadlocks]] to detect them.
+Utilises the [cyclic properties of deadlocks](Notes/Deadlocks.md#Cyclic%20Properties%20of%20Deadlocks) to detect them.
 - Each transaction holding a lock or waiting for one is a node
 - An edge exists from T1 to T2 if there is some element A where:
 	- T2 holds a lock on A
@@ -59,7 +70,9 @@ Utilises the [[Notes/Deadlocks#Cyclic Properties of Deadlocks|cyclic properties 
 This graph can become very large ad analysing this graph for every action can take a long time.
 ### Timestamps
 Assign each transaction with a timestamp. This timestamp never changes for the transaction even if it is rolled back.
+#### Wait-Die
 ![](https://i.imgur.com/f1MbRut.png)
+#### Wound-Wait
 ![](https://i.imgur.com/RLvfh5T.png)
 ### Comparison
 ![](https://i.imgur.com/gslOHOC.png)

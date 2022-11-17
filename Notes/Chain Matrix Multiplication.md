@@ -1,3 +1,6 @@
+---
+title: "Chain Matrix Multiplication"
+---
 # Chain Matrix Multiplication
 ![](https://i.imgur.com/LZShYsW.png)
 
