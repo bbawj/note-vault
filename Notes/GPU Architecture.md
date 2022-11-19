@@ -8,7 +8,6 @@ SIMD: Single instruction multiple data
 ## CUDA
 ### Architecture
 ![](https://i.imgur.com/bY9kIUJ.png)
-
 ### Programming Model
 CUDA works on a heterogeneous programming model that consists of a host and device. Host calls the device to run the program.
 - Host: CPU
@@ -38,7 +37,9 @@ Multi-dimensionality:
 The above code does not take advantage of GPU parallelism in the CUDA core. We can create 1 block with 3 threads to achieve parallelism: `vector_add_cu<<<1,3>>>(d_c, d_a, d_b);`
 Use the threadIdx to access the memory:
 ![](https://i.imgur.com/d70gRtX.png)
-The example can also be achieved using 3 blocks each with 1 thread. However, parallel threads have the advantage to directly communicate and synchronise with each other due to shared hardware.
+> [! Threads vs Blocks]
+> The example can also be achieved using 3 blocks each with 1 thread. However, parallel threads have the advantage to directly communicate and synchronise with each other due to shared hardware. Sharing memory between blocks would require *global memory access*
+![](https://i.imgur.com/5vxKQ9c.png)
 ### Example
 ![](https://i.imgur.com/B5iK4Ky.png)
 ```c++
@@ -69,6 +70,18 @@ __global__ void dot_prod_cu(int *d_c, int *d_a, int *d_b){
 #### Warps
 ![](https://i.imgur.com/ObcIEOG.png)
 ![](https://i.imgur.com/ENSz0mN.png)
+#### SIMT
+Warps enable a unique architecture called Single Instruction Multiple Thread. This means each warp executes only one common instruction for all threads.
+
+Within a single thread, its instructions are
+- pipelined to achieve instruction-level parallelism
+- issued in order, with no branch prediction and speculative execution
+Individual threads in a warp start together, at the same instruction address
+- but each has its own instruction address counter and registers
+- free to branch and execute independently when the thread diverges, such as due to data-dependent conditional execution and branch.
+#### Thread Divergence
+Branch statements will result in some threads in a warp wasting their clock cycles. This is because the threads in the warp must all execute the same instruction. For some which satisfy the condition, computation is done else NOP.
+![](https://i.imgur.com/D0DNFIi.png)
 ## Practice Problems
 ![](https://i.imgur.com/zf3Aapc.png)
 ```c

@@ -23,8 +23,10 @@ This is done using [](Notes/Combinational%20Circuits.md#Multiplexer%7Cmultiplexe
 ![](https://i.imgur.com/qCzi7WY.png)
 #### Data memory
 ![](https://i.imgur.com/L0PnDz1.png)
-### Instructions
+### Instructions Format
 Based on the system we can design a set of computer [Instructions](Notes/Instructions.md).
+### Addressing Modes
+![](https://i.imgur.com/o2BH98s.png)
 ## Practice Problems
 ![](https://i.imgur.com/jgFhIqL.png)
 ```
