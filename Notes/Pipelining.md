@@ -6,6 +6,18 @@ title: "Pipelining"
 ## Datapath
 Pipelining makes use of extra registers between each pipeline in order to store the necessary data and control signals needed by the current instruction for the next stage. Without it, the next instruction will override the information.
 ![](https://i.imgur.com/fAFW3V8.png)
+### Clock Period
+Pipelining allows us to achieve smaller clock period (and hence higher frequencies) by reducing the time required for a single stage to complete.
+![](https://i.imgur.com/U02KVRZ.png)
+### Limitation
+![](https://i.imgur.com/HZTDkkx.png)
+- Single cycle: $1.2+0.8+0.7+1.3=4ns$
+- Pipelined: $1.3+0.3=1.6ns$ (register delay needs to be taken into account)
+![](https://i.imgur.com/AzTIQBp.png)
+Clock period of a single stage = $4/1000 = 0.004ns$
+Maximum delay = $0.004+0.3=0.304ns$
+Speedup = $4/0.304=13$
+*A 1000x increase in pipeline registers only results in a 13x increase in speedup!*
 ## Hazards
 A hazard is a drop in efficiency in the pipeline due to stalling.
 We can measure the effect of stalls using steady state CPI
