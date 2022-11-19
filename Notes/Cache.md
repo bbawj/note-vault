@@ -50,7 +50,12 @@ L1 cache hit can be considered to be part of CPI ideal as it is often possible t
 ### Measuring Impact with Average Memory Access Time (AMAT) 
 We need a way to measure the performance of cache, standalone from the performance of the CPU.
 AMAT is the average time to access memory considering both hits and misses
-$$AMAT=\text{Time for hit}+\text{Miss Rate}\times\text{Miss Penalty}$$
+$$
+\begin{aligned}
+AMAT&=\text{Hit Time}\times(1-\text{Miss Rate})+\text{Miss Rate}\times(\text{Hit Time}+\text{Miss Penalty})\\
+&=\text{Time for hit}+\text{Miss Rate}\times\text{Miss Penalty}\\
+\end{aligned}
+$$
 ![](https://i.imgur.com/4RDpPr0.png)
 ## Practice Problems
 ![](https://i.imgur.com/bo5A0np.png)
