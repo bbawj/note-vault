@@ -31,15 +31,20 @@ STUR
 > [!We can utilize a set of extra multiplexers to reuse components for both types]
 > 
 ![](https://i.imgur.com/POeSnMZ.png)
-## Immediate type (immediate addressing mode)
+## Immediate type
+Addressing mode: Immediate addressing
 ![](https://i.imgur.com/XBcUWz2.png)
 ### Datapath
 ![](https://i.imgur.com/m6rHt3u.png)
-## Conditional Branch type (PC relative addressing mode)
+## Conditional Branch type
+PC relative addressing mode
 ![](https://i.imgur.com/cL7BQNZ.png)
 ### Datapath
 ![](https://i.imgur.com/e3nbpwz.png)
+#### What's with the shift left by 2? #question 
+Each instruction word is 32 bits (4 bytes) long. If we want to move by 2 instructions, we need to move 8 bytes. Thus, left shift by 2 to multiple the address by 4 to navigate the correct number of bytes.
 ## Unconditional Branch type
+Addressing mode: PC relative addressing
 ![](https://i.imgur.com/clXQze5.png)
 ## Combine all types into a single datapath
 ![](https://i.imgur.com/Wmjc1KN.png)

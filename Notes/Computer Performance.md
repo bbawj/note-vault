@@ -23,6 +23,8 @@ $$T' = (T\times (1-E))+\frac{T\times E}{S}$$
 ### Amdahl's Law
 __If the program is of a fixed workload:__
 Let _E_ be the fraction of program that is enhanced via _parallelism_, with maximum enhancement factor $S = \infty$, the maximum speedup is $$\text{Max Speedup} =lim_{s\rightarrow \infty}\frac{1}{1-E+\frac{E}{S}}=\frac{1}{1-E}$$
+Let *E* be the fraction of program enhanced by Speedup $S_1$ and $1-E$ enhanced by Speedup $S_2$.
+$$Speedup=\frac{1}{\frac{1-E}{S_2}+\frac{E}{S_1}}$$
 ### Gustafson's Law
 __If the program is set to a fixed time period instead:__ do more parallel work in the same amount of time
 ![](https://i.imgur.com/aaL1XLz.png)

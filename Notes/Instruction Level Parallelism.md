@@ -2,6 +2,7 @@
 title: "Instruction Level Parallelism"
 ---
 # Instruction Level Parallelism
+We can group multiple independent instructions and execute them concurrently in different functional units of a single processor.
 ![](https://i.imgur.com/yzE277X.png)
 ## Approaches
 Hardware approach: Superscalar processor

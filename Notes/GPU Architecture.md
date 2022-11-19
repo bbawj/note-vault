@@ -2,6 +2,8 @@
 title: "GPU Architecture"
 ---
 # GPU Architecture
+The general purpose CPU is designed for single-threaded code optimised for *low latency.* The GPU allows us to achieve higher throughput in exchange for *higher latency.*
+
 Need to achieve massive data parallelism for computing tasks such as vector processing and Multiplication and Accumulation (MAC) operations in matrices.
 ![](https://i.imgur.com/48iqtPk.png)
 SIMD: Single instruction multiple data

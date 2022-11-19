@@ -34,7 +34,7 @@ Out-of-order execution and completion:
 Reordering introduces the possibility of WAR and WAW hazards which were not possible in an in-order execution pipeline. These can be solved via __register renaming__:
 ![](https://i.imgur.com/E8tAmwX.png)
 #### Loop Unrolling
-Further optimizations can be made for looping code. Loop segments contain a high level of overhead _(lines that work on the loop variable and branch commands)_, which are not directly contributing to the work of the loop body.
+Further optimizations can be made for looping code. Loop segments contain a high level of overhead *(lines that work on the loop variable and branch commands)*, which are not directly contributing to the work of the loop body.
 ```assembly
 for (i=999; i>=0; i=i–1) 
 	x[i] = x[i] + s;

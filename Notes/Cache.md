@@ -31,6 +31,7 @@ When useful blocks are displaced due to placement policies. E.g. fully associati
 - Block size
 	- Larger blocks exploit spatial locality. More data in the same area is loaded together when requested.
 	- Reduces compulsory misses since more data is loaded at once.
+	- Reduces number of cache blocks for a fixed block size. This leads to increase in conflict miss as higher chance for different data map to the same blocks.
 	- Increases miss penalty as more data needs to be replaced on a miss.
 ![](https://i.imgur.com/PKhDsDq.png)
 ### Measuring Impact with CPI
