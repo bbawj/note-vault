@@ -19,5 +19,5 @@ Maintain the state of each cache line as the following
 - Dirty: present and modified
 Update the state bit on modification. 
 ### Disadvantages
-- Cache coherence problem: in multi-processors where each core maintains its own level of cache, if one core needs to access the data that has been modified by another core, they will get the stale data from memory as updated data is still in that core's own cache and has not been propagated.
+- [Cache Coherence](Notes/Thread%20Level%20Parallelism.md#Cache%20Coherence): in multi-processors where each core maintains its own level of cache, if one core needs to access the data that has been modified by another core, they will get the stale data from memory as updated data is still in that core's own cache and has not been propagated.
 - Coherent I/O: I/O devices are able to use [DMA](Notes/Direct%20Memory%20Access.md) and access stale copies of data in main memory.

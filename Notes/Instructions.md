@@ -78,6 +78,7 @@ Notes:
 - Mem2Reg (1) to select data from memory
 ### Store
 ![](https://i.imgur.com/HUHMwJN.png)
+- Reg2Loc used to select Rn as the read register 2
 ### Conditional Branch
 ![](https://i.imgur.com/PLmtZJS.png)
 Critical path:

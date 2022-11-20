@@ -6,6 +6,12 @@ The same operation is performed on multiple data values concurrently in multiple
 ![](https://i.imgur.com/He0shTf.png)
 ## Processors
 Different types of hardware can support different levels of data parallelism.
+### Flynn's Processor Taxonomy
+![](https://i.imgur.com/DkNRPll.png)
+Advantages of SIMD > MIMD
+- Allow sequential thinking yet achieves parallel speedup
+- Reduced energy usage
+- More efficient parallel efficiency
 ### Single Instruction Multiple Data (SIMD)
 ![](https://i.imgur.com/Pf45HmC.png)
 

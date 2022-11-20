@@ -33,6 +33,8 @@ When useful blocks are displaced due to placement policies. E.g. fully associati
 	- Reduces compulsory misses since more data is loaded at once.
 	- Reduces number of cache blocks for a fixed block size. This leads to increase in conflict miss as higher chance for different data map to the same blocks.
 	- Increases miss penalty as more data needs to be replaced on a miss.
+- Levels of cache
+	- Using multi-level cache will reduce the miss penalty
 ![](https://i.imgur.com/PKhDsDq.png)
 ### Measuring Impact with CPI
 $$
@@ -57,6 +59,7 @@ AMAT&=\text{Hit Time}\times(1-\text{Miss Rate})+\text{Miss Rate}\times(\text{Hit
 \end{aligned}
 $$
 ![](https://i.imgur.com/4RDpPr0.png)
+One example to show that AMAT is superior would be to consider two different caches with similar miss rates, but drastically different hit times. Using the miss rate metric, we would rate both caches the same. Using the AMAT metric, a cache with a lower hit time or lower miss penalty will outperform a cache with a higher respective time, assuming all other variables are the same.
 ## Practice Problems
 ![](https://i.imgur.com/bo5A0np.png)
 3 bit index, 2bit tag with 0 bit offset.

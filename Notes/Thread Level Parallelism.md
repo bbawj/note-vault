@@ -9,9 +9,21 @@ Not to be confused with *multiprocessors*:
 - Multicore: 2 or more processors in a single CPU. Executes a single program faster through [](Notes/Threads.md#^7d353c%7Cmulti-threading)
 ![](https://i.imgur.com/fNXcCn7.png)
 ### Challenges
+#### ILP wall
+![](https://i.imgur.com/vPnlfce.png)
 #### Power wall
+Overcome power wall using multiple slow cores  
+- Cores running at lower clock frequency and lower voltage can still deliver the desired performance using less power  
+- Scale up the number of cores rather than frequency
 ![](https://i.imgur.com/qhjCvl6.png)
 #### Memory wall
+Widening gap between compute bandwidth and memory bandwidth could not be bridged - resulting in memory latency.
+
+Overcome memory wall with memory parallelism via multiple threads
 ![](https://i.imgur.com/x8wuo0k.png)
 #### Interconnect problem
 ![](https://i.imgur.com/DC9WD8x.png)
+#### Cache Coherence
+![](https://i.imgur.com/FjEitrp.png)
+
+![](https://i.imgur.com/ktGNvyv.png)
