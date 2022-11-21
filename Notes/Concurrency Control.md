@@ -1,5 +1,7 @@
 ---
 title: "Concurrency Control"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Concurrency Control
 The DBMS needs to ensure consistency during concurrent execution of transactions, as concurrency can result in the database being in an inconsistent state despite preserving the correctness of transactions and without encountering a failure.

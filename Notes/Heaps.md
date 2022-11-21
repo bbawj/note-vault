@@ -1,5 +1,7 @@
 ---
 title: "Heaps"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Heaps
 A specialized tree based data structure.

@@ -1,6 +1,8 @@
 ---
 title: "008 Networking"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Networking
 #moc 

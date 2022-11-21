@@ -1,5 +1,7 @@
 ---
 title: "User Datagram Protocol"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # User Datagram Protocol (UDP)
 UDP offers flexibility and is commonly used for bootstrapping new transport protocols.

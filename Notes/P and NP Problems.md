@@ -1,5 +1,7 @@
 ---
 title: "P and NP Problems"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # P and NP Problems
 _Hard Problems_: the best-known algorithm for the problem is expensive in terms of running time.

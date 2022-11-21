@@ -1,5 +1,7 @@
 ---
 title: "Insertion Sort"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Insertion Sort
 ## General Idea

@@ -1,5 +1,7 @@
 ---
 title: "Query Execution"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Query Execution
 How do database management systems execute a particular query plan?

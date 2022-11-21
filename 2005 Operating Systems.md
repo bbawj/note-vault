@@ -1,6 +1,8 @@
 ---
 title: "2005 Operating Systems"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Operating Systems
 #moc 

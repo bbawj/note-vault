@@ -1,6 +1,8 @@
 ---
 title: "006 Tools"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Tools
 #moc 

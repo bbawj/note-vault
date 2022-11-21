@@ -1,6 +1,8 @@
 ---
 title: "What is this?!"
 tags: [moc]
+date: 2022-11-15
+lastmod: 2022-11-21
 ---
 #moc 
 # What even is this site?! 

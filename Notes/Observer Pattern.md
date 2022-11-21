@@ -1,6 +1,8 @@
 ---
 title: "Observer Pattern"
 tags: [design-patterns]
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Observer Pattern
 #design-patterns

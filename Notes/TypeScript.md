@@ -1,5 +1,7 @@
 ---
 title: "TypeScript"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # TypeScript
 TypeScript is a superset of JavaScript, with all the features of JavaScript + a type checking layer.

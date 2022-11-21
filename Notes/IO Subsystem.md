@@ -1,5 +1,7 @@
 ---
 title: "IO Subsystem"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # I/O Subsystem
 ![](https://i.imgur.com/5Y5N0mC.png)

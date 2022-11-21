@@ -1,5 +1,7 @@
 ---
 title: "007 Data Structures"
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Data Structures
 - [Linked Lists](Linked%20Lists)

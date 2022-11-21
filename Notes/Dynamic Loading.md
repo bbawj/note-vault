@@ -1,5 +1,7 @@
 ---
 title: "Dynamic Loading"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Dynamic Loading
 Mechanism for loading a binary and execute functions from external software.

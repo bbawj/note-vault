@@ -1,6 +1,8 @@
 ---
 title: "Proof By Contradiction"
 tags: [logic]
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Proof By Contradiction
 #logic

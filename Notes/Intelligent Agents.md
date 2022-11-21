@@ -1,5 +1,7 @@
 ---
 title: "Intelligent Agents"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Intelligent Agents
 Rational agents: make decisions based on maximising a specific value. Based on built-in knowledge about the environment

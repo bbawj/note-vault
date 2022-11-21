@@ -1,5 +1,7 @@
 ---
 title: "README"
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Note Vault
 This vault is meant to be used as a backup and syncing tool for _most_ of the notes I make for the NTU Business and Computing course AY19/20 and the learning of new and interesting topics in computer science. 

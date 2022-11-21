@@ -1,6 +1,8 @@
 ---
 title: "Factory Pattern"
 tags: [design-patterns]
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Factory Pattern
 #design-patterns 

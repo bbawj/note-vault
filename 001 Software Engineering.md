@@ -1,6 +1,8 @@
 ---
 title: "001 Software Engineering"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Software Engineering Map of Contents
 #moc 

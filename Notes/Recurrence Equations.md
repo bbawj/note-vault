@@ -1,5 +1,7 @@
 ---
 title: "Recurrence Equations"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Recurrence Equations
 ## Iteration Method

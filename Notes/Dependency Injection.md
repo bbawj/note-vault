@@ -1,6 +1,8 @@
 ---
 title: "Dependency Injection"
 tags: [design-patterns]
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Dependency Injection
 #design-patterns 

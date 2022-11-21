@@ -1,5 +1,7 @@
 ---
 title: "Hash Tables"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Hash Tables
 The problem with direct addressing: when the number of keys known to us is large, we are unable to map each key to their own slot.

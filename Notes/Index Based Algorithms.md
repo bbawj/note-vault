@@ -1,5 +1,7 @@
 ---
 title: "Index Based Algorithms"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Index Based Algorithms
 Having an index on 1 or more attributes of a relation makes some algorithms more feasible.

@@ -1,5 +1,7 @@
 ---
 title: "Knowledge Representation"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Knowledge Representation
 Representation of knowledge in a computer-tractable form.

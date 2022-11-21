@@ -1,5 +1,7 @@
 ---
 title: "Uniform Cost Search"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Uniform Cost Search
 Take the full path cost to the node as g(n)

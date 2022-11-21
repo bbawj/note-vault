@@ -1,5 +1,7 @@
 ---
 title: "Quick Sort"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Quick Sort
 ## General Idea

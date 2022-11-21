@@ -1,6 +1,8 @@
 ---
 title: "Instructions"
 tags: [question]
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Instructions
 An example using the ARM ISA

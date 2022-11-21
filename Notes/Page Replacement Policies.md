@@ -1,5 +1,7 @@
 ---
 title: "Page Replacement Policies"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Page Replacement Policies
 ## First In First Out

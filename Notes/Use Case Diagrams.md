@@ -1,5 +1,7 @@
 ---
 title: "Use Case Diagrams"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Use Case Diagram
 ![](https://i.imgur.com/ruK2Qlz.png)

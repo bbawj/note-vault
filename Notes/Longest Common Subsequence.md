@@ -1,5 +1,7 @@
 ---
 title: "Longest Common Subsequence"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Longest Common Subsequence
 ![](https://i.imgur.com/fZELoJ2.png)

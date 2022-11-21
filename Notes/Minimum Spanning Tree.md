@@ -1,5 +1,7 @@
 ---
 title: "Minimum Spanning Tree"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Minimum Spanning Tree
 A minimum-weight _spanning tree_ in a weighted graph

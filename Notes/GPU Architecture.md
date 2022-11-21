@@ -1,5 +1,7 @@
 ---
 title: "GPU Architecture"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # GPU Architecture
 The general purpose CPU is designed for single-threaded code optimised for *low latency.* The GPU allows us to achieve higher throughput in exchange for *higher latency.*

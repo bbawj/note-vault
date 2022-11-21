@@ -1,5 +1,7 @@
 ---
 title: "Virtual Memory"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Virtual Memory
 In [memory organisation](Notes/Memory%20Organisation.md), we assumed that for each program, its entirety has to be loaded into the memory. This means that the overall program size must be restricted to the size of physical memory.

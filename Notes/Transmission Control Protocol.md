@@ -1,5 +1,7 @@
 ---
 title: "Transmission Control Protocol"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Transmission Control Protocol (TCP)
 ## Three-way Handshake

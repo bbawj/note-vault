@@ -1,5 +1,7 @@
 ---
 title: "Boyer-Moore Algorithm"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Boyer-Moore Algorithm
 Definitions

@@ -1,5 +1,7 @@
 ---
 title: "Process Synchronization"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Process Synchronization
 [Race Condition](Notes/Race%20Condition.md)

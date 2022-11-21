@@ -1,5 +1,7 @@
 ---
 title: "Virtualization"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Virtualization
 A technique that uses software called Hypervisor (virtual machine manager or VMM) to create abstraction of hardware.

@@ -1,3 +1,7 @@
+---
+date: 2022-11-21
+lastmod: 2022-11-21
+---
 <%*
   let title = tp.file.title
   if (title.startsWith("Untitled")) {

@@ -1,5 +1,7 @@
 ---
 title: "Thread Level Parallelism"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Thread Level Parallelism
 Distribute the workload among a set of concurrently running threads. Uses MIMD model.

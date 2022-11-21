@@ -1,6 +1,8 @@
 ---
 title: "Façade Pattern"
 tags: [design-patterns]
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Façade Pattern
 #design-patterns 

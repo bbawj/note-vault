@@ -1,5 +1,7 @@
 ---
 title: "Instruction Set Architecture"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Instruction Set Architecture (ISA)
 A set of specifications a programmer must know to write correct and efficient programs for a specific machine

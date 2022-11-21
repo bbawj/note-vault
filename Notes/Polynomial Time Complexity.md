@@ -1,5 +1,7 @@
 ---
 title: "Polynomial Time Complexity"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Polynomial Time Complexity
 _Polynomial Bound: Worst case complexity is bounded by a polynomial function of **input size**_

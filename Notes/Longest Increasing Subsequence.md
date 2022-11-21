@@ -1,5 +1,7 @@
 ---
 title: "Longest Increasing Subsequence"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Longest Increasing Subsequence
 ![](https://i.imgur.com/ZQvHrc3.png)

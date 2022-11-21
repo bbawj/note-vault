@@ -1,5 +1,7 @@
 ---
 title: "Threads"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Threads
 A thread (or lightweight process) consists of its own thread id, program counter, registers and stack space. However it shares the same data and code as the parent process.

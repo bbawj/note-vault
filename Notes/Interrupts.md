@@ -1,5 +1,7 @@
 ---
 title: "Interrupts"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Interrupts
 An interrupt is a request for the processor to interrupt currently executing code so that the event can be processed in a timely manner. 

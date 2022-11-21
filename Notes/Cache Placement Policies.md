@@ -1,5 +1,7 @@
 ---
 title: "Cache Placement Policies"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Cache Placement Policies
 We need a way to decide where the data is placed when it is first copied into the cache where in the cache a copy of selected memory block will reside.

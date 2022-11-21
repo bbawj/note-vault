@@ -1,5 +1,7 @@
 ---
 title: "Hash Index"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Hash Index
 Idea: use a [hash table](Notes/Hash%20Tables.md)

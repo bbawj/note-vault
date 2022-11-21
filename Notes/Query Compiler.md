@@ -1,5 +1,7 @@
 ---
 title: "Query Compiler"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Query Compiler
 An SQL query is *declarative* - does not specify the procedure for query execution. 

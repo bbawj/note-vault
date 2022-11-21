@@ -1,5 +1,7 @@
 ---
 title: "Layered Architecture"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Layered Architecture
 ![](https://i.imgur.com/zKXvw5b.png)

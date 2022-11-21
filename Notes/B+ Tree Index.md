@@ -1,5 +1,7 @@
 ---
 title: "B+ Tree Index"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # B+ Tree Index
 Idea: build a multi-layer index in the structure of a [B-tree](Notes/B-tree.md)

@@ -1,5 +1,7 @@
 ---
 title: "Custom Computing"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Custom Computing
 Custom computers are special-purpose systems customised for specific applications such as signal processing and database operations, when general-purpose computers are too slow, too bulky or consume too much power.

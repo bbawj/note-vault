@@ -1,5 +1,7 @@
 ---
 title: "Binary Tree"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Binary Trees
 A tree structure in which each node has at most 2 children.

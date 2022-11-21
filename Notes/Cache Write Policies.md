@@ -1,5 +1,7 @@
 ---
 title: "Cache Write Policies"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Cache Write Policies
 How do we keep memory updated while writing on the cache?

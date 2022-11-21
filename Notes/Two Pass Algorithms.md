@@ -1,5 +1,7 @@
 ---
 title: "Two Pass Algorithms"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Two Pass Algorithms
 The entirety of your data might not always fit in main memory. Two pass algorithms are a class of algorithms used to break down data into chunks which fit into main memory where we can then apply operations.

@@ -1,5 +1,7 @@
 ---
 title: "Conventional Indexes"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Conventional Indexes
 Indexes are needed to reduce the I/O required to find a record.

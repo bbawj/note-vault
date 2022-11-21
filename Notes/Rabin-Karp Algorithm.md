@@ -1,5 +1,7 @@
 ---
 title: "Rabin-Karp Algorithm"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Rabin-Karp Algorithm
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qQ8vS2btsxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

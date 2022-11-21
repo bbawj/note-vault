@@ -1,5 +1,7 @@
 ---
 title: "Brag Doc"
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Brag Doc
 ## Shopee

@@ -1,5 +1,7 @@
 ---
 title: "Arrays and Slices"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Arrays and Slices
 ## Arrays

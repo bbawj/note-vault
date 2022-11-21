@@ -1,5 +1,7 @@
 ---
 title: "Processes"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Processes
 A program in execution, also known as a job. One process can have multiple [threads](Threads%20).

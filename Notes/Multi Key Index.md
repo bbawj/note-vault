@@ -1,5 +1,7 @@
 ---
 title: "Multi Key Index"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Multi Key Indexes
 Motivation: we want to be able to have efficient queries on multiple attributes

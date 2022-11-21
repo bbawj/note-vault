@@ -1,6 +1,8 @@
 ---
 title: "2101 Algorithm Design and Analysis"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # 2101 Algorithm Design and Analysis
 #moc 

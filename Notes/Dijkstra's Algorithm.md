@@ -1,5 +1,7 @@
 ---
 title: "Dijkstra's Algorithm"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Dijkstra's Algorithm
 [Shortest Path Problem](Notes/Shortest%20Path%20Problem.md)

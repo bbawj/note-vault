@@ -1,5 +1,7 @@
 ---
 title: "Network Address Translation"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Network Address Translation
 IPv4 addresses are only 32 bits long which provides a maximum of 4.29 billion unique IP addresses.

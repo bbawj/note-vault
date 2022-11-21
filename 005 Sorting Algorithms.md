@@ -1,6 +1,8 @@
 ---
 title: "005 Sorting Algorithms"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # 005 Sorting Algorithms
 #moc 

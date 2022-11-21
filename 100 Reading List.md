@@ -1,6 +1,8 @@
 ---
 title: "100 Reading List"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Reading List
 #moc 

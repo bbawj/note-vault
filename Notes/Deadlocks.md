@@ -1,5 +1,7 @@
 ---
 title: "Deadlocks"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Deadlocks
 A set of blocked processes each holding a resource and waiting to acquire a resource held by another process in the set

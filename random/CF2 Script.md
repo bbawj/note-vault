@@ -1,5 +1,7 @@
 ---
 title: "CF2 Script"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 **Good morning Senior Minister of State Tan Kiat How and fellow members of the Forward Singapore team. I am Brendan, a computer science and business student from NTU and I am here today to share with you about my idea to equip every Singaporean with the opportunity to thrive.
 

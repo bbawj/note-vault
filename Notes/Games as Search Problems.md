@@ -1,5 +1,7 @@
 ---
 title: "Games as Search Problems"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 ![](https://i.imgur.com/CZ3e50G.png)
 

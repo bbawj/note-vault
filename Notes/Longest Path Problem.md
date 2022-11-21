@@ -1,5 +1,7 @@
 ---
 title: "Longest Path Problem"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Longest Path Problem
 It is the problem of finding a simple path of maximum length in a given graph. 

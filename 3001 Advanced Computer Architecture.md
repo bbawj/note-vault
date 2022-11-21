@@ -1,6 +1,8 @@
 ---
 title: "3001 Advanced Computer Architecture"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Advanced Computer Architecture
 #moc 

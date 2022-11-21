@@ -1,5 +1,7 @@
 ---
 title: "Instruction Level Parallelism"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Instruction Level Parallelism
 We can group multiple independent instructions and execute them concurrently in different functional units of a single processor.

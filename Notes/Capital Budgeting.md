@@ -1,5 +1,7 @@
 ---
 title: "Capital Budgeting"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Capital Budgeting
 ### NPV

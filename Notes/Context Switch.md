@@ -1,5 +1,7 @@
 ---
 title: "Context Switch"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Context Switch
 OS preserves the state of the CPU by storing registers and the Program Counter

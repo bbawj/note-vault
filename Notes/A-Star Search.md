@@ -1,5 +1,7 @@
 ---
 title: "A-Star Search"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # A* Search
 Combines [Greedy Best First Search](Notes/Greedy%20Best%20First%20Search.md) h(n) with [Uniform Cost Search](Notes/Uniform%20Cost%20Search.md) g(n)

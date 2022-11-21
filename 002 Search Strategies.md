@@ -1,6 +1,8 @@
 ---
 title: "002 Search Strategies"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # Search Strategies
 #moc

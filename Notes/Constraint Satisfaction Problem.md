@@ -1,5 +1,7 @@
 ---
 title: "Constraint Satisfaction Problem"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Constraint Satisfaction Problem
 There are a set of constraints which specify the allowable combinations of values

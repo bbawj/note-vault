@@ -1,6 +1,8 @@
 ---
 title: "003 Dynamic Programming"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # 003 Dynamic Programming
 #moc 

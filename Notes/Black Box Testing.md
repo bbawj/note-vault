@@ -1,6 +1,8 @@
 ---
 title: "Black Box Testing"
 tags: [testing]
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Black Box Testing
 #testing

@@ -1,5 +1,7 @@
 ---
 title: "Process scheduling"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Process Scheduling
 A process execution alternates between CPU executions and I/O operations

@@ -1,5 +1,7 @@
 ---
 title: "Union Find"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Union Find
 A data structure to represent dynamic equivalence relations

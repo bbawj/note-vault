@@ -1,5 +1,7 @@
 ---
 title: "Alignment Problem"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Alignment Problem
 ![](https://i.imgur.com/RVNlE5M.png)

@@ -1,5 +1,7 @@
 ---
 title: "Monte Carlo Policy"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Monte Carlo
 ![Pasted image 20220415190047](Pics/Pasted%20image%2020220415190047.png)

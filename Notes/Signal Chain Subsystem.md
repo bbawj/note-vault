@@ -1,5 +1,7 @@
 ---
 title: "Signal Chain Subsystem"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Signal Chain Subsystem
 The signal chain subsystem is concerned about how hardware in computer systems communicate.

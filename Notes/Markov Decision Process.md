@@ -1,5 +1,7 @@
 ---
 title: "Markov Decision Process"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 ## Components of MDP
 ![Pasted image 20220415205145](Pics/Pasted%20image%2020220415205145.png)

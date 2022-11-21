@@ -1,5 +1,7 @@
 ---
 title: "One Pass Algorithms"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # One Pass Algorithms
 Algorithms where the data is read only once from the disk.

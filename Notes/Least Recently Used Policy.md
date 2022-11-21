@@ -1,5 +1,7 @@
 ---
 title: "Least Recently Used Policy"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # Least Recently Used Policy (LRU)
 1. Keep track of when each item is accessed

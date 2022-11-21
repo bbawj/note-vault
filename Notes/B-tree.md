@@ -1,5 +1,7 @@
 ---
 title: "B-tree"
+date: 2022-11-08
+lastmod: 2022-11-21
 ---
 # B-tree
 A self balancing tree data structure.

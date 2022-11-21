@@ -1,6 +1,8 @@
 ---
 title: "3005 AI MOC"
 tags: [moc]
+date: 2022-11-07
+lastmod: 2022-11-21
 ---
 # CZ3005 Artificial Intelligence
 #moc 
