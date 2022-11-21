@@ -76,12 +76,16 @@ graph LR;
 	A("REG(read)")  --> C(ALUSrc Mux) --> ALU --> T(D-MEM)--> E("Mem2Reg Mux") --> F("REG(write)")
 ```
 Notes:
-- Reg2Loc not used as only 1 read
+- Reg2Loc not used as only Rn is used
 - ALUSrc (1) to select  sign-extended address
 - Mem2Reg (1) to select data from memory
 ### Store
 ![](https://i.imgur.com/HUHMwJN.png)
-- Reg2Loc used to select Rn as the read register 2
+```mermaid
+graph LR;
+	A("REG(read)")  --> C(ALUSrc Mux) --> ALU --> T(D-MEM)
+```
+- Reg2Loc used to select Rt as the read register 2. Rt data is passed into the D-MEM and not used by the ALU. Hence, the RegFile + Reg2Loc Mux delay is overshadowed by the ALU.
 ### Conditional Branch
 ![](https://i.imgur.com/PLmtZJS.png)
 Critical path:
@@ -106,7 +110,7 @@ Notes:
 i. All instructions
 ii. All instructions
 iii. All except unconditional branch instructions
-iv. ALU instructions, Load/Store instructions and Conditional Branch. _Why unconditional branch don't need?_
+iv. ALU instructions, Load/Store instructions and Conditional Branch. *Why unconditional branch don't need?*
 v. Load/Store instructions
 ![](https://i.imgur.com/fyYJqgz.png)
 PC++, PCin -> PCout and I-MEM is used for all datapaths

@@ -4,6 +4,7 @@ date: 2022-11-08
 lastmod: 2022-11-21
 ---
 # Transmission Control Protocol (TCP)
+TCP is the transport layer above the [internet protocol](Notes/Internet%20Protocol.md), providing an abstraction of a reliable network running over an unreliable channel, hiding most of the complexity of network communication. It optimises for accurate delivery.
 ## Three-way Handshake
 Every TCP connection begins with a 3-way handshake:
 ![](https://i.imgur.com/yvkT1aC.png)

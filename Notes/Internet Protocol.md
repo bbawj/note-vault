@@ -4,7 +4,7 @@ date: 2022-11-08
 lastmod: 2022-11-21
 ---
 # Internet Protocol (IP)
-A protocol designed to deliver datagrams from the source to destination host based on their addresses.
+A protocol designed to deliver datagrams from the source to destination host based on their addresses. It provides host-to-host routing and addressing.
 ![](https://i.imgur.com/5DkdXqr.png)
 
 The IP layer provides no guarantees about message delivery and failure notification.
