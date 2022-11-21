@@ -11,6 +11,7 @@ Dissipated only when computation is performed
 ### Static Power
 Due to leakage current and dissipated whenever the system is powered on
 ![](https://i.imgur.com/F74nRcy.png)
+Thus, it is possible that heat reducing solutions like a heat sink can help to reduce powe consumption.
 ### Total Power
 ![](https://i.imgur.com/mqmylWP.png)
 
