@@ -1,5 +1,6 @@
 ---
 title: "Proof By Contradiction"
+tags: [logic]
 ---
 # Proof By Contradiction
 #logic

@@ -1,5 +1,6 @@
 ---
 title: "101 Introduction To Algorithms"
+tags: [book, moc]
 ---
 # Introduction To Algorithms
 #book #moc 

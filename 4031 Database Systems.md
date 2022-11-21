@@ -1,5 +1,6 @@
 ---
 title: "4031 Database Systems"
+tags: [moc]
 ---
 # Database Systems
 #moc 

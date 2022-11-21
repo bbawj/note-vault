@@ -1,5 +1,6 @@
 ---
 title: "Strategy Pattern"
+tags: [design-patterns]
 ---
 # Strategy Pattern
 #design-patterns 

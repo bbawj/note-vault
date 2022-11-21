@@ -1,5 +1,6 @@
 ---
 title: "001 Software Engineering"
+tags: [moc]
 ---
 # Software Engineering Map of Contents
 #moc 

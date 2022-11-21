@@ -1,5 +1,6 @@
 ---
 title: "003 Dynamic Programming"
+tags: [moc]
 ---
 # 003 Dynamic Programming
 #moc 

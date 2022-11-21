@@ -1,5 +1,6 @@
 ---
 title: "Dependency Injection"
+tags: [design-patterns]
 ---
 # Dependency Injection
 #design-patterns 

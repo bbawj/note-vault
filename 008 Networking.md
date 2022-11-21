@@ -1,5 +1,6 @@
 ---
 title: "008 Networking"
+tags: [moc]
 ---
 # Networking
 #moc 

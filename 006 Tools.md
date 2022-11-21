@@ -1,5 +1,6 @@
 ---
 title: "006 Tools"
+tags: [moc]
 ---
 # Tools
 #moc 

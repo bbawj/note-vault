@@ -1,5 +1,6 @@
 ---
 title: "Black Box Testing"
+tags: [testing]
 ---
 # Black Box Testing
 #testing

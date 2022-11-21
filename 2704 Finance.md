@@ -1,5 +1,6 @@
 ---
 title: "2704 Finance"
+tags: [moc]
 ---
 # 2704 Finance 
 #moc 

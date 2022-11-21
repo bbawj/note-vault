@@ -1,5 +1,6 @@
 ---
 title: "2005 Operating Systems"
+tags: [moc]
 ---
 # Operating Systems
 #moc 

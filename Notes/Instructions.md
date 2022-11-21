@@ -1,5 +1,6 @@
 ---
 title: "Instructions"
+tags: [question]
 ---
 # Instructions
 An example using the ARM ISA

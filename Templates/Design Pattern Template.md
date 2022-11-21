@@ -1,5 +1,6 @@
 ---
 title: "Design Pattern Template"
+tags: [design-patterns]
 ---
 # {{title}}
 #design-patterns 

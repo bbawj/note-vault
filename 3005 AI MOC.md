@@ -1,5 +1,6 @@
 ---
 title: "3005 AI MOC"
+tags: [moc]
 ---
 # CZ3005 Artificial Intelligence
 #moc 

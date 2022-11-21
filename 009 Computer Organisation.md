@@ -1,5 +1,6 @@
 ---
 title: "009 Computer Organisation"
+tags: [moc]
 ---
 # Computer Organisation
 #moc 

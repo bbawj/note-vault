@@ -1,5 +1,6 @@
 ---
 title: "White Box Testing"
+tags: [testing]
 ---
 # White Box Testing
 #testing 

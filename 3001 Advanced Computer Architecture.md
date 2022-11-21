@@ -1,5 +1,6 @@
 ---
 title: "3001 Advanced Computer Architecture"
+tags: [moc]
 ---
 # Advanced Computer Architecture
 #moc 

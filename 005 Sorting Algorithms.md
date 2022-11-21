@@ -1,5 +1,6 @@
 ---
 title: "005 Sorting Algorithms"
+tags: [moc]
 ---
 # 005 Sorting Algorithms
 #moc 

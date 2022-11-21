@@ -1,5 +1,6 @@
 ---
 title: "Façade Pattern"
+tags: [design-patterns]
 ---
 # Façade Pattern
 #design-patterns 

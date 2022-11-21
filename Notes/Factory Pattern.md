@@ -1,5 +1,6 @@
 ---
 title: "Factory Pattern"
+tags: [design-patterns]
 ---
 # Factory Pattern
 #design-patterns 

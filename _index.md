@@ -1,5 +1,6 @@
 ---
 title: "What is this?!"
+tags: [moc]
 ---
 #moc 
 # What even is this site?! 

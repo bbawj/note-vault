@@ -1,5 +1,6 @@
 ---
 title: "002 Search Strategies"
+tags: [moc]
 ---
 # Search Strategies
 #moc

@@ -1,5 +1,6 @@
 ---
 title: "004 String Matching"
+tags: [moc]
 ---
 # 004 String Matching
 #moc 

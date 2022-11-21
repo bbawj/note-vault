@@ -1,5 +1,6 @@
 ---
 title: "2101 Algorithm Design and Analysis"
+tags: [moc]
 ---
 # 2101 Algorithm Design and Analysis
 #moc 

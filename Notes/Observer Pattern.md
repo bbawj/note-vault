@@ -1,5 +1,6 @@
 ---
 title: "Observer Pattern"
+tags: [design-patterns]
 ---
 # Observer Pattern
 #design-patterns
