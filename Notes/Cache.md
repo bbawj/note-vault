@@ -60,6 +60,7 @@ AMAT&=\text{Hit Time}\times(1-\text{Miss Rate})+\text{Miss Rate}\times(\text{Hit
 &=\text{Time for hit}+\text{Miss Rate}\times\text{Miss Penalty}\\
 \end{aligned}
 $$
+Note here that *Miss Penalty* is the loss in cycles for a miss, and not just the cost of main memory access. e.g If time to hit cache = 1, time to hit main memory = 100, miss penalty is $100-1=99$.
 ![](https://i.imgur.com/4RDpPr0.png)
 One example to show that AMAT is superior would be to consider two different caches with similar miss rates, but drastically different hit times. Using the miss rate metric, we would rate both caches the same. Using the AMAT metric, a cache with a lower hit time or lower miss penalty will outperform a cache with a higher respective time, assuming all other variables are the same.
 ## Practice Problems
