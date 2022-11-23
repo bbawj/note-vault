@@ -14,13 +14,12 @@ $$\text{Average CPI}=\text{Cycle Count}/\text{Instruction Count}$$
 ### Clock Period
 Clock period is the inverse of clock frequency
 __Memory wall problem__: a higher clock frequency may not result in better performance if the the time needed for memory access operations is slower than the CPU
-
 ## Speed-up
 Speed-up is the factor over the original machine of improved performance
 $$\text{Speedup} = \frac{Perf_a}{Perf_b}$$
 We can define the execution time of an enhanced machine by the proportion of the program _E_ that is improved and _T_ the original time taken and _S_ the enhancement factor
 $$T' = (T\times (1-E))+\frac{T\times E}{S}$$
-#### Example
+### Example
 ![](https://i.imgur.com/pM0zGxx.png)
 ### Amdahl's Law
 __If the program is of a fixed workload:__

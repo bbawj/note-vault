@@ -14,7 +14,6 @@ Due to leakage current and dissipated whenever the system is powered on
 Thus, it is possible that heat reducing solutions like a heat sink can help to reduce powe consumption.
 ### Total Power
 ![](https://i.imgur.com/mqmylWP.png)
-
 When voltage is reduced, the threshold that is used to differentiate between a logic 1 and logic 0 output will be reduced. If this threshold is small, a high frequency will be more prone to noise that could alter the output.
 ## Reducing power consumption
 1. Component design
