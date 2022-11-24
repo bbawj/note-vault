@@ -50,6 +50,7 @@ Each instruction word is 32 bits (4 bytes) long. If we want to move by 2 instruc
 Addressing mode: PC relative addressing
 ![](https://i.imgur.com/clXQze5.png)
 ## Combine all types into a single datapath
+### R-Type
 ![](https://i.imgur.com/Wmjc1KN.png)
 Critical path:
 ```mermaid
@@ -97,6 +98,7 @@ Notes:
 - Reg2Loc (1) to read Rt
 - ALUSrc (0) to use data from register rather than address
 - Zero-flag in AND-gate together with Branch-flag to select address to add for branching rather than default +4 to load into PC
+### Unconditional Branch
 ![](https://i.imgur.com/FZM5SNF.png)
 Critical path:
 ```mermaid

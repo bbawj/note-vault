@@ -29,3 +29,4 @@ Overcome memory wall with memory parallelism via multiple threads
 ![](https://i.imgur.com/FjEitrp.png)
 
 ![](https://i.imgur.com/ktGNvyv.png)
+![](https://i.imgur.com/uhtYbF5.png)
