@@ -1,0 +1,13 @@
+{
+  "spellcheckLanguages": [
+    "en-GB"
+  ],
+  "vimMode": true,
+  "newLinkFormat": "absolute",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Notes",
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "Pics",
+  "showInlineTitle": false,
+  "useMarkdownLinks": true
+}
