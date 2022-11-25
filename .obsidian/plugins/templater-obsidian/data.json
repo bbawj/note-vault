@@ -17,6 +17,10 @@
     {
       "folder": "Notes",
       "template": "Templates/Frontmatter.md"
+    },
+    {
+      "folder": "Blog",
+      "template": "Templates/Frontmatter.md"
     }
   ],
   "syntax_highlighting": true,

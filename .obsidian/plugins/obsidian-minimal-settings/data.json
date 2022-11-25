@@ -2,7 +2,7 @@
   "theme": "moonstone",
   "lightStyle": "minimal-light",
   "darkStyle": "minimal-dark",
-  "lightScheme": "minimal-nord-light",
+  "lightScheme": "minimal-default-light",
   "darkScheme": "minimal-nord-dark",
   "editorFont": "",
   "lineHeight": 1.5,
@@ -28,9 +28,17 @@
   "focusMode": false,
   "underlineInternal": true,
   "underlineExternal": true,
-  "useSystemTheme": true,
+  "useSystemTheme": false,
   "folding": true,
   "lineNumbers": false,
   "readableLineLength": true,
-  "devBlockWidth": false
+  "devBlockWidth": false,
+  "accentHue": 201,
+  "accentSat": 17,
+  "trimCols": true,
+  "maxColWidth": "18em",
+  "minimalIcons": true,
+  "fancyCursor": false,
+  "frostedSidebar": true,
+  "bordersTitle": false
 }
