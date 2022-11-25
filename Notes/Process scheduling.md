@@ -93,7 +93,7 @@ c. False. Response time is time to first start of execution. Turnaround time is 
 d. False. Migration overheads occur in global scheduling when a process partially executes on one core and then migrates to another. In partitioned scheduling processes don’t migrate between cores. However, partitioned scheduling has the problem of unbalanced loading of the cores depending on the process-core mapping.
 ![](https://i.imgur.com/w1gOgdk.png)
 abc.
-![ 800](Excalidraw/Drawing%202022-08-28%2021.06.51.excalidraw.md)
+![800](Excalidraw/Drawing%202022-08-28%2021.06.51.excalidraw.svg)
 d.
 Uni-core: RR
 Duo-core: RR, SRTF

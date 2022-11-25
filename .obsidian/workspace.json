@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b32f588092d4368e",
+            "id": "7c7fc122d139a15d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Heaps.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "89c1c9a61a731ac0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Instructions.md",
+                "file": "Notes/Process scheduling.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Heaps.md",
+                "file": "Notes/Process scheduling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Heaps.md",
+                "file": "Notes/Process scheduling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Heaps.md"
+                "file": "Notes/Process scheduling.md"
               }
             }
           },
@@ -154,7 +142,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Heaps.md",
+                "file": "Notes/Process scheduling.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -197,17 +185,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9a801a92cdfc9a12",
+  "active": "7c7fc122d139a15d",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.md",
+    "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.svg",
+    "Notes/Process scheduling.md",
+    "Excalidraw/Drawing 2022-08-29 15.35.16.excalidraw.md",
+    "Notes/Instructions.md",
+    "Notes/Heaps.md",
     "Notes/Cache Write Policies.md",
     "Notes/Thread Level Parallelism.md",
     "3001 Advanced Computer Architecture.md",
-    "Notes/Data Level Parallelism.md",
-    "Notes/GPU Architecture.md",
-    "Notes/Least Recently Used Policy.md",
-    "Notes/Cache.md",
-    "Notes/Instructions.md",
-    "Notes/Cache Placement Policies.md",
-    "Notes/Custom Computing.md"
+    "Notes/Data Level Parallelism.md"
   ]
 }
