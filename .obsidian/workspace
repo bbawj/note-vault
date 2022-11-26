@@ -1,50 +1,56 @@
 {
   "main": {
-    "id": "22398dface3d8ed0",
+    "id": "0e1799a676643ea4",
     "type": "split",
     "children": [
       {
-        "id": "fbad134fdaeec674",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b21fffac80df5063",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
+        "id": "6fa96ee9e17dfe23",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Notes/Memory Organisation.md",
+            "mode": "source",
+            "source": false
           }
-        ]
+        }
+      },
+      {
+        "id": "dd11772980fb8b2d",
+        "type": "leaf",
+        "state": {
+          "type": "excalidraw",
+          "state": {
+            "file": "Pics/Memory Organisation 2022-10-18 14.12.16.excalidraw.md"
+          }
+        }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "9f5a34d8ad4d9b74",
+    "id": "d9de158f832545d2",
     "type": "split",
     "children": [
       {
-        "id": "1575f61be41bc234",
+        "id": "c46517d50e2f18fe",
         "type": "tabs",
         "children": [
           {
-            "id": "3fae0f301918ac84",
+            "id": "a52fc31bddfc12af",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
+              "state": {}
             }
           },
           {
-            "id": "eff96ca3e23b7885",
+            "id": "3f6c65f5bd97cdce",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "coher",
+                "query": "paging",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -52,27 +58,37 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "0ca8f4544b1d63e4",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "4a86c425f8755884",
+    "id": "d757962547352c18",
     "type": "split",
     "children": [
       {
-        "id": "a6277fd9a6ee8454",
+        "id": "4cbf5fc57efd69bc",
         "type": "tabs",
         "children": [
           {
-            "id": "963b295df563c5dc",
+            "id": "60c9611ced680d09",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Memory Organisation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,18 +100,19 @@
             }
           },
           {
-            "id": "0fef7677eb22b526",
+            "id": "9b97bf5a41634ca3",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Memory Organisation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "ead962b02b49b137",
+            "id": "b347da495fe6e263",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -106,15 +123,17 @@
             }
           },
           {
-            "id": "fd1e09f2e0845606",
+            "id": "1c7e9280448b49e2",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Memory Organisation.md"
+              }
             }
           },
           {
-            "id": "9a801a92cdfc9a12",
+            "id": "37886c7585d11cfe",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -122,18 +141,19 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
-        "id": "773c08e3cb822493",
+        "id": "4edaf2f120b8f772",
         "type": "tabs",
         "children": [
           {
-            "id": "c36441d222216d25",
+            "id": "d488566ae8bd2d89",
             "type": "leaf",
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Notes/Memory Organisation.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -144,16 +164,8 @@
                   "showTags": false,
                   "showAttachments": false,
                   "hideUnresolved": false,
-                  "collapse-color-groups": false,
-                  "colorGroups": [
-                    {
-                      "query": "tag:#moc",
-                      "color": {
-                        "a": 1,
-                        "rgb": 14701138
-                      }
-                    }
-                  ],
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
                   "collapse-display": true,
                   "showArrow": false,
                   "textFadeMultiplier": 0,
@@ -164,8 +176,8 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7132754626224433,
-                  "close": true
+                  "scale": 0.8676747884532884,
+                  "close": false
                 }
               }
             }
@@ -176,17 +188,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b21fffac80df5063",
+  "active": "6fa96ee9e17dfe23",
   "lastOpenFiles": [
-    "Notes/Process scheduling.md",
-    "conflict-files-obsidian-git.md",
-    "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.svg",
-    "Excalidraw/Drawing 2022-08-29 15.35.16.excalidraw.md",
-    "Notes/Instructions.md",
-    "Notes/Heaps.md",
-    "Notes/Cache Write Policies.md",
-    "Notes/Thread Level Parallelism.md",
-    "3001 Advanced Computer Architecture.md"
+    "Pics/Memory Organisation 2022-10-18 14.12.16.excalidraw.md",
+    "Notes/Memory Organisation.md",
+    "2005 Operating Systems.md",
+    "Notes/Query Optimisation.md",
+    "Notes/Query Execution.md",
+    "4031 Database Systems.md",
+    "Notes/Query Compiler.md",
+    "Notes/Query Processing.md",
+    "Notes/Virtual Memory.md",
+    "Notes/Index Based Algorithms.md"
   ]
 }
