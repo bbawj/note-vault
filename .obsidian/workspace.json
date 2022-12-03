@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "008 Networking.md",
+                "file": "Notes/Wireless Networks.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -60,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "coher",
+                "query": "signal",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +70,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -89,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Transport Layer Security.md",
+                "file": "Notes/Wireless Networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Transport Layer Security.md",
+                "file": "Notes/Wireless Networks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Transport Layer Security.md"
+                "file": "Notes/Wireless Networks.md"
               }
             }
           },
@@ -154,7 +156,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Transport Layer Security.md",
+                "file": "Notes/Wireless Networks.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -197,11 +199,11 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "b21fffac80df5063",
+  "active": "eff96ca3e23b7885",
   "lastOpenFiles": [
     "008 Networking.md",
-    "Notes/Network Address Translation.md",
     "Notes/Transport Layer Security.md",
+    "Notes/Network Address Translation.md",
     "Notes/Process scheduling.md",
     "conflict-files-obsidian-git.md",
     "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.md",
