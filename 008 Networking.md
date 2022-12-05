@@ -13,3 +13,6 @@ lastmod: 2022-11-21
 - [[Transport Layer Security]]
 - [[Wireless Networks]]
 - [[HTTP]]
+- [[Browser Networking]]
+## References
+- [High Performance Browser Networking](https://hpbn.co/)
