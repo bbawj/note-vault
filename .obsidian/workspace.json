@@ -38,7 +38,7 @@
               "type": "markdown",
               "state": {
                 "file": "Blog/Why Vim, in the land of Go.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -210,7 +210,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "9a801a92cdfc9a12",
+  "active": "f7844ca41c39e472",
   "lastOpenFiles": [
     "008 Networking.md",
     "Notes/HTTP.md",
