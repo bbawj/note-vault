@@ -37,8 +37,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/Why Vim, in the land of Go.md",
-                "mode": "preview",
+                "file": "Notes/101 Introduction To Algorithms.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/Why Vim, in the land of Go.md",
+                "file": "Notes/101 Introduction To Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/Why Vim, in the land of Go.md",
+                "file": "Notes/101 Introduction To Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/Why Vim, in the land of Go.md"
+                "file": "Notes/101 Introduction To Algorithms.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Blog/Why Vim, in the land of Go.md",
+                "file": "Notes/101 Introduction To Algorithms.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -212,6 +212,7 @@
   },
   "active": "f7844ca41c39e472",
   "lastOpenFiles": [
+    "Blog/Why Vim, in the land of Go.md",
     "008 Networking.md",
     "Notes/HTTP.md",
     "Notes/Transmission Control Protocol.md",
@@ -220,7 +221,6 @@
     "Notes/Network Address Translation.md",
     "Notes/Process scheduling.md",
     "conflict-files-obsidian-git.md",
-    "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.svg"
+    "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.md"
   ]
 }
