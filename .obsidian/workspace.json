@@ -52,9 +52,33 @@
                 "currentVersion": "1.1.8"
               }
             }
+          },
+          {
+            "id": "683126e0b10437c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "008 Networking.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4b8f98a343d9b3e6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Building Blocks of the Internet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -112,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/101 Introduction To Algorithms.md",
+                "file": "Notes/Building Blocks of the Internet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/101 Introduction To Algorithms.md",
+                "file": "Notes/Building Blocks of the Internet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/101 Introduction To Algorithms.md"
+                "file": "Notes/Building Blocks of the Internet.md"
               }
             }
           },
@@ -165,7 +189,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "773c08e3cb822493",
@@ -177,7 +201,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/101 Introduction To Algorithms.md",
+                "file": "Notes/Building Blocks of the Internet.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -232,17 +256,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a9f3d8bb44da742e",
+  "active": "4b8f98a343d9b3e6",
   "lastOpenFiles": [
-    "Blog/Why Vim, in the land of Go.md",
     "008 Networking.md",
+    "Notes/Building Blocks of the Internet.md",
+    "Notes/null.md",
+    "Blog/Why Vim, in the land of Go.md",
     "Notes/HTTP.md",
     "Notes/Transmission Control Protocol.md",
     "Notes/Wireless Networks.md",
     "Notes/Transport Layer Security.md",
     "Notes/Network Address Translation.md",
-    "Notes/Process scheduling.md",
-    "conflict-files-obsidian-git.md",
-    "Excalidraw/Drawing 2022-08-28 21.06.51.excalidraw.md"
+    "Notes/Process scheduling.md"
   ]
 }
