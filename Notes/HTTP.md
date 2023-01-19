@@ -4,13 +4,35 @@ date: 2022-12-03
 lastmod: 2022-12-05
 ---
 # Hypertext Transfer Protocol
-HTTP is an application layer, above the transport or optional encryption layer.
+HTTP is the Web's application layer protocol, above the transport or optional encryption layer.
+A Web page contains many objects and is addressable using a Uniform Resource Locator (URL):
+![](https://i.imgur.com/TxqKYuV.png)
+**HTTP uses TCP as its underlying transport protocol.**
 ## A brief history rundown
 1. HTTP 0.9 began in 1991 with the goal of transferring HTML between client and server. 
 2. HTTP 1.0 evolved to add more capabilities such as header fields and supporting more than HTML file types, becoming a misnomer for hypermedia transport. 
    A typical plaintext HTTP request ![400](https://i.imgur.com/NMRHtwo.png)
 3. HTTP 1.1 introduced critical performance optimisations such as keepalive connections, chunked encoding transfers and additional caching mechanisms.
 4. HTTP 2.0 aimed to improve transport performance for lower latency and higher throughput.
+## HTTP message format
+### Request
+GET, POST, PUT, UPDATE, DELETE, HEAD methods are available
+![](https://i.imgur.com/yMFZlsC.png)
+### Response
+![](https://i.imgur.com/kpb7ngf.png)
+## User-Server State
+HTTP is a *stateless* protocol, and does not maintain information about the clients. This simplifies server design and allow for high-performance web servers.
+### Cookies
+It is often desirable for a Web site to identify users, either to restrict user access or serve specific content.
+Cookie technology consists of 4 components:
+1. Cookie header line in the HTTP response message
+2. Cookie header line in the HTTP request message
+3. Cookie file kept on the user’s end system and managed by the user’s browser
+4. Back-end database at the Web site
+![](https://i.imgur.com/13VLbBW.png)
+## Web Caching
+A proxy server acts as a Web cache with its own disk storage and keeps recently requested objects. The proxy server sits on the LAN and reduces response time for a request.
+![500](https://i.imgur.com/nZHDsPZ.png)
 ## Optimisations in HTTP 1.1
 ![500x500](https://i.imgur.com/WlgrLkY.png)
 ### HTTP Keepalive

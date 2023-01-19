@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b21fffac80df5063",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Transport Layer Security.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "46e024892e456225",
             "type": "leaf",
             "state": {
@@ -32,34 +20,36 @@
             }
           },
           {
-            "id": "f7844ca41c39e472",
+            "id": "683126e0b10437c5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/101 Introduction To Algorithms.md",
+                "file": "Notes/DNS.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "a9f3d8bb44da742e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.8"
-              }
-            }
-          },
-          {
-            "id": "683126e0b10437c5",
+            "id": "0460bed861562a8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "008 Networking.md",
+                "file": "Notes/Network Address Translation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0bf66d227119f1a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/HTTP.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -120,7 +110,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 214.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -136,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Building Blocks of the Internet.md",
+                "file": "Notes/DNS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Building Blocks of the Internet.md",
+                "file": "Notes/DNS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Building Blocks of the Internet.md"
+                "file": "Notes/DNS.md"
               }
             }
           },
@@ -189,7 +180,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "773c08e3cb822493",
@@ -201,7 +192,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Building Blocks of the Internet.md",
+                "file": "Notes/DNS.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -242,7 +233,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -256,17 +248,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4b8f98a343d9b3e6",
+  "active": "683126e0b10437c5",
   "lastOpenFiles": [
+    "Notes/Application Layer.md",
+    "Notes/Network Address Translation.md",
+    "Notes/POP3.md",
+    "Notes/SMTP.md",
     "008 Networking.md",
+    "Notes/HTTP.md",
     "Notes/Building Blocks of the Internet.md",
     "Notes/null.md",
     "Blog/Why Vim, in the land of Go.md",
-    "Notes/HTTP.md",
-    "Notes/Transmission Control Protocol.md",
-    "Notes/Wireless Networks.md",
-    "Notes/Transport Layer Security.md",
-    "Notes/Network Address Translation.md",
-    "Notes/Process scheduling.md"
+    "Notes/Transmission Control Protocol.md"
   ]
 }
