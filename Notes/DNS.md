@@ -18,5 +18,30 @@ DNS being employed by HTTP:
 DNS can be invoked by an application to obtain the **canonical hostname** for a supplied alias hostname. A host with a complicated hostname can have one or more alias names. For example, a hostname such as relay1.west-coast .enterprise.com could have two aliases such as enterprise.com and www.enterprise.com. The hostname relay1 .west-coast.enterprise.com is said to be a canonical hostname.
 ### Load distribution
 Busy sites can have different servers all replicating the same content, each having their own IP address. DNS stores the entire set of addresses, but is able to rotate their order with each reply. Because the client sends its HTTP request message to the first IP address, this performs load distribution.
+## How it works
+Rather than having 1 central DNS server which does not scale, DNS servers are distributed and organized in a hierarchical structure: Root -> Top Level Domain -> Authoritative.
+![](https://i.imgur.com/ZZScm7J.png)
+- Root: provides the IP address of TLD servers. There are 400 root name servers scattered across the world
+- TLD: com, org, net etc. and all country TLD uk, sg etc. maintained by companies and countries.
+- Authoritative: houses the DNS records of organization host IP addresses e.g. amazon.com. Can be done in house or outsourced to some service provider
+- Local: close to the host which acts as a proxy, forwarding queries to the DNS server hierarchy
+![400](https://i.imgur.com/sTi4w1K.png)
+> [!Note]
+> TLD server may not know directly the authoritative server address, but rather some other intermediate server. In this way, there could be 2 more DNS messages required
+
+Query 1 is a recursive query, as it asks to obtain the mapping on its behalf. Subsequent queries are iterative as all replies are directly returned to local DNS server. This is the more typical scenario. There are also queries which are all recursive:
+![400](https://i.imgur.com/d6WbQi8.png)
+### DNS Caching
+In a query chain, when a DNS server receives a DNS reply (containing, for example, a mapping from a hostname to an IP address), it can cache the mapping in its local memory. This DNS server can provide the desired IP address, even if it is not authoritative for the hostname. Because hosts and mappings between hostnames and IP addresses are by no means permanent, DNS servers discard cached information after a period of time (often set to two days).
+## DNS Records
+![](https://i.imgur.com/z4tkBPG.png)
+### Inserting Records
+A registrar is a commercial entity that verifies the uniqueness of the domain name, enters the domain name into the DNS database and collects a small fee.
+Example registering domain name `networkutopia.com`, two records are inserted:
+`(networkutopia.com, dns1.networkutopia.com, NS) 
+`(dns1.networkutopia.com, 212.212.212.1, A)`
+## DNS attacks
+![](https://i.imgur.com/FMtlD4D.png)
+
 
 

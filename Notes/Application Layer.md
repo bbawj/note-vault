@@ -1,6 +1,7 @@
 ---
 title: "Application Layer"
 date: 2023-01-18
+lastmod: 2023-01-19
 ---
 # Application Layer
 ## Network Application Architectures
@@ -11,6 +12,18 @@ Examples:
 Examples:
 - File sharing
 - Bittorrent
+### CS vs P2P File Distribution
+![500](https://i.imgur.com/0pCgt40.png)
+#### Client Server
+- The server must transmit one copy of the file to each of the N peers. Thus the server must transmit NF bits. Since the server’s upload rate is us, the time to distribute the file must be at least NF/us.
+- Let $d_{min}$ denote the download rate of the peer with the lowest download rate, that is, $d_{min} = min \{d1, dp, . . . , dN\}$. The peer with the lowest download rate cannot obtain all F bits of the file in less than $F/d_{min}$ seconds. Thus the minimum distribution time is at least $F/d_{min}$.
+$$D_{CS} \ge max\{\frac{NF}{u_s},\frac{F}{d_{min}}\}$$
+From this we can observe that distribution time increases linearly with the number of peers N.
+#### P2P
+- To get this file into the community of peers, the server must send each bit of the file at least once into its access link. Thus, the minimum distribution time is at least F/us.
+- The peer with the lowest download rate cannot obtain all F bits of the file in less than $F/d_{min}$ seconds. 
+- The total upload capacity of the system as a whole is equal to the upload rate of the server plus the upload rates of each of the individual peers, that is, $u_{total} = u_s + u_1 + ... + u_N$. The system must upload F bits to each of the N peers, thus delivering a total of NF bits. The minimum distribution time is also at least $NF/(u_s + u_1 + ... + uN)$.
+![500](https://i.imgur.com/DwxC3nt.png)
 ## Process Communication
 Network applications on different hosts need a way to communicate with each other (sometimes across different operating systems). 
 Client: process that initiates the communication
@@ -43,4 +56,44 @@ The heart of Internet electronic mail is [[SMTP]], which allows for the transfer
 SMTP is a push protocol. Mail access protocols are needed to retrieve mail from the mail server via a pull operation:
 - [[POP3]]
 ### DNS
-[[DNS]]
+Many application protocols are built on top of [[DNS]].
+### BitTorrent
+The most popular P2P protocol for file distribution is [[BitTorrent]]
+### Distributed Hash Table
+Another application of P2P is a [[Distributed Hash Table]]
+## Socket Programming
+How are network applications actually created? Processes running on different machines communicate with each other through sockets.
+![](https://i.imgur.com/m6lthQk.png)
+### TCP
+Network applications may communicate through TCP, and hence the connection socket must support TCP. TCP provides a reliable **byte-stream** service:
+![](https://i.imgur.com/2CO9GiP.png)
+Basic byte I/O classes in Java
+![](https://i.imgur.com/zpjfz02.png)
+#### Client
+The client must perform the following operations:
+1. Open TCP connection to the server
+2. Send data
+3. Receive data on the connection
+4. Close the connection
+![](https://i.imgur.com/nisae4A.png)
+#### Server
+![](https://i.imgur.com/WrmIrHf.png)
+![](https://i.imgur.com/AfPgXhj.png)
+
+![](https://i.imgur.com/qqHEpRB.png)
+### Encoding/Decoding
+To transfer a string between two processes over the network, we must decide how to represent the string as a sequence of bytes.
+#### ASCII
+![](Pics/Pasted%20image%2020230120000437.png)
+#### UTF-8
+- Unicode Transformation Format – 8-bit  
+- Variable length encoding  
+- Up to four bytes per symbol  
+- The first 128 are the same as for ASCII  
+- Backwards compatibility – ASCII text is also valid UTF-8  
+- Dominating format on the Web
+![](https://i.imgur.com/nQ6XDpH.png)
+### Helpful Java classes
+![](https://i.imgur.com/puWh81X.png)
+
+![](https://i.imgur.com/kudOIAw.png)

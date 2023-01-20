@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "46e024892e456225",
+            "id": "1fe5cf4f34586ea1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "008 Networking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "683126e0b10437c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/DNS.md",
+                "file": "Notes/Application Layer.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "signal",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,7 +93,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -127,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/DNS.md",
+                "file": "Notes/Application Layer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/DNS.md",
+                "file": "Notes/Application Layer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/DNS.md"
+                "file": "Notes/Application Layer.md"
               }
             }
           },
@@ -180,7 +168,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "773c08e3cb822493",
@@ -192,7 +180,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/DNS.md",
+                "file": "Notes/Application Layer.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -223,7 +211,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7132754626224433,
+                  "scale": 0.7132754626224435,
                   "close": true
                 }
               }
@@ -248,17 +236,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "683126e0b10437c5",
+  "active": "1fe5cf4f34586ea1",
   "lastOpenFiles": [
-    "Notes/Application Layer.md",
-    "Notes/Network Address Translation.md",
-    "Notes/POP3.md",
-    "Notes/SMTP.md",
+    "3005 AI.md",
     "008 Networking.md",
+    "Notes/2421 Machine Learning.md",
+    "Notes/Application Layer.md",
+    "Notes/Distributed Hash Table.md",
+    "Notes/BitTorrent.md",
+    "Notes/DNS.md",
     "Notes/HTTP.md",
-    "Notes/Building Blocks of the Internet.md",
-    "Notes/null.md",
-    "Blog/Why Vim, in the land of Go.md",
-    "Notes/Transmission Control Protocol.md"
+    "Notes/Network Address Translation.md",
+    "Notes/Cache.md"
   ]
 }
