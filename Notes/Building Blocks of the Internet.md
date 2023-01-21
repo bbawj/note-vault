@@ -58,3 +58,18 @@ For the Internet, the [Internet Protocol](Notes/Internet%20Protocol.md) dictates
 Internet has a number of special routing protocols that are used to automatically set the forwarding tables. A routing protocol may, for example, determine the shortest path from each router to each destination and use the shortest path results to configure the forwarding tables in the routers.
 ### Queueing Delay
 ![](https://i.imgur.com/mlRrKNs.png)
+## Exercises
+a) What is a communication protocol ?  
+A protocol defines the format and order of messages and the set of procedures performed on a message when it is sent or received.
+b) Name the different layers in the Internet protocol stack, and place the following  
+protocols/functions/concepts at the correct layer : IP, TCP, Ethernet, HTTP, bit coding , FTP, IEEE 802.11 WLAN, TP Category 6, Routing , UDP.  
+| Application | Transport | Network | Link        | Physical   |
+| ----------- | --------- | ------- | ----------- | ---------- |
+| HTTP        | TCP       | IP      | IEEE 802.11 | TP Cat 6   |
+| FTP         | UDP       | Routing | Ethernet    | bit coding | 
+c) What layer in the Internet protoco l stack is responsible for the transfer of a data packet over a single link, between two directly connected devices?  
+Link layer.
+*d) A router has two main functions, which can be described by the two terms “routing” and “forwarding”. What is the difference between routing and forwarding?*
+Routing refers to the address translation performed in order to determine the correct destination address for the packet. Forwarding is the actual relay of the data packet to the destination address.
+*e) What service does the transport layer describe? Give a short answer*
+Service of the transfer of data from one host to another.

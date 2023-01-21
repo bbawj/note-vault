@@ -13,31 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Application Layer.md",
+                "file": "008 Networking.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "0460bed861562a8d",
+            "id": "dea603e5826a073f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Network Address Translation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0bf66d227119f1a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/HTTP.md",
+                "file": "Notes/Transport Layer.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,13 +37,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Building Blocks of the Internet.md",
+                "file": "Notes/Transport Layer.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -93,13 +82,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 214.5,
-    "collapsed": true
+    "width": 214.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -115,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Application Layer.md",
+                "file": "Notes/Transport Layer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Application Layer.md",
+                "file": "Notes/Transport Layer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Application Layer.md"
+                "file": "Notes/Transport Layer.md"
               }
             }
           },
@@ -168,7 +155,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "773c08e3cb822493",
@@ -180,7 +167,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Application Layer.md",
+                "file": "Notes/Transport Layer.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -236,17 +223,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fe5cf4f34586ea1",
+  "active": "3fae0f301918ac84",
   "lastOpenFiles": [
-    "3005 AI.md",
-    "008 Networking.md",
-    "Notes/2421 Machine Learning.md",
-    "Notes/Application Layer.md",
-    "Notes/Distributed Hash Table.md",
-    "Notes/BitTorrent.md",
-    "Notes/DNS.md",
-    "Notes/HTTP.md",
+    "Notes/SMTP.md",
+    "Notes/Building Blocks of the Internet.md",
+    "Notes/Transport Layer.md",
     "Notes/Network Address Translation.md",
-    "Notes/Cache.md"
+    "008 Networking.md",
+    "Notes/Application Layer.md",
+    "3005 AI.md",
+    "Notes/2421 Machine Learning.md",
+    "Notes/Distributed Hash Table.md",
+    "Notes/BitTorrent.md"
   ]
 }
