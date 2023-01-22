@@ -42,9 +42,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "522bcb8e9c2497db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "008 Networking.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "614892074eba2e1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Transport Layer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95c8cdf58b841c7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/User Datagram Protocol.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -86,7 +122,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 214.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -102,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Transport Layer.md",
+                "file": "Notes/User Datagram Protocol.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Transport Layer.md",
+                "file": "Notes/User Datagram Protocol.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Transport Layer.md"
+                "file": "Notes/User Datagram Protocol.md"
               }
             }
           },
@@ -167,7 +204,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Transport Layer.md",
+                "file": "Notes/User Datagram Protocol.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -223,17 +260,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3fae0f301918ac84",
+  "active": "95c8cdf58b841c7b",
   "lastOpenFiles": [
+    "Notes/Transport Layer.md",
+    "Notes/Network Layer.md",
+    "008 Networking.md",
+    "2203 Distributed Systems.md",
     "Notes/SMTP.md",
     "Notes/Building Blocks of the Internet.md",
-    "Notes/Transport Layer.md",
     "Notes/Network Address Translation.md",
-    "008 Networking.md",
     "Notes/Application Layer.md",
     "3005 AI.md",
-    "Notes/2421 Machine Learning.md",
-    "Notes/Distributed Hash Table.md",
-    "Notes/BitTorrent.md"
+    "2421 Machine Learning.md"
   ]
 }

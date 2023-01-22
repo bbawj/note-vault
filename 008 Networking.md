@@ -9,6 +9,7 @@ lastmod: 2023-01-18
 - [[Notes/Building Blocks of the Internet]]
 - [[Application Layer]]
 - [[Transport Layer]]
+- [[Network Layer]]
 - [Internet Protocol](Notes/Internet%20Protocol.md)
 - [Transmission Control Protocol](Notes/Transmission%20Control%20Protocol.md)
 - [User Datagram Protocol](Notes/User%20Datagram%20Protocol.md)
