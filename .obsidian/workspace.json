@@ -109,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "imap",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -123,7 +123,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 214.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -260,7 +261,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eff96ca3e23b7885",
+  "active": "95c8cdf58b841c7b",
   "lastOpenFiles": [
     "Notes/Transport Layer.md",
     "Notes/Network Layer.md",
