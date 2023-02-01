@@ -4,6 +4,7 @@ date: 2023-01-21
 ---
 # 2203 Distributed Systems
 #moc 
+- [[Distributed Abstractions]]
 ## What are distributed systems
 A set of nodes, connected by a network, which appear to  
 its users as a single coherent system.

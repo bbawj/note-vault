@@ -8,15 +8,15 @@ lastmod: 2023-01-18
 #moc 
 - [[Notes/Building Blocks of the Internet]]
 - [[Application Layer]]
+	- [[HTTP]]
 - [[Transport Layer]]
+	- [Transmission Control Protocol](Notes/Transmission%20Control%20Protocol.md)
+	- [User Datagram Protocol](Notes/User%20Datagram%20Protocol.md)
 - [[Network Layer]]
-- [Internet Protocol](Notes/Internet%20Protocol.md)
-- [Transmission Control Protocol](Notes/Transmission%20Control%20Protocol.md)
-- [User Datagram Protocol](Notes/User%20Datagram%20Protocol.md)
+	- [Internet Protocol](Notes/Internet%20Protocol.md)
+	- [[Wireless Networks]]
 - [Network Address Translation](Notes/Network%20Address%20Translation.md)
 - [[Transport Layer Security]]
-- [[Wireless Networks]]
-- [[HTTP]]
 - [[Browser Networking]]
 ## References
 - [High Performance Browser Networking](https://hpbn.co/)

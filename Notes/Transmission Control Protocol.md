@@ -5,20 +5,38 @@ lastmod: 2022-11-21
 ---
 # Transmission Control Protocol (TCP)
 TCP is the transport layer above the [internet protocol](Notes/Internet%20Protocol.md), providing an abstraction of a reliable network running over an unreliable channel, hiding most of the complexity of network communication. It optimises for accurate delivery.
-## Three-way Handshake
+## TCP Connection
+### Three-way Handshake
 Every TCP connection begins with a 3-way handshake:
 ![](https://i.imgur.com/yvkT1aC.png)
 - SYN: Client picks a random sequence number x and sends a SYN packet, which may also include additional TCP flags and options.
 - SYN ACK: Server increments x by 1 and picks own random sequence number for y, appends its own set of flags and options
 - ACK: Client increments both x and y by 1 and completes the handshake
-### Performance Implications
+#### Performance Implications
 The client can send a data packet immediately after the ACK packet but the server must wait for the ACK packet before it can dispatch any data.
 
 Each new connection will have a full roundtrip of latency before any application data is transferred.
-### TCP Keep-Alive
+#### TCP Keep-Alive
 Rather than having to complete 3-way handshake for each data transfer, allow long-lasting connections to immediately transfer application data.
-### TCP Fast Open (TFO)
+#### TCP Fast Open (TFO)
 Allow data transfer within the SYN Packet.
+### Connection stream
+![](https://i.imgur.com/fy9tDBn.png)
+- Maximum Segment Size (MSS): max data that can be placed in a segment
+- Maximum Transmission Unit (MTU): largest link layer frame that can be sent
+## TCP Segment Structure
+![](https://i.imgur.com/oeUX3hM.png)
+### Sequence Numbers
+Consider a 500,000 byte file with MSS = 1000 bytes:
+![](https://i.imgur.com/lOu8NFO.png)
+Sequence numbers are over the bytes and not the segments. The first segment gets a sequence number 0, second segment gets a sequence number 1000, etc.
+### Acknowledgement Numbers
+It is the sequence number of the first missing byte in the stream. TCP provids **cumulative acknowledgements**.
+*Example: If A received a segment (0-535) and a segment (900-1000), it places 536 as its acknowledgement number.*
+## Lost Segment Recovery
+TCP uses a timeout retransmit mechanism to recover from lost segments similar to [RDT 3.0 Lossy channels](Notes/Transport%20Layer.md#RDT%203.0%20Lossy%20channels). 
+![](https://i.imgur.com/RBWoT52.png)
+
 ## Stateful: Order of transmission
 TCP is capable of transmitting messages spread across multiple packets without explicit information from the packets themselves.
 

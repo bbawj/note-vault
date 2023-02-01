@@ -20,36 +20,12 @@
             }
           },
           {
-            "id": "dea603e5826a073f",
+            "id": "8c735f32c98d4e6e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transport Layer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4b8f98a343d9b3e6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Transport Layer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "522bcb8e9c2497db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "008 Networking.md",
+                "file": "Notes/Network Layer.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,19 +44,43 @@
             }
           },
           {
+            "id": "ded010a73101845f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Transmission Control Protocol.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "95c8cdf58b841c7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/User Datagram Protocol.md",
+                "file": "2203 Distributed Systems.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a801823c943c9bd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Distributed Abstractions.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/User Datagram Protocol.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/User Datagram Protocol.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/User Datagram Protocol.md"
+                "file": "Notes/Transmission Control Protocol.md"
               }
             }
           },
@@ -193,7 +193,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "773c08e3cb822493",
@@ -205,7 +205,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/User Datagram Protocol.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -261,17 +261,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "95c8cdf58b841c7b",
+  "active": "ded010a73101845f",
   "lastOpenFiles": [
     "Notes/Transport Layer.md",
-    "Notes/Network Layer.md",
+    "Notes/Transmission Control Protocol.md",
+    "Notes/Finite State Machines.md",
     "008 Networking.md",
+    "Notes/Network Layer.md",
+    "Notes/Distributed Abstractions.md",
+    "Notes/Failure Detectors.md",
     "2203 Distributed Systems.md",
-    "Notes/SMTP.md",
-    "Notes/Building Blocks of the Internet.md",
-    "Notes/Network Address Translation.md",
-    "Notes/Application Layer.md",
-    "3005 AI.md",
-    "2421 Machine Learning.md"
+    "Notes/User Datagram Protocol.md",
+    "Notes/SMTP.md"
   ]
 }
