@@ -5,6 +5,7 @@ date: 2023-01-21
 # 2203 Distributed Systems
 #moc 
 - [[Distributed Abstractions]]
+- [[Broadcast Abstractions]]
 ## What are distributed systems
 A set of nodes, connected by a network, which appear to  
 its users as a single coherent system.
@@ -62,3 +63,12 @@ Atomic Broadcast
 Examples:  
 - Embedded systems (shared clock)  
 - Multicore computers
+## Measuring Performance
+### Message complexity
+The number of messages required to terminate an operation of an abstraction
+### Time complexity (Rounds)
+One time unit in an Execution E is the longest message delay in E. We assume all communication steps takes one time unit. We also call this a round or step.
+
+Time Complexity is Maximum time taken by any execution of the algorithm under the assumptions  
+- A process can execute any finite number of actions (events) in zero time  
+- The time between send(m)i,j and deliver(m)i,j is at most one time unit  
