@@ -51,14 +51,14 @@ Reliable broadcast creates a problem. If a failed process delivers a message tha
 ![](https://i.imgur.com/TzK7KCV.png)
 ![](https://i.imgur.com/6A4OvxA.png)
 ![](https://i.imgur.com/omFKzDs.png)
-### Fail Silent
+### Majority-ACK (Fail Silent)
 Correctness assumption: a majority of processes are always correct. Resilience is N/2 machines can fail
 ![](https://i.imgur.com/SpK4Poo.png)
 ## Causal Broadcast
 - Causality between broadcast events is preserved by the corresponding delivery events  
 - If broadcast(m1) happens-before broadcast(m2), any delivery(m2) cannot happen-before a delivery(m1)  
 ![](https://i.imgur.com/vJe21OC.png)
-### Fail Silent
+### Reliable (Fail Silent)
 Each broadcasted messages carries a history which can be used to ensure causality before delivery. The history is an ordered list of casually preceding messages in the past.
 ![](https://i.imgur.com/exeReIx.png)
 ![](https://i.imgur.com/QMyVWOR.png)
@@ -71,3 +71,10 @@ Each broadcasted messages carries a history which can be used to ensure causalit
 
 ![](https://i.imgur.com/w6wZvDJ.png)
 ![](https://i.imgur.com/FtmlotO.png)
+## Orderings
+- Single source FIFO order: delivery is ordered in FIFO order for deliveries of its own broadcasts
+- Total order: order of delivery is the same across all processes
+- Causal order: [Causality](Notes/Distributed%20Abstractions.md#Causality)
+![300](https://i.imgur.com/2dw7fC6.png)
+![300](https://i.imgur.com/45hjtOK.png)
+![300](https://i.imgur.com/yqznohJ.png)

@@ -5,6 +5,7 @@ date: 2023-01-21
 # 2203 Distributed Systems
 #moc 
 - [[Distributed Abstractions]]
+- [Failure Detectors](Notes/Failure%20Detectors.md)
 - [[Broadcast Abstractions]]
 ## What are distributed systems
 A set of nodes, connected by a network, which appear to  

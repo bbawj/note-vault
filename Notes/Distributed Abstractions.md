@@ -60,6 +60,11 @@ Access to stable storage to read and write to permanent device which survives th
 Process behaves arbitrarily such as sending messages not in its algorithm, or behave maliciously attacking the system.
 ![500](https://i.imgur.com/YPA4gvB.png)
 Model B is a special case of model A if a process that works correctly under A, also works correctly under B.
+#### Quorums
+A quorum is any set of majority processes (i.e. $\lfloor N/2\rfloor+1$)
+- Two quorums always intersect in at least 1 process
+- There is at least 1 quorum with only correct processes
+- There is at least 1 correct process in each quorum 
 ### Channel Failure Modes
 #### Fair loss links
 Channels delivers any message sent with non-zero probability (no network partitions)

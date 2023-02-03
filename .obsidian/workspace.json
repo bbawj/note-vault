@@ -32,42 +32,6 @@
             }
           },
           {
-            "id": "614892074eba2e1d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Transport Layer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ded010a73101845f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2203 Distributed Systems.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fd18bc5531ee65c3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Broadcast Abstractions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "95c8cdf58b841c7b",
             "type": "leaf",
             "state": {
@@ -85,14 +49,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Distributed Abstractions.md",
+                "file": "Notes/Broadcast Abstractions.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -121,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fair",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -258,8 +222,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -273,17 +236,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fd18bc5531ee65c3",
+  "active": "a801823c943c9bd0",
   "lastOpenFiles": [
-    "2203 Distributed Systems.md",
-    "Notes/Broadcast Abstractions.md",
     "Notes/Distributed Abstractions.md",
     "Notes/Failure Detectors.md",
-    "Notes/Transmission Control Protocol.md",
+    "2203 Distributed Systems.md",
+    "Notes/Network Layer.md",
     "Notes/Transport Layer.md",
+    "Notes/Broadcast Abstractions.md",
+    "Notes/Transmission Control Protocol.md",
     "Notes/Finite State Machines.md",
     "008 Networking.md",
-    "Notes/Network Layer.md",
     "Notes/User Datagram Protocol.md"
   ]
 }
