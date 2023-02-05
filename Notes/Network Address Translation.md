@@ -9,7 +9,8 @@ IPv4 addresses are only 32 bits long which provides a maximum of 4.29 billion un
 Introduce NAT devices at the edge of the network, each of which would be responsible for maintaining a table mapping of local IP and port tuples to one or more globally unique (public) IP and port tuples (Figure 3-3). 
 ![](https://i.imgur.com/S5Ys071.png)
 ## NAT Traversal
-Problems while using a NAT
+![](https://i.imgur.com/pgZ6tsW.png)
+## Problems while using a NAT
 1. Client may not know the public IP address: if the client communicates its private IP address as part of its application data with a peer outside of its private network, then the connection will inevitably fail.
 2. NAT table may not have the mapping of a public IP of a packet
 ### Session Travel Utilities for NAT (STUN)
