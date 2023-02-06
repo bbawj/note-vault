@@ -19,3 +19,13 @@ The [Internet Protocol](Notes/Internet%20Protocol.md) handles addressing convent
 ![](https://i.imgur.com/LNEfMNs.png)
 
 ![](https://i.imgur.com/CBk42YD.png)
+## Routing Algorithms
+The goal of the routing algorithm is to determine the least cost path to be populated in  the forwarding table.
+### Classifications
+- Centralised: algorithm has complete information about connectivity and link costs (link-state algorithms)
+- Decentralised: no node has complete information about all network links. Each node exchanges information with its neighbours.
+- Static: routes change very slowly over time
+- Dynamic: routes change as the network traffic loads or topology change
+### Link-State Algorithm
+Each node is able to have the identical and complete view of the network by broadcasting link-state packets to all other nodes in the network. With this, [Dijkstra's Algorithm](Notes/Dijkstra's%20Algorithm.md) can be used to find the least cost paths.
+###

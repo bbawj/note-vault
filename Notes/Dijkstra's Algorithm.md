@@ -19,7 +19,6 @@ Assumptions:
 **Weights must be nonnegative**
 ### Data Structures Needed
 ![](https://i.imgur.com/2YaUIHm.png)
-
 ### Pseudocode
 ![](https://i.imgur.com/XJ0HfYt.png)
 ![](https://i.imgur.com/7e5woJm.png)

@@ -39,4 +39,8 @@ The IPv4 32 bit address space was beginning to be used up. In February 2011, IAN
 - Flow label: identify datagrams of the same "flow" (maybe such as audio or video transmission)
 - Next header: identifies the protocol which the contents of the data will be delivered (to TCP or UDP)
 - Hop limit: decremented each time each router forwards the datagram (discarded at 0)
+Some fields from the IPv4 datagram were also removed:
+- Fragmentation: IPv6 does not allow for fragmentation and reassembly at intermediate routers. This can only be done at the source and destination. If the datagram is too large for the outgoing link, it is dropped and the sender is asked to resend using a smaller datagram size.
+- Checksum: removed to reduce processing time
+- Options: moved out of the headers portion
 
