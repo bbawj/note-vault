@@ -53,10 +53,21 @@ Scenarios:
 #### TCP Fast Retransmit
 The timeout period can be relatively long, delaying retransmission of the lost packet. The sender can detect packet loss well before the timeout event by noting **duplicate ACKs**. When *3* duplicate ACKs are received, a fast retransmit is performed before the timer expires.
 ## Flow Control
-TCP places received bytes in a receive buffer. Flow control is a mechanism to prevent the sender from overwhelming the receiver with data it may not be able to process—the receiver may be busy.
+The TCP receiver places received bytes in a receive buffer. Flow control is a mechanism to prevent the sender from overwhelming the receiver with data it may not be able to process—the receiver may be busy.
 ### Receive Window (rwnd)
 Transmit a receive window value in each ACK packet between both sides to communicate the size of available buffer space to hold incoming data such that the buffer does not overflow:
 ![](https://i.imgur.com/G2cu6EX.png)
+### Silly window syndrome
+1. When the receiver consumes data slowly, the window becomes smaller to the point where the data transmitted is smaller than the packet header resulting in inefficient data transfer (thrashing).
+2. When the sender creates data slowly, a small packet that does not fully utilise the maximum segment size is sent also resulting in inefficient data transfer.
+#### Nagle's algorithm (case 1)
+Applications such as telnet/rlogin generates a 41 byte TCP packet for each 1 byte of user data.
+1. Each TCP connection can have only one outstanding (i.e., unacknowledged) small segment (i.e., a tinygram)  
+2. While waiting - additional data is accumulated and sent as one segment when the  ACK arrives, or when maximum segment size can be filled  
+3. Self-clock: the faster ACKs come, the more often data is sent. Thus automatically on slow WANs fewer segments are sent
+#### Delayed acknowledgements
+Rather than sending an ACK immediately, the TCP receiver waits up to 200ms. This prevents the sender from sliding its window. Traffic is reduced and potentially more data can be piggy backed on the ACK.
+*Host requirements RFC states the delay must be less than 500ms which is the standard timeout interval. This ensures that retransmit is not triggered.*
 ## Stateful: Order of transmission
 TCP is capable of transmitting messages spread across multiple packets without explicit information from the packets themselves.
 
@@ -86,20 +97,19 @@ Time to reach a cwnd = N:
 ![](https://i.imgur.com/8i8jDM4.png)
 ![](https://i.imgur.com/bf30Siq.png)
 #### Congestion Avoidance
-When a timeout occurs, `cwnd = 1` and `ssthresh` is set to `cwnd/2`, restarting the slow start process. We can use `ssthresh` to figure out when we are nearing a "reckless" value and stop the slow start process. How should cwnd be adjusted after this? 
-![](https://i.imgur.com/mmi1F8C.png)
-TCP changes to a linear increase in the cwnd rather than exponential increase.
+When a timeout occurs, $cwnd = 1$ and `ssthresh` is set to `cwnd at duplicate ACK/2`, restarting the slow start process. We can use `ssthresh` to figure out when we are nearing a "reckless" value and stop the slow start process. How should cwnd be adjusted after this? 
+When `ssthresh` is reached, TCP changes to a linear increase in the cwnd rather than exponential increase.
 #### Fast Recovery
-TCP Reno incorporates fast recovery, to increase cwnd by 1 MSS for each duplicate ACK  for the missing segment
+The slow start process does not restart (cwnd restart at 1 MSS), instead the cwnd is increased by 1 MSS for each duplicate ACK for the missing segment. This is because we can be sure that the receiver can handle at least the ssthresh + duplicate ACKs number of packets.
 ![](https://i.imgur.com/np1L7hU.png)
+3 duplicate ACKs occur at round 12. $ssthresh = 12/2=6$. 
+- TCP Renoe: $cwnd = ssthresh + 3 = 9. Followed by linear increase
+- TCP Tahoe: $cwnd = 1$. Exponential increase followed by linear increase at ssthresh.
 #### Summary
 ![](https://i.imgur.com/qO06hi5.png)
-### Throughput
+## Throughput
 ![](https://i.imgur.com/uvKZYQk.png)
-### Fairness
-![](https://i.imgur.com/THDL0za.png)
-![](https://i.imgur.com/i68fmak.png)
-## Bandwidth Delay Product
+### Bandwidth Delay Product
 If either the sender or receiver exceeds the maximum unacknowledged data, they will have to wait before they can send any more. 
 ![](https://i.imgur.com/tE0o5TM.png)
 To maximize throughput, *send so much data that there is always an ACK returning back to the sender at the same time we are about to send a data packet*.
@@ -107,6 +117,9 @@ $BDP = \text{Data Link Capacity}\times\text{Round Trip Time}$
 Example, 10 Mbps available bandwidth and 100ms RTT
 $BDP=10\times10^6\times0.1=1\times10^6$ bits
 The window size needs to be at least this size to saturate the data link.
+## Fairness
+![](https://i.imgur.com/THDL0za.png)
+![](https://i.imgur.com/i68fmak.png)
 ## Head-of-Line Blocking
 If one of the packets is lost en route to the receiver, then all subsequent packets must be held in the receiver’s TCP buffer until the lost packet is retransmitted and arrives at the receiver. Because this work is done within the TCP layer, our application has no visibility into the TCP retransmissions or the queued packet buffers, and must wait for the full sequence before it is able to access the data. Instead, it simply sees a delivery delay when it tries to read the data from the socket. 
 >[! Note]
@@ -116,3 +129,55 @@ If one of the packets is lost en route to the receiver, then all subsequent pack
 >Cons
 >1. Introduces unpredictable latency variation in packet arrival times (jitter)
 >2. Application may not need reliable or in-order delivery
+## Exercises
+TCP uses delayed ACKs instead of sending and ACK directly after a correctly received packet. Answer the two following questions related to delayed ACKs in TCP. 
+a) An ACK must not be delayed more than 500 ms. Why?    
+500ms is the amount of time before retransmission timeout.
+b) Assume that a TCP segment arrives with the expected sequence number. The previous segment arrived in correct order and it has not been ACKed yet. What will the receiver do now? 
+Receiver will send a TCP packet with acknowledgement number = the latest segment sequence number + 1
+
+TCP uses both flow control and congestion control. Explain the overall difference between these. What do they mean? What are their purposes?
+Flow control is used to throttle the sender in the case where the receiver is unable to handle the rate of data being sent. Congestion control is used to throttle the sender in the case where there is congestion in the network link.
+
+An application uses TCP and sends data in full size windows (65 535 bytes) over a 1 Gbps channel having a one-way delay of 10 ms. The transmission time can be neglected.  
+a) What is the maximum throughput that can be achieved?  
+1 window of data can be sent every RTT:
+$65535\times8/(20\times10^-3)=2621400 \ bits/s$
+b) What channel utilization can be achieved, i.e., how large part of the available bandwidth can be used?
+$\frac{26214000}{1\times10^9}=2.6\%$
+
+A client application establishes a TCP connection to a server application to transfer 15 kB of data. The (one-way) delay is 5 ms, RTT (round-trip time) is 10 ms, and the receive window (rwnd) is 24 kB. Assume that the initial congestion window is 2 kB. There is no congestion in the network, the transmission time can be neglected, and the connection establishment phase can be neglected. Calculate the total transfer time.
+$$
+\begin{align}
+\\ \text{Round 1 2kb of data sent}: cwnd = 2*2=4
+\\ \text{Round 2 4kb of data sent}: cwnd = 4*2=8
+\\ \text{Round 3 8kb of data sent}: cwnd = 8*2=16
+\\ \text{Last 1kb sent in round 4}: 10+10+10+5 = 35ms
+\\ \end{align}
+$$
+![](https://i.imgur.com/eo9PkJO.png)
+a,b)
+![500](Pics/Transmission%20Control%20Protocol%202023-02-07%2014.20.50.excalidraw.svg)
+c. 3 duplicate ACKs
+d. Timeout
+e. 32 segments
+f. 21
+g. 15
+h. 7
+i. ssthresh = 4, cwnd = 7
+j. ssthresh = 21, cwnd = 4
+k. $1+2+4+8+16+21=52$. Round 22 will have sent 21 packets assuming that we are able to successfully send at least the number of data packets `ssthresh` dictates.
+![](Pics/Transmission%20Control%20Protocol%202023-02-07%2014.58.22.excalidraw.svg)
+![](https://i.imgur.com/WsP2Wtv.png)
+![](https://i.imgur.com/PlRfgpa.png)
+a.
+1. Host sends request to local DNS server
+2. Local DNS makes a query to the root DNS server
+3. Root DNS returns the Top level domain DNS server for "com"
+4. Local DNS makes query to TLD
+5. TLD returns the authoritative name server for "fws.com"
+6. Local DNS makes query to DNS server for "fws.com"
+7. Authoritative DNS returns the IP address for "punchy.fws.com"
+8. Local DNS returns this IP address to the host
+b. Query 1 is recursive. The rest are iterative
+c. 

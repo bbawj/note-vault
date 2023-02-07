@@ -29,7 +29,7 @@ We can incrementally build a reliable data transfer (rdt) protocol using [[Finit
 #### RDT 1.0 reliable under channel
 ![](https://i.imgur.com/CXSayAv.png)
 #### RDT 2.0 error checking
-Add error checking through acknowledgements (ACKs) and negative acknowledgements (NAKs), and have the sender retransmit the corrupted sentence.
+Add error checking through checksum calculation, acknowledgements (ACKs) and negative acknowledgements (NAKs), and have the sender retransmit the corrupted sentence.
 ![](https://i.imgur.com/ULJ2VIw.png)
 #### RDT 2.1 ACK corruption
 *The fatal flaw in rdt 2.0 is that the ACK or NAK packets may in itself be corrupted. How should the protocol recover from such errors?* Here are some ideas:

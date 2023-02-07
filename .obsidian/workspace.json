@@ -13,55 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "008 Networking.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "8c735f32c98d4e6e",
+            "id": "e8cc2ce0d18dca8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Network Layer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "95c8cdf58b841c7b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2203 Distributed Systems.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a801823c943c9bd0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Network Layer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4a55d2dca7af2e77",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Dijkstra's Algorithm.md",
+                "file": "Notes/Transport Layer.md",
                 "mode": "source",
                 "source": false
               }
@@ -79,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "bandwidth delay",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -140,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Dijkstra's Algorithm.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Dijkstra's Algorithm.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Dijkstra's Algorithm.md"
+                "file": "Notes/Transmission Control Protocol.md"
               }
             }
           },
@@ -193,7 +156,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "773c08e3cb822493",
@@ -205,7 +168,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Dijkstra's Algorithm.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -261,17 +224,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4a55d2dca7af2e77",
+  "active": "1fe5cf4f34586ea1",
   "lastOpenFiles": [
-    "Notes/Network Layer.md",
-    "Notes/Internet Protocol.md",
-    "Notes/Network Address Translation.md",
-    "Notes/Broadcast Abstractions.md",
-    "Notes/Distributed Abstractions.md",
-    "Notes/Failure Detectors.md",
-    "2203 Distributed Systems.md",
-    "Notes/Transport Layer.md",
+    "Pics/Transmission Control Protocol 2023-02-07 14.58.22.excalidraw.md",
     "Notes/Transmission Control Protocol.md",
-    "Notes/Finite State Machines.md"
+    "Notes/Transport Layer.md",
+    "Notes/HTTP.md",
+    "Pics/Transmission Control Protocol 2023-02-07 14.20.50.excalidraw.md",
+    "Notes/User Datagram Protocol.md",
+    "Notes/DNS.md",
+    "Notes/Network Layer.md",
+    "Notes/Application Layer.md",
+    "Notes/Network Address Translation.md"
   ]
 }

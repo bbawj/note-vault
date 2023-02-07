@@ -19,12 +19,13 @@ Datagram: packets delivered via an unreliable service, without delivery guarante
 
 UDP encapsulates user messages into its own packet structure on top of the [Internet Protocol](Notes/Internet%20Protocol.md):
 ![](https://i.imgur.com/DeoXhWu.png)
+### UDP Checksum
+Sender: Perform a 1s complement sum of all the 16 bit words in the UDP segment, with overflow being wrapped around.
+Receiver: Sum all the 16 bit words including the checksum, the result should be 16 1s, else an error is detected.
+*Note: this checksum is optional*
 ## Stateless
 Each datagram is carried in a single IP packet with no support for bytestreams. Hence each read will yield the full message and datagrams are not fragmented.
 ### Problems 
 Each connection relies upon [Network Address Translation](Notes/Network%20Address%20Translation.md). Translation tables rely on the connection state in order to create and remove entries as needed, but UDP does not have any processes to define its state (no handshake, no termination sequence).
 
 One solution: UDP routing records are expired on a timer.
-## UDP Checksum
-Sender: Perform a 1s complement sum of all the 16 bit words in the UDP segment, with overflow being wrapped around.
-Receiver: Sum all the 16 bit words including the checksum, the result should be 16 1s, else an error is detected.
