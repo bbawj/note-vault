@@ -42,6 +42,21 @@ Example registering domain name `networkutopia.com`, two records are inserted:
 `(dns1.networkutopia.com, 212.212.212.1, A)`
 ## DNS attacks
 ![](https://i.imgur.com/FMtlD4D.png)
-
+## Exercises
+![](https://i.imgur.com/WsP2Wtv.png)
+![](https://i.imgur.com/PlRfgpa.png)
+a.
+1. Host sends request to local DNS server
+2. Local DNS makes a query to the root DNS server
+3. Root DNS returns the Top level domain DNS server for "com"
+4. Local DNS makes query to TLD
+5. TLD returns the authoritative name server for "fws.com"
+6. Local DNS makes query to DNS server for "fws.com"
+7. Authoritative DNS returns the IP address for "punchy.fws.com"
+8. Local DNS returns this IP address to the host
+b. Query 1 is recursive. The rest are iterative
+c. Yes
+![](Pics/Transmission%20Control%20Protocol%202023-02-07%2017.09.11.excalidraw.svg)
+%%[🖋 Edit in Excalidraw](Pics/Transmission%20Control%20Protocol%202023-02-07%2017.09.11.excalidraw.md), and the [dark exported image](Pics/Transmission%20Control%20Protocol%202023-02-07%2017.09.11.excalidraw.dark.svg)%%
 
 

@@ -7,6 +7,7 @@ date: 2023-01-21
 - [[Distributed Abstractions]]
 - [Failure Detectors](Notes/Failure%20Detectors.md)
 - [[Broadcast Abstractions]]
+- [[Distributed Shared Memory]]
 ## What are distributed systems
 A set of nodes, connected by a network, which appear to  
 its users as a single coherent system.

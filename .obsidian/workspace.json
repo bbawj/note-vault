@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md",
+                "file": "2203 Distributed Systems.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1a5e7f3eb6942bbf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Distributed Shared Memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md",
+                "file": "Notes/Distributed Shared Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md",
+                "file": "Notes/Distributed Shared Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md"
+                "file": "Notes/Distributed Shared Memory.md"
               }
             }
           },
@@ -156,7 +169,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "773c08e3cb822493",
@@ -168,7 +181,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md",
+                "file": "Notes/Distributed Shared Memory.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -209,8 +222,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -224,17 +236,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1fe5cf4f34586ea1",
+  "active": "1a5e7f3eb6942bbf",
   "lastOpenFiles": [
-    "Pics/Transmission Control Protocol 2023-02-07 14.58.22.excalidraw.md",
+    "2203 Distributed Systems.md",
     "Notes/Transmission Control Protocol.md",
+    "Notes/DNS.md",
+    "Pics/Transmission Control Protocol 2023-02-07 17.09.11.excalidraw.md",
+    "Pics/Transmission Control Protocol 2023-02-07 17.09.11.excalidraw.svg",
+    "Pics/Transmission Control Protocol 2023-02-07 14.58.22.excalidraw.md",
     "Notes/Transport Layer.md",
     "Notes/HTTP.md",
     "Pics/Transmission Control Protocol 2023-02-07 14.20.50.excalidraw.md",
-    "Notes/User Datagram Protocol.md",
-    "Notes/DNS.md",
-    "Notes/Network Layer.md",
-    "Notes/Application Layer.md",
-    "Notes/Network Address Translation.md"
+    "Notes/User Datagram Protocol.md"
   ]
 }

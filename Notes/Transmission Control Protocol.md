@@ -168,16 +168,50 @@ i. ssthresh = 4, cwnd = 7
 j. ssthresh = 21, cwnd = 4
 k. $1+2+4+8+16+21=52$. Round 22 will have sent 21 packets assuming that we are able to successfully send at least the number of data packets `ssthresh` dictates.
 ![](Pics/Transmission%20Control%20Protocol%202023-02-07%2014.58.22.excalidraw.svg)
-![](https://i.imgur.com/WsP2Wtv.png)
-![](https://i.imgur.com/PlRfgpa.png)
+![](https://i.imgur.com/KwdfNTw.png)
 a.
-1. Host sends request to local DNS server
-2. Local DNS makes a query to the root DNS server
-3. Root DNS returns the Top level domain DNS server for "com"
-4. Local DNS makes query to TLD
-5. TLD returns the authoritative name server for "fws.com"
-6. Local DNS makes query to DNS server for "fws.com"
-7. Authoritative DNS returns the IP address for "punchy.fws.com"
-8. Local DNS returns this IP address to the host
-b. Query 1 is recursive. The rest are iterative
-c. 
+$$
+\begin{align}
+\\&\text{Packets sent per cycle}=\frac{W}{2}+(\frac{W}{2}+1)+...+W
+\\&=\frac{3W}{2}\times(\frac{W}{2}+1)\div2
+\\&=\frac{3W^2}{8}+\frac{3W}{4}
+\\&\text{1 packet loss per cycle:}
+\\&L=\frac{1}{\frac{3W^2}{8}+\frac{3W}{4}}
+\end{align}
+$$
+b.
+$$
+\begin{align}
+&Rate = \text{Packets transferred per unit time}
+\\&\frac{1}L=\frac{3W^2}8+\frac{3W}4
+\\&\frac{1}L\approx\frac{3W^2}8
+\\&W=\sqrt\frac{8}{3L}
+\\&\text{Avg Rate} = \frac{3W}{4RTT}MSS
+\\&\approx\frac{1.22MSS}{RTT\sqrt L}
+\end{align}
+$$
+![](https://i.imgur.com/rs3CQYR.png)
+a.
+$$
+\begin{align}
+&\text{Max throughput}=10\times10^6\times150\times10^{-3}=150\times10^{4}
+\\&x\times MSS=150\times10^{4}\div8
+\\&x=125
+\end{align}
+$$
+b.
+$$
+\begin{align}
+&\text{Avg window size} = \frac{3}4W_{max}=93.75
+\\&\text{Avg throughput} = \text{Avg window size}/RTT
+\\&=93.75\times1500\times8/(150\times10^{-3})
+\\&=7,500,00=7.5\ Mbps
+\end{align}
+$$
+c.
+$$
+\begin{align}
+&\text{cwnd after packet loss}=125/2=62.5
+\\&62.5\times150\times10^{-3}=9.375s
+\end{align}
+$$
