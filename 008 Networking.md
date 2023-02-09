@@ -9,6 +9,11 @@ lastmod: 2023-01-18
 - [[Notes/Building Blocks of the Internet]]
 - [[Application Layer]]
 	- [[HTTP]]
+	- [[DNS]]
+	- [SMTP](Notes/SMTP.md)
+	- [POP3](Notes/POP3.md)
+	- [BitTorrent](Notes/BitTorrent.md)
+	- [Distributed Hash Table](Notes/Distributed%20Hash%20Table.md)
 - [[Transport Layer]]
 	- [Transmission Control Protocol](Notes/Transmission%20Control%20Protocol.md)
 	- [User Datagram Protocol](Notes/User%20Datagram%20Protocol.md)
