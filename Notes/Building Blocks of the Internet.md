@@ -73,3 +73,60 @@ Link layer.
 Routing refers to the address translation performed in order to determine the correct destination address for the packet. Forwarding is the actual relay of the data packet to the destination address.
 *e) What service does the transport layer describe? Give a short answer*
 Service of the transfer of data from one host to another.
+![](https://i.imgur.com/8tknIWb.png)
+$$
+\begin{align}
+&\text{First packet delay} = N*(L/R)\\
+&\text{The 2nd packet must wait for the first packet to reach the 2nd router before it is sent}:\\
+&\text{2nd packet delay} = N*(L/R)+(L/R)\\
+&...\\
+&\text{Pth packet delay} = N*(L/R)+(P-1)*(L/R)\\
+&\text{All packets sent after Pth delay}:\\
+&d_{end-to-end} = (N+P-1)*(L/R)
+\end{align}
+$$
+![](https://i.imgur.com/FjVNvWQ.png)
+a. $d_{prop}=m/s$
+b. $d_{trans}=L/R$
+c. $d_{end-to-end}=d_{prop}+d_{trans}$
+d. At the start of the link
+e. In the link
+f. At the destination
+g. 
+$d_{trans}=\frac{120}{56\times10^3}=0.00214s$
+$0.00214=m/2.5\times10^8$
+$m=535.7km$
+![](https://i.imgur.com/Oq5N82i.png)
+$$
+\begin{align}
+&\text{All bits must be generated before it can be grouped into packets}:\\
+d_{generate}&=56\times8/(64\times10^3)=7ms\\
+d_{trans}&=56\times8/(2\times10^6)=0.000224s\\
+d_{prop}&=0.01s\\
+Total&=17.224ms
+\end{align}
+$$
+![](https://i.imgur.com/fJ0zOXS.png)
+![](https://i.imgur.com/IobqAEp.png)
+The first bit of host 1 reaches Router A after 0.002s
+The last bit of host 1 reaches Router A after $0.002+(1500\times8)/(4\times10^6)=0.005s$
+The first bit of host 2 reaches Router A after 0.006s. Hence, no queueing delay is incurred as the last bit of host 1 is propagated before host 2 first bit arrives.
+![](https://i.imgur.com/qkACdhm.png)
+No buffering when:
+$$
+d_1+\frac{L}{R_1}< d_2
+$$
+![](https://i.imgur.com/5CObMf3.png)
+a. The first packet to be propagated has no queueing delay
+The 2nd packet will have $d=L/R$
+3rd packet: $d=2\times L/R$
+Nth packet: $d = (N-1)\times L/R$
+Avg delay:
+$$
+\begin{align}
+\frac{1}N\sum_{i=0}^{N-1}i\times\frac{L}{R}\\
+=\frac{L}{NR}\times\frac{N(N-1)}2\\
+=L(N-1)/2R
+\end{align}
+$$
+b. The Nth packet is propagated after $(N-1)L/R$, which is $<NL/R$. The first packet of the  next stream will not have to wait. Average queueing delay of such a packet will be the same as in (a).
