@@ -65,8 +65,23 @@ If z routes through y to get to destination x, then z will advertise to y that i
 #### Routing Information Protocol (RIP)
 RIP uses the distance vector algorithm with its metric being the number of hop counts. 
 ![](https://i.imgur.com/cdaoCkz.png)
-## Open Shortest Path First (OPSF)
+## Intra-AS: Open Shortest Path First (OPSF)
+### Autonomous Systems
 In above routing algorithms, the model of the network of routers was too simplistic
 - Scale: as number of routers become large, up to 600 million routers today, it would incur large amounts of overhead to store all destination routing tables. A DV algorithm iterated among them would surely never converge
 - Administrative autonomy: each network admin may want to control the routing in its own network, such as which routing algorithm to use
 This can be solved by organizing routers into autonomous systems (ASs), with each AS consisting of a group of routers that are under the same administrative control.
+![](https://i.imgur.com/lc7ldXT.png)
+Each AS needs to be unique, and is identified by its AS number, which is assigned by ICANN regional registries
+### OSPF
+![](https://i.imgur.com/ZwT5nz4.png)
+OSPF uses IP directly, without UDP or TCP, meaning it has to implement functionality such as reliable message transfer.
+Each router
+1. Actively test the status of all neighbours/links  
+2. Build a Link State Advertisement (LSA) from this information and propagate it to all other routers within an area.  
+3. Using LSAs from all other routers, compute a shortest path delivery tree, typically using Dijkstra shortest path algorithm.
+![](https://i.imgur.com/g59bgpK.png)
+## Inter-AS: Border Gateway Protocol (BGP)
+To route a packet across multiple ASs, we need an inter-autonomous system routing protocol. Since an inter-AS routing protocol involves coordination among multiple ASs, communicating ASs must run the same inter-AS routing protocol. In the Internet, all ASs run the same inter-AS routing protocol, the BGP.
+![](https://i.imgur.com/HInOBzf.png)
+Each router sends messages over these connections. For example, when a new subnet x appears in AS3, the gateway router in AS3 sends a message to AS2 "AS3 x". AS2 then uses iBGP to advertise the existence of x amongst internal AS2 routers before sending a message over eBGP "AS2 AS3 x" to AS1.
