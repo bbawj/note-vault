@@ -11,12 +11,8 @@
             "id": "c1007869437970d4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "008 Networking.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -37,7 +33,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/GPU Architecture.md",
+                "file": "2203 Distributed Systems.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4ab0b90f9cd434ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Distributed Shared Memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -97,8 +105,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bellman",
-                "matchingCase": false,
+                "query": "tag:#question",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -111,8 +119,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5,
-    "collapsed": true
+    "width": 214.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -128,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/GPU Architecture.md",
+                "file": "Notes/Distributed Shared Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/GPU Architecture.md",
+                "file": "Notes/Distributed Shared Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/GPU Architecture.md"
+                "file": "Notes/Distributed Shared Memory.md"
               }
             }
           },
@@ -181,7 +188,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "773c08e3cb822493",
@@ -193,7 +200,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/GPU Architecture.md",
+                "file": "Notes/Distributed Shared Memory.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -224,7 +231,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7132754626224435,
+                  "scale": 0.7132754626224436,
                   "close": true
                 }
               }
@@ -234,8 +241,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -249,17 +255,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ec69797ceffb3538",
+  "active": "eff96ca3e23b7885",
   "lastOpenFiles": [
+    "2203 Distributed Systems.md",
+    "008 Networking.md",
+    "Notes/Distributed Shared Memory.md",
+    "Notes/Failure Detectors.md",
+    "Notes/GPU Architecture.md",
     "Notes/HTTP.md",
     "Notes/Network Layer.md",
     "Notes/Bellman-Ford Algorithm.md",
     "Notes/Markov Decision Process.md",
-    "2421 Machine Learning.md",
-    "Notes/Building Blocks of the Internet.md",
-    "Notes/Application Layer.md",
-    "Notes/Transport Layer.md",
-    "Notes/DNS.md",
-    "Notes/Transmission Control Protocol.md"
+    "2421 Machine Learning.md"
   ]
 }

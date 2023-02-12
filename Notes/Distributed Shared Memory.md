@@ -43,7 +43,7 @@ Validity
 - Otherwise may return last or concurrent “value”
 ![](https://i.imgur.com/9OyS87V.png)
 ### Fail-Stop Read-one Write-All
-Uses perfect [perfect failure detector P](Notes/Failure%20Detectors.md#Perfect%20failure%20detector):
+Uses [perfect failure detector P](Notes/Failure%20Detectors.md#Perfect%20failure%20detector):
 write(v)
 1. Update local value to v
 2. [Fail Stop Broadcast](Notes/Broadcast%20Abstractions.md#Fail%20Stop) v to all
@@ -52,6 +52,7 @@ write(v)
 read
 1. Return local value
 ![500](https://i.imgur.com/ms7UOou.png)
+[Eventually perfect failure detector](Notes/Failure%20Detectors.md#Eventually%20perfect%20failure%20detector) will not work here as it might falsely suspect some processes as having crashed. During this time, since a write on another process only waits for ACKs from all correct processes, it could return early. A read on the falsely suspected process will incorrectly return the old value.
 ### Fail silent Majority voting
 Make use of timestamp-value pairs, tvp = (ts, v), where the timestamp can be used to determine which value is more recent. Each process stores the value of register r with max timestamp of each register r.
 
@@ -80,8 +81,42 @@ Allows executions whose results appear as if the operations of each processes we
 ![](https://i.imgur.com/YQDpASj.png)
 ![](https://i.imgur.com/tfvYJS7.png)
 ### Extending to N readers N writers (Read-impose Write-consult-majority)
-Problem: ![](https://i.imgur.com/cjeoDqd.png)
+Problem: 
+![](https://i.imgur.com/cjeoDqd.png)
 Before writing, read from majority to get the latest timestamp (query phase before update phase). 
 ![](https://i.imgur.com/PySj7Kq.png)
+## Eventual Consistency
+![](https://i.imgur.com/9Tdj6IH.png)
+State updates can be issued at any replica/correct process. All updates are disseminated via BEB, RB,...  
+- Each correct process that receives all updates should deterministically converge to the same state.  
+- Eventually every correct process should receive all updates...  
+- Problem: When can a process know it has received all updates??
+### Strong Eventual Consistency
+If state operations are **commutative** and processes exchange information, eventually they converge to an identical view.
+![](https://i.imgur.com/2d68BHj.png)
+![](https://i.imgur.com/vyWBePp.png)
+## Conflict Free Replicated Data Types (CRDTs)
+Data structures which implement strong eventual consistency.
+![](https://i.imgur.com/rdcu52T.png)
+![](https://i.imgur.com/jZ8OQqc.png)
+The join operation allows there to be a commutative operation relationship between sets. However, operations need to have a strict monotonically increasing effect on the set.
+### State Based CRDT (CvRDT)
+![](https://i.imgur.com/3zI2hzY.png)
+#### Grow-Only Counter
+![](https://i.imgur.com/5u0Ry92.png)
 
+![](https://i.imgur.com/B8tFa70.png)
+#### Up-Down Counter
+![](https://i.imgur.com/phCGsID.png)
 
+![](https://i.imgur.com/KydUmYt.png)
+#### Or-Set
+![](https://i.imgur.com/idz0zR2.png)
+![](https://i.imgur.com/6UZUPuV.png)
+### Operation Based CRDTs (CmRDTs)
+CmRDTs impose stricter assumptions. Causally dependent updates are replaced with [Causal Broadcast](Notes/Broadcast%20Abstractions.md#Causal%20Broadcast) and the join function is replaced with any commutative update function.
+- Less states and IO required (only the operations are broadcasted)
+- More restrictions to programming model leading to less flexibility
+![](https://i.imgur.com/A8bZIfc.png)
+#### Or-Set
+![](https://i.imgur.com/Egu3eSa.png)
