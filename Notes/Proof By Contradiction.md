@@ -1,15 +1,12 @@
 ---
 title: "Proof By Contradiction"
-tags: [logic]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-12
 ---
 # Proof By Contradiction
-#logic
-
-1. The proposition to be proved, _P_, is assumed to be false. That is, $\neg$P is true.
-2. It is then shown that $\neg$P implies two mutually contradictory assertions, _Q_ and $\neg$Q.
-3. Since _Q_ and $\neg$Q cannot both be true, the assumption that _P_ is false must be wrong, so _P_ must be true.
+1. The proposition to be proved, *P*, is assumed to be false. That is, $\neg$P is true.
+2. It is then shown that $\neg$P implies two mutually contradictory assertions, *Q* and $\neg$Q.
+3. Since *Q* and $\neg$Q cannot both be true, the assumption that *P* is false must be wrong, so *P* must be true.
 
 Explanation in Propositional Logic 
 $$\begin{aligned}\neg P \implies \emptyset \\ P \equiv True \end{aligned}$$

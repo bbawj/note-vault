@@ -1,12 +1,9 @@
 ---
 title: "Strategy Pattern"
-tags: [design-patterns]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-12
 ---
 # Strategy Pattern
-#design-patterns 
-
 ## Problems we want to solve
 1. A set of **interchangeable** algorithms or objects that can be decided at run-time
 2. Extensible set of strategies: [Open-Closed Principle](Open-Closed%20Principle)

@@ -1,12 +1,9 @@
 ---
 title: "Observer Pattern"
-tags: [design-patterns]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-12
 ---
 # Observer Pattern
-#design-patterns
-
 ## Problems we want to solve
 1. Tight coupling due to a 1-many dependency
 2. We need a number of dependent objects to update automatically when one object changes state

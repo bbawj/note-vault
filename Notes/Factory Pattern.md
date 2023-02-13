@@ -1,12 +1,9 @@
 ---
 title: "Factory Pattern"
-tags: [design-patterns]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-12
 ---
 # Factory Pattern
-#design-patterns 
-
 ## Problems we want to solve
 1. Decouple class selection and object creation from the place where the object is used.
 2. Need to instantiate a set of classes but without knowing exactly which one until runtime.

@@ -1,12 +1,9 @@
 ---
 title: "Black Box Testing"
-tags: [testing]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-12
 ---
 # Black Box Testing
-#testing
-
 Testing of requirements and specifications
 
 Assumptions:

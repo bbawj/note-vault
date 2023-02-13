@@ -1,12 +1,9 @@
 ---
 title: "Façade Pattern"
-tags: [design-patterns]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-12
 ---
 # Façade Pattern
-#design-patterns 
-
 ## Problems we want to solve
 1. Decoupling of object interactions
 2. Open-closed principle

@@ -1,12 +1,9 @@
 ---
 title: "White Box Testing"
-tags: [testing]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-12
 ---
 # White Box Testing
-#testing 
-
 Testing of implementation details, internal paths and structure. Contrast to [Black Box Testing](Notes/Black%20Box%20Testing.md)
 
 ## Control Flow Testing

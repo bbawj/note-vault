@@ -9,5 +9,6 @@
   "obsidian-vimrc-support",
   "obsidian-link-converter",
   "templater-obsidian",
-  "obsidian-linter"
+  "obsidian-linter",
+  "obsidian-citation-plugin"
 ]

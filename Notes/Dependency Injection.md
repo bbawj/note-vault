@@ -1,12 +1,9 @@
 ---
 title: "Dependency Injection"
-tags: [design-patterns]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-12
 ---
 # Dependency Injection
-#design-patterns 
-
 ## Problems we want to solve
 1. How can a class be independent from the creation of the objects it depends on?
 2. How can an application, and the objects it uses support different configurations?
