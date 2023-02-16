@@ -26,6 +26,7 @@ Allow data transfer within the SYN Packet.
 - Maximum Transmission Unit (MTU): largest link layer frame that can be sent
 ### Closing
 ![](https://i.imgur.com/CVxBm3K.png)
+Server sends the FIN when no more remaining data to send. With the client ACK, the connection is closed.
 ## TCP Segment Structure
 ![](https://i.imgur.com/oeUX3hM.png)
 ### Sequence Numbers

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "008 Networking.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "mode": "source",
                 "source": false
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "References/@kuroseComputerNetworkingTopdown2017.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "References/@kuroseComputerNetworkingTopdown2017.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "References/@kuroseComputerNetworkingTopdown2017.md"
+                "file": "Notes/Transmission Control Protocol.md"
               }
             }
           },
@@ -190,7 +190,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "References/@kuroseComputerNetworkingTopdown2017.md",
+                "file": "Notes/Transmission Control Protocol.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -246,17 +246,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3fae0f301918ac84",
+  "active": "ab0370d330a9bdbd",
   "lastOpenFiles": [
+    "Notes/Distributed Shared Memory.md",
     "008 Networking.md",
+    "References/@kuroseComputerNetworkingTopdown2017.md",
     "Notes/Network Layer.md",
     "Notes/Regression.md",
     "2421 Machine Learning.md",
     "001 Software Engineering.md",
     "Notes/DNS.md",
     "Notes/Strategy Pattern.md",
-    "Templates/Design Pattern Template.md",
-    "Notes/Observer Pattern.md",
-    "Notes/Factory Pattern.md"
+    "Templates/Design Pattern Template.md"
   ]
 }
