@@ -13,31 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3bc69e581a6bef25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2421 Machine Learning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ec69797ceffb3538",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "2203 Distributed Systems.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1611f815257094c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Consensus.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "00dfaf87bae21074",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Failure Detectors.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#moc",
+                "query": "quoru",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -105,11 +106,13 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 214.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -125,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md",
+                "file": "Notes/Consensus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md",
+                "file": "Notes/Consensus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md"
+                "file": "Notes/Consensus.md"
               }
             }
           },
@@ -190,7 +193,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Transmission Control Protocol.md",
+                "file": "Notes/Consensus.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -246,17 +249,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab0370d330a9bdbd",
+  "active": "1611f815257094c2",
   "lastOpenFiles": [
+    "Notes/Failure Detectors.md",
+    "Notes/Consensus.md",
     "Notes/Distributed Shared Memory.md",
+    "2203 Distributed Systems.md",
+    "Notes/Transmission Control Protocol.md",
     "008 Networking.md",
     "References/@kuroseComputerNetworkingTopdown2017.md",
     "Notes/Network Layer.md",
     "Notes/Regression.md",
-    "2421 Machine Learning.md",
-    "001 Software Engineering.md",
-    "Notes/DNS.md",
-    "Notes/Strategy Pattern.md",
-    "Templates/Design Pattern Template.md"
+    "2421 Machine Learning.md"
   ]
 }
