@@ -43,7 +43,6 @@ We want all processes to detect a single and same correct process. To do so, we 
 ![500](https://i.imgur.com/uwSCoBm.png)
 
 ![](https://i.imgur.com/GzKPYmu.png)
-
 ### Strong completeness equivalent to weak completeness
 ![](https://i.imgur.com/4qlsXBC.png)
 

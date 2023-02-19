@@ -13,7 +13,7 @@ Single Value Consensus
 Single Value Uniform Consensus
 - **Uniform** Agreement: no *2 processes* decide different values
 ## Paxos Algorithm
-An [Eventual Leader Election](Notes/Failure%20Detectors.md#Eventual%20Leader%20Election) (weakest leader elector we can use) can be used to elect 1 single proposer
+An [Eventual Leader Election](Notes/Failure%20Detectors.md#Eventual%20Leader%20Election) (weakest leader elector we can use) can be used to elect 1 single proposer.
 - Proposers: attempt to impose their proposal to acceptors
 - Acceptors: may accept values issued by proposers (cannot talk to each other)
 - Learners: decide depending on what is accepted
