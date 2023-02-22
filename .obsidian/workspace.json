@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/HTTP.md",
+                "file": "2421 Machine Learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "48f3ab2eabdb8e47",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Maximum Likelihood Estimation.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -128,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/HTTP.md",
+                "file": "Notes/Maximum Likelihood Estimation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/HTTP.md",
+                "file": "Notes/Maximum Likelihood Estimation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/HTTP.md"
+                "file": "Notes/Maximum Likelihood Estimation.md"
               }
             }
           },
@@ -193,7 +205,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/HTTP.md",
+                "file": "Notes/Maximum Likelihood Estimation.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -234,7 +246,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -248,17 +261,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1611f815257094c2",
+  "active": "48f3ab2eabdb8e47",
   "lastOpenFiles": [
+    "2421 Machine Learning.md",
+    "Notes/HTTP.md",
     "Notes/Consensus.md",
     "Notes/Failure Detectors.md",
+    "Notes/Internet Protocol.md",
     "Notes/Distributed Shared Memory.md",
     "2203 Distributed Systems.md",
     "Notes/Transmission Control Protocol.md",
     "008 Networking.md",
-    "References/@kuroseComputerNetworkingTopdown2017.md",
-    "Notes/Network Layer.md",
-    "Notes/Regression.md",
-    "2421 Machine Learning.md"
+    "References/@kuroseComputerNetworkingTopdown2017.md"
   ]
 }

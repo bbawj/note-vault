@@ -65,3 +65,27 @@ Rather than agreeing on a single command and storing that in a Log, we can direc
 - Termination
 After adopting a value with highest proposal number, the proposer is allowed to extend the sequence with the new command. 
 ![](Pics/Pasted%20image%2020230216180512.png)
+Problem: in the prepare phase, processes send a lot of redundant state as the full log is transferred between the proposer and acceptor leading to high IO. No pipelining as well since each round must begin with the prepare phase.
+### Log Synchronisation
+Modify the prepare phase and shared states such that we can work on a single synchronised log $v_a$. *To do this, let 1 process act as the sole leader (proposer) until it is aborted by an election of higher ballot number*
+![](https://i.imgur.com/XYiZEZQ.png)
+The leader sends:
+- current round
+- accepted round
+- log length
+- decided index $l_d$, where the decided sequence is $prefix(v_a,l_d)$
+The followers send the log entries which the leader is missing and the leader appends those to the log. `AcceptSync` is used to synchronise the new log.
+![](https://i.imgur.com/KZp1A8L.png)
+### Partial Connectivity (enabling quorum connectedness)
+Chained scenario:
+![](https://i.imgur.com/543TQYs.png)
+When one server loses connectivity to the leader, it will try to elect itself as a leader. Livelock situation as servers compete to become the leader.
+Quorum Loss:
+![](https://i.imgur.com/2Ndk23L.png)
+When the leader loses quorum connectivity, deadlock situation as a majority cannot be obtained to make progress. B, D, E cannot elect a leader without a quorum. A is quorum connected but cannot elect a new leader since it is still connected to the alive leader C.
+Constrained Election:
+![](https://i.imgur.com/XHNIYM4.png)
+Leader is fully disconnected. A can become the new leader but will not be elected as it does not have the most updated log (log length).
+![](https://i.imgur.com/9H1UwI5.png)
+
+![](https://i.imgur.com/HVSEhzS.png)

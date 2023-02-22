@@ -20,6 +20,9 @@ The isolated islands of network interfaces formed when disconnected from the rou
 ![500](https://i.imgur.com/Ka0I6dZ.png)
 - Example: the subnet address 223.1.2.0/24 indicates a 24 bit subnet mask which says that the leftmost 24 bits define the subnet address.
 ![](https://i.imgur.com/RASHKku.png)
+> [!Note]
+> 1 IP address is reserved for the network and 1 is reserved for the broadcast address
+> A /24 netmask will only have $2^8-2=254$ available host addresses
 ## Obtaining an IP address
 An organisation can request for a block of IP addresses from an ISP. An ISP can split up its own allocated block in this way:
 ![](https://i.imgur.com/ggSAoym.png)
