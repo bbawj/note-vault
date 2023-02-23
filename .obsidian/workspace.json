@@ -25,19 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2421 Machine Learning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "48f3ab2eabdb8e47",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md",
+                "file": "Notes/Consensus.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -140,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md",
+                "file": "Notes/Consensus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md",
+                "file": "Notes/Consensus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md"
+                "file": "Notes/Consensus.md"
               }
             }
           },
@@ -205,7 +193,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md",
+                "file": "Notes/Consensus.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -261,17 +249,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "48f3ab2eabdb8e47",
+  "active": "1611f815257094c2",
   "lastOpenFiles": [
     "2421 Machine Learning.md",
-    "Notes/HTTP.md",
     "Notes/Consensus.md",
+    "Notes/Support Vector Machines.md",
+    "Notes/Maximum Likelihood Estimation.md",
+    "Notes/HTTP.md",
     "Notes/Failure Detectors.md",
     "Notes/Internet Protocol.md",
     "Notes/Distributed Shared Memory.md",
     "2203 Distributed Systems.md",
-    "Notes/Transmission Control Protocol.md",
-    "008 Networking.md",
-    "References/@kuroseComputerNetworkingTopdown2017.md"
+    "Notes/Transmission Control Protocol.md"
   ]
 }

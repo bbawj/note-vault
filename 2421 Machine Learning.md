@@ -9,6 +9,7 @@ lastmod: 2023-01-19
 - [[Decision Trees]]
 - [[Regression]]
 - [[Maximum Likelihood Estimation]]
+- [[Support Vector Machines]]
 
 ## Training and validation
 Training a machine learning model involves the use of data. However, we need to test the effectiveness of the model, this is called validation. Hence we need to split the data into training and testing sets.
