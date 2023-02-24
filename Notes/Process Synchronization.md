@@ -1,7 +1,7 @@
 ---
 title: "Process Synchronization"
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-02-23
 ---
 # Process Synchronization
 [Race Condition](Notes/Race%20Condition.md)
@@ -11,7 +11,6 @@ One method to solve the race condition is to divide processes into critical sect
 Problem: design protocol to ensure that no 2 processes are executing their critical section at the same time.
 
 We need to satisfy 3 properties:
-
 1. **Mutual exclusion**: if process is executing in critical section, no other process can be executing in its critical section at the same time.
    *Why is mutual exclusion not enough? 
    - It can be achieved naively by preventing any process from entering critical section
@@ -73,6 +72,20 @@ Atomicity is not possible for this solution on a single-core. If a process P0 mu
 ![](https://i.imgur.com/Mc1Ihj1.png)
 Atomicity needed for these system calls:
 ![](https://i.imgur.com/YRNgQVD.png)
+## Common Patterns
+### Signalling
+One thread sends a signal to another thread to indicate something has happened
+![](https://i.imgur.com/7fHTzV1.png)
+- Ensure a1 before b2
+- Ensure b1 before a2
+```
+aArrived = Semaphore(0)
+bArrived = Semaphore(0)
+```
+| Thread A            | Thread B |
+| ------------------- | -------- |
+| `aArrived.signal()` | `bArrived.signal()`          |
+| `bArrived.wait()`   |`aArrived.wait()`          |
 ## Classical Problems of Synchronization
 ### Bounded Buffer
 ![](https://i.imgur.com/Y7Jf4tR.png)
@@ -132,7 +145,7 @@ wait(wrt);
 signal(wrt);
 ```
 #### Second Readers-Writers Problem
-It is possible that a reader _R1_ might have the lock, a writer _W_ be waiting for the lock, and then a reader _R2_ requests access. It would be unfair for _R2_ to jump in immediately, ahead of _W_; if that happened often enough, _W_ would [starve](https://en.wikipedia.org/wiki/Resource_starvation "Resource starvation"). Instead, _W_ should start as soon as possible. This is the motivation for the **second readers–writers problem**, in which the constraint is added that _no writer, once added to the queue, shall be kept waiting longer than absolutely necessary_. This is also called **writers-preference**.
+It is possible that a reader *R1* might have the lock, a writer *W* be waiting for the lock, and then a reader *R2* requests access. It would be unfair for *R2* to jump in immediately, ahead of *W*; if that happened often enough, *W* would [starve](https://en.wikipedia.org/wiki/Resource_starvation "Resource starvation"). Instead, *W* should start as soon as possible. This is the motivation for the **second readers–writers problem**, in which the constraint is added that *no writer, once added to the queue, shall be kept waiting longer than absolutely necessary*. This is also called **writers-preference**.
 ```c
 int readcount, writecount;                   //(initial value = 0)
 semaphore rmutex, wmutex, readTry, resource; //(initial value = 1)

@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2203 Distributed Systems.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1611f815257094c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Process Synchronization.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -97,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "quoru",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -128,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Process Synchronization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Process Synchronization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Consensus.md"
+                "file": "Notes/Process Synchronization.md"
               }
             }
           },
@@ -193,7 +180,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Process Synchronization.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -249,17 +236,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1611f815257094c2",
+  "active": "ab0370d330a9bdbd",
   "lastOpenFiles": [
-    "2421 Machine Learning.md",
+    "2203 Distributed Systems.md",
     "Notes/Consensus.md",
+    "Notes/Process Synchronization.md",
+    "2005 Operating Systems.md",
+    "Notes/Deadlocks.md",
+    "2421 Machine Learning.md",
     "Notes/Support Vector Machines.md",
     "Notes/Maximum Likelihood Estimation.md",
     "Notes/HTTP.md",
-    "Notes/Failure Detectors.md",
-    "Notes/Internet Protocol.md",
-    "Notes/Distributed Shared Memory.md",
-    "2203 Distributed Systems.md",
-    "Notes/Transmission Control Protocol.md"
+    "Notes/Failure Detectors.md"
   ]
 }
