@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Process Synchronization.md",
+                "file": "Notes/Building Blocks of the Internet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7053ff3460f1f72c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Link Layer.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -84,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "forwarding",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -115,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Process Synchronization.md",
+                "file": "Notes/Link Layer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Process Synchronization.md",
+                "file": "Notes/Link Layer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Process Synchronization.md"
+                "file": "Notes/Link Layer.md"
               }
             }
           },
@@ -180,7 +193,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Process Synchronization.md",
+                "file": "Notes/Link Layer.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -236,17 +249,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab0370d330a9bdbd",
+  "active": "7053ff3460f1f72c",
   "lastOpenFiles": [
+    "Notes/Building Blocks of the Internet.md",
+    "Notes/Link Layer.md",
+    "008 Networking.md",
+    "Notes/Process Synchronization.md",
     "2203 Distributed Systems.md",
     "Notes/Consensus.md",
-    "Notes/Process Synchronization.md",
     "2005 Operating Systems.md",
     "Notes/Deadlocks.md",
     "2421 Machine Learning.md",
-    "Notes/Support Vector Machines.md",
-    "Notes/Maximum Likelihood Estimation.md",
-    "Notes/HTTP.md",
-    "Notes/Failure Detectors.md"
+    "Notes/Support Vector Machines.md"
   ]
 }

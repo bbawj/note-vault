@@ -23,6 +23,7 @@ lastmod: 2023-01-18
 - [[Wireless Networks]]
 - [Network Address Translation](Notes/Network%20Address%20Translation.md)
 - [[Browser Networking]]
+[[Link Layer]]
 ## References
 - [High Performance Browser Networking](https://hpbn.co/)
 - [@kuroseComputerNetworkingTopdown2017](References/@kuroseComputerNetworkingTopdown2017.md)
