@@ -39,7 +39,7 @@ Proposers query acceptors so that if a value is accepted, every higher proposal 
 	- Acceptor also responds with the value corresponding to the highest ballot number proposal
 2. Proposer $accept(n,v)$:
 	- Pick the value from the maximum proposal number returned. If none of the processes return a value, proposer can pick freely.
- 3. Acceptor $accept(n,v)$ if not accepted any $prepare(m)$ such that $m>n$; else $reject$
+3. Acceptor $accept(n,v)$ if not accepted any $prepare(m)$ such that $m>n$; else $reject$
 4. Proposer $decide(v)$ if majority acks; else $abort$ 
 ![](Pics/Pasted%20image%2020230216162304.png)
 
