@@ -25,19 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "008 Networking.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "00dfaf87bae21074",
+            "id": "3c5fd2f770d5bdc8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Failure Detectors.md",
+                "file": "Notes/Maximum Likelihood Estimation.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -128,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Maximum Likelihood Estimation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Maximum Likelihood Estimation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Consensus.md"
+                "file": "Notes/Maximum Likelihood Estimation.md"
               }
             }
           },
@@ -193,7 +193,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Maximum Likelihood Estimation.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -249,17 +249,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7053ff3460f1f72c",
+  "active": "3c5fd2f770d5bdc8",
   "lastOpenFiles": [
+    "Notes/Wireless Networks.md",
     "Notes/Link Layer.md",
+    "Notes/Binary Exponential Backoff.md",
     "Notes/Building Blocks of the Internet.md",
     "008 Networking.md",
+    "Notes/Consensus.md",
     "Notes/Process Synchronization.md",
     "2203 Distributed Systems.md",
-    "Notes/Consensus.md",
     "2005 Operating Systems.md",
-    "Notes/Deadlocks.md",
-    "2421 Machine Learning.md",
-    "Notes/Support Vector Machines.md"
+    "Notes/Deadlocks.md"
   ]
 }

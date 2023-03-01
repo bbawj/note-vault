@@ -20,10 +20,10 @@ lastmod: 2023-01-18
 - [User Datagram Protocol](Notes/User%20Datagram%20Protocol.md)
 ## [[Network Layer]]
 - [Internet Protocol](Notes/Internet%20Protocol.md)
-- [[Wireless Networks]]
 - [Network Address Translation](Notes/Network%20Address%20Translation.md)
 - [[Browser Networking]]
 [[Link Layer]]
+- [[Wireless Networks]]
 ## References
 - [High Performance Browser Networking](https://hpbn.co/)
 - [@kuroseComputerNetworkingTopdown2017](References/@kuroseComputerNetworkingTopdown2017.md)

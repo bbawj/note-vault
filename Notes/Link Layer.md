@@ -21,7 +21,7 @@ Problem: what if only 1 node wants to transmit something? For a link bandwidth R
 - **Code division multiple access** (CDMA): assign each node a unique code used to encode the data. Each node can transmit simultaneously and the receiver can use the code to determine the sender. 
 ### Random Access Protocols
 Each node transmit at full rate, when a collision occurs, independently choose a random delay before retransmission. Probable for the node to *sneak* in its packet.
-#### Carrier Sense Multiple Access
+#### Carrier Sense Multiple Access Collision Detection (CSMA/CD)
 Rather than independently making a decision:
 - Carrier sensing (listen before speaking): node listens to the channel before transmitting and waits until it is quiet before transmission
 - Collision detection (stop talking if someone else begins talking): node listens to the channel while transmitting and stops if there is interference.
