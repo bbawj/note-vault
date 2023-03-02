@@ -37,7 +37,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md",
+                "file": "2421 Machine Learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "084268e7ba8c64c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Ensemble Learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3d5ffa374697aa6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Clustering.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -97,7 +121,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "forwarding",
+                "query": "nearest",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,8 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5,
-    "collapsed": true
+    "width": 214.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -128,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md",
+                "file": "Notes/Ensemble Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md",
+                "file": "Notes/Ensemble Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md"
+                "file": "Notes/Ensemble Learning.md"
               }
             }
           },
@@ -193,7 +216,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Maximum Likelihood Estimation.md",
+                "file": "Notes/Ensemble Learning.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -234,8 +257,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -249,8 +271,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3c5fd2f770d5bdc8",
+  "active": "084268e7ba8c64c2",
   "lastOpenFiles": [
+    "2421 Machine Learning.md",
+    "Notes/Ensemble Learning.md",
+    "Notes/Clustering.md",
+    "Notes/Statistical Inference.md",
+    "Notes/Statistics.md",
+    "Notes/Regression.md",
     "Notes/Wireless Networks.md",
     "Notes/Link Layer.md",
     "Notes/Binary Exponential Backoff.md",
@@ -258,8 +286,6 @@
     "008 Networking.md",
     "Notes/Consensus.md",
     "Notes/Process Synchronization.md",
-    "2203 Distributed Systems.md",
-    "2005 Operating Systems.md",
-    "Notes/Deadlocks.md"
+    "2203 Distributed Systems.md"
   ]
 }

@@ -2,14 +2,16 @@
 title: "2421 Machine Learning"
 date: 2023-01-19
 tags: [moc]
-lastmod: 2023-01-19
+lastmod: 2023-03-02
 ---
 # 2421 Machine Learning
 #moc 
 - [[Decision Trees]]
 - [[Regression]]
-- [[Maximum Likelihood Estimation]]
+- [[Notes/Statistical Inference]]
 - [[Support Vector Machines]]
+- [[Clustering]]
+- [[Ensemble Learning]]
 
 ## Training and validation
 Training a machine learning model involves the use of data. However, we need to test the effectiveness of the model, this is called validation. Hence we need to split the data into training and testing sets.
@@ -32,3 +34,5 @@ How do we know how much % to split between test and train-set data? Cross valida
 Among a large number of variables the model there are generally many that have little (or no) effect on Y  
 - Leaving these variables in the model makes it harder to see the big picture, i.e. the effect of the “important variables”  
 - Would be easier to interpret the model by removing unimportant variables (setting the coefficients to zero)
+### Occam's Razor
+A principle about choosing the simplest explanation for the observed data, which can involve the number of model parameters, data points and fit to data.
