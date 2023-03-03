@@ -35,7 +35,7 @@ What is the "least cost"?:
 ### Link-State Algorithm
 Each node is able to have the identical and complete view of the network by broadcasting link-state packets to all other nodes in the network. With this, [Dijkstra's Algorithm](Notes/Dijkstra's%20Algorithm.md) can be used to find the least cost paths.
 ### Distance Vector Algorithm
-Let $d_x(y)$ be the cost of the least-cost path from node x to node y. Then the least costs are related by the Bellman-Ford equation, namely, $dx(y) = min_v \{c(x, v) + dv( y)\}$, which takes the minimum across all neighbours v to x, of the sum of x to v and v to y.
+Let $d_x(y)$ be the cost of the least-cost path from node x to node y. Then the least costs are related by the Bellman-Ford equation, namely, $dx(y) = min_v \{c(x, v) + dv( y)\}$, which takes the minimum across all neighbours v of x, of the sum of x to v and v to y.
 [[Bellman-Ford Algorithm]]
 ![](https://i.imgur.com/wAdh2pW.png)
 Each node x begins with $D_x(y)$, an estimate of the cost of the least-cost path from itself to node y, for all nodes, y, in N. Let Dx = [Dx(y): y in N] be node x’s distance vector, which is the vector of cost estimates from x to all other nodes, y, in N. Each node x maintains the following routing information:
@@ -62,9 +62,6 @@ If z routes through y to get to destination x, then z will advertise to y that i
 
 *Loops involving 3 or more nodes will not be detected by this technique*
 ![](https://i.imgur.com/R9WakJH.png)
-#### Routing Information Protocol (RIP)
-RIP uses the distance vector algorithm with its metric being the number of hop counts. 
-![](https://i.imgur.com/cdaoCkz.png)
 ## Intra-AS: Open Shortest Path First (OPSF)
 ### Autonomous Systems
 In above routing algorithms, the model of the network of routers was too simplistic
@@ -73,6 +70,9 @@ In above routing algorithms, the model of the network of routers was too simplis
 This can be solved by organizing routers into autonomous systems (ASs), with each AS consisting of a group of routers that are under the same administrative control.
 ![](https://i.imgur.com/lc7ldXT.png)
 Each AS needs to be unique, and is identified by its AS number, which is assigned by ICANN regional registries
+### Routing Information Protocol (RIP)
+RIP uses the distance vector algorithm with its metric being the number of hop counts. 
+![](https://i.imgur.com/cdaoCkz.png)
 ### OSPF
 ![](https://i.imgur.com/ZwT5nz4.png)
 OSPF uses IP directly, without UDP or TCP, meaning it has to implement functionality such as reliable message transfer.
@@ -85,3 +85,5 @@ Each router
 To route a packet across multiple ASs, we need an inter-autonomous system routing protocol. Since an inter-AS routing protocol involves coordination among multiple ASs, communicating ASs must run the same inter-AS routing protocol. In the Internet, all ASs run the same inter-AS routing protocol, the BGP.
 ![](https://i.imgur.com/HInOBzf.png)
 Each router sends messages over these connections. For example, when a new subnet x appears in AS3, the gateway router in AS3 sends a message to AS2 "AS3 x". AS2 then uses iBGP to advertise the existence of x amongst internal AS2 routers before sending a message over eBGP "AS2 AS3 x" to AS1.
+- Uses TCP
+- Uses augmented distance-vector algorithm called path-vector.

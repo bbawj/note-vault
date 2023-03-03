@@ -34,6 +34,10 @@ Once an organisation has obtained a block of addresses, it can assign individual
 2. Offer: server broadcasts a message (on 255.255.255.255) containing transaction ID of the received message, proposed IP address and IP address lease time
 3. Request: client chooses from 1 or more offers and responds
 4. ACK: server responds to the request message
+DHCP can also provide:
+- address of first-hop router for client  
+- name and IP address of local DNS server  
+- network mask (indicating network versus host portion of address)
 ## IPv6
 The IPv4 32 bit address space was beginning to be used up. In February 2011, IANA allocated out the last remaining pool of unassigned IPv4 addresses.
 ### Datagram

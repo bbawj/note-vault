@@ -38,7 +38,7 @@ The link layer requires its own addresses (MAC address) in order to forward data
 When a host wants to send a datagram to another over IP, it must give the IP datagram and the destination MAC address. ARP is used to determine the MAC address given an IP address **on the same LAN or subnet**.
 ![](https://i.imgur.com/Dt0njq9.png)
 What if there is no entry in the ARP table for a desired destination?
-1. Sender construct ARP packet and indicate to use the MAC broadcast address `FF-FF-FF-FF-FF-FF` before passing to the adapter
+1. Sender construct ARP packet and indicate to use the MAC broadcast address `FF-FF-FF-FF-FF-FF` before passing to the adapter (consequently, this also reaches any other connected switches, populating their address tables)
 2. Adapter encapsulates the packet into the link layer frame and transmits
 3. Each adapter on the subnet passes the frame to its own ARP module which checks if the destination IP is its own. If it is, sends the packet back with the desired mapping
 #### Sending across different subnets

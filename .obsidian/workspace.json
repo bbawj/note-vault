@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ab0370d330a9bdbd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Building Blocks of the Internet.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7053ff3460f1f72c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "008 Networking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3c5fd2f770d5bdc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2421 Machine Learning.md",
+                "file": "Notes/Wireless Networks.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,26 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Ensemble Learning.md",
+                "file": "Notes/Statistical Inference.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "3d5ffa374697aa6f",
+            "id": "16a26dfab97056c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Clustering.md",
+                "file": "Notes/Internet Protocol.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e8cc2ce0d18dca8d",
+            "id": "07dc23f5b96fbea2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -92,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -121,7 +97,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nearest",
+                "query": "NAT",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -151,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Ensemble Learning.md",
+                "file": "Notes/Statistical Inference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Ensemble Learning.md",
+                "file": "Notes/Statistical Inference.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Ensemble Learning.md"
+                "file": "Notes/Statistical Inference.md"
               }
             }
           },
@@ -216,7 +192,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Ensemble Learning.md",
+                "file": "Notes/Statistical Inference.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -273,17 +249,21 @@
   },
   "active": "084268e7ba8c64c2",
   "lastOpenFiles": [
+    "Notes/Link Layer.md",
+    "Notes/Network Address Translation.md",
+    "Notes/Wireless Networks.md",
+    "Notes/Internet Protocol.md",
+    "Notes/Transport Layer.md",
+    "Notes/Network Layer.md",
+    "008 Networking.md",
     "2421 Machine Learning.md",
     "Notes/Ensemble Learning.md",
     "Notes/Clustering.md",
     "Notes/Statistical Inference.md",
     "Notes/Statistics.md",
     "Notes/Regression.md",
-    "Notes/Wireless Networks.md",
-    "Notes/Link Layer.md",
     "Notes/Binary Exponential Backoff.md",
     "Notes/Building Blocks of the Internet.md",
-    "008 Networking.md",
     "Notes/Consensus.md",
     "Notes/Process Synchronization.md",
     "2203 Distributed Systems.md"
