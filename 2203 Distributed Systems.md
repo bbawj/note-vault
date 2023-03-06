@@ -10,8 +10,7 @@ date: 2023-01-21
 - [[Distributed Shared Memory]]
 - [[Consensus]]
 ## What are distributed systems
-A set of nodes, connected by a network, which appear to  
-its users as a single coherent system.
+A set of nodes, connected by a network, which appear to its users as a single coherent system.
 ![](https://i.imgur.com/9tNONlM.png)
 ## Core problems
 ### Agreement
