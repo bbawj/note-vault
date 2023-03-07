@@ -1,6 +1,7 @@
 ---
 title: "Distributed Abstractions"
 date: 2023-01-31
+lastmod: 2023-03-07
 ---
 # Distributed Abstractions
 The basic building blocks of any distributed system is a set of distributed algorithms. which are implemented as a middleware between network (OS) and the application.  
@@ -48,18 +49,18 @@ Process omits sending or receiving messages
 - Send omission: not sending messages according to algorithm
 - Receive omission: not receiving messages that have been sent to the process
 #### Crash recovery
-Process might crash and
+An incorrect process will crash and
 - never recover, or
 - recovers an infinite number of times
  
 May recover after crashing with a special recovery event automatically generated
-- Crash recovery == omission: *By crashing, recovering and reading the last state from storage, crash recovery is equivalent to omitting the send/receive during the crash duration.*
-Access to stable storage to read and write to permanent device which survives the crash
-- Omission $\subset$ Crash recovery: volatile memory extends omission with amnesia by not being able to restore all the state.
 #### Byzantine
 Process behaves arbitrarily such as sending messages not in its algorithm, or behave maliciously attacking the system.
 ![500](https://i.imgur.com/YPA4gvB.png)
 Model B is a special case of model A if a process that works correctly under A, also works correctly under B.
+- Crash is a special case of omission where all messages are omitted.
+- Omission is a special case of crash-recovery, as it recovers but does not restore state
+- Omission == Crash-recovery: where access to volatile memory means some messages after a crash are omitted as it cannot be restored
 #### Quorums
 A quorum is any set of majority processes (i.e. $\lfloor N/2\rfloor+1$)
 - Two quorums always intersect in at least 1 process

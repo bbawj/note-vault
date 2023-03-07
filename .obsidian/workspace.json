@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7053ff3460f1f72c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Wireless Networks.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "084268e7ba8c64c2",
             "type": "leaf",
             "state": {
@@ -32,43 +20,32 @@
             }
           },
           {
-            "id": "16a26dfab97056c3",
+            "id": "ab4cb20459f657e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Internet Protocol.md",
+                "file": "Notes/Distributed Abstractions.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "07dc23f5b96fbea2",
+            "id": "07a60dc3fbe93477",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Transport Layer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9443813c43c8fea9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Network Address Translation.md",
+                "file": "Notes/Failure Detectors.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2,
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -97,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "NAT",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 214.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -127,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2203 Distributed Systems.md",
+                "file": "Notes/Failure Detectors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2203 Distributed Systems.md",
+                "file": "Notes/Failure Detectors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2203 Distributed Systems.md"
+                "file": "Notes/Failure Detectors.md"
               }
             }
           },
@@ -192,7 +170,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "2203 Distributed Systems.md",
+                "file": "Notes/Failure Detectors.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -247,8 +225,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "084268e7ba8c64c2",
+  "active": "07a60dc3fbe93477",
   "lastOpenFiles": [
+    "Notes/Distributed Abstractions.md",
+    "2203 Distributed Systems.md",
+    "Notes/Consensus.md",
     "4031 Database Systems.md",
     "Notes/Statistical Inference.md",
     "Notes/Link Layer.md",
@@ -265,8 +246,6 @@
     "Notes/Regression.md",
     "Notes/Binary Exponential Backoff.md",
     "Notes/Building Blocks of the Internet.md",
-    "Notes/Consensus.md",
-    "Notes/Process Synchronization.md",
-    "2203 Distributed Systems.md"
+    "Notes/Process Synchronization.md"
   ]
 }
