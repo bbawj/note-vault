@@ -69,6 +69,10 @@ Allows executions whose results appear as if the operations of each processes we
 
 ![](https://i.imgur.com/UiMocib.png)
 ![](https://i.imgur.com/EJCOw3g.png)
+### Liveness requirements
+- Wait-free: no deadlocks, no livelocks, no starvation
+- Lock-free: no deadlock, no livelocks, maybe starvation
+- Obstruction-free: no deadlock, maybe livelocks and starvation
 ## Register Linearizability/Atomicity
 Allows executions whose results appear as if the operations of each processes were executed in some sequential order according to "global time" (cannot reorder):
 ![](https://i.imgur.com/Q6ny756.png)

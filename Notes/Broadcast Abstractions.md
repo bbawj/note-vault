@@ -1,6 +1,7 @@
 ---
 title: "Broadcast Abstractions"
 date: 2023-02-02
+lastmod: 2023-03-07
 ---
 # Broadcast Abstractions
 ## Unreliable Broadcast
@@ -58,6 +59,11 @@ Correctness assumption: a majority of processes are always correct. Resilience i
 - Causality between broadcast events is preserved by the corresponding delivery events  
 - If broadcast(m1) happens-before broadcast(m2), any delivery(m2) cannot happen-before a delivery(m1)  
 ![](https://i.imgur.com/vJe21OC.png)
+### Examples
+![](https://i.imgur.com/nmOs8xl.png)
+- 3 caused the broadcast of 2, causal order is preserved for {3,2,1} or {3,1,2}
+![](Pics/Broadcast%20Abstractions%202023-03-07%2021.54.54.excalidraw.svg)
+%%[🖋 Edit in Excalidraw](Pics/Broadcast%20Abstractions%202023-03-07%2021.54.54.excalidraw.md), and the [dark exported image](Pics/Broadcast%20Abstractions%202023-03-07%2021.54.54.excalidraw.dark.svg)%%
 ### Reliable (Fail Silent)
 Each broadcasted messages carries a history which can be used to ensure causality before delivery. The history is an ordered list of casually preceding messages in the past.
 ![](https://i.imgur.com/exeReIx.png)

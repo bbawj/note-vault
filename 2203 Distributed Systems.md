@@ -9,6 +9,7 @@ date: 2023-01-21
 - [[Broadcast Abstractions]]
 - [[Distributed Shared Memory]]
 - [[Consensus]]
+- [[Time Abstractions]]
 ## What are distributed systems
 A set of nodes, connected by a network, which appear to its users as a single coherent system.
 ![](https://i.imgur.com/9tNONlM.png)
