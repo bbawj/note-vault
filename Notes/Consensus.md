@@ -13,6 +13,9 @@ Processes propose values and they all have to agree on one of these values.
 - Single Value Uniform Consensus
 	- **Uniform** Agreement: no *2 processes* decide different values
 **Consensus is not solvable in the asynchronous system model if any node is allowed to fail**
+- Unable to detect failure
+- Cannot wait for the correct majority of processes
+- Termination not satisfied: cannot decide
 ## Paxos Algorithm
 An [Eventual Leader Election](Notes/Failure%20Detectors.md#Eventual%20Leader%20Election) (weakest leader elector we can use) can be used to eventually elect 1 single proposer *(providing termination)*.
 ![](Pics/Pasted%20image%2020230216162304.png)
@@ -35,15 +38,19 @@ Since proposers can propose again, we need a way to differentiate between them.
 - Use a ballot number: sequence number in the form $i, n+i, 2n+i$ for a process $i$ and $n$ processes
 Problem 3: restarts lead to different majority accepted values across time, learners cannot make a single decision 
 ![](Pics/Pasted%20image%2020230216150901.png)
-#### Version 4
+#### Version 4 (Prepare and Accept)
+We need a way to ensure that every higher number proposal results in the same chosen value
+- Satisfied by ensuring acceptors only accept this value
+- Satisfied by ensuring proposers only propose this value
+- Proposers need to learn this value from the highest sequence number of those accepted. Proposers need to ensure that this "highest value" does not change.
 Proposers query acceptors so that if a value is accepted, every higher proposal issued has the same value previously accepted
 1. Proposer $prepare(n)$:
 	- Gets a promise from acceptors not to accept a proposal with lower ballot number n
 	- Acceptor also responds with the value corresponding to the highest ballot number proposal
 2. Proposer $accept(n,v)$:
 	- Pick the value from the maximum proposal number returned. If none of the processes return a value, proposer can pick freely.
-3. Acceptor $accept(n,v)$ if not accepted any $prepare(m)$ such that $m>n$; else $reject$
-4. Proposer $decide(v)$ if majority acks; else $abort$ 
+	- Acceptor $accept(n,v)$ if not accepted any $prepare(m)$ such that $m>n$; else $reject$
+1. Proposer $decide(v)$ if majority acks; else $abort$ 
 ![](Pics/Pasted%20image%2020230216162327.png)
 #### Optimisations
 - Reject `prepare(n)` if accepted `prepare(m); m > n`: Reject a lower prepare
@@ -73,12 +80,21 @@ Problem: in the prepare phase, processes send a lot of redundant state as the fu
 ### Log Synchronisation
 Modify the prepare phase and shared states such that we can work on a single synchronised log $v_a$. *To do this, let 1 process act as the sole leader (proposer) until it is aborted by an election of higher ballot number*
 ![](https://i.imgur.com/XYiZEZQ.png)
-The leader sends:
-- current round
-- accepted round
-- log length
+#### Prepare Phase
+The leader sends `Prepare`:
+- current round: $n$
+- accepted round: $n_a$
+- log length: $|v_a|$
 - decided index $l_d$, where the decided sequence is $prefix(v_a,l_d)$
-The followers send the log entries which the leader is missing and the leader appends those to the log. `AcceptSync` is used to synchronise the new log.
+The followers reply with `Promise`:
+- their accepted round
+- the log entries which the leader is missing and the leader appends those to the log. `AcceptSync` is used to synchronise the new log.
+*Promised followers and leader now have the same common log prefix*
+#### Accept Phase
+The leader sends `Accept` command with highest $n$ to all promised followers
+The followers reply with `Accepted`
+When majority accepted, `Decide` is sent.
+Any late `Promise` is replied with an `AcceptSync`
 ![](https://i.imgur.com/KZp1A8L.png)
 ### Partial Connectivity (enabling quorum connectedness)
 Chained scenario:

@@ -20,18 +20,6 @@
             }
           },
           {
-            "id": "461682b629eaa122",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Distributed Data Management.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ab4cb20459f657e6",
             "type": "leaf",
             "state": {
@@ -102,9 +90,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "461682b629eaa122",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Distributed Data Management.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 7,
+        "currentTab": 5,
         "stacked": true
       }
     ],
@@ -134,7 +134,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "snapshot",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -148,8 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5,
-    "collapsed": true
+    "width": 214.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -165,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Time Abstractions.md",
+                "file": "Notes/Consensus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +181,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Time Abstractions.md",
+                "file": "Notes/Consensus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Time Abstractions.md"
+                "file": "Notes/Consensus.md"
               }
             }
           },
@@ -218,7 +217,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "773c08e3cb822493",
@@ -230,7 +229,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Time Abstractions.md",
+                "file": "Notes/Consensus.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -261,7 +260,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7132754626224436,
+                  "scale": 0.3064788394464945,
                   "close": true
                 }
               }
@@ -285,17 +284,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0b0bb94883898933",
+  "active": "9a801a92cdfc9a12",
   "lastOpenFiles": [
+    "Notes/Broadcast Abstractions.md",
+    "Notes/Distributed Abstractions.md",
+    "Notes/Default Logic.md",
+    "Notes/Time Abstractions.md",
+    "Notes/Distributed Data Management.md",
     "Notes/Consensus.md",
     "Notes/Distributed Shared Memory.md",
-    "Notes/Broadcast Abstractions.md",
     "Notes/Failure Detectors.md",
-    "Notes/Distributed Abstractions.md",
     "2203 Distributed Systems.md",
-    "Notes/Distributed Data Management.md",
     "Notes/Concurrency Control.md",
-    "Notes/Time Abstractions.md",
     "4031 Database Systems.md",
     "Notes/Transaction Management.md",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.md",
@@ -313,7 +313,6 @@
     "Notes/Ensemble Learning.md",
     "Notes/Clustering.md",
     "Notes/Statistics.md",
-    "Notes/Regression.md",
-    "Notes/Binary Exponential Backoff.md"
+    "Notes/Regression.md"
   ]
 }
