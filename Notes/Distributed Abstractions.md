@@ -1,7 +1,7 @@
 ---
 title: "Distributed Abstractions"
 date: 2023-01-31
-lastmod: 2023-03-07
+lastmod: 2023-03-09
 ---
 # Distributed Abstractions
 The basic building blocks of any distributed system is a set of distributed algorithms. which are implemented as a middleware between network (OS) and the application.  
@@ -13,11 +13,13 @@ Types of events
 - Indications: outgoing from component
 ![](https://i.imgur.com/uhDwRCU.png)
 ## Specifications
+A distributed system specification includes the interface, correctness properties and model/assumptions.
 ### Interface
 This specifies the API, importantly, the requests and events of the service
 ![](https://i.imgur.com/dzfSvde.png)
 ### Correctness Properties
 ![](https://i.imgur.com/oVSfzzE.png)
+Any trace property can be expressed as a *conjunction* of safety and liveliness properties.
 #### Safety
 Properties that state that nothing bad ever happens. It can only be:
 - satisfied in infinite time (you cannot be sure you are safe)
@@ -43,13 +45,13 @@ Properties that state that something good eventually happens. It can only be:
 ### Failure assumptions
 Processes that do not fail in an execution are **correct**.
 #### Crash stop failure
-Process stops taking steps like sending and receiving messages.
+Process is not correct if it stops taking steps like sending and receiving messages.
 #### Omission failure
-Process omits sending or receiving messages
+Process is not correct if it omits sending or receiving messages
 - Send omission: not sending messages according to algorithm
 - Receive omission: not receiving messages that have been sent to the process
 #### Crash recovery
-An incorrect process will crash and
+Process is not correct if it crashes and
 - never recover, or
 - recovers an infinite number of times
  
@@ -70,10 +72,12 @@ A quorum is any set of majority processes (i.e. $\lfloor N/2\rfloor+1$)
 #### Fair loss links
 Channels delivers any message sent with non-zero probability (no network partitions)
 ![500](https://i.imgur.com/m28zEgQ.png)
+
 ![500](https://i.imgur.com/g3BpSDt.png)
 #### Stubborn links
 Channels delivers any message sent infinitely many times
 ![500](https://i.imgur.com/RbpQui1.png)
+
 ![500](https://i.imgur.com/JeNQufn.png)
 We can implement stubborn links using fair loss links
 - sender stores every message it sends in *sent*
@@ -87,14 +91,18 @@ Channels that deliver any message sent exactly once.
 ### Timing assumptions
 Processes: bounds on time to make a computation step  
 Network: Bounds on time to transmit a message between a sender and a receiver  
-Clocks: Lower and upper bounds on clock rate-drift and  clock skew w.r.t. real time
+Clocks: Lower and upper bounds on clock rate-drift and clock skew w.r.t. real time
 
 Asynchronous systems: no timing assumption on process and channels
 Partially synchronous systems: eventually every execution will exhibit synchrony
 Synchronous systems: build on solid timed operations and clocks
 #### Causality
+In the asynchronous model, we can only reason about the order of events by observing which events may cause other events.
 ![](https://i.imgur.com/zyGQcSe.png)
+
 ![](https://i.imgur.com/LHEtnUb.png)
+#### Computation Theorem and equivalence
+A permutation of the same collection events whilst preserving causal order are said to be equivalent.
 #### Logical Clocks
 A logical clock is an algorithm that assigns a timestamp to each event occurring in a  
 distributed system.
@@ -103,6 +111,7 @@ $$if  \ a\rightarrow b, t(a)<t(b)$$
 #### Lamport clocks:
 ![500](https://i.imgur.com/Nr21gJZ.png)
 ![500](https://i.imgur.com/GPVztK0.png)
+- Note that this does not mean that $t(a)<t(b) \implies a\rightarrow b$. Lesser timestamps does not necessarily mean they are causally related
 We need to distinguish the total order of events for same timestamps across different processes.
 ![500](https://i.imgur.com/td2qdsA.png)
 #### Vector clocks

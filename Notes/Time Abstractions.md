@@ -7,6 +7,7 @@ date: 2023-03-08
 Every clock has an error $\rho$. The error bounds for *1* unit of time is defined as: $$1-\rho\le \frac{dC}{dt}\le1+\rho$$
 ## Leader-leases
 A way to support faster reads by allowing direct reads from the leader's local state without any communication with the followers.
+
 Problem: a leader can be disjoint from the rest of the network, causing another leader to be elected that changes the state of the system
 ![](https://i.imgur.com/dZKOxV6.png)
 Leader leases ensure that there can only be 1 leader at a time and during this time reads from local state are allowed.

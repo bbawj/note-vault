@@ -10,6 +10,7 @@ date: 2023-01-21
 - [[Distributed Shared Memory]]
 - [[Consensus]]
 - [[Time Abstractions]]
+- [[Distributed Data Management]]
 ## What are distributed systems
 A set of nodes, connected by a network, which appear to its users as a single coherent system.
 ![](https://i.imgur.com/9tNONlM.png)
@@ -60,12 +61,16 @@ Atomic Broadcast
 - No bound on time to compute  
 - Clocks are not synchronized
 ### Synchronous system  
+*"My server always serves requests within 1 week"*
 - Known bound on time to deliver a message (latency)  
 - Known bound on time to compute  
 - Known lower and upper bounds in physical clock drift rate  
 Examples:  
 - Embedded systems (shared clock)  
 - Multicore computers
+### Partial Synchrony
+*"My server processes requests within one week when it is running, and it will eventually be running for at least a week, I just don't know when that will be."*
+- A system that is asynchronous but eventually exhibits some period of synchrony.
 ## Measuring Performance
 ### Message complexity
 The number of messages required to terminate an operation of an abstraction

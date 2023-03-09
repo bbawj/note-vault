@@ -21,7 +21,7 @@ Correctness
 - No creation & No duplication already guaranteed by perfect channels
 ![](https://i.imgur.com/qLc7YaJ.png)
 ## Reliable Broadcast
-BEB gives no guarantees if sender crashes. Reliable strengthens this by giving guarantees even if sender crashes.
+BEB gives no guarantees if sender crashes. Reliable strengthens this by giving guarantees even if sender crashes. Guarantee: either all correct processes deliver m or none of them.
 - RB1 = BEB1. Validity  
 - RB2 = BEB2. No duplication  
 - RB3 = BEB3. No creation  
@@ -30,6 +30,7 @@ BEB gives no guarantees if sender crashes. Reliable strengthens this by giving g
 ### Fail Stop (Lazy) Implementation
 ![](https://i.imgur.com/96xQG2C.png)
 - Perfect failure detector (P): use this to detect when process crash
+	- If P is replaced with [Eventually perfect failure detector](Notes/Failure%20Detectors.md#Eventually%20perfect%20failure%20detector): eventual strong accuracy means that some correct processes may be suspected as crashed. However, since we redistribute messages on crash, no property is violated.
 - BEB: use this to redistribute messages when detect a crash from a process
 Case 1: detect crash and redistribute
 Case 2: delivered message, detect crash and redistribute
@@ -48,7 +49,8 @@ Reliable broadcast creates a problem. If a failed process delivers a message tha
 - URB2 = RB2.  
 - URB3 = RB3.  
 - URB4. Uniform Agreement: For any message m, if a process delivers m, then every correct process delivers m
-### Fail Stop
+### Eager (Fail-stop)
+Intuition: deliver the message only when we know that every other correct process can deliver the message. If we do not wait for all correct processes (or we do not have the complete set of failed processes using a weaker FD), we might deliver m even though some correct processes did not receive the message, violating agreement.
 ![](https://i.imgur.com/TzK7KCV.png)
 ![](https://i.imgur.com/6A4OvxA.png)
 ![](https://i.imgur.com/omFKzDs.png)
@@ -56,8 +58,9 @@ Reliable broadcast creates a problem. If a failed process delivers a message tha
 Correctness assumption: a majority of processes are always correct. Resilience is N/2 machines can fail
 ![](https://i.imgur.com/SpK4Poo.png)
 ## Causal Broadcast
-- Causality between broadcast events is preserved by the corresponding delivery events  
-- If broadcast(m1) happens-before broadcast(m2), any delivery(m2) cannot happen-before a delivery(m1)  
+[Causality](Notes/Distributed%20Abstractions.md#Causality) between broadcast events is preserved by the corresponding delivery events  
+- If broadcast(m1) happens-before broadcast(m2), any delivery(m2) cannot happen-before a delivery(m1)
+- However, delivering m2 by itself still preserves causal order.
 ![](https://i.imgur.com/vJe21OC.png)
 ### Examples
 ![](https://i.imgur.com/nmOs8xl.png)

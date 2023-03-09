@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "0b0bb94883898933",
+            "id": "461682b629eaa122",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Time Abstractions.md",
+                "file": "Notes/Distributed Data Management.md",
                 "mode": "source",
                 "source": false
               }
@@ -44,12 +44,36 @@
             }
           },
           {
+            "id": "ecb2fbc70859a38b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Failure Detectors.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "07a60dc3fbe93477",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Notes/Distributed Shared Memory.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "68ecd9191f48889f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Broadcast Abstractions.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,9 +90,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0b0bb94883898933",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Time Abstractions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4,
+        "currentTab": 7,
         "stacked": true
       }
     ],
@@ -98,7 +134,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "snapshot",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -129,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Time Abstractions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Time Abstractions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +205,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Consensus.md"
+                "file": "Notes/Time Abstractions.md"
               }
             }
           },
@@ -194,7 +230,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Consensus.md",
+                "file": "Notes/Time Abstractions.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -249,19 +285,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fd1e09f2e0845606",
+  "active": "0b0bb94883898933",
   "lastOpenFiles": [
-    "Notes/Failure Detectors.md",
     "Notes/Consensus.md",
     "Notes/Distributed Shared Memory.md",
-    "Notes/Time Abstractions.md",
-    "2203 Distributed Systems.md",
     "Notes/Broadcast Abstractions.md",
+    "Notes/Failure Detectors.md",
+    "Notes/Distributed Abstractions.md",
+    "2203 Distributed Systems.md",
+    "Notes/Distributed Data Management.md",
+    "Notes/Concurrency Control.md",
+    "Notes/Time Abstractions.md",
+    "4031 Database Systems.md",
+    "Notes/Transaction Management.md",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.md",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg",
-    "Notes/Distributed Abstractions.md",
-    "4031 Database Systems.md",
     "Notes/Statistical Inference.md",
     "Notes/Link Layer.md",
     "Notes/Network Address Translation.md",
@@ -275,8 +314,6 @@
     "Notes/Clustering.md",
     "Notes/Statistics.md",
     "Notes/Regression.md",
-    "Notes/Binary Exponential Backoff.md",
-    "Notes/Building Blocks of the Internet.md",
-    "Notes/Process Synchronization.md"
+    "Notes/Binary Exponential Backoff.md"
   ]
 }

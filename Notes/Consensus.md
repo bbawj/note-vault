@@ -12,6 +12,7 @@ Processes propose values and they all have to agree on one of these values.
 	- Integrity: a process decides at most once
 - Single Value Uniform Consensus
 	- **Uniform** Agreement: no *2 processes* decide different values
+**Consensus is not solvable in the asynchronous system model if any node is allowed to fail**
 ## Paxos Algorithm
 An [Eventual Leader Election](Notes/Failure%20Detectors.md#Eventual%20Leader%20Election) (weakest leader elector we can use) can be used to eventually elect 1 single proposer *(providing termination)*.
 ![](Pics/Pasted%20image%2020230216162304.png)
@@ -51,6 +52,9 @@ Proposers query acceptors so that if a value is accepted, every higher proposal 
 - Ignore messages if majority obtained 
 ## Multi Paxos
 The motivation: replicated state machines need to agree on a sequence of commands to execute.
+
+Approach: organise the algorithm into rounds. In each round, each server starts a new instance of Paxos. They propose (2 RTT), accept (2 RTT) and decide on 1 command, add that to the log and restart.
+
 Initial states
 - $ProCmds = \emptyset$: stores the list of commands proposed
 - Log = <>: a log of decided commands
@@ -89,6 +93,11 @@ Leader is fully disconnected. A can become the new leader but will not be electe
 ![](https://i.imgur.com/9H1UwI5.png)
 
 ![](https://i.imgur.com/HVSEhzS.png)
+### Failure recovery
+1. Recover state from persistent storage
+2. Send a `PrepareReq` to all peers
+	- If elected as leader, synchronise through a `Prepare` phase
+	- `Prepare` phase from another leader will synchronise
 ### Reconfiguration
 Supporting a way to add/replace any process part of the replicated state machine.
 A configuration $c_i$ is defined by a set of process ids $\{p1, p2, p3\}$ and the new configuration can be any new set of processes e.g. $\{p1,p2,p4\}$

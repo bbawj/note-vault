@@ -46,11 +46,11 @@ Validity
 Uses [perfect failure detector P](Notes/Failure%20Detectors.md#Perfect%20failure%20detector):
 write(v)
 1. Update local value to v
-2. [Fail Stop Broadcast](Notes/Broadcast%20Abstractions.md#Fail%20Stop) v to all
+2. [Fail Stop Broadcast](Notes/Broadcast%20Abstractions.md#Fail%20Stop) v to all, and each node locally updates to v: 1 RTT needed
 3. Wait for ACK from all correct processes
-4. Return
+4. Return: this return means that all processes have updated locally to v, validity is ensured!
 read
-1. Return local value
+1. Return local value: 0 RTT needed
 ![500](https://i.imgur.com/ms7UOou.png)
 [Eventually perfect failure detector](Notes/Failure%20Detectors.md#Eventually%20perfect%20failure%20detector) will not work here as it might falsely suspect some processes as having crashed. During this time, since a write on another process only waits for ACKs from all correct processes, it could return early. A read on the falsely suspected process will incorrectly return the old value.
 ### Fail silent Majority voting
@@ -60,8 +60,9 @@ Majority idea is based of [quorums](Notes/Distributed%20Abstractions.md#Quorums)
 - Read and write operation reads from quorums, this means at least 1 process knows the most recent value ![500](https://i.imgur.com/LrUlCMD.png)
 
 ![](https://i.imgur.com/xhFW67T.png)
+- 1 RTT is needed
 ![](https://i.imgur.com/jdpFdgF.png)
-
+- 1 RTT is needed
 ![](https://i.imgur.com/7chktQ2.png)
 ## Sequential Consistency
 Allows executions whose results appear as if the operations of each processes were executed in some sequential order according to "local time" (we can reorder operations across processes but not locally):
@@ -87,9 +88,11 @@ Allows executions whose results appear as if the operations of each processes we
 ### Extending to N readers N writers (Read-impose Write-consult-majority)
 Problem: 
 ![](https://i.imgur.com/cjeoDqd.png)
-Before writing, read from majority to get the latest timestamp (query phase before update phase). 
+Before writing, read from majority to get the latest timestamp (query phase before update phase): 2 RTT needed
 ![](https://i.imgur.com/PySj7Kq.png)
 ## Eventual Consistency
+![](https://i.imgur.com/d7aRmkC.png)
+
 ![](https://i.imgur.com/9Tdj6IH.png)
 State updates can be issued at any replica/correct process. All updates are disseminated via BEB, RB,...  
 - Each correct process that receives all updates should deterministically converge to the same state.  
