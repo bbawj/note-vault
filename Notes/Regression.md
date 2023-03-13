@@ -26,8 +26,11 @@ which is the sum of the weights rather than the squared sum of weights. This all
 
 For models which include a lot of "useless" parameters, the ability to shrink them to 0 makes lasso regression better than ridge regression.
 ## k-NN Regression
-Rather than considering a linear equation of weights and parameters, consider the k closest points to a given value of X and take the average of the values.
+Rather than trying to find a best fit line (equation), we use the training data as sample points. For new data, consider the k closest points to a its given value of X and take the average of the values as the prediction
 $$f(x)=\frac1k\sum_{x_i\in N_i}y_i$$
+![500](https://i.imgur.com/FPskD0S.png)
+
+
 ![](https://i.imgur.com/ObXEPPj.png)
 - Non parametric approach may be better if its the true form of the data
 - Parametric methods are worse when there are smaller number of observations per predictor and are also less interpretable

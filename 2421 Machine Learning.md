@@ -12,6 +12,7 @@ lastmod: 2023-03-02
 - [[Support Vector Machines]]
 - [[Clustering]]
 - [[Ensemble Learning]]
+- [[Dimensionality Reduction]]
 
 ## Training and validation
 Training a machine learning model involves the use of data. However, we need to test the effectiveness of the model, this is called validation. Hence we need to split the data into training and testing sets.

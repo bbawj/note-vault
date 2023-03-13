@@ -16,7 +16,7 @@ By finding the *maximum* margin we can apply on the linear separator, we are fin
 By introducing more dimensionality into the data, the idea is that we can find some dimension in which a linear separation can be found.
 ![](https://i.imgur.com/4md60Gk.png)
 ## Kernels
-How do we decide how to transform the data into higher dimensions? This is done through *kernel functions*.
+How do we decide how to transform the data into higher dimensions? This is done through *kernel functions*. Kernels provide a possible way to increase the maximization of the margins we can find, but in exchange requires more computing resources.
 ![300](https://i.imgur.com/sE7bl3L.png)
 Rather than actually computing the data points transformed to higher dimensions, kernel functions only require the original data be used (observe the common kernels only involve dot products of the original data), saving lots of computation.
 ## Slack

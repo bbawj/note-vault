@@ -14,6 +14,7 @@ Simple Mail Transfer Protocol transfers messages from senders' mail servers to r
 - HELO and QUIT is performed once
 - MAIL FROM, RCPT TO, DATA, actual message is performed as many times as there are different messages.
 - Same message can have multiple RCPT TO
+- The "From, To etc." which you see in the email is from the DATA and does not have to match the RCPT TO. Hence, an email in your inbox can have the wrong "TO" field.
 - Each command takes 1 round trip of network delay: in the above a total of 6 round trips is needed.
 ## Difference with HTTP
 - SMTP is a push protocol (sending mail pushes the file to the server)
