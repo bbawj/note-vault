@@ -3,7 +3,7 @@ title: "Ensemble Learning"
 date: 2023-03-02
 ---
 # Ensemble Learning
-The idea behind ensemble learning is to combine independent and diverse classifiers with the hopes of obtaining better predictions.
+The idea behind ensemble learning is to combine independent and diverse classifiers (high variance low bias) with the hopes of obtaining better predictions i.e. *the variance of the overall model is reduced.*
 ## Bootstrap Aggregating (Bagging)
 Use replicates of the training set by sampling with replacement to train each model. Combine $B$ such models together, by running the test data on each replicate. The classification which received the most "votes" from the replicates is the decided value.
 ![500](https://i.imgur.com/vslHrD5.png)

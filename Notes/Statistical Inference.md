@@ -3,6 +3,9 @@ title: "Statistical Inference"
 date: 2023-02-22
 ---
 # Statistical Inference
+Inference is about predicting an answer given an observation.
+## Bayes Rule
+![](https://i.imgur.com/0Wm1wow.png)
 ## Maximum Likelihood Estimate
 The goal of MLE is to find the optimal way to fit a distribution to the data, i.e. the best distribution (parameters) to maximise the probability of observing our data.
 ![](https://i.imgur.com/GbzkGDj.png)
