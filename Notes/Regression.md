@@ -24,7 +24,16 @@ Similar to ridge regression, but the minimized term is now:
 $$RSS+\lambda\sum_{i=1}^d|w_i|$$
 which is the sum of the weights rather than the squared sum of weights. This allows some coefficients to be able to shrink to 0 rather than just being asymptotically close to 0 as $\lambda$ increases.
 
-For models which include a lot of "useless" parameters, the ability to shrink them to 0 makes lasso regression better than ridge regression.
+*Variable selection property*: for models which include a lot of "useless" parameters, the ability to shrink them to 0 makes lasso regression better than ridge regression.
+#### Link to bias vs variance trade off 
+$$\sum_{i=1}^d|w_i|\le s$$
+When s = 0, all weights are zero; the model is extremely simple, predicting a constant and has no variance with the prediction being far from actual value, thus with high bias. 
+
+As s increases, all wi increase from zero toward their least square estimate values:
+- Steadily decreasing the training error to the ordinary least square RSS
+- Bias decreases as the model continues to better fit training data.
+- Values of wi then become more dependent on training data, thus increasing the variance. 
+- The test error initially decreases as well, but eventually start increasing due to overfitting to the training data.
 ## k-NN Regression
 Rather than trying to find a best fit line (equation), we use the training data as sample points. For new data, consider the k closest points to a its given value of X and take the average of the values as the prediction
 $$f(x)=\frac1k\sum_{x_i\in N_i}y_i$$

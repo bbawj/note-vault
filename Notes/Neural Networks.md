@@ -9,7 +9,7 @@ A method to find separating hyperplanes, for classification:
 - Only limited to linear separable datasets
 - Guaranteed to converge
 - Initial weights do not affect convergence
-A single neuron is limited, we need a multi-layer perceptron network for more complex separation:
+A single neuron is limited, we need a multi-layer perceptron network for more than a linear separation:
 ![](https://i.imgur.com/LmHZ4bu.png)
 ## Error Backpropagation
 A way to iteratively update the weights based on the target output at the final node.

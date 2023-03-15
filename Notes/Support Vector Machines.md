@@ -25,9 +25,14 @@ How do we decide how to transform the data into higher dimensions? This is done 
 4. Classify the new data points via the indicator function. > 0 is positive class, < 0 is negative class
    ![](https://i.imgur.com/4BJ7HUx.png)
 Rather than actually computing the data points transformed to higher dimensions, kernel functions only require the original data be used (observe the common kernels only involve dot products of the original data), saving lots of computation.
+
+*What if it is already linearly separable? Are there any benefits for using the kernel?*
+Can find a wider margin of separation which would generalize better.
 ## Slack
 Although we can technically always find a separation, we might not want to do so as this could result in increased generalization. Allow some misclassifications or data to enter the margin to achieve slack.
 ![](https://i.imgur.com/hAKVxJ2.png)
-A support vector has $0<a_i<C$ and lies on the margins.
+- A support vector has $0<a_i<C$ and lies on the margins.
+- A point between the boundary and the margin has $a=C$
+- Points outside the margin have $a=0$ and are useless
 ## Advantages
 - Guaranteed to find the global minima, unlike the learning in [Neural Networks](Notes/Neural%20Networks.md).
