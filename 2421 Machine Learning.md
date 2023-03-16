@@ -27,7 +27,7 @@ Our intuition may tell:
 - Variance is also bad, but a model with high variance could at least predict well on average...  
 So the model should minimize bias even at the expense of variance?? Not really!  
 Bias and variance are equally important as we are always dealing with a single realization of the data set.
-### Bias and variance decomposition
+#### Bias and variance decomposition
 - True function: $f(x)$
 - Prediction function estimated with data D: $\hat{f_D}(x)$
 - Average of prediction models: $E_D[\hat{f_D}(x)]$

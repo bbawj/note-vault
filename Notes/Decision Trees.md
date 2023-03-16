@@ -1,6 +1,7 @@
 ---
 title: "Decision Trees"
 date: 2023-02-09
+lastmod: 2023-03-16
 ---
 # Decision Trees
 A decision tree is an analysis strategy by asking questions about the target sequentially
@@ -11,11 +12,8 @@ This type of logical expression is easiest for a decision tree to learn.
 2. Terminate when a unique class label is formed (no need for further questions)
 3. Grow by recursively extending other branches
 ### Entropy (measuring information gain)
-![500](https://i.imgur.com/C40tc15.png)
-
-![](https://i.imgur.com/DimXXkH.png)
-
-![](https://i.imgur.com/ysqTnYF.png)
+- [Entropy](Notes/Information%20Theory.md#Entropy)
+- [Gini Impurity](Notes/Information%20Theory.md#Gini%20Impurity)
 ### Choosing attributes
 ![](https://i.imgur.com/xjafN3v.png)
 

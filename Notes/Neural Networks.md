@@ -11,8 +11,13 @@ A method to find separating hyperplanes, for classification:
 - Initial weights do not affect convergence
 A single neuron is limited, we need a multi-layer perceptron network for more than a linear separation:
 ![](https://i.imgur.com/LmHZ4bu.png)
+
+![](https://i.imgur.com/prBgGTP.png)
 ## Error Backpropagation
 A way to iteratively update the weights based on the target output at the final node.
+1. Forward propagation: calculate output nodes
+2. Backward propagation: calculate the errors
+3. Update: update weights locally
 ![](https://i.imgur.com/YQyT7EU.png)
 - Prone to converge to local minima
 - Bad weights can affect convergence

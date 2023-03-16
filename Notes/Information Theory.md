@@ -18,7 +18,7 @@ Entropy&= E(Surprise)\\
 &=\sum-p(x)log(p(x))
 \end{aligned}
 $$
-
+![](https://i.imgur.com/DimXXkH.png)
 ### Information Gain
 Can be interpreted as the reduction in entropy (made things more certain/less surprising).
 ### Example
@@ -45,3 +45,5 @@ E(Entropy)= \frac{1}{2}(1)+\frac{1}{2}(0)=0.5\\
 Gain=0.811-0.5=0.311
 \end{align}
 $$
+## Gini Impurity
+![](https://i.imgur.com/ysqTnYF.png)
