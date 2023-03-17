@@ -10,5 +10,6 @@
   "obsidian-link-converter",
   "templater-obsidian",
   "obsidian-linter",
-  "obsidian-citation-plugin"
+  "obsidian-citation-plugin",
+  "obsidian-sample-plugin"
 ]
