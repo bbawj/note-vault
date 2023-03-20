@@ -1,6 +1,8 @@
 mod obsidian;
 mod embedding;
 
+use crate::embedding::EmbeddingRequestBuilderError;
+use crate::embedding::EmbeddingRequestBuilder;
 use std::error::Error;
 
 use csv::{FromUtf8Error, Writer, Reader, ReaderBuilder, StringRecord};
@@ -109,6 +111,10 @@ impl ExampleCommand {
                            record.get(2).unwrap().to_string()
                           ).collect();
         let embedding_input = EmbeddingInput::StringArray(string_records);
+        let mut embedding_request = EmbeddingRequestBuilder::default()
+            .model("text-embedding-ada-002".to_string())
+            .input(embedding_input)
+            .build()?;
         Ok(())
     }
 
@@ -246,6 +252,9 @@ impl From<reqwest::Error> for SemanticSearchError {
     }
 }
 
+impl From<EmbeddingRequestBuilderError> for SemanticSearchError {
+
+}
 
 impl std::error::Error for SemanticSearchError {
 }
