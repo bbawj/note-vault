@@ -103,23 +103,22 @@ impl ExampleCommand {
     }
 
     async fn create_embedding_request(&self) -> Result<EmbeddingRequest, SemanticSearchError> {
-        let input = self.vault.adapter().read(DATA_FILE_PATH.to_string()).await?;
-        let mut reader_builder = ReaderBuilder::new().trim(csv::Trim::All).flexible(false);
-        let mut reader = reader_builder.from_reader(input.as_string().unwrap().as_bytes());
+        let input = self.vault.adapter().read(DATA_FILE_PATH.to_string()).await?.as_string().expect("Input csv is not a string");
+        let mut reader = ReaderBuilder::new().trim(csv::Trim::All).flexible(false)
+            .from_reader(input.as_bytes());
         let records = reader.records().collect::<Result<Vec<StringRecord>, csv::Error>>()?;
         let string_records = records.iter().map(|record| 
                            record.get(2).unwrap().to_string()
                           ).collect();
         let embedding_input = EmbeddingInput::StringArray(string_records);
-        let mut embedding_request = EmbeddingRequestBuilder::default()
+        let embedding_request = EmbeddingRequestBuilder::default()
             .model("text-embedding-ada-002".to_string())
             .input(embedding_input)
             .build()?;
-        Ok(())
+        Ok(embedding_request)
     }
 
     async fn post_embedding_request<I: serde::ser::Serialize, O: serde::de::DeserializeOwned>(&self, request: I) -> Result<O, SemanticSearchError> {
-
         let path = "/embeddings";
 
         let request = reqwest::Client::new()
@@ -207,6 +206,7 @@ enum SemanticSearchError {
     ReqwestError(reqwest::Error),
     JSONDeserialize(serde_json::Error),
     ApiError(ApiError),
+    InvalidArgument(String),
 }
 
 impl std::fmt::Display for SemanticSearchError {
@@ -218,6 +218,7 @@ impl std::fmt::Display for SemanticSearchError {
             SemanticSearchError::ReqwestError(e) => write!(f, "reqwest error; {}", e),
             SemanticSearchError::JSONDeserialize(e) => write!(f, "JSONDeserialize error: {:?}", e),
             SemanticSearchError::ApiError(e) => write!(f, "API error: {}: {}", e.r#type, e.message),
+            SemanticSearchError::InvalidArgument(e) => write!(f, "Invalid argument: {}", e),
         }
     }
 }
@@ -253,7 +254,9 @@ impl From<reqwest::Error> for SemanticSearchError {
 }
 
 impl From<EmbeddingRequestBuilderError> for SemanticSearchError {
-
+    fn from(value: EmbeddingRequestBuilderError) -> Self {
+        Self::InvalidArgument(value.to_string())
+    }
 }
 
 impl std::error::Error for SemanticSearchError {
