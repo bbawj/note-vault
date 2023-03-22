@@ -16,6 +16,9 @@ use wasm_bindgen::prelude::*;
 
 use crate::embedding::EmbeddingInput;
 
+const DATA_FILE_PATH: &str = "./input.csv";
+const EMBEDDING_FILE_PATH: &str = "./embedding.csv";
+
 #[wasm_bindgen]
 pub struct ExampleCommand {
     id: JsString,
@@ -100,6 +103,16 @@ impl ExampleCommand {
         }
 
         Ok(header_to_content)
+    }
+
+    async fn get_embeddings(&self) -> Result<(), SemanticSearchError> {
+        let request = self.create_embedding_request().await?;
+        let response = self.post_embedding_request(request).await?;
+
+        let adapter = self.vault.adapter();
+        adapter.append(EMBEDDING_FILE_PATH.to_string(), response).await?;
+
+        Ok(())
     }
 
     async fn create_embedding_request(&self) -> Result<EmbeddingRequest, SemanticSearchError> {
@@ -274,8 +287,6 @@ pub fn onload(plugin: &obsidian::Plugin) {
     debug!("ApiKey: {:?}", plugin.settings().apiKey());
     plugin.addCommand(JsValue::from(cmd))
 }
-
-const DATA_FILE_PATH: &str = "./input.csv";
 
 struct DataRow<'a> {
     file_name: &'a str,
