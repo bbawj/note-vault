@@ -1,5 +1,7 @@
 mod obsidian;
 mod embedding;
+mod file_processor;
+mod error;
 
 use crate::embedding::EmbeddingRequestBuilderError;
 use crate::embedding::EmbeddingRequestBuilder;
@@ -7,9 +9,11 @@ use std::error::Error;
 
 use csv::{FromUtf8Error, Writer, Reader, ReaderBuilder, StringRecord};
 use embedding::EmbeddingRequest;
+use error::SemanticSearchError;
+use error::WrappedError;
+use file_processor::FileProcessor;
 use js_sys::JsString;
 use log::debug;
-use obsidian::Vault;
 use reqwest::header::HeaderMap;
 use serde::Deserialize;
 use wasm_bindgen::prelude::*;
@@ -20,15 +24,14 @@ const DATA_FILE_PATH: &str = "./input.csv";
 const EMBEDDING_FILE_PATH: &str = "./embedding.csv";
 
 #[wasm_bindgen]
-pub struct ExampleCommand {
+pub struct PrepareCommand {
     id: JsString,
     name: JsString,
-    vault: Vault,
-    client: Client,
+    file_processor: FileProcessor,
 }
 
 #[wasm_bindgen]
-impl ExampleCommand {
+impl PrepareCommand {
     #[wasm_bindgen(getter)]
     pub fn id(&self) -> JsString {
         self.id.clone()
@@ -50,73 +53,49 @@ impl ExampleCommand {
     }
 
     pub async fn callback(&self) {
-        obsidian::Notice::new(
-            format!(
-                "Number of markdown files: {}",
-                self.vault.getMarkdownFiles().len()
-            )
-            .as_str(),
-        );
-        match self.process_files(self.vault.getMarkdownFiles()).await {
+        // obsidian::Notice::new(
+        //     format!(
+        //         "Number of markdown files: {}",
+        //         self.vault.getMarkdownFiles().len()
+        //     )
+        //     .as_str(),
+        // );
+        let data = self.file_processor.process_files().await.expect("failed to prepare input.csv");
+        match self.file_processor.write_to_path(data, DATA_FILE_PATH).await {
             Ok(()) => (),
             Err(e) => debug!("{:?}", e),
         }
     }
+}
 
-    async fn process_files(&self, files: Vec<obsidian::TFile>) -> Result<(), SemanticSearchError> {
+#[wasm_bindgen]
+pub struct GetEmbeddingsCommand {
+    id: JsString,
+    name: JsString,
+    file_processor: FileProcessor,
+    client: Client,
+}
+
+impl GetEmbeddingsCommand {
+    async fn get_embeddings(&self, files: Vec<obsidian::TFile>) -> Result<(), SemanticSearchError> {
+        let input = self.file_processor.read_from_path(EMBEDDING_FILE_PATH).await?;
+        let request = self.create_embedding_request(input).await?;
+        let response = self.post_embedding_request(&request).await?;
+
         let mut wtr = csv::Writer::from_writer(vec![]);
-        for file in files {
-            let extracted = self.extract_sections(file).await.unwrap();
-            for (file_name, header, body) in extracted {
-                wtr.write_record(&[&file_name, &header, &body])?;
+        match request.input {
+            EmbeddingInput::StringArray(arr) => {
+                for input in arr {
+                    // wtr.write_record(record)
+                }
             }
         }
-        let data = String::from_utf8(wtr.into_inner()?)?;
-        let adapter = self.vault.adapter();
-        adapter.append(DATA_FILE_PATH.to_string(), data).await?;
-        Ok(())
-    }
-    
-    async fn extract_sections(&self, file: obsidian::TFile) -> std::io::Result<Vec<(String, String, String)>> {
-        let mut header_to_content: Vec<(String, String, String)> = Vec::new();
-        let name = file.name();
-        match self.vault.read(file).await {
-            Ok(text) => {
-                let text = text.as_string().unwrap();
-                let mut header = "".to_string();
-                let mut body = "".to_string();
-                let mut iterator = text.lines().peekable();
-                while let Some(line) = iterator.next() {
-                    if line.starts_with("##") {
-                        header = line.replace("#", "").trim().to_string();
-                        header_to_content.push((name.clone(), header.clone(), body.clone()));
-                        body.clear();
-                    } else {
-                        body += line;
-                        if iterator.peek().is_none() && header != "" {
-                            header_to_content.push((name.clone(), header.clone(), body.clone()));
-                        }
-                    }
-                }
-            },
-            Err(_) => todo!(),
-        }
-
-        Ok(header_to_content)
-    }
-
-    async fn get_embeddings(&self) -> Result<(), SemanticSearchError> {
-        let request = self.create_embedding_request().await?;
-        let response = self.post_embedding_request(request).await?;
-
-        let adapter = self.vault.adapter();
+        let adapter = self.file_processor.adapter();
         adapter.append(EMBEDDING_FILE_PATH.to_string(), response).await?;
-
         Ok(())
     }
 
-    async fn create_embedding_request(&self) -> Result<EmbeddingRequest, SemanticSearchError> {
-        let input = self.vault.adapter().read(DATA_FILE_PATH.to_string()).await?.as_string().expect("Input csv is not a string");
+    async fn create_embedding_request(&self, input: String) -> Result<EmbeddingRequest, SemanticSearchError> {
         let mut reader = ReaderBuilder::new().trim(csv::Trim::All).flexible(false)
             .from_reader(input.as_bytes());
         let records = reader.records().collect::<Result<Vec<StringRecord>, csv::Error>>()?;
@@ -158,6 +137,7 @@ impl ExampleCommand {
             serde_json::from_slice(bytes.as_ref()).map_err(SemanticSearchError::JSONDeserialize)?;
         Ok(response)
     }
+
 }
 
 #[derive(Debug, Clone)]
@@ -196,96 +176,24 @@ impl Client {
     }
 }
 
-/// Wrapper to deserialize the error object nested in "error" JSON key
-#[derive(Debug, Deserialize)]
-pub(crate) struct WrappedError {
-    pub(crate) error: ApiError,
-}
-
-/// OpenAI API returns error object on failure
-#[derive(Debug, Deserialize)]
-pub struct ApiError {
-    pub message: String,
-    pub r#type: String,
-    pub param: Option<serde_json::Value>,
-    pub code: Option<serde_json::Value>,
-}
-
-#[derive(Debug)]
-enum SemanticSearchError {
-    ObsidianError(JsValue),
-    WriteError(csv::Error),
-    ConversionError(Box<dyn std::error::Error>),
-    ReqwestError(reqwest::Error),
-    JSONDeserialize(serde_json::Error),
-    ApiError(ApiError),
-    InvalidArgument(String),
-}
-
-impl std::fmt::Display for SemanticSearchError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self {
-            SemanticSearchError::ObsidianError(e) => write!(f, "obsidian error; {}", e.as_string().unwrap()),
-            SemanticSearchError::WriteError(e) => write!(f, "write error; {:?}", e.source()),
-            SemanticSearchError::ConversionError(e) => write!(f, "conversion error; {:?}", e.source()),
-            SemanticSearchError::ReqwestError(e) => write!(f, "reqwest error; {}", e),
-            SemanticSearchError::JSONDeserialize(e) => write!(f, "JSONDeserialize error: {:?}", e),
-            SemanticSearchError::ApiError(e) => write!(f, "API error: {}: {}", e.r#type, e.message),
-            SemanticSearchError::InvalidArgument(e) => write!(f, "Invalid argument: {}", e),
-        }
-    }
-}
-
-impl From<csv::Error> for SemanticSearchError {
-    fn from(value: csv::Error) -> Self {
-        Self::WriteError(value)
-    }
-}
-
-impl From<csv::IntoInnerError<Writer<Vec<u8>>>> for SemanticSearchError {
-    fn from(value: csv::IntoInnerError<Writer<Vec<u8>>>) -> Self {
-        Self::ConversionError(Box::new(value.into_error()))
-    }
-}
-
-impl From<std::string::FromUtf8Error> for SemanticSearchError {
-    fn from(value: std::string::FromUtf8Error) -> Self {
-        Self::ConversionError(Box::new(value))
-    }
-}
-
-impl From<wasm_bindgen::JsValue> for SemanticSearchError {
-    fn from(value: wasm_bindgen::JsValue) -> Self {
-        Self::ObsidianError(value)
-    }
-}
-
-impl From<reqwest::Error> for SemanticSearchError {
-    fn from(value: reqwest::Error) -> Self {
-        Self::ReqwestError(value)
-    }
-}
-
-impl From<EmbeddingRequestBuilderError> for SemanticSearchError {
-    fn from(value: EmbeddingRequestBuilderError) -> Self {
-        Self::InvalidArgument(value.to_string())
-    }
-}
-
-impl std::error::Error for SemanticSearchError {
-}
-
 #[wasm_bindgen]
 pub fn onload(plugin: &obsidian::Plugin) {
     console_log::init_with_level(log::Level::Debug).expect("");
-    let cmd = ExampleCommand {
-        id: JsString::from("example"),
-        name: JsString::from("Example"),
-        vault: plugin.app().vault(),
+    let file_processor = FileProcessor::new(plugin.app().vault());
+    let preparecmd = PrepareCommand {
+        id: JsString::from("prepare"),
+        name: JsString::from("Prepare Command"),
+        file_processor
+    };
+    let getembeddingscmd = GetEmbeddingsCommand {
+        id: JsString::from("get"),
+        name: JsString::from("Get Embeddings Command"),
+        file_processor,
         client: Client::new(plugin.settings().apiKey())
     };
     debug!("ApiKey: {:?}", plugin.settings().apiKey());
-    plugin.addCommand(JsValue::from(cmd))
+    plugin.addCommand(JsValue::from(preparecmd));
+    plugin.addCommand(JsValue::from(getembeddingscmd))
 }
 
 struct DataRow<'a> {
