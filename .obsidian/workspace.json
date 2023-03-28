@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brag Doc.md",
+                "file": "Notes/2460 Software Safety and Security.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "575ce93139a6be80",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/X.509 Email Address Vulnerability.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -62,7 +75,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 214.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -78,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brag Doc.md",
+                "file": "Notes/X.509 Email Address Vulnerability.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brag Doc.md",
+                "file": "Notes/X.509 Email Address Vulnerability.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Brag Doc.md"
+                "file": "Notes/X.509 Email Address Vulnerability.md"
               }
             }
           },
@@ -143,7 +157,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Brag Doc.md",
+                "file": "Notes/X.509 Email Address Vulnerability.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -184,7 +198,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,8 +214,12 @@
       "obsidian-sample-plugin:Sample Plugin": false
     }
   },
-  "active": "15b9931cb45183b6",
+  "active": "575ce93139a6be80",
   "lastOpenFiles": [
+    "Notes/X.509 Email Address Vulnerability.md",
+    "Notes/2460 Software Safety and Security.md",
+    "Notes/Risk Analysis.md",
+    "Brag Doc.md",
     "input.csv",
     "2421 Machine Learning.md",
     "Notes/Statistics.md",
@@ -224,9 +243,6 @@
     "Notes/Building Blocks of the Internet.md",
     "Notes/Bellman-Ford Algorithm.md",
     "Notes/DNS.md",
-    "Notes/POP3.md",
-    "008 Networking.md",
-    "Notes/Distributed Data Management.md",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"
   ]
