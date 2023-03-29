@@ -6,6 +6,7 @@ date: 2023-03-27
 #moc 
 - [[Risk Analysis]]
 - [[X.509 Email Address Vulnerability]]
+- [[Formal Specification]]
 Safety: condition of being protected from harm
 Security: degree of protection from harm
 ## Verification vs Validation

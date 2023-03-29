@@ -20,19 +20,43 @@
             }
           },
           {
-            "id": "575ce93139a6be80",
+            "id": "96474687ced9c877",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/X.509 Email Address Vulnerability.md",
+                "file": "Notes/Risk Analysis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bcad2ffcd33b7cbc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Formal Specification.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "751231dfe2bb2ba9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Event-B.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1,
+        "currentTab": 3,
         "stacked": true
       }
     ],
@@ -92,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/X.509 Email Address Vulnerability.md",
+                "file": "Notes/Event-B.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/X.509 Email Address Vulnerability.md",
+                "file": "Notes/Event-B.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/X.509 Email Address Vulnerability.md"
+                "file": "Notes/Event-B.md"
               }
             }
           },
@@ -157,7 +181,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/X.509 Email Address Vulnerability.md",
+                "file": "Notes/Event-B.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -214,11 +238,13 @@
       "obsidian-sample-plugin:Sample Plugin": false
     }
   },
-  "active": "575ce93139a6be80",
+  "active": "751231dfe2bb2ba9",
   "lastOpenFiles": [
-    "Notes/X.509 Email Address Vulnerability.md",
-    "Notes/2460 Software Safety and Security.md",
+    "Notes/Formal Specification.md",
+    "Notes/Event-B.md",
     "Notes/Risk Analysis.md",
+    "Notes/2460 Software Safety and Security.md",
+    "Notes/X.509 Email Address Vulnerability.md",
     "Brag Doc.md",
     "input.csv",
     "2421 Machine Learning.md",
@@ -241,8 +267,6 @@
     "Notes/Transmission Control Protocol.md",
     "Notes/Network Layer.md",
     "Notes/Building Blocks of the Internet.md",
-    "Notes/Bellman-Ford Algorithm.md",
-    "Notes/DNS.md",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"
   ]
