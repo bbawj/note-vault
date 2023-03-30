@@ -3,7 +3,7 @@ title: "Event-B"
 date: 2023-03-28
 ---
 # Event-B
-A formal specification framework based on set theory.
+A formal specification framework based on [Set Theory](Notes/Set%20Theory.md).
 ## Abstract Machine Notation
 ![](https://i.imgur.com/7xfv1u5.png)
 
@@ -19,10 +19,6 @@ A formal specification framework based on set theory.
 ![](https://i.imgur.com/3v567Uc.png)
 ![](https://i.imgur.com/pjz2k7S.png)
 ### Set
-![](https://i.imgur.com/abyWqbF.png)
-![](https://i.imgur.com/D0OpBpx.png)
-### Types
-![](https://i.imgur.com/T8BJmH8.png)
 ## Examples
 ### University Access
 A system for controlling access to a university building
@@ -41,3 +37,14 @@ A system for controlling access to a university building
 ![](https://i.imgur.com/kYOr7ax.png)
 ![](https://i.imgur.com/TQ514Bt.png)
 ![](https://i.imgur.com/O9vIX2G.png)
+### Printer Access
+- A system should support adding a permission for a student in order to get an access to a particular printer and removing a permission.
+- A system should support removing a student’s access to all printers at once.
+- A system should support giving the combined permissions of any two students to both of them.
+#### Requirements Document
+![](https://i.imgur.com/u8f6wNi.png)
+#### Modelling
+- To keep track of changing permissions, it will make use of a variable access whose type is a relation between STUDENTS and PRINTERS.  
+![300](https://i.imgur.com/Qsa5Xxr.png)
+
+![](https://i.imgur.com/vehZFBv.png)

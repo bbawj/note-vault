@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Formal Specification.md",
+                "file": "Notes/Set Theory.md",
                 "mode": "source",
                 "source": false
               }
@@ -240,8 +240,9 @@
   },
   "active": "751231dfe2bb2ba9",
   "lastOpenFiles": [
-    "Notes/Formal Specification.md",
+    "Notes/Set Theory.md",
     "Notes/Event-B.md",
+    "Notes/Formal Specification.md",
     "Notes/Risk Analysis.md",
     "Notes/2460 Software Safety and Security.md",
     "Notes/X.509 Email Address Vulnerability.md",
@@ -266,7 +267,6 @@
     "Notes/SMTP.md",
     "Notes/Transmission Control Protocol.md",
     "Notes/Network Layer.md",
-    "Notes/Building Blocks of the Internet.md",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"
   ]
