@@ -1,6 +1,7 @@
 ---
 title: "Set Theory"
 date: 2023-03-29
+lastmod: 2023-03-30
 ---
 # Set Theory
 ## Defining a set

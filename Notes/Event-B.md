@@ -47,4 +47,11 @@ A system for controlling access to a university building
 - To keep track of changing permissions, it will make use of a variable access whose type is a relation between STUDENTS and PRINTERS.  
 ![300](https://i.imgur.com/Qsa5Xxr.png)
 
-![](https://i.imgur.com/vehZFBv.png)
+![400](https://i.imgur.com/vehZFBv.png)
+![400](https://i.imgur.com/YJuqO2y.png)
+![400](https://i.imgur.com/kVgu5Zb.png)
+#### New requirement: a student can use no more than 3 printers
+![](https://i.imgur.com/ODxLte4.png)
+
+![](https://i.imgur.com/U8eh3gW.png)
+
