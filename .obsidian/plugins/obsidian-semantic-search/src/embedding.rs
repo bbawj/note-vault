@@ -1,5 +1,5 @@
 use derive_builder::Builder;
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Clone)]
 #[serde(untagged)]
@@ -33,9 +33,6 @@ pub struct EmbeddingRequest {
     ///  to monitor and detect abuse. [Learn more](https://platform.openai.com/docs/usage-policies/end-user-ids).
     #[serde(skip_serializing_if = "Option::is_none")]
     pub user: Option<String>,
-
-    ///
-    pub csv_reader: csv::Reader<&[u8]>,
 }
 
 #[derive(Debug, Deserialize, Clone)]

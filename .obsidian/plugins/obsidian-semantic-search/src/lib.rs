@@ -13,7 +13,7 @@ use error::SemanticSearchError;
 use error::WrappedError;
 use file_processor::FileProcessor;
 use js_sys::JsString;
-use log::debug;
+use log::{debug, error};
 use reqwest::header::HeaderMap;
 use serde::Deserialize;
 use wasm_bindgen::prelude::*;
@@ -60,10 +60,11 @@ impl PrepareCommand {
         //     )
         //     .as_str(),
         // );
-        let data = self.file_processor.process_files().await.expect("failed to prepare input.csv");
+        let data = self.file_processor.generate_input().await.expect("failed to prepare input.csv");
+        // TODO: only write if file does not exist/delete the file first
         match self.file_processor.write_to_path(data, DATA_FILE_PATH).await {
             Ok(()) => (),
-            Err(e) => debug!("{:?}", e),
+            Err(e) => error!("{:?}", e),
         }
     }
 }
@@ -76,38 +77,91 @@ pub struct GetEmbeddingsCommand {
     client: Client,
 }
 
+#[wasm_bindgen]
 impl GetEmbeddingsCommand {
-    async fn get_embeddings(&self, files: Vec<obsidian::TFile>) -> Result<(), SemanticSearchError> {
-        let input = self.file_processor.read_from_path(EMBEDDING_FILE_PATH).await?;
-        let request = self.create_embedding_request(input).await?;
-        let response = self.post_embedding_request(&request).await?;
+    #[wasm_bindgen(getter)]
+    pub fn id(&self) -> JsString {
+        self.id.clone()
+    }
 
-        let mut wtr = csv::Writer::from_writer(vec![]);
-        match request.input {
-            EmbeddingInput::StringArray(arr) => {
-                for input in arr {
-                    // wtr.write_record(record)
-                }
-            }
+    #[wasm_bindgen(setter)]
+    pub fn set_id(&mut self, id: &str) {
+        self.id = JsString::from(id)
+    }
+
+    #[wasm_bindgen(getter)]
+    pub fn name(&self) -> JsString {
+        self.name.clone()
+    }
+
+    #[wasm_bindgen(setter)]
+    pub fn set_name(&mut self, name: &str) {
+        self.name = JsString::from(name)
+    }
+    pub async fn callback(&self) {
+        match self.get_embeddings().await {
+            Ok(()) => (),
+            Err(e) => error!("{:?}", e),
         }
-        let adapter = self.file_processor.adapter();
-        adapter.append(EMBEDDING_FILE_PATH.to_string(), response).await?;
+    }
+
+    async fn get_embeddings(&self) -> Result<(), SemanticSearchError> {
+        let input = self.file_processor.read_from_path(DATA_FILE_PATH).await?;
+        let request = self.create_embedding_request(input.clone())?;
+        let response = self.post_embedding_request(&request).await?;
+        debug!("{:?}", response);
+
+        // let filename_header = self.get_filename_header(input.clone())?;
+        // let mut wtr = csv::Writer::from_writer(vec![]);
+        // match request.input {
+        //     EmbeddingInput::StringArray(arr) => {
+        //         for (i, input) in arr.iter().enumerate() {
+        //             let filename_header = match filename_header.get(i) {
+        //                 None => return Err(SemanticSearchError::GetEmbeddingsError(format!("embedding for filename_header index {} is not found", i))),
+        //                 Some(filename_header) => filename_header
+        //             };
+        //             let filename = &filename_header.0;
+        //             let header = &filename_header.1;
+        //             wtr.write_record(&[filename, header, &input])?;
+        //         }
+        //     }
+        // }
+        //
+        // let data = String::from_utf8(wtr.into_inner()?)?;
+        // let adapter = self.file_processor.adapter();
+        // adapter.append(EMBEDDING_FILE_PATH.to_string(), data).await?;
         Ok(())
     }
 
-    async fn create_embedding_request(&self, input: String) -> Result<EmbeddingRequest, SemanticSearchError> {
+    fn create_embedding_request(&self, input: String) -> Result<EmbeddingRequest, SemanticSearchError> {
+        let string_records = self.get_content_to_embed(input)?;
+        let embedding_input = EmbeddingInput::StringArray(string_records);
+        let embedding_request = EmbeddingRequestBuilder::default()
+            .model("text-embedding-ada-002".to_string())
+            .input(embedding_input)
+            .user(None)
+            .build()?;
+        Ok(embedding_request)
+    }
+
+    fn get_content_to_embed(&self, input: String) -> Result<Vec<String>, SemanticSearchError> {
         let mut reader = ReaderBuilder::new().trim(csv::Trim::All).flexible(false)
             .from_reader(input.as_bytes());
         let records = reader.records().collect::<Result<Vec<StringRecord>, csv::Error>>()?;
         let string_records = records.iter().map(|record| 
                            record.get(2).unwrap().to_string()
                           ).collect();
-        let embedding_input = EmbeddingInput::StringArray(string_records);
-        let embedding_request = EmbeddingRequestBuilder::default()
-            .model("text-embedding-ada-002".to_string())
-            .input(embedding_input)
-            .build()?;
-        Ok(embedding_request)
+        Ok(string_records)
+    }
+
+    fn get_filename_header(&self, input: String) -> Result<Vec<(String, String)>, SemanticSearchError> {
+        let mut reader = ReaderBuilder::new().trim(csv::Trim::All).flexible(false)
+            .from_reader(input.as_bytes());
+        let records = reader.records().collect::<Result<Vec<StringRecord>, csv::Error>>()?;
+        let filename_header = records.iter().map(|record| 
+                           (record.get(0).unwrap().to_string(), record.get(1).unwrap().to_string())
+                          ).collect();
+        Ok(filename_header)
     }
 
     async fn post_embedding_request<I: serde::ser::Serialize, O: serde::de::DeserializeOwned>(&self, request: I) -> Result<O, SemanticSearchError> {
@@ -164,7 +218,7 @@ impl Client {
     }
 
     fn new(api_key: String) -> Self{
-        Self { api_key: api_key, api_base: API_BASE.to_string(), org_id: Default::default() }
+        Self { api_key, api_base: API_BASE.to_string(), org_id: Default::default() }
     }
 
     fn headers(&self) -> HeaderMap {
@@ -179,22 +233,32 @@ impl Client {
 #[wasm_bindgen]
 pub fn onload(plugin: &obsidian::Plugin) {
     console_log::init_with_level(log::Level::Debug).expect("");
-    let file_processor = FileProcessor::new(plugin.app().vault());
-    let preparecmd = PrepareCommand {
-        id: JsString::from("prepare"),
-        name: JsString::from("Prepare Command"),
-        file_processor
-    };
-    let getembeddingscmd = GetEmbeddingsCommand {
-        id: JsString::from("get"),
-        name: JsString::from("Get Embeddings Command"),
-        file_processor,
-        client: Client::new(plugin.settings().apiKey())
-    };
+    let preparecmd = build_prepare_cmd(plugin);
+    let getembeddingscmd = build_get_embeddings_cmd(plugin);
     debug!("ApiKey: {:?}", plugin.settings().apiKey());
     plugin.addCommand(JsValue::from(preparecmd));
     plugin.addCommand(JsValue::from(getembeddingscmd))
 }
+
+fn build_prepare_cmd(plugin: &obsidian::Plugin) -> PrepareCommand {
+    let file_processor = FileProcessor::new(plugin.app().vault());
+    PrepareCommand {
+        id: JsString::from("prepare"),
+        name: JsString::from("Prepare Command"),
+        file_processor
+    }
+}
+
+fn build_get_embeddings_cmd(plugin: &obsidian::Plugin) -> GetEmbeddingsCommand {
+    let file_processor = FileProcessor::new(plugin.app().vault());
+    GetEmbeddingsCommand {
+        id: JsString::from("get"),
+        name: JsString::from("Get Embeddings Command"),
+        file_processor,
+        client: Client::new(plugin.settings().apiKey())
+    }
+}
+
 
 struct DataRow<'a> {
     file_name: &'a str,
