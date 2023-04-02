@@ -4,12 +4,25 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Serialize, Clone)]
 #[serde(untagged)]
 pub enum EmbeddingInput {
+    String(String),
     StringArray(Vec<String>),
 }
 
 impl Default for EmbeddingInput {
     fn default() -> Self {
         EmbeddingInput::StringArray(vec!["".to_string()])
+    }
+}
+
+impl From<String> for EmbeddingInput {
+    fn from(value: String) -> Self {
+        EmbeddingInput::String(value)
+    }
+}
+
+impl From<Vec<String>> for EmbeddingInput {
+    fn from(value: Vec<String>) -> Self {
+        EmbeddingInput::StringArray(value)
     }
 }
 
@@ -36,7 +49,7 @@ pub struct EmbeddingRequest {
 }
 
 #[derive(Debug, Deserialize, Clone)]
-pub struct CreateEmbeddingResponse {
+pub struct EmbeddingResponse {
     pub object: String,
     pub model: String,
     pub data: Vec<Embedding>,
