@@ -126,6 +126,13 @@ export class ExampleModal extends SuggestModal<Suggestion> {
     super(app);
     this.settings = settings;
   }
+
+  onOpen(): void {
+      const contentEl = this.contentEl;
+      contentEl.createEl("h1", {text: "Enter your search query"});
+      super.onOpen();
+  }
+
   // Returns all available suggestions.
   async getSuggestions(query: string): Promise<Suggestion[]> {
     const suggestions = await plugin.get_suggestions(this.app, this.settings.apiKey, query);
