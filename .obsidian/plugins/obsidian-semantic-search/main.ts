@@ -119,7 +119,7 @@ type Suggestion = {
   header: string
 }
 
-export class ExampleModal extends SuggestModal<Suggestion> {
+export class ExampleModal extends Modal {
   settings: semanticSearchSettings = DEFAULT_SETTINGS;
 
   constructor(app: App, settings: semanticSearchSettings) {
@@ -130,7 +130,9 @@ export class ExampleModal extends SuggestModal<Suggestion> {
   onOpen(): void {
       const contentEl = this.contentEl;
       contentEl.createEl("h1", {text: "Enter your search query"});
-      super.onOpen();
+      const input = contentEl.createEl("input", {cls: "query_input"});
+      const div = contentEl.createDiv()
+      const button = contentEl.createEl("button", {text: "Submit"});
   }
 
   // Returns all available suggestions.
