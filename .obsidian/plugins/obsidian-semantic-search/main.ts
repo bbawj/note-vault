@@ -1,4 +1,4 @@
-import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting, SuggestModal } from 'obsidian';
+import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting, SuggestModal, TFile } from 'obsidian';
 
 import * as plugin from "./pkg/obsidian_rust_plugin.js";
 import * as wasmbin from './pkg/obsidian_rust_plugin_bg.wasm';
@@ -69,7 +69,7 @@ export default class MyPlugin extends Plugin {
 		});
 
 		// This adds a settings tab so the user can configure various aspects of the plugin
-		this.addSettingTab(new SampleSettingTab(this.app, this));
+		this.addSettingTab(new SettingTab(this.app, this));
 
 		// If the plugin hooks up any global DOM events (on parts of the app that doesn't belong to this plugin)
 		// Using this function will automatically remove the event listener when this plugin is disabled.
@@ -98,29 +98,14 @@ export default class MyPlugin extends Plugin {
 	}
 }
 
-class SampleModal extends Modal {
-	constructor(app: App) {
-		super(app);
-	}
-
-	onOpen() {
-		const {contentEl} = this;
-		contentEl.setText('Woah!');
-	}
-
-	onClose() {
-		const {contentEl} = this;
-		contentEl.empty();
-	}
-}
-
 type Suggestion = {
   name: string,
   header: string
 }
 
-export class ExampleModal extends Modal {
+export class QueryModal extends Modal {
   settings: semanticSearchSettings = DEFAULT_SETTINGS;
+  estimatedCost = 0;
 
   constructor(app: App, settings: semanticSearchSettings) {
     super(app);
@@ -132,7 +117,19 @@ export class ExampleModal extends Modal {
       contentEl.createEl("h1", {text: "Enter your search query"});
       const input = contentEl.createEl("input", {cls: "query_input"});
       const div = contentEl.createDiv()
-      const button = contentEl.createEl("button", {text: "Submit"});
+      div.createSpan({text: "Estimated cost of query: " + this.estimatedCost});
+      const button = div.createEl("button", {text: "Submit"});
+      button.onclick = async () => {
+        const suggestions: Suggestion[] = await this.getSuggestions(input.value);
+        suggestions.forEach(suggestion => {
+          this.renderSuggestion(suggestion, contentEl);
+        })
+      }
+  }
+
+  onClose() {
+    let { contentEl } = this;
+    contentEl.empty();
   }
 
   // Returns all available suggestions.
@@ -143,17 +140,25 @@ export class ExampleModal extends Modal {
 
   // Renders each suggestion item.
   renderSuggestion(suggestion: Suggestion, el: HTMLElement) {
-    el.createEl("div", { text: suggestion.name});
+    const div = el.createEl("div", { text: suggestion.name});
     el.createEl("small", { text: suggestion.header});
+    div.onclick = this.onChooseSuggestion;
   }
 
   // Perform action on the selected suggestion.
   onChooseSuggestion(suggestion: Suggestion, evt: MouseEvent | KeyboardEvent) {
     new Notice(`Selected ${suggestion.name}`);
   }
+
+  // Find corresponding suggestion file
+  findSuggestionFile(suggestion: Suggestion) : TFile | undefined {
+    const files = this.app.vault.getMarkdownFiles();
+    const matching_file = files.find(file => file.name === suggestion.name);
+    return matching_file
+  }
 }
 
-class SampleSettingTab extends PluginSettingTab {
+class SettingTab extends PluginSettingTab {
 	plugin: MyPlugin;
 
 	constructor(app: App, plugin: MyPlugin) {
