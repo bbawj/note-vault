@@ -1,9 +1,7 @@
-import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting, SuggestModal, TFile } from 'obsidian';
+import { App, Editor, fuzzySearch, MarkdownView, Modal, Notice, OpenViewState, PaneType, Plugin, PluginSettingTab, Pos, prepareQuery, renderResults, SearchResult, Setting, SplitDirection, SuggestModal, TFile, WorkspaceLeaf } from 'obsidian';
 
 import * as plugin from "./pkg/obsidian_rust_plugin.js";
 import * as wasmbin from './pkg/obsidian_rust_plugin_bg.wasm';
-
-// Remember to rename these classes and interfaces!
 
 interface semanticSearchSettings {
 	apiKey: string;
@@ -36,7 +34,7 @@ export default class MyPlugin extends Plugin {
 			id: 'open-sample-modal-simple',
 			name: 'Open sample modal (simple)',
 			callback: () => {
-				new SampleModal(this.app).open();
+				new QueryModal(this.app, this.settings).open();
 			}
 		});
 		// This adds an editor command that can perform some operation on the current editor instance
@@ -46,25 +44,6 @@ export default class MyPlugin extends Plugin {
 			editorCallback: (editor: Editor, view: MarkdownView) => {
 				console.log(editor.getSelection());
 				editor.replaceSelection('Sample Editor Command');
-			}
-		});
-		// This adds a complex command that can check whether the current state of the app allows execution of the command
-		this.addCommand({
-			id: 'open-sample-modal-complex',
-			name: 'Open sample modal (complex)',
-			checkCallback: (checking: boolean) => {
-				// Conditions to check
-				const markdownView = this.app.workspace.getActiveViewOfType(MarkdownView);
-				if (markdownView) {
-					// If checking is true, we're simply "checking" if the command can be run.
-					// If checking is false, then we want to actually perform the operation.
-					if (!checking) {
-						new ExampleModal(this.app, this.settings).open();
-					}
-
-					// This command will only show up in Command Palette when the check function returns true
-					return true;
-				}
 			}
 		});
 
@@ -98,9 +77,46 @@ export default class MyPlugin extends Plugin {
 	}
 }
 
-type Suggestion = {
-  name: string,
+type WASMSuggestion = {
+  name: string
   header: string
+}
+
+class Suggestion {
+  app: App;
+  name: string;
+  header: string;
+  pos: Pos | undefined;
+  file: TFile | undefined;
+
+  constructor(app: App, wasmSuggestion: WASMSuggestion) {
+    this.app = app;
+    this.name = wasmSuggestion.name;
+    this.header = wasmSuggestion.header;
+  }
+
+  // Find corresponding suggestion file
+  addSuggestionFile() : Suggestion {
+    const files = this.app.vault.getMarkdownFiles();
+    const matching_file = files.find(file => file.name === this.name);
+    this.file = matching_file;
+    return this;
+  }
+
+  addSuggestionHeading() {
+    const prepQuery = prepareQuery(this.header);
+    const { metadataCache } = this.app;
+    if (this.file) {
+      const headingList = metadataCache.getFileCache(this.file)?.headings ?? [];
+      headingList.forEach(heading => {
+        const match = fuzzySearch(prepQuery, heading.heading);
+        if (match) {
+          this.pos = heading.position;
+        }
+      })
+    }
+    return this;
+  }
 }
 
 export class QueryModal extends Modal {
@@ -134,7 +150,13 @@ export class QueryModal extends Modal {
 
   // Returns all available suggestions.
   async getSuggestions(query: string): Promise<Suggestion[]> {
-    const suggestions = await plugin.get_suggestions(this.app, this.settings.apiKey, query);
+    const wasmSuggestions: WASMSuggestion[] = await plugin.get_suggestions(this.app, this.settings.apiKey, query);
+    const suggestions: Suggestion[] = wasmSuggestions.map(wasmSuggestion => new Suggestion(this.app, wasmSuggestion));
+
+    suggestions.forEach(suggestion => {
+      suggestion.addSuggestionFile().addSuggestionHeading();
+      const headingCache = this.findSuggestionHeading(suggestion, matching_file);
+    })
     return suggestions;
   }
 
@@ -142,19 +164,62 @@ export class QueryModal extends Modal {
   renderSuggestion(suggestion: Suggestion, el: HTMLElement) {
     const div = el.createEl("div", { text: suggestion.name});
     el.createEl("small", { text: suggestion.header});
-    div.onclick = this.onChooseSuggestion;
+    div.onclick = async () => await this.onChooseSuggestion(suggestion);
+  }
+
+  renderContent(
+    parentEl: HTMLElement,
+    content: string,
+    match: SearchResult,
+    offset?: number,
+  ): HTMLDivElement {
+    const contentEl = parentEl.createDiv({
+      cls: ['suggestion-content', 'qsp-content'],
+    });
+
+    const titleEl = contentEl.createDiv({
+      cls: ['suggestion-title', 'qsp-title'],
+    });
+
+    renderResults(titleEl, content, match, offset);
+
+    return contentEl;
   }
 
   // Perform action on the selected suggestion.
-  onChooseSuggestion(suggestion: Suggestion, evt: MouseEvent | KeyboardEvent) {
-    new Notice(`Selected ${suggestion.name}`);
+  async onChooseSuggestion(suggestion: Suggestion) {
+    const isMatch = (candidateLeaf: WorkspaceLeaf) => {
+      let val = false;
+
+      if (candidateLeaf?.view) {
+        val = candidateLeaf.view.file === suggestion.file;
+      }
+
+      return val;
+    };
+    const leaves: WorkspaceLeaf[] = [];
+    this.app.workspace.iterateAllLeaves(leaf => leaves.push(leaf));
+    const matchingLeaf = leaves.find(isMatch);
+
+    const eState = {
+      startLoc: suggestion.pos?.start,
+      endLoc: suggestion.pos?.end,
+    }
+
+    if (matchingLeaf === undefined && suggestion.file) {
+      await this.openFileInLeaf(suggestion.file, "tab", "vertical", {
+        active: true,
+        eState
+      })
+    }
   }
 
-  // Find corresponding suggestion file
-  findSuggestionFile(suggestion: Suggestion) : TFile | undefined {
-    const files = this.app.vault.getMarkdownFiles();
-    const matching_file = files.find(file => file.name === suggestion.name);
-    return matching_file
+
+
+  async openFileInLeaf(file: TFile, navType: PaneType, splitDirection: SplitDirection = "vertical", openState: OpenViewState) {
+    const { workspace } = this.app;
+    const leaf = navType === "split" ? workspace.getLeaf(navType, splitDirection) : workspace.getLeaf(navType)
+    await leaf.openFile(file, openState);
   }
 }
 
