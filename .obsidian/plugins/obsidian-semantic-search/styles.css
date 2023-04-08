@@ -6,6 +6,6 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
-.query_input {
-  width: 100%;
+.suggestion-item:hover {
+  background-color: var(--background-modifier-hover);
 }

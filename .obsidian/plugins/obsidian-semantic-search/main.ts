@@ -1,4 +1,4 @@
-import { App, Editor, fuzzySearch, MarkdownView, Modal, Notice, OpenViewState, PaneType, Plugin, PluginSettingTab, Pos, prepareQuery, renderResults, SearchResult, Setting, SplitDirection, SuggestModal, TFile, WorkspaceLeaf } from 'obsidian';
+import { App, Modal, normalizePath, OpenViewState, PaneType, Plugin, PluginSettingTab, Pos, prepareSimpleSearch, renderResults, SearchResult, setIcon, Setting, SplitDirection, TFile, WorkspaceLeaf } from 'obsidian';
 
 import * as plugin from "./pkg/obsidian_rust_plugin.js";
 import * as wasmbin from './pkg/obsidian_rust_plugin_bg.wasm';
@@ -11,53 +11,25 @@ const DEFAULT_SETTINGS: semanticSearchSettings = {
 	apiKey: ''
 }
 
-export default class MyPlugin extends Plugin {
+export default class SemanticSearch extends Plugin {
 	settings: semanticSearchSettings;
 
 	async onload() {
 		await this.loadSettings();
 
-		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
-			// Called when the user clicks the icon.
-			new Notice('This is a notice!');
+		this.addRibbonIcon('file-search-2', 'Semantic Search', (evt: MouseEvent) => {
+      new QueryModal(this.app, this.settings).open();
 		});
-		// Perform additional things with the ribbon
-		ribbonIconEl.addClass('my-plugin-ribbon-class');
 
-		// This adds a status bar item to the bottom of the app. Does not work on mobile apps.
-		const statusBarItemEl = this.addStatusBarItem();
-		statusBarItemEl.setText('Status Bar Text');
-
-		// This adds a simple command that can be triggered anywhere
 		this.addCommand({
-			id: 'open-sample-modal-simple',
-			name: 'Open sample modal (simple)',
+			id: 'open-query-modal',
+			name: 'Open query modal',
 			callback: () => {
 				new QueryModal(this.app, this.settings).open();
 			}
 		});
-		// This adds an editor command that can perform some operation on the current editor instance
-		this.addCommand({
-			id: 'sample-editor-command',
-			name: 'Sample editor command',
-			editorCallback: (editor: Editor, view: MarkdownView) => {
-				console.log(editor.getSelection());
-				editor.replaceSelection('Sample Editor Command');
-			}
-		});
 
-		// This adds a settings tab so the user can configure various aspects of the plugin
 		this.addSettingTab(new SettingTab(this.app, this));
-
-		// If the plugin hooks up any global DOM events (on parts of the app that doesn't belong to this plugin)
-		// Using this function will automatically remove the event listener when this plugin is disabled.
-		this.registerDomEvent(document, 'click', (evt: MouseEvent) => {
-			console.log('click', evt);
-		});
-
-		// When registering intervals, this function will automatically clear the interval when the plugin is disabled.
-		this.registerInterval(window.setInterval(() => console.log('setInterval'), 5 * 60 * 1000));
 
 		// here's the Rust bit
 		await plugin.default(Promise.resolve(wasmbin.default));
@@ -88,6 +60,7 @@ class Suggestion {
   header: string;
   pos: Pos | undefined;
   file: TFile | undefined;
+  match: SearchResult | undefined;
 
   constructor(app: App, wasmSuggestion: WASMSuggestion) {
     this.app = app;
@@ -104,14 +77,17 @@ class Suggestion {
   }
 
   addSuggestionHeading() {
-    const prepQuery = prepareQuery(this.header);
     const { metadataCache } = this.app;
     if (this.file) {
       const headingList = metadataCache.getFileCache(this.file)?.headings ?? [];
+      const search = prepareSimpleSearch(this.header);
       headingList.forEach(heading => {
-        const match = fuzzySearch(prepQuery, heading.heading);
-        if (match) {
+        if (heading.heading === this.header) {
           this.pos = heading.position;
+          const match = search(heading.heading);
+          if (match) {
+            this.match = match;
+          }
         }
       })
     }
@@ -130,15 +106,20 @@ export class QueryModal extends Modal {
 
   onOpen(): void {
       const contentEl = this.contentEl;
-      contentEl.createEl("h1", {text: "Enter your search query"});
-      const input = contentEl.createEl("input", {cls: "query_input"});
+
+      const inputContainer = contentEl.createDiv({cls: "prompt-input-container"})
+      const input = inputContainer.createEl("input", {cls: "prompt-input"});
+
       const div = contentEl.createDiv()
       div.createSpan({text: "Estimated cost of query: " + this.estimatedCost});
+
       const button = div.createEl("button", {text: "Submit"});
+      const resultsDiv = contentEl.createDiv({cls: "prompt-results"});
       button.onclick = async () => {
         const suggestions: Suggestion[] = await this.getSuggestions(input.value);
         suggestions.forEach(suggestion => {
-          this.renderSuggestion(suggestion, contentEl);
+          const resultContainer = resultsDiv.createDiv({cls: ["suggestion-item", "mod-complex"]})
+          this.renderSuggestion(suggestion, resultContainer);
         })
       }
   }
@@ -155,16 +136,20 @@ export class QueryModal extends Modal {
 
     suggestions.forEach(suggestion => {
       suggestion.addSuggestionFile().addSuggestionHeading();
-      const headingCache = this.findSuggestionHeading(suggestion, matching_file);
     })
+
     return suggestions;
   }
 
   // Renders each suggestion item.
   renderSuggestion(suggestion: Suggestion, el: HTMLElement) {
-    const div = el.createEl("div", { text: suggestion.name});
-    el.createEl("small", { text: suggestion.header});
-    div.onclick = async () => await this.onChooseSuggestion(suggestion);
+    // const div = el.createEl("div", { text: suggestion.name});
+    // el.createEl("small", { text: suggestion.header});
+    el.onclick = async () => await this.onChooseSuggestion(suggestion);
+    if (suggestion.match && suggestion.file) {
+      const div = this.renderContent(el, suggestion.header, suggestion.match);
+      this.renderPath(div, suggestion.file, suggestion.match);
+    }
   }
 
   renderContent(
@@ -184,6 +169,43 @@ export class QueryModal extends Modal {
     renderResults(titleEl, content, match, offset);
 
     return contentEl;
+  }
+
+  renderPath(
+    parentEl: HTMLElement,
+    file: TFile,
+    match: SearchResult,
+  ): void {
+    if (parentEl && file) {
+      const isRoot = file.parent.isRoot();
+      let hidePath = isRoot;
+
+      if (!hidePath) {
+        const wrapperEl = parentEl.createDiv({ cls: ['suggestion-note', 'qsp-note'] });
+        const path = this.getPathDisplayText(file);
+
+        const iconEl = wrapperEl.createSpan({ cls: ['qsp-path-indicator'] });
+        setIcon(iconEl, 'folder');
+
+        const pathEl = wrapperEl.createSpan({ cls: 'qsp-path' });
+        renderResults(pathEl, path, match);
+      }
+    }
+  }
+
+  getPathDisplayText(
+    file: TFile,
+  ): string {
+    let text = '';
+
+    if (file) {
+      const { parent } = file;
+      const dirname = parent.name;
+      const isRoot = parent.isRoot();
+      text = isRoot ? `${file.name}` : normalizePath(`${dirname}/${file.name}`);
+    }
+
+    return text;
   }
 
   // Perform action on the selected suggestion.
@@ -206,12 +228,19 @@ export class QueryModal extends Modal {
       endLoc: suggestion.pos?.end,
     }
 
-    if (matchingLeaf === undefined && suggestion.file) {
-      await this.openFileInLeaf(suggestion.file, "tab", "vertical", {
-        active: true,
-        eState
-      })
+    if (matchingLeaf === undefined) {
+      if (suggestion.file) {
+        await this.openFileInLeaf(suggestion.file, "tab", "vertical", {
+          active: true,
+          eState
+        })
+      }
+    } else {
+      this.app.workspace.setActiveLeaf(matchingLeaf, {focus: true});
+      matchingLeaf.view.setEphemeralState(eState);
     }
+
+    this.close();
   }
 
 
@@ -224,9 +253,9 @@ export class QueryModal extends Modal {
 }
 
 class SettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
+	plugin: SemanticSearch;
 
-	constructor(app: App, plugin: MyPlugin) {
+	constructor(app: App, plugin: SemanticSearch) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
