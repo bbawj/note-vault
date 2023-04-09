@@ -39,6 +39,11 @@ impl FileProcessor {
         let data = String::from_utf8(wtr.into_inner()?)?;
         Ok(data)
     }
+
+    pub async fn delete_file_at_path(&self, path: &str) -> Result<(), SemanticSearchError> {
+        self.vault.adapter().remove(path.to_string()).await?;
+        Ok(())
+    }
     
     async fn process_file(&self, file: obsidian::TFile) -> std::io::Result<Vec<(String, String, String)>> {
         let name = file.name();
@@ -48,7 +53,6 @@ impl FileProcessor {
         };
         Ok(res)
     }
-
 }
 
 fn extract_sections(name: &str, text: &str) -> std::io::Result<Vec<(String, String, String)>> {

@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5,
-    "collapsed": true
+    "width": 214.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -156,7 +155,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "773c08e3cb822493",
@@ -223,10 +222,10 @@
       "command-palette:Open command palette": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "obsidian-sample-plugin:Sample Plugin": false
+      "obsidian-semantic-search:Semantic Search": false
     }
   },
-  "active": "fd1e09f2e0845606",
+  "active": "9a801a92cdfc9a12",
   "lastOpenFiles": [
     "Notes/Wireless Networks.md",
     "Notes/Union Find.md",

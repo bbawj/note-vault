@@ -12,5 +12,7 @@
   "obsidian-linter",
   "obsidian-citation-plugin",
   "darlal-switcher-plus",
-  "obsidian-sample-plugin"
+  "obsidian-sample-plugin",
+  "hot-reload",
+  "obsidian-semantic-search"
 ]

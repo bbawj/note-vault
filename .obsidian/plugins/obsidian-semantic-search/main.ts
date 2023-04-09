@@ -2,6 +2,7 @@ import { App, Modal, normalizePath, OpenViewState, PaneType, Plugin, PluginSetti
 
 import * as plugin from "./pkg/obsidian_rust_plugin.js";
 import * as wasmbin from './pkg/obsidian_rust_plugin_bg.wasm';
+import GenerateEmbeddingsModal from "src/modal";
 
 interface semanticSearchSettings {
 	apiKey: string;
@@ -17,7 +18,7 @@ export default class SemanticSearch extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
-		this.addRibbonIcon('file-search-2', 'Semantic Search', (evt: MouseEvent) => {
+		this.addRibbonIcon('file-search-2', 'Semantic Search', (_: MouseEvent) => {
       new QueryModal(this.app, this.settings).open();
 		});
 
@@ -26,6 +27,14 @@ export default class SemanticSearch extends Plugin {
 			name: 'Open query modal',
 			callback: () => {
 				new QueryModal(this.app, this.settings).open();
+			}
+		});
+
+		this.addCommand({
+			id: 'generate-embeddings-modal',
+			name: 'Generate Embeddings',
+			callback: () => {
+				new GenerateEmbeddingsModal(this.app, this.settings).open();
 			}
 		});
 
@@ -98,6 +107,8 @@ class Suggestion {
 export class QueryModal extends Modal {
   settings: semanticSearchSettings = DEFAULT_SETTINGS;
   estimatedCost = 0;
+  timerId: number;
+  delay = 200;
 
   constructor(app: App, settings: semanticSearchSettings) {
     super(app);
@@ -106,14 +117,19 @@ export class QueryModal extends Modal {
 
   onOpen(): void {
       const contentEl = this.contentEl;
+      contentEl.parentElement?.querySelector(".modal-close-button")?.remove();
 
       const inputContainer = contentEl.createDiv({cls: "prompt-input-container"})
       const input = inputContainer.createEl("input", {cls: "prompt-input"});
 
-      const div = contentEl.createDiv()
-      div.createSpan({text: "Estimated cost of query: " + this.estimatedCost});
+      const estimate_container = contentEl.createDiv({cls: "prompt-instructions"});
+      const estimate_text = estimate_container.createDiv({cls: "prompt-instruction"});
+      estimate_text.setText("Estimated cost of query: $0");
+      input.addEventListener("input", (e) => {
+        this.debounce(() => this.update_query_cost_estimate(e, estimate_text), this.delay);
+      })
 
-      const button = div.createEl("button", {text: "Submit"});
+      const button = inputContainer.createEl("button", {text: "Submit", cls: "prompt-instruction"});
       const resultsDiv = contentEl.createDiv({cls: "prompt-results"});
       button.onclick = async () => {
         const suggestions: Suggestion[] = await this.getSuggestions(input.value);
@@ -122,6 +138,19 @@ export class QueryModal extends Modal {
           this.renderSuggestion(suggestion, resultContainer);
         })
       }
+  }
+
+  update_query_cost_estimate(e: Event, estimate_text: HTMLElement) {
+    if (e.target) {
+      const input = e.target as HTMLInputElement;
+      this.estimatedCost = plugin.get_query_cost_estimate(input.value);
+    }
+    estimate_text.setText("Estimated cost of query: $" + this.estimatedCost);
+  }
+
+  debounce(fn: Function, delay_in_ms: number) {
+    clearTimeout(this.timerId);
+    this.timerId = setTimeout(fn, delay_in_ms);
   }
 
   onClose() {
@@ -143,8 +172,6 @@ export class QueryModal extends Modal {
 
   // Renders each suggestion item.
   renderSuggestion(suggestion: Suggestion, el: HTMLElement) {
-    // const div = el.createEl("div", { text: suggestion.name});
-    // el.createEl("small", { text: suggestion.header});
     el.onclick = async () => await this.onChooseSuggestion(suggestion);
     if (suggestion.match && suggestion.file) {
       const div = this.renderContent(el, suggestion.header, suggestion.match);
@@ -159,11 +186,11 @@ export class QueryModal extends Modal {
     offset?: number,
   ): HTMLDivElement {
     const contentEl = parentEl.createDiv({
-      cls: ['suggestion-content', 'qsp-content'],
+      cls: 'suggestion-content',
     });
 
     const titleEl = contentEl.createDiv({
-      cls: ['suggestion-title', 'qsp-title'],
+      cls: 'suggestion-title',
     });
 
     renderResults(titleEl, content, match, offset);
@@ -181,13 +208,13 @@ export class QueryModal extends Modal {
       let hidePath = isRoot;
 
       if (!hidePath) {
-        const wrapperEl = parentEl.createDiv({ cls: ['suggestion-note', 'qsp-note'] });
+        const wrapperEl = parentEl.createDiv({ cls: 'suggestion-note' });
         const path = this.getPathDisplayText(file);
 
-        const iconEl = wrapperEl.createSpan({ cls: ['qsp-path-indicator'] });
+        const iconEl = wrapperEl.createSpan();
         setIcon(iconEl, 'folder');
 
-        const pathEl = wrapperEl.createSpan({ cls: 'qsp-path' });
+        const pathEl = wrapperEl.createSpan();
         renderResults(pathEl, path, match);
       }
     }
@@ -239,16 +266,39 @@ export class QueryModal extends Modal {
       this.app.workspace.setActiveLeaf(matchingLeaf, {focus: true});
       matchingLeaf.view.setEphemeralState(eState);
     }
-
     this.close();
   }
-
-
 
   async openFileInLeaf(file: TFile, navType: PaneType, splitDirection: SplitDirection = "vertical", openState: OpenViewState) {
     const { workspace } = this.app;
     const leaf = navType === "split" ? workspace.getLeaf(navType, splitDirection) : workspace.getLeaf(navType)
     await leaf.openFile(file, openState);
+  }
+}
+
+export class GenerateEmbeddingsModal extends Modal {
+  estimatedCost = 0;
+  wasmGenerateEmbeddingsCommand : plugin.GenerateEmbeddingsCommand;
+
+  constructor(app: App, settings: semanticSearchSettings) {
+    super(app);
+    this.wasmGenerateEmbeddingsCommand = new plugin.GenerateEmbeddingsCommand(app, settings);
+  }
+
+  onOpen(): void {
+     const contentEl = this.contentEl;
+     const estimate_container = contentEl.createDiv();
+     const estimate_text = estimate_container.createDiv();
+
+     estimate_text.setText("Estimated cost of query: $" + this.estimatedCost);
+
+     const confirm_button = estimate_container.createEl("button", {text: "Confirm"});
+     confirm_button.onclick = () => this.wasmGenerateEmbeddingsCommand.get_embeddings();
+  }
+
+  onClose() {
+    let { contentEl } = this;
+    contentEl.empty();
   }
 }
 
