@@ -28,18 +28,20 @@ extern "C" {
     pub fn getMarkdownFiles(this: &Vault) -> Vec<TFile>;
     #[wasm_bindgen(method, catch)]
     pub async fn cachedRead(this: &Vault, file: TFile) -> Result<JsValue, JsValue>;
-    #[wasm_bindgen(method, getter)]
-    pub fn adapter(this: &Vault) -> DataAdapter;
-
-    pub type DataAdapter;
-
     #[wasm_bindgen(method, catch)]
-    pub async fn append(this: &DataAdapter, normalizedPath: String, data: String) -> Result<(), JsValue>;
+    pub async fn append(this: &Vault, file: TFile, data: String) -> Result<JsValue, JsValue>;
     #[wasm_bindgen(method, catch)]
-    pub async fn read(this: &DataAdapter, normalizedPath: String) -> Result<JsValue, JsValue>;
+    pub async fn create(this: &Vault, path: String, data: String) -> Result<JsValue, JsValue>;
     #[wasm_bindgen(method, catch)]
-    pub async fn remove(this: &DataAdapter, normalizedPath: String) -> Result<JsValue, JsValue>;
+    pub async fn delete(this: &Vault, file: TFile) -> Result<JsValue, JsValue>;
+    #[wasm_bindgen(method)]
+    pub fn getAbstractFileByPath(this: &Vault, path: String) -> TAbstractFile;
 
+    #[derive(Debug)]
+    pub type TAbstractFile;
+
+    #[derive(Debug)]
+    #[wasm_bindgen(extends = TAbstractFile)]
     pub type TFile;
 
     #[wasm_bindgen(method, getter)]

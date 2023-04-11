@@ -1,18 +1,11 @@
 [
-  "table-editor-obsidian",
-  "obsidian-excalidraw-plugin",
-  "hotkeysplus-obsidian",
-  "obsidian-imgur-plugin",
-  "obsidian-minimal-settings",
-  "obsidian-git",
-  "obsidian-style-settings",
-  "obsidian-vimrc-support",
-  "obsidian-link-converter",
-  "templater-obsidian",
-  "obsidian-linter",
-  "obsidian-citation-plugin",
-  "darlal-switcher-plus",
   "obsidian-sample-plugin",
-  "hot-reload",
-  "obsidian-semantic-search"
+  "obsidian-vimrc-support",
+  "obsidian-semantic-search",
+  "table-editor-obsidian",
+  "obsidian-citation-plugin",
+  "obsidian-excalidraw-plugin",
+  "obsidian-imgur-plugin",
+  "obsidian-linter",
+  "obsidian-minimal-settings"
 ]

@@ -4,46 +4,95 @@
     "type": "split",
     "children": [
       {
-        "id": "136574e09212aee9",
+        "id": "e82f28775f768f12",
         "type": "tabs",
         "children": [
           {
-            "id": "10ed0241b94e5538",
+            "id": "2277c538b437b938",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Union Find.md",
+                "file": "2005 Operating Systems.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e263eb18faf711ba",
+            "id": "7a1376d366ab2d78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Wireless Networks.md",
+                "file": "Notes/File Systems.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f9716b6aa771573c",
+            "id": "6357854794b1bc12",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Wireless Networks.md",
+                "file": "Notes/Process Synchronization.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0355bd803a379f0b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Processes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fd58876be8c4f5a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Threads.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d230b546eb1cefae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Process scheduling.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fae4fbc7e9391391",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Direct Memory Access.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -73,8 +122,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "random forest",
-                "matchingCase": true,
+                "query": "forms of internet communication",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -86,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 214.5
+    "width": 322.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -102,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Union Find.md",
+                "file": "Notes/Process Synchronization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Union Find.md",
+                "file": "Notes/Process Synchronization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Union Find.md"
+                "file": "Notes/Process Synchronization.md"
               }
             }
           },
@@ -154,8 +203,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "773c08e3cb822493",
@@ -167,7 +215,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Union Find.md",
+                "file": "Notes/Process Synchronization.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -208,36 +256,41 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
-      "templater-obsidian:Templater": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "darlal-switcher-plus:Open in Headings Mode": false,
-      "darlal-switcher-plus:Open Symbols for the active editor": false,
       "obsidian-semantic-search:Semantic Search": false
     }
   },
-  "active": "9a801a92cdfc9a12",
+  "active": "6357854794b1bc12",
   "lastOpenFiles": [
-    "Notes/Wireless Networks.md",
-    "Notes/Union Find.md",
-    "Notes/Building Blocks of the Internet.md",
     "Notes/File Systems.md",
+    "2005 Operating Systems.md",
+    "Notes/Threads.md",
+    "Notes/Processes.md",
+    "Notes/Process Synchronization.md",
+    "Notes/Process scheduling.md",
+    "Notes/Direct Memory Access.md",
+    "input.csv",
+    "Notes/Transmission Control Protocol.md",
+    "Notes/Application Layer.md",
+    "2203 Distributed Systems.md",
+    "Notes/Network Layer.md",
+    "Notes/Wireless Networks.md",
     "Notes/Set Theory.md",
+    "Notes/Union Find.md",
+    "embedding.csv",
+    "Notes/Building Blocks of the Internet.md",
     "Notes/Risk Analysis.md",
     "Notes/Support Vector Machines.md",
-    "2203 Distributed Systems.md",
-    "embedding.csv",
     "Notes/Broadcast Abstractions.md",
-    "input.csv",
     "Notes/2460 Software Safety and Security.md",
     "Notes/Event-B.md",
     "Notes/Formal Specification.md",
@@ -246,15 +299,6 @@
     "2421 Machine Learning.md",
     "Notes/Statistics.md",
     "Notes/Regression.md",
-    "Notes/Neural Networks.md",
-    "Notes/Decision Trees.md",
-    "Notes/Information Theory.md",
-    "Notes/Exponential Distribution.md",
-    "Notes/Statistical Inference.md",
-    "Notes/Dimensionality Reduction.md",
-    "Notes/Poisson Distribution.md",
-    "Notes/Clustering.md",
-    "Notes/Ensemble Learning.md",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"
   ]

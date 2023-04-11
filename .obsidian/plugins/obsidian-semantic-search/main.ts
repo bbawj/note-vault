@@ -1,8 +1,7 @@
-import { App, Modal, normalizePath, OpenViewState, PaneType, Plugin, PluginSettingTab, Pos, prepareSimpleSearch, renderResults, SearchResult, setIcon, Setting, SplitDirection, TFile, WorkspaceLeaf } from 'obsidian';
+import { App, Modal, normalizePath, Notice, OpenViewState, PaneType, Plugin, PluginSettingTab, Pos, prepareSimpleSearch, renderResults, SearchResult, setIcon, Setting, SplitDirection, TFile, WorkspaceLeaf } from 'obsidian';
 
 import * as plugin from "./pkg/obsidian_rust_plugin.js";
 import * as wasmbin from './pkg/obsidian_rust_plugin_bg.wasm';
-import GenerateEmbeddingsModal from "src/modal";
 
 interface semanticSearchSettings {
 	apiKey: string;
@@ -116,8 +115,10 @@ export class QueryModal extends Modal {
   }
 
   onOpen(): void {
-      const contentEl = this.contentEl;
-      contentEl.parentElement?.querySelector(".modal-close-button")?.remove();
+      const contentEl = this.modalEl;
+      this.modalEl.removeClass("modal");
+      this.modalEl.addClass("prompt");
+      this.modalEl.querySelector(".modal-close-button")?.remove();
 
       const inputContainer = contentEl.createDiv({cls: "prompt-input-container"})
       const input = inputContainer.createEl("input", {cls: "prompt-input"});
@@ -129,13 +130,15 @@ export class QueryModal extends Modal {
         this.debounce(() => this.update_query_cost_estimate(e, estimate_text), this.delay);
       })
 
-      const button = inputContainer.createEl("button", {text: "Submit", cls: "prompt-instruction"});
+      const button = inputContainer.createEl("button", {text: "Submit", cls: "ss-query-submit-button"});
       const resultsDiv = contentEl.createDiv({cls: "prompt-results"});
       button.onclick = async () => {
+        resultsDiv.replaceChildren();
+        setIcon(resultsDiv, "loader");
         const suggestions: Suggestion[] = await this.getSuggestions(input.value);
+        resultsDiv.replaceChildren();
         suggestions.forEach(suggestion => {
-          const resultContainer = resultsDiv.createDiv({cls: ["suggestion-item", "mod-complex"]})
-          this.renderSuggestion(suggestion, resultContainer);
+          this.renderSuggestion(suggestion, resultsDiv);
         })
       }
   }
@@ -172,9 +175,10 @@ export class QueryModal extends Modal {
 
   // Renders each suggestion item.
   renderSuggestion(suggestion: Suggestion, el: HTMLElement) {
-    el.onclick = async () => await this.onChooseSuggestion(suggestion);
+    const resultContainer = el.createDiv({cls: ["suggestion-item", "mod-complex", "ss-suggestion-item"]})
+    resultContainer.onclick = async () => await this.onChooseSuggestion(suggestion);
     if (suggestion.match && suggestion.file) {
-      const div = this.renderContent(el, suggestion.header, suggestion.match);
+      const div = this.renderContent(resultContainer, suggestion.header, suggestion.match);
       this.renderPath(div, suggestion.file, suggestion.match);
     }
   }
@@ -237,6 +241,7 @@ export class QueryModal extends Modal {
 
   // Perform action on the selected suggestion.
   async onChooseSuggestion(suggestion: Suggestion) {
+    this.close();
     const isMatch = (candidateLeaf: WorkspaceLeaf) => {
       let val = false;
 
@@ -251,8 +256,14 @@ export class QueryModal extends Modal {
     const matchingLeaf = leaves.find(isMatch);
 
     const eState = {
+      active: true,
+      focus: true,
       startLoc: suggestion.pos?.start,
       endLoc: suggestion.pos?.end,
+      cursor: {
+        from: {line: suggestion.pos?.start.line, ch: suggestion.pos?.start.col },
+        to: {line: suggestion.pos?.start.line, ch: suggestion.pos?.start.col },
+      }
     }
 
     if (matchingLeaf === undefined) {
@@ -266,7 +277,6 @@ export class QueryModal extends Modal {
       this.app.workspace.setActiveLeaf(matchingLeaf, {focus: true});
       matchingLeaf.view.setEphemeralState(eState);
     }
-    this.close();
   }
 
   async openFileInLeaf(file: TFile, navType: PaneType, splitDirection: SplitDirection = "vertical", openState: OpenViewState) {
@@ -277,7 +287,6 @@ export class QueryModal extends Modal {
 }
 
 export class GenerateEmbeddingsModal extends Modal {
-  estimatedCost = 0;
   wasmGenerateEmbeddingsCommand : plugin.GenerateEmbeddingsCommand;
 
   constructor(app: App, settings: semanticSearchSettings) {
@@ -285,15 +294,30 @@ export class GenerateEmbeddingsModal extends Modal {
     this.wasmGenerateEmbeddingsCommand = new plugin.GenerateEmbeddingsCommand(app, settings);
   }
 
-  onOpen(): void {
+  async onOpen() {
      const contentEl = this.contentEl;
-     const estimate_container = contentEl.createDiv();
+     const estimate_container = contentEl.createDiv({cls: "ss-estimate-container"});
+     const exists_container = contentEl.createDiv();
      const estimate_text = estimate_container.createDiv();
+     estimate_text.setText("Estimated cost of query: ...");
 
-     estimate_text.setText("Estimated cost of query: $" + this.estimatedCost);
+     try {
+       const cost = await this.wasmGenerateEmbeddingsCommand.get_input_cost_estimate();
+       const exists = await this.wasmGenerateEmbeddingsCommand.check_embedding_file_exists();
+       if (exists) {
+         const exists_text = exists_container.createSpan({text: "Warning: the file 'embedding.csv' already exists.", cls: "ss-exists-text"})
+       }
+       estimate_text.setText("Estimated cost of query: $" + cost);
+     } catch (error) {
+       console.error(error)
+     }
 
-     const confirm_button = estimate_container.createEl("button", {text: "Confirm"});
-     confirm_button.onclick = () => this.wasmGenerateEmbeddingsCommand.get_embeddings();
+     const confirm_button = contentEl.createEl("button", {text: "Generate Embeddings"})
+     confirm_button.onclick = async () => {
+       this.close();
+       await this.wasmGenerateEmbeddingsCommand.get_embeddings();
+       new Notice("Successfully generated embeddings in 'embedding.csv'");
+     }
   }
 
   onClose() {
