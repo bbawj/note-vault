@@ -82,10 +82,12 @@ One thread sends a signal to another thread to indicate something has happened
 aArrived = Semaphore(0)
 bArrived = Semaphore(0)
 ```
-| Thread A            | Thread B |
-| ------------------- | -------- |
-| `aArrived.signal()` | `bArrived.signal()`          |
-| `bArrived.wait()`   |`aArrived.wait()`          |
+| Thread A            | Thread B            |
+| ------------------- | ------------------- |
+| statement a1        | statement b1        |
+| `aArrived.signal()` | `bArrived.signal()` |
+| `bArrived.wait()`   | `aArrived.wait()`   |
+| statement a2        | statement b2        |
 ## Classical Problems of Synchronization
 ### Bounded Buffer
 ![](https://i.imgur.com/Y7Jf4tR.png)

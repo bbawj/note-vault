@@ -7,6 +7,7 @@ date: 2023-03-27
 - [[Risk Analysis]]
 - [[X.509 Email Address Vulnerability]]
 - [[Formal Specification]]
+- [[Modal Checking]]
 Safety: condition of being protected from harm
 Security: degree of protection from harm
 ## Verification vs Validation

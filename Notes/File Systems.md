@@ -23,7 +23,7 @@ A file is an unstructured sequence of bytes. Each byte is individually addressab
 - First searches the system wide OFT to see if it is being used by another process. If it is, per process open file table entry is created pointing to this. 
 - If not, the directory structure is searched for the file. FCB is copied to the system wide OFT. Entry is made in per process OFT and a pointer to the entry is returned.
 ![](https://i.imgur.com/YG1FRQs.png)
-The open file tables saves substantial overhead by serving as a cache for the FCB. Data blocks are *not* kept in memory, instead, when the process is closed, the FCB is entry is removed and the updated data is copied back to the disk.
+The open file tables saves substantial overhead by serving as a cache for the FCB. Data blocks are *not* kept in memory, instead, when the process is closed, the FCB entry is removed and the updated data is copied back to the disk.
 #### File Descriptor
 A file descriptor is a non-negative integer which indexes into a per-process file descriptor table which is maintained by the kernel. This in turn indexes into a system-wide open file table. It also indexes into the inode table that describes the actual underlying files. All operations are done on the file descriptor
 ### Storage allocation
