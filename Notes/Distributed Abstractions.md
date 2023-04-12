@@ -19,28 +19,7 @@ This specifies the API, importantly, the requests and events of the service
 ![](https://i.imgur.com/dzfSvde.png)
 ### Correctness Properties
 ![](https://i.imgur.com/oVSfzzE.png)
-Any trace property can be expressed as a *conjunction* of safety and liveliness properties.
-#### Safety
-Properties that state that nothing bad ever happens. It can only be:
-- satisfied in infinite time (you cannot be sure you are safe)
-- violated in finite time (when bad happens)
-![](https://i.imgur.com/Ym9AsqW.png)
-The **prefix** of a trace T is the first k (for k ≥ 0) events of T  
-- cut off the tail of T  
-- finite beginning of T  
-An **extension** of a prefix P is any trace that has P as a prefix
->[!Formal definition]
-> A property P is a safety property if given any execution E such that P(trace(E)) = false, there exists a prefix of E, s.t. every extension of that prefix gives an execution F s.t. P(trace(F))=false
-
-![500](https://i.imgur.com/9w2eSWC.png)
-#### Liveliness
-Properties that state that something good eventually happens. It can only be:
-- satisfied in finite time (when good happens)
-- violated in infinite time (there is always hope)
->[!Formal definition]
->A property P is a liveness property if given any prefix F of an execution E, there exists an extension of trace(F) for which P is true
-
-![500](https://i.imgur.com/gZEIagM.png)
+Any trace property can be expressed as a *conjunction* of [Safety and Liveliness](Notes/Safety%20and%20Liveliness.md) properties.
 ## Model/Assumptions
 ### Failure assumptions
 Processes that do not fail in an execution are **correct**.

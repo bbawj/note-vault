@@ -1,6 +1,8 @@
 ---
 title: "2460 Software Safety and Security"
 date: 2023-03-27
+tags: [moc]
+lastmod: 2023-04-11
 ---
 # 2460 Software Safety and Security
 #moc 
@@ -8,7 +10,7 @@ date: 2023-03-27
 - [[X.509 Email Address Vulnerability]]
 - [[Formal Specification]]
 - [[Modal Checking]]
-Safety: condition of being protected from harm
+[Safety](Notes/Safety%20and%20Liveliness.md): condition of being protected from harm
 Security: degree of protection from harm
 ## Verification vs Validation
 Verification: does the software do things right?

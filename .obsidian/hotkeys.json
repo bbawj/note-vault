@@ -2,5 +2,22 @@
   "switcher:open": [],
   "editor:delete-paragraph": [],
   "editor:save-file": [],
-  "editor:toggle-italics": []
+  "editor:toggle-italics": [],
+  "workspace:next-tab": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
+  ],
+  "editor:toggle-checklist-status": [],
+  "workspace:previous-tab": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "J"
+    }
+  ]
 }
