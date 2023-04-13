@@ -30,3 +30,34 @@ Case statement must be exhaustive:
 - Each module runs in parallel
 - Share state using parameters
 ![](https://i.imgur.com/Zf7geTg.png)
+## Operators
+### next()
+![](https://i.imgur.com/wJamRXj.png)
+## Ferryman Problem Example
+- Ferryman wants to cross the river with cabbage, goat and wolf
+- Goat will eat cabbage if left alone
+- Wolf will eat goat if left alone
+![](https://i.imgur.com/kWTgMM5.png)
+
+![](https://i.imgur.com/DYJ6Qny.png)
+
+![](https://i.imgur.com/5cSezFY.png)
+We can find the solution by negative the property we want to hold, *reach the solution while property is false*. Model checker can then find a counter example where we reach the solution while property is true:
+![](https://i.imgur.com/63KShXB.png)
+## Bridge and Torch Problem
+![](https://i.imgur.com/KF6fRey.png)
+
+![](https://i.imgur.com/rIV6lf0.png)
+### Model
+- Location of A,B,C,D as array of booleans
+- Travelling status of ABCD as another array of booleans
+- Torch location as boolean
+- Time as a number 0-100
+### Transitions
+- Torch can change location only if someone travels.
+- Model that torch always changes location until solution achieved, since we are interested in efficient solutions, and time does not increase if nobody moves.
+- Location is updated iff they want to travel and the torch is at their place
+- Timekeeping
+	- Time advances according to the slowest person who travels
+	- Define a time limit which the problem must be solved
+ 

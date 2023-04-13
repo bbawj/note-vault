@@ -39,3 +39,12 @@ Safety invariants (things that should *always* hold) that need to be verified:
 2. Always after controller reacted, if sensor is OK and temp + Δ ≥ -70 then cooler is in decr
 ## Formal Specification Frameworks
 [[Event-B]]
+## Building a Safety Case
+Fundamental elements:
+- Supporting evidence e.g. observation
+- High level argument: explain how the evidence can be reasonably interpreted as indicating acceptable safety.
+
+1. Define safety requirements (SR)
+2. Use formal specification in Event-B to model the requirements
+3. Discharging the proof obligations produces evidence that SR is met. Shown through [Goal Structured Notation:](Notes/Risk%20Analysis.md#Goal%20Structured%20Notation)![](https://i.imgur.com/BJqkXD2.png)
+

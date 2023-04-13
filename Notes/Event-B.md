@@ -18,7 +18,6 @@ A formal specification framework based on [Set Theory](Notes/Set%20Theory.md).
 #### Actions
 ![](https://i.imgur.com/3v567Uc.png)
 ![](https://i.imgur.com/pjz2k7S.png)
-### Set
 ## Examples
 ### University Access
 A system for controlling access to a university building
