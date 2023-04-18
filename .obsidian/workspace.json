@@ -68,6 +68,18 @@
             }
           },
           {
+            "id": "64f9d4c81afa24dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Risk Analysis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "3eeb4995d418630d",
             "type": "leaf",
             "state": {
@@ -80,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 1,
+        "currentTab": 4,
         "stacked": true
       }
     ],
@@ -141,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Formal Specification.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +170,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Formal Specification.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -181,7 +193,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/NuSMV.md"
+                "file": "Notes/Formal Specification.md"
               }
             }
           },
@@ -206,7 +218,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Formal Specification.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -264,20 +276,19 @@
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-semantic-search:Semantic Search": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "40bc744ba8088723",
+  "active": "8b073b8c6f7851a2",
   "lastOpenFiles": [
-    "Notes/Model Checking.md",
+    "Notes/Risk Analysis.md",
     "Notes/Formal Specification.md",
     "Notes/Event-B.md",
-    "Notes/Risk Analysis.md",
-    "Notes/2460 Software Safety and Security.md",
     "Notes/NuSMV.md",
+    "Notes/Model Checking.md",
+    "Notes/2460 Software Safety and Security.md",
     "Notes/Safety and Liveliness.md",
     "Notes/Distributed Abstractions.md",
     "References/@kuroseComputerNetworkingTopdown2017.md",
