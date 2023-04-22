@@ -60,4 +60,18 @@ We can find the solution by negative the property we want to hold, *reach the so
 - Timekeeping
 	- Time advances according to the slowest person who travels
 	- Define a time limit which the problem must be solved
- 
+## Semaphore Model
+![](https://i.imgur.com/vA10931.png)
+
+![](https://i.imgur.com/GQVfAPs.png)
+### Ensuring fairness
+`running` is a property created by the process keyword internally which indicates which process is running.
+
+Process 2 is always selected by this model "scheduler". This is unfair trace which can be forbidden using the keyword `FAIRNESS running;`
+![](https://i.imgur.com/BX0dAGp.png)
+### No bounded waiting
+Process 1 and 2 alternate between each other but process 2 acquires the semaphore each time before process 1 is able to do so.
+![](https://i.imgur.com/uIRAPv6.png)
+
+
+

@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/Process Synchronization.md",
                 "mode": "source",
                 "source": false
               }
@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 4,
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -153,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Formal Specification.md",
+                "file": "Notes/NuSMV.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +170,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Formal Specification.md",
+                "file": "Notes/NuSMV.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,7 +193,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Formal Specification.md"
+                "file": "Notes/NuSMV.md"
               }
             }
           },
@@ -218,7 +218,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Formal Specification.md",
+                "file": "Notes/NuSMV.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -281,14 +281,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8b073b8c6f7851a2",
+  "active": "40bc744ba8088723",
   "lastOpenFiles": [
-    "Notes/Risk Analysis.md",
-    "Notes/Formal Specification.md",
-    "Notes/Event-B.md",
+    "Notes/Process Synchronization.md",
+    "Notes/Deadlocks.md",
+    "Notes/Set Theory.md",
     "Notes/NuSMV.md",
-    "Notes/Model Checking.md",
     "Notes/2460 Software Safety and Security.md",
+    "Notes/Formal Specification.md",
+    "Notes/Risk Analysis.md",
+    "Notes/Event-B.md",
+    "Notes/Model Checking.md",
     "Notes/Safety and Liveliness.md",
     "Notes/Distributed Abstractions.md",
     "References/@kuroseComputerNetworkingTopdown2017.md",
@@ -296,7 +299,6 @@
     "2005 Operating Systems.md",
     "Brag Doc.md",
     "Notes/File Systems.md",
-    "Notes/Process Synchronization.md",
     "Notes/Threads.md",
     "Notes/Processes.md",
     "Notes/Process scheduling.md",
@@ -307,10 +309,8 @@
     "2203 Distributed Systems.md",
     "Notes/Network Layer.md",
     "Notes/Wireless Networks.md",
-    "Notes/Set Theory.md",
     "Notes/Union Find.md",
     "embedding.csv",
-    "Notes/Building Blocks of the Internet.md",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"
   ]

@@ -19,6 +19,7 @@ lastmod: 2023-03-30
 ### Power Set
 A power set is a set S whose elements are all subsets of S.
 $P(\{1,3,5\})=\{\emptyset,1,3,5,(1,3),(1,5),(3,5),(1,3,5)\}$
+It can also be denoted as a power of 2 (as each item in the set can either be part of the subset (1) or not (0): $P(S)=\{0,1\}^n = 2^n$
 ### Cardinality
 Number of elements in a set
 ### Ordered-Pair
