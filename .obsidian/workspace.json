@@ -32,18 +32,6 @@
             }
           },
           {
-            "id": "cdab3ccd6e17c7c9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Process Synchronization.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "91d926661c94c200",
             "type": "leaf",
             "state": {
@@ -92,7 +80,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -153,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Model Checking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Model Checking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/NuSMV.md"
+                "file": "Notes/Model Checking.md"
               }
             }
           },
@@ -218,7 +205,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Model Checking.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -267,7 +254,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 319.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -278,20 +265,22 @@
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "40bc744ba8088723",
+  "active": "6f87ea85125cc88f",
   "lastOpenFiles": [
+    "input.csv",
+    "Notes/NuSMV.md",
+    "Notes/Model Checking.md",
     "Notes/Process Synchronization.md",
     "Notes/Deadlocks.md",
     "Notes/Set Theory.md",
-    "Notes/NuSMV.md",
     "Notes/2460 Software Safety and Security.md",
     "Notes/Formal Specification.md",
     "Notes/Risk Analysis.md",
     "Notes/Event-B.md",
-    "Notes/Model Checking.md",
     "Notes/Safety and Liveliness.md",
     "Notes/Distributed Abstractions.md",
     "References/@kuroseComputerNetworkingTopdown2017.md",
@@ -303,13 +292,11 @@
     "Notes/Processes.md",
     "Notes/Process scheduling.md",
     "Notes/Direct Memory Access.md",
-    "input.csv",
     "Notes/Transmission Control Protocol.md",
     "Notes/Application Layer.md",
     "2203 Distributed Systems.md",
     "Notes/Network Layer.md",
     "Notes/Wireless Networks.md",
-    "Notes/Union Find.md",
     "embedding.csv",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"

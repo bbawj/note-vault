@@ -54,3 +54,17 @@ Operators cannot be nested
 A core tool used for model checking is [[NuSMV]]
 - Symbolic Model Verifier (SMV)
 - NuSMV: open source re-implementation
+## Binary Decision Diagrams
+Data structure which efficiently reduces redundancy in sub-expressions of Boolean functions. 
+
+The basic state space search algorithm with set theory:
+![](https://i.imgur.com/l0aaQca.png)
+This is useful in model checking as we can represent $R$ and $I$ as boolean function of {0,1} as being part of the set or not. We can then use BDD operations rather than set operations.
+### Example BDD derivation
+![](https://i.imgur.com/ObcZsC6.png)
+![](https://i.imgur.com/CFiKQ0p.png)
+![](https://i.imgur.com/Gy2TNw3.png)
+### Reduction Algorithm
+- Traverse BDD from bottom to top
+- For each layer of variables, eliminate nodes with equal successors. Sort nodes and unite nodes with equal successors
+![400](https://i.imgur.com/3S1LkfU.png)
