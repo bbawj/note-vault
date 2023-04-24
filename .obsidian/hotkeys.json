@@ -17,7 +17,9 @@
       "modifiers": [
         "Mod"
       ],
-      "key": "J"
+      "key": "H"
     }
-  ]
+  ],
+  "workspace:close-others": [],
+  "editor:open-search-replace": []
 }

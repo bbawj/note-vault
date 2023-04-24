@@ -13,73 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Model Checking.md",
+                "file": "Notes/Crafting Interpreters.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "40bc744ba8088723",
+            "id": "9afe0684deac275f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/NuSMV.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "91d926661c94c200",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Risk Analysis.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8b073b8c6f7851a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Formal Specification.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "64f9d4c81afa24dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Risk Analysis.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3eeb4995d418630d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Event-B.md",
+                "file": "Notes/Programming Language Aspects.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -140,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Model Checking.md",
+                "file": "Notes/Programming Language Aspects.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Model Checking.md",
+                "file": "Notes/Programming Language Aspects.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Model Checking.md"
+                "file": "Notes/Programming Language Aspects.md"
               }
             }
           },
@@ -205,7 +158,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Model Checking.md",
+                "file": "Notes/Programming Language Aspects.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -254,7 +207,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 319.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -269,11 +223,13 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "6f87ea85125cc88f",
+  "active": "9afe0684deac275f",
   "lastOpenFiles": [
+    "Notes/Crafting Interpreters.md",
+    "Notes/Programming Language Aspects.md",
+    "Notes/Model Checking.md",
     "input.csv",
     "Notes/NuSMV.md",
-    "Notes/Model Checking.md",
     "Notes/Process Synchronization.md",
     "Notes/Deadlocks.md",
     "Notes/Set Theory.md",
@@ -296,7 +252,6 @@
     "Notes/Application Layer.md",
     "2203 Distributed Systems.md",
     "Notes/Network Layer.md",
-    "Notes/Wireless Networks.md",
     "embedding.csv",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"
