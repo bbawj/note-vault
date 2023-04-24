@@ -11,6 +11,7 @@ The paths from source code to machine code:
 ### Scanning
 Also known as lexing or lexical analysis. Take a linear stream of characters and chunk them into *tokens*.
 ![](https://i.imgur.com/HTwN5Ae.png)
+More of this in [[Scanning]]
 ### Parsing
 Takes the tokens and forms *grammar* through construction of an Abstract Syntax Tree (AST).
 ![](https://i.imgur.com/zTMePI4.png)
