@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Programming Language Aspects.md",
+                "file": "Notes/Model Checking.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Notes/Model Checking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Notes/Model Checking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -115,7 +117,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Notes/Model Checking.md"
+              }
             }
           },
           {
@@ -127,7 +131,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "773c08e3cb822493",
@@ -139,6 +143,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Notes/Model Checking.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -202,15 +207,15 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "9a801a92cdfc9a12",
+  "active": "9afe0684deac275f",
   "lastOpenFiles": [
+    "Notes/NuSMV.md",
     "Notes/Programming Language Aspects.md",
     "Notes/Crafting Interpreters.md",
     "Notes/Scanning.md",
     "4913",
     "Notes/Model Checking.md",
     "input.csv",
-    "Notes/NuSMV.md",
     "Notes/Process Synchronization.md",
     "Notes/Deadlocks.md",
     "Notes/Set Theory.md",
