@@ -38,4 +38,44 @@ enum TokenType {
   EOF
 }
 ```
-	
+## Regex as an alternative
+Lexical grammar: the rules for how a programming language groups characters into lexemes.
+
+Regular Language: if the lexical grammar can be defined by regular expressions.
+## Scanner algorithm
+Use 2 offset variables `start` and `current` to index into the string.
+Recognising lexemes can be done with simple match statements.
+```java
+private void scanToken() {
+    char c = advance();
+    switch (c) {
+      case '(': addToken(LEFT_PAREN); break;
+      case ')': addToken(RIGHT_PAREN); break;
+      case '{': addToken(LEFT_BRACE); break;
+      case '}': addToken(RIGHT_BRACE); break;
+      case ',': addToken(COMMA); break;
+      case '.': addToken(DOT); break;
+      case '-': addToken(MINUS); break;
+      case '+': addToken(PLUS); break;
+      case ';': addToken(SEMICOLON); break;
+      case '*': addToken(STAR); break; 
+    }
+  }
+```
+- `advance()` consumes the next character in the source file
+```java
+  private char advance() {
+	return source.charAt(current++);
+  }
+```
+- `addToken()` grabs the text representing the current lexeme and creates a new token corresponding to a specific token type.
+```java
+private void addToken(TokenType type, Object literal) {
+    String text = source.substring(start, current);
+    tokens.add(new Token(type, text, literal, line));
+  }
+```
+### Longer Lexemes
+To handle scanning longer lexemes, we use a lookahead. After detecting the start of a lexeme, we pass control over to some lexeme specific code that consumes characters until it reaches the end.
+### Literals
+Strategy is similar to longer lexemes. For strings, we start consuming when we see a ", for numbers, we start when we see a digit.

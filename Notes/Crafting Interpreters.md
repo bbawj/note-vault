@@ -1,20 +1,20 @@
 ---
 title: "Crafting Interpreters"
 date: 2023-04-24
-lastmod: 2023-04-24
+lastmod: 2023-04-26
 ---
 # Crafting Interpreters
-- [[Programming Language Aspects]]
+- [[Notes/Programming Language Design]]
 ## Parts of a Language
 The paths from source code to machine code:
 ![](https://i.imgur.com/BzSEUJj.png)
 ### Scanning
 Also known as lexing or lexical analysis. Take a linear stream of characters and chunk them into *tokens*.
 ![](https://i.imgur.com/HTwN5Ae.png)
-More of this in [[Scanning]]
+
+More of this in [[Scanning]].
 ### Parsing
-Takes the tokens and forms *grammar* through construction of an Abstract Syntax Tree (AST).
-![](https://i.imgur.com/zTMePI4.png)
+Takes the tokens and forms *grammar* through construction of an [Abstract Syntax Tree](Notes/Representing%20Code.md#Abstract%20Syntax%20Tree).
 ### Static Analysis
 "In an expression like a + b, we know we are adding a and b, but we don’t know what those names refer to. Are they local variables? Global? Where are they defined?"
 - Binding: for each *identifier*, figure out where it is defined and wire them together. This is affected by scoping.

@@ -1,9 +1,9 @@
 ---
-title: "Programming Language Aspects"
+title: "Programming Language Design"
 date: 2023-04-24
-lastmod: 2023-04-24
+lastmod: 2023-04-26
 ---
-# Programming Language Aspects
+# Programming Language Design
 There are many pieces which form a programming language.
 - Type system: static or dynamic
 - Automatic memory management

@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "e82f28775f768f12",
+        "id": "59324980c90b036d",
         "type": "tabs",
         "children": [
           {
-            "id": "9afe0684deac275f",
+            "id": "9942520edc9ef14b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Model Checking.md",
+                "file": "Notes/Crafting Interpreters.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a1d79087cee5ec3a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Representing Code.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "03cf178743f510ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Visitor Pattern.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -78,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Model Checking.md",
+                "file": "Notes/Representing Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Model Checking.md",
+                "file": "Notes/Representing Code.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Model Checking.md"
+                "file": "Notes/Representing Code.md"
               }
             }
           },
@@ -143,7 +168,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Model Checking.md",
+                "file": "Notes/Representing Code.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -207,14 +232,21 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "9afe0684deac275f",
+  "active": "a1d79087cee5ec3a",
   "lastOpenFiles": [
-    "Notes/NuSMV.md",
-    "Notes/Programming Language Aspects.md",
     "Notes/Crafting Interpreters.md",
+    "Notes/Visitor Pattern.md",
+    "001 Software Engineering.md",
+    "Templates/Design Pattern Template.md",
+    "Notes/Observer Pattern.md",
+    "Notes/Dynamic Loading.md",
+    "Notes/Representing Code.md",
     "Notes/Scanning.md",
-    "4913",
+    "Notes/Abstract Syntax Tree.md",
+    "Notes/Programming Language Design.md",
     "Notes/Model Checking.md",
+    "Notes/NuSMV.md",
+    "4913",
     "input.csv",
     "Notes/Process Synchronization.md",
     "Notes/Deadlocks.md",
@@ -230,12 +262,6 @@
     "2005 Operating Systems.md",
     "Brag Doc.md",
     "Notes/File Systems.md",
-    "Notes/Threads.md",
-    "Notes/Processes.md",
-    "Notes/Process scheduling.md",
-    "Notes/Direct Memory Access.md",
-    "Notes/Transmission Control Protocol.md",
-    "Notes/Application Layer.md",
     "embedding.csv",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"

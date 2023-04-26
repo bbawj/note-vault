@@ -20,6 +20,7 @@ lastmod: 2022-11-21
 	- [Observer Pattern](Notes/Observer%20Pattern.md)
 	- [Factory Pattern](Notes/Factory%20Pattern.md)
 	- [Façade Pattern](Notes/Fa%C3%A7ade%20Pattern.md)
+	- [[Visitor Pattern]]
 	- [Dynamic Loading](Notes/Dynamic%20Loading.md)
 	- [Dependency Injection](Notes/Dependency%20Injection.md)
 - ## Software Architecture
