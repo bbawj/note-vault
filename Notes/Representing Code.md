@@ -85,3 +85,80 @@ abstract class Expr {
   // Other expressions...
 }
 ```
+# Parsing Code
+The 2 jobs of a parser:
+1.  Given a valid sequence of tokens, produce a corresponding syntax tree.
+2.  Given an _invalid_ sequence of tokens, detect any errors and tell the user about their mistakes.
+## Precedence and Associativity
+Different expressions have different precedence and associativity rules. 
+The C programming language rules with precedence from top to bottom:
+![](https://i.imgur.com/eaRjO5S.png)
+
+Applying the rules to our grammar notation:
+```
+expression     → equality ;
+equality       → comparison ( ( "!=" | "==" ) comparison )* ;
+comparison     → term ( ( ">" | ">=" | "<" | "<=" ) term )* ;
+term           → factor ( ( "-" | "+" ) factor )* ;
+factor         → unary ( ( "/" | "*" ) unary )* ;
+unary          → ( "!" | "-" ) unary
+               | primary ;
+primary        → NUMBER | STRING | "true" | "false" | "nil"
+               | "(" expression ")" ;
+```
+Each lower precedence expression matches internally to a higher precedence expression. For example, `equality` can either match an equality expression like `a == b`, or for an expression like `a >= b`, it calls the matching rule for `comparison`.
+### Adding ternary `?:` operator
+The ternary operator should have lowest precedence.
+`ternary -> equality ("?" equality ":" equality)*`
+## Recursive Descent Parsing
+A **top-down parser** starting from the top or outermost grammar rule (here `expression`) and working its way down into the nested subexpressions before finally reaching the leaves of the syntax tree. This is in contrast with bottom-up parsers like LR that start with primary expressions and compose them into larger and larger chunks of syntax.
+![](https://i.imgur.com/NsnrDsm.png)
+
+Translating the [grammar rules](Notes/Representing%20Code.md#Precedence%20and%20Associativity) into code maps nicely into recursive function calls:
+`equality       → comparison ( ( "!=" | "==" ) comparison )* ;`
+is
+```java
+private Expr equality() {
+    Expr expr = comparison();
+
+    while (match(BANG_EQUAL, EQUAL_EQUAL)) {
+      Token operator = previous();
+      Expr right = comparison();
+      expr = new Expr.Binary(expr, operator, right);
+    }
+
+    return expr;
+  }
+```
+## Error Handling
+### Panicking
+As soon as the parser detects an error, it enters panic mode. It knows at least one token doesn’t make sense given its current state in the middle of some stack of grammar productions.
+
+Languages like Java allows us to throw an exception.
+### Synchronisation
+Before it can get back to parsing, it needs to get its state and the sequence of forthcoming tokens aligned such that the next token does match the rule being parsed. 
+
+We want to discard tokens until we are at the beginning of the next statement. That boundary is usually after semicolons or before keywords like `if`:
+```java
+private void synchronize() {
+    advance();
+
+    while (!isAtEnd()) {
+      if (previous().type == SEMICOLON) return;
+
+      switch (peek().type) {
+        case CLASS:
+        case FUN:
+        case VAR:
+        case FOR:
+        case IF:
+        case WHILE:
+        case PRINT:
+        case RETURN:
+          return;
+      }
+
+      advance();
+    }
+  }
+```
