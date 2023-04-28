@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "46c576acb54c576e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Scanning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "03cf178743f510ed",
             "type": "leaf",
             "state": {
@@ -74,7 +86,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "safety",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +99,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5
+    "width": 322.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -232,16 +245,17 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "fd1e09f2e0845606",
+  "active": "a1d79087cee5ec3a",
   "lastOpenFiles": [
     "Notes/Crafting Interpreters.md",
+    "Notes/Representing Code.md",
+    "Notes/Scanning.md",
+    "Pics/Pasted image 20230427234412.png",
     "Notes/Visitor Pattern.md",
     "001 Software Engineering.md",
     "Templates/Design Pattern Template.md",
     "Notes/Observer Pattern.md",
     "Notes/Dynamic Loading.md",
-    "Notes/Representing Code.md",
-    "Notes/Scanning.md",
     "Notes/Abstract Syntax Tree.md",
     "Notes/Programming Language Design.md",
     "Notes/Model Checking.md",
@@ -261,7 +275,6 @@
     "008 Networking.md",
     "2005 Operating Systems.md",
     "Brag Doc.md",
-    "Notes/File Systems.md",
     "embedding.csv",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"

@@ -4,7 +4,11 @@ date: 2023-04-24
 lastmod: 2023-04-26
 ---
 # Crafting Interpreters
+#moc
+Notes from the book [Crafting Interpreters](http://craftinginterpreters.com/welcome.html). These consists of code examples in Java, but also the core concepts required to build an interpreter from scratch in any language.
 - [[Notes/Programming Language Design]]
+- [Scanning](Notes/Scanning.md)
+- [Representing Code](Notes/Representing%20Code.md)
 ## Parts of a Language
 The paths from source code to machine code:
 ![](https://i.imgur.com/BzSEUJj.png)

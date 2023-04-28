@@ -1,6 +1,7 @@
 ---
 title: "Scanning"
 date: 2023-04-24
+lastmod: 2023-04-28
 ---
 # Scanning
 The first job of an interpreter/compiler is to scan the raw source code as characters and group them into something meaningful.
@@ -79,3 +80,8 @@ private void addToken(TokenType type, Object literal) {
 To handle scanning longer lexemes, we use a lookahead. After detecting the start of a lexeme, we pass control over to some lexeme specific code that consumes characters until it reaches the end.
 ### Literals
 Strategy is similar to longer lexemes. For strings, we start consuming when we see a ", for numbers, we start when we see a digit.
+### Reserved words and Identifiers
+**Maximal munch** principle: when two lexical grammar rules can both match a chunk of code that the scanner is looking at, *whichever one matches the most characters wins*.
+
+`nil_identifier` is not matched as `nil`
+`<=` is matched as `<=` and not `<` followed by `=`
