@@ -20,43 +20,31 @@
             }
           },
           {
-            "id": "a1d79087cee5ec3a",
+            "id": "6a3a6b6f3c10c193",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/Model Checking.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "46c576acb54c576e",
+            "id": "2dc50b9ed06d92bb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Scanning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "03cf178743f510ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Visitor Pattern.md",
+                "file": "Notes/Software Model Checking.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1,
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -95,7 +83,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -116,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/Software Model Checking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/Software Model Checking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Representing Code.md"
+                "file": "Notes/Software Model Checking.md"
               }
             }
           },
@@ -181,7 +170,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/Software Model Checking.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -245,27 +234,30 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "a1d79087cee5ec3a",
+  "active": "2dc50b9ed06d92bb",
   "lastOpenFiles": [
-    "Notes/Crafting Interpreters.md",
-    "Notes/Representing Code.md",
-    "Notes/Scanning.md",
-    "Pics/Pasted image 20230427234412.png",
+    "Notes/Process Synchronization.md",
+    "Notes/Software Model Checking.md",
+    "Notes/Model Checking.md",
+    "Notes/Deadlocks.md",
+    "Pics/Software Model Checking 2023-04-29 15.44.45.excalidraw.md",
     "Notes/Visitor Pattern.md",
+    "Pics/Software Model Checking 2023-04-29 15.44.45.excalidraw.svg",
+    "Notes/Scanning.md",
+    "Notes/Crafting Interpreters.md",
+    "Notes/2460 Software Safety and Security.md",
+    "Notes/Representing Code.md",
+    "Pics/Pasted image 20230427234412.png",
     "001 Software Engineering.md",
     "Templates/Design Pattern Template.md",
     "Notes/Observer Pattern.md",
     "Notes/Dynamic Loading.md",
     "Notes/Abstract Syntax Tree.md",
     "Notes/Programming Language Design.md",
-    "Notes/Model Checking.md",
     "Notes/NuSMV.md",
     "4913",
     "input.csv",
-    "Notes/Process Synchronization.md",
-    "Notes/Deadlocks.md",
     "Notes/Set Theory.md",
-    "Notes/2460 Software Safety and Security.md",
     "Notes/Formal Specification.md",
     "Notes/Risk Analysis.md",
     "Notes/Event-B.md",
@@ -273,8 +265,6 @@
     "Notes/Distributed Abstractions.md",
     "References/@kuroseComputerNetworkingTopdown2017.md",
     "008 Networking.md",
-    "2005 Operating Systems.md",
-    "Brag Doc.md",
     "embedding.csv",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"
