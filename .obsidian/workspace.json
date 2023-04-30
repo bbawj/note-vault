@@ -44,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 2,
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Software Model Checking.md",
+                "file": "Notes/Model Checking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Software Model Checking.md",
+                "file": "Notes/Model Checking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Software Model Checking.md"
+                "file": "Notes/Model Checking.md"
               }
             }
           },
@@ -158,7 +158,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "773c08e3cb822493",
@@ -170,7 +170,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Software Model Checking.md",
+                "file": "Notes/Model Checking.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -234,10 +234,10 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "2dc50b9ed06d92bb",
+  "active": "6a3a6b6f3c10c193",
   "lastOpenFiles": [
-    "Notes/Process Synchronization.md",
     "Notes/Software Model Checking.md",
+    "Notes/Process Synchronization.md",
     "Notes/Model Checking.md",
     "Notes/Deadlocks.md",
     "Pics/Software Model Checking 2023-04-29 15.44.45.excalidraw.md",
