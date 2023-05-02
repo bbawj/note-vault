@@ -12,6 +12,7 @@ noremap <C-u> <C-u>zz
 
 " Yank to system clipboard
 set clipboard=unnamed
+unmap <C-c>
 "
 " Maps pasteinto to Alt-p
 map <A-p> :pasteinto
