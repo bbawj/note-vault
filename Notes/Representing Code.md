@@ -1,7 +1,7 @@
 ---
 title: "Representing Code"
 date: 2023-04-26
-lastmod: 2023-04-28
+lastmod: 2023-05-03
 ---
 # Representing Code
 ## Context Free Grammars (CFG)
@@ -215,7 +215,8 @@ statement      → exprStmt
 exprStmt       → expression ";" ;
 printStmt      → "print" expression ";" ;
 ```
-### Variables
+### Supporting Global Variables
+#### Variable declaration
 Variable declarations are statements but may be restricted to only be allowed in certain cases.
 `if (monday) var beverage = "espresso";` is weird. What is the scope of that `beverage` variable? Does it persist after the `if` statement? If so, what is its value on days other than Monday? Does the variable exist at all on those days?
 
@@ -256,6 +257,15 @@ private Stmt varDeclaration() {
     return new Stmt.Var(name, initializer);
   }
 ```
+#### Variable Expressions
+A variable expression accesses the binding made in declaration and returns it.
+```
+primary        → "true" | "false" | "nil"
+               | NUMBER | STRING
+               | "(" expression ")"
+               | IDENTIFIER ;
+```
+We update the primary expression to match an `IDENTIFIER` type, which corresponds to the name of the variable.
 ### Environments
 The environment is a data structure used to store the bindings between variables and values.
 ![](https://i.imgur.com/tag2o9N.png)
@@ -291,6 +301,26 @@ isOdd(){
 isEven() {
 	isOdd();
 }
+```
+#### Interpreting Variables
+We allow accessing a variable before initializing. In that case, we should return nil, the code below sets nil as the default value in the environment.
+```java
+  public Void visitVarStmt(Stmt.Var stmt) {
+    Object value = null;
+    if (stmt.initializer != null) {
+      value = evaluate(stmt.initializer);
+    }
+
+    environment.define(stmt.name.lexeme, value);
+    return null;
+  }
+```
+
+Interpreting variable expressions is a simple environment access:
+```java
+  public Object visitVariableExpr(Expr.Variable expr) {
+    return environment.get(expr.name);
+  }
 ```
 ### Assignment
 
