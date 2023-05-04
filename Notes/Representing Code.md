@@ -323,4 +323,122 @@ Interpreting variable expressions is a simple environment access:
   }
 ```
 ### Assignment
+An assignment is either an identifier followed by an = and an expression for the value, or an equality (and thus any other) expression. 
+```
+expression     → assignment ;
+assignment     → IDENTIFIER "=" assignment
+               | equality ;
+```
 
+A single token lookahead recursive descent parser can’t see far enough to tell that it’s parsing an assignment until after it has gone through the left-hand side and stumbled onto the `=`. Why does it matter? After all, we do not care about it for operators like `+` anyway. 
+#### L-value and R-value
+An assignment is different because the left operand does not evaluate to any value. It only evaluates to a storage location to assign to, an *l-value*. Expressions like `+` produce only *r-values*. 
+```
+var a = "before";
+a = "value";
+```
+In this case, we do not want to evaluate "a" (which returns "before").
+
+We can parse the left side as though it is an expression. Only if we reach a `=`, we wrap the entire thing in a assignment expression:
+```java
+private Expr assignment() {
+    Expr expr = equality();
+
+    if (match(EQUAL)) {
+      Token equals = previous();
+      Expr value = assignment();
+
+      if (expr instanceof Expr.Variable) {
+        Token name = ((Expr.Variable)expr).name;
+        return new Expr.Assign(name, value);
+      }
+
+      error(equals, "Invalid assignment target."); 
+    }
+
+    return expr;
+  }
+```
+At the same time, if the left side is not a valid assignment target (aka not a variable in this case), we throw an error.
+#### Interpreting
+Use an assign method which inserts into the environment only if the identifier exists, else throw a runtime error:
+```java
+public Object visitAssignExpr(Expr.Assign expr) {
+    Object value = evaluate(expr.value);
+    environment.assign(expr.name, value);
+    return value;
+  }
+```
+## Scope
+*Lexical scope*: the text of the program itself shows where a scope begins and ends, i.e. uses stuff like "{ }", *also called block scope*.
+*Dynamic scope*: where you don’t know what a name refers to until you execute the code:
+```java
+class Saxophone {
+  play() {
+    print "Careless Whisper";
+  }
+}
+
+class GolfClub {
+  play() {
+    print "Fore!";
+  }
+}
+
+fun playIt(thing) {
+  thing.play();
+}
+```
+### Nesting and shadowing
+When a local variable has the same name as a variable in an enclosing scope, it **shadows** the outer one. Code inside the block can’t see it any more—it is hidden in the “shadow” cast by the inner one—but it’s still there.
+
+When we enter a new block scope, we need to preserve variables defined in outer scopes so they are still around when we exit the inner block. 
+- Define a fresh environment for each block containing only the variables defined in that scope. 
+- When we exit the block, we discard its environment and restore the previous one.
+- Chain the environments together. Each environment has a reference to the environment of the immediately enclosing scope. When we look up a variable, we walk that chain from innermost out until we find the variable. 
+```java {3}
+class Environment {
+  final Environment enclosing;
+
+  private final Map<String, Object> values = new HashMap<>();
+```
+### Blocks
+#### Syntax
+A block is a series of statements or declarations surrounded by curly braces:
+```java
+statement      → exprStmt
+               | printStmt
+               | block ;
+
+block          → "{" declaration* "}" ;
+```
+It contains a list of statements.
+```java
+private List<Stmt> block() {
+    List<Stmt> statements = new ArrayList<>();
+
+    while (!check(RIGHT_BRACE) && !isAtEnd()) {
+      statements.add(declaration());
+    }
+
+    consume(RIGHT_BRACE, "Expect '}' after block.");
+    return statements;
+  }
+```
+#### Semantics
+When we encounter a block statement, we create a new environment with the current environment and pass it into a function like this:
+```java
+void executeBlock(List<Stmt> statements,
+                    Environment environment) {
+    Environment previous = this.environment;
+    try {
+      this.environment = environment;
+
+      for (Stmt statement : statements) {
+        execute(statement);
+      }
+    } finally {
+      this.environment = previous;
+    }
+  }
+```
