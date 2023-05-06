@@ -74,9 +74,9 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "dinng ",
                 "matchingCase": false,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5,
-    "collapsed": true
+    "width": 322.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -242,7 +241,7 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "54fd1a4e6ad68b67",
+  "active": "eff96ca3e23b7885",
   "lastOpenFiles": [
     "Notes/Scanning.md",
     "Notes/Representing Code.md",
