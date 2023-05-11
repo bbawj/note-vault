@@ -1,7 +1,8 @@
 ---
 title: "Crafting Interpreters"
 date: 2023-04-24
-lastmod: 2023-04-26
+lastmod: 2023-05-10
+tags: [moc]
 ---
 # Crafting Interpreters
 #moc

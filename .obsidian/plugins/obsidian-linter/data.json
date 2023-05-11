@@ -201,6 +201,27 @@
     },
     "remove-multiple-blank-lines-on-paste": {
       "enabled": false
+    },
+    "headings-start-line": {
+      "enabled": false
+    },
+    "remove-trailing-punctuation-in-heading": {
+      "enabled": false,
+      "punctuation-to-remove": ".,;:!。，；：！"
+    },
+    "auto-correct-common-misspellings": {
+      "enabled": false,
+      "ignore-words": ""
+    },
+    "remove-space-around-characters": {
+      "enabled": false,
+      "include-fullwidth-forms": true,
+      "include-cjk-symbols-and-punctuation": true,
+      "include-dashes": true,
+      "other-symbols": ""
+    },
+    "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
+      "enabled": false
     }
   },
   "lintOnSave": true,
