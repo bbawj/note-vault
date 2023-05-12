@@ -11,6 +11,7 @@ lastmod: 2023-04-11
 - [[Formal Specification]]
 - [[Notes/Model Checking]]
 - [[Software Model Checking]]
+- [[Memory Safety]]
 [Safety](Notes/Safety%20and%20Liveliness.md): condition of being protected from harm
 Security: degree of protection from harm
 ## Verification vs Validation
