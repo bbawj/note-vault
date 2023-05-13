@@ -10,6 +10,7 @@ Notes from the book [Crafting Interpreters](http://craftinginterpreters.com/welc
 - [[Notes/Programming Language Design]]
 - [Scanning](Notes/Scanning.md)
 - [Representing Code](Notes/Representing%20Code.md)
+- [[Control Flow]]
 ## Parts of a Language
 The paths from source code to machine code:
 ![](https://i.imgur.com/BzSEUJj.png)
