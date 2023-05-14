@@ -235,11 +235,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 319.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -254,11 +256,11 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "1d7a59a6827eb6ab",
+  "active": "fbaf081fc25f67df",
   "lastOpenFiles": [
     "Notes/Representing Code.md",
-    "Notes/Scanning.md",
     "Notes/Control Flow.md",
+    "Notes/Scanning.md",
     "Notes/Crafting Interpreters.md",
     "Notes/Memory Safety.md",
     "Notes/2460 Software Safety and Security.md",

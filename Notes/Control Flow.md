@@ -1,6 +1,7 @@
 ---
 title: "Control Flow"
 date: 2023-05-12
+lastmod: 2023-05-13
 ---
 # Control Flow
 ## Conditional Execution
@@ -52,4 +53,77 @@ statement      → exprStmt
                | block ;
 
 whileStmt      → "while" "(" expression ")" statement ;
+```
+## For loops
+Updated grammar:
+```
+statement      → exprStmt
+               | forStmt
+               | ifStmt
+               | printStmt
+               | whileStmt
+               | block ;
+
+forStmt        → "for" "(" ( varDecl | exprStmt | ";" )
+                 expression? ";"
+                 expression? ")" statement ;
+```
+The first clause is the initializer. It is executed exactly once, before anything else. It’s usually an expression, but for convenience, we also allow a variable declaration. In that case, the variable is scoped to the rest of the for loop—the other two clauses and the body.
+
+Next is the condition. It’s evaluated once at the beginning of each iteration, including the first. If the result is truthy, it executes the loop body. Otherwise, it bails.
+
+The last clause is the increment. It’s an arbitrary expression that does some work at the end of each loop iteration. The result of the expression is discarded, so it must have a side effect to be useful. In practice, it usually increments a variable.
+
+Any of these clauses can be omitted. Following the closing parenthesis is a statement for the body, which is typically a block
+### Desugaring
+We don't actually *need* the for loop. It is syntactic sugar for the primitive operations we already have. The for loop can be rewritten to:
+```java
+{
+  var i = 0;
+  while (i < 10) {
+    print i;
+    i = i + 1;
+  }
+}
+```
+# Functions
+The name of the function being called isn’t actually part of the call syntax. The thing being called, *the callee*, can be any expression that evaluates to a function.
+`getCallback()();`
+The first pair of parentheses has `getCallback` as its callee. But the second call has the entire `getCallback()` expression as its callee. It is the parentheses following an expression that indicate a function call. You can think of a call as sort of like a postfix operator that starts with `(`.
+
+Updating our grammar:
+```
+unary          → ( "!" | "-" ) unary | call ;
+call           → primary ( "(" arguments? ")" )* ;
+arguments      → expression ( "," expression )* ;
+```
+## Currying
+Named after Haskell Curry, the rule uses `*` to allow matching a series of calls like `fn(1)(2)(3)`. In this style, defining a function that takes multiple arguments is as a series of nested functions. Each function takes one argument and returns a new function. That function consumes the next argument, returns yet another function, and so on.
+## Arity
+Arity is the fancy term for the number of arguments a function or operation expects. Unary operators have arity one, binary operators two, etc. With functions, the arity is determined by the number of parameters it declares.
+## Native Functions
+**Primitives**, **external functions**, or **foreign functions**. They are functions that the interpreter exposes to user code but that are implemented in the host language (in our case Java), not the language being implemented (Lox).
+
+They provide access to the fundamental services that all programs are defined in terms of. If you don’t provide native functions to access the file system, a user’s going to have a hell of a time writing a program that reads and displays a file.
+
+Add a new globals environment which will store all the native methods in fixed reference to the global scope:
+```java
+class Interpreter implements Expr.Visitor<Object>,
+                             Stmt.Visitor<Void> {
+  final Environment globals = new Environment();
+  private Environment environment = globals;
+
+  void interpret(List<Stmt> statements) {
+```
+## Function declaration
+Updated grammar:
+```
+declaration    → funDecl
+               | varDecl
+               | statement ;
+			   
+funDecl        → "fun" function ;
+function       → IDENTIFIER "(" parameters? ")" block ;
+
+parameters     → IDENTIFIER ( "," IDENTIFIER )* ;
 ```
