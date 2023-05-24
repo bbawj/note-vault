@@ -1,7 +1,7 @@
 ---
 title: "Crafting Interpreters"
 date: 2023-04-24
-lastmod: 2023-05-10
+lastmod: 2023-05-23
 tags: [moc]
 ---
 # Crafting Interpreters
@@ -11,6 +11,7 @@ Notes from the book [Crafting Interpreters](http://craftinginterpreters.com/welc
 - [Scanning](Notes/Scanning.md)
 - [Representing Code](Notes/Representing%20Code.md)
 - [[Control Flow]]
+- [Functions](Notes/Functions.md)
 ## Parts of a Language
 The paths from source code to machine code:
 ![](https://i.imgur.com/BzSEUJj.png)
