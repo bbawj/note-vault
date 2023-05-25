@@ -12,6 +12,7 @@ Notes from the book [Crafting Interpreters](http://craftinginterpreters.com/welc
 - [Representing Code](Notes/Representing%20Code.md)
 - [[Control Flow]]
 - [Functions](Notes/Functions.md)
+- [[Classes]]
 ## Parts of a Language
 The paths from source code to machine code:
 ![](https://i.imgur.com/BzSEUJj.png)
