@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Classes.md",
+                "file": "Notes/Scanning.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 4,
+        "currentTab": 3,
         "stacked": true
       }
     ],
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Classes.md",
+                "file": "Notes/Crafting Interpreters.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Classes.md",
+                "file": "Notes/Crafting Interpreters.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Classes.md"
+                "file": "Notes/Crafting Interpreters.md"
               }
             }
           },
@@ -213,7 +213,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Classes.md",
+                "file": "Notes/Crafting Interpreters.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -279,11 +279,11 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "7076ffbf801eff1e",
+  "active": "54fd1a4e6ad68b67",
   "lastOpenFiles": [
     "Notes/Scanning.md",
-    "Notes/Classes.md",
     "Notes/Crafting Interpreters.md",
+    "Notes/Classes.md",
     "Notes/Formal Specification.md",
     "Notes/Software Model Checking.md",
     "Notes/2460 Software Safety and Security.md",

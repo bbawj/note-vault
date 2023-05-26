@@ -1,7 +1,7 @@
 ---
 title: "Crafting Interpreters"
 date: 2023-04-24
-lastmod: 2023-05-23
+lastmod: 2023-05-26
 tags: [moc]
 ---
 # Crafting Interpreters
@@ -49,6 +49,14 @@ In compiled languages like Go, the code implementing the runtime is directly ins
 ## Alternate Paths
 ### Tree-walk interpreters
 The interpreter traverses the abstract syntax tree and evaluates each node as it goes. IR, code generation not required.
+
+Those are real advantages. But, on the other hand, it’s *not memory-efficient*. Each piece of syntax becomes an AST node. A tiny Lox expression like `1 + 2` turns into a slew of objects with lots of pointers between them, something like:
+![](https://i.imgur.com/bLsHLtp.png)
+### Bytecode interpreter
+Structurally, bytecode resembles machine code. It’s a dense, linear sequence of binary instructions. That keeps overhead low and plays nice with the cache. However, it’s a much simpler, higher-level instruction set than any real chip out there. (In many bytecode formats, each instruction is only a single byte long, hence “bytecode”.)
+
+To execute the bytecode, we need to write an *emulator*—a simulated chip written in software that interprets the bytecode one instruction at a time. A *virtual machine (VM)*, if you will. If we write our VM in a language like C that is already supported on all the machines we care about, and we can run our emulator on top of any hardware we like.
+![](https://i.imgur.com/svohXTO.png)
 ### Transpilers
 Writing a complete backend for a language is a lot of work. Another method could be to write the front end of the language and in the backend, produce a string of valid source code for some other language that is about as high level and use the backend tools for that language to do the rest of the work e.g. Typescript to JavaScript.
 ## Interpreter vs Compiler
