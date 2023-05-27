@@ -8,48 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9942520edc9ef14b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b32a97fac896be80",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Software Model Checking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "364a2b2e7f813c88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Formal Specification.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "54fd1a4e6ad68b67",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Notes/Crafting Interpreters.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d44718048f617d38",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Virtual Machine.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0dbf692669b421d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Compiling Expressions.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3,
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -148,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Crafting Interpreters.md",
+                "file": "Notes/Compiling Expressions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Crafting Interpreters.md",
+                "file": "Notes/Compiling Expressions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Crafting Interpreters.md"
+                "file": "Notes/Compiling Expressions.md"
               }
             }
           },
@@ -213,7 +201,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Crafting Interpreters.md",
+                "file": "Notes/Compiling Expressions.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -279,14 +267,16 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "54fd1a4e6ad68b67",
+  "active": "0dbf692669b421d0",
   "lastOpenFiles": [
-    "Notes/Scanning.md",
     "Notes/Crafting Interpreters.md",
-    "Notes/Classes.md",
+    "Notes/Virtual Machine.md",
+    "Notes/Compiling Expressions.md",
     "Notes/Formal Specification.md",
     "Notes/Software Model Checking.md",
     "Notes/2460 Software Safety and Security.md",
+    "Notes/Scanning.md",
+    "Notes/Classes.md",
     "Notes/Functions.md",
     "Notes/Control Flow.md",
     "Notes/Representing Code.md",
@@ -309,8 +299,6 @@
     "4913",
     "input.csv",
     "Notes/Set Theory.md",
-    "Notes/Risk Analysis.md",
-    "Notes/Event-B.md",
     "embedding.csv",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"

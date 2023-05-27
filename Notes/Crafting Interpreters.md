@@ -13,6 +13,8 @@ Notes from the book [Crafting Interpreters](http://craftinginterpreters.com/welc
 - [[Control Flow]]
 - [Functions](Notes/Functions.md)
 - [[Classes]]
+- [[Virtual Machine]]
+- [[Compiling Expressions]]
 ## Parts of a Language
 The paths from source code to machine code:
 ![](https://i.imgur.com/BzSEUJj.png)
