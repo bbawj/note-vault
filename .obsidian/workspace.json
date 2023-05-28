@@ -25,62 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "006 Tools.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "05cc0b4c3afddb6f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_index.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0dbf692669b421d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Compiling Expressions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7076ffbf801eff1e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Scanning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b3e30c05955b8703",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Scanning.md",
+                "file": "Notes/Rust.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2,
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -148,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_index.md",
+                "file": "Notes/Rust.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_index.md",
+                "file": "Notes/Rust.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -188,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_index.md"
+                "file": "Notes/Rust.md"
               }
             }
           },
@@ -213,7 +165,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_index.md",
+                "file": "Notes/Rust.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -278,10 +230,11 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "9a801a92cdfc9a12",
+  "active": "d44718048f617d38",
   "lastOpenFiles": [
-    "Notes/Rust.md",
     "006 Tools.md",
+    "_index.md",
+    "Notes/Rust.md",
     "Notes/Tagged Unions.md",
     "Notes/Virtual Machine.md",
     "Notes/Compiling Expressions.md",
@@ -295,7 +248,6 @@
     "Notes/Control Flow.md",
     "Notes/Representing Code.md",
     "Notes/Memory Safety.md",
-    "_index.md",
     "Notes/Model Checking.md",
     "Notes/Process Synchronization.md",
     "Notes/Deadlocks.md",
