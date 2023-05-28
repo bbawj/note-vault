@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Virtual Machine.md",
+                "file": "006 Tools.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "05cc0b4c3afddb6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_index.md",
                 "mode": "source",
                 "source": false
               }
@@ -136,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Compiling Expressions.md",
+                "file": "_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -153,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Compiling Expressions.md",
+                "file": "_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -176,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Compiling Expressions.md"
+                "file": "_index.md"
               }
             }
           },
@@ -189,7 +201,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "773c08e3cb822493",
@@ -201,7 +213,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Compiling Expressions.md",
+                "file": "_index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -251,8 +263,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5,
-    "collapsed": true
+    "width": 319.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -267,11 +278,14 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "0dbf692669b421d0",
+  "active": "9a801a92cdfc9a12",
   "lastOpenFiles": [
-    "Notes/Crafting Interpreters.md",
+    "Notes/Rust.md",
+    "006 Tools.md",
+    "Notes/Tagged Unions.md",
     "Notes/Virtual Machine.md",
     "Notes/Compiling Expressions.md",
+    "Notes/Crafting Interpreters.md",
     "Notes/Formal Specification.md",
     "Notes/Software Model Checking.md",
     "Notes/2460 Software Safety and Security.md",
@@ -294,11 +308,8 @@
     "Notes/Observer Pattern.md",
     "Notes/Dynamic Loading.md",
     "Notes/Abstract Syntax Tree.md",
-    "Notes/Programming Language Design.md",
-    "Notes/NuSMV.md",
     "4913",
     "input.csv",
-    "Notes/Set Theory.md",
     "embedding.csv",
     "Pics/Pasted Image 20230307215510_225.png",
     "Pics/Broadcast Abstractions 2023-03-07 21.54.54.excalidraw.svg"
