@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "1d9a810ca6d32960",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Representing Code.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "d44718048f617d38",
             "type": "leaf",
             "state": {
@@ -100,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Rust.md",
+                "file": "Notes/Representing Code.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Rust.md",
+                "file": "Notes/Representing Code.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Rust.md"
+                "file": "Notes/Representing Code.md"
               }
             }
           },
@@ -153,7 +165,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "773c08e3cb822493",
@@ -165,7 +177,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Rust.md",
+                "file": "Notes/Representing Code.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -230,23 +242,24 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "d44718048f617d38",
+  "active": "fd1e09f2e0845606",
   "lastOpenFiles": [
+    "Notes/Crafting Interpreters.md",
+    "Notes/Control Flow.md",
+    "Notes/Representing Code.md",
+    "Notes/String Interning.md",
+    "Notes/Rust.md",
     "006 Tools.md",
     "_index.md",
-    "Notes/Rust.md",
     "Notes/Tagged Unions.md",
     "Notes/Virtual Machine.md",
     "Notes/Compiling Expressions.md",
-    "Notes/Crafting Interpreters.md",
     "Notes/Formal Specification.md",
     "Notes/Software Model Checking.md",
     "Notes/2460 Software Safety and Security.md",
     "Notes/Scanning.md",
     "Notes/Classes.md",
     "Notes/Functions.md",
-    "Notes/Control Flow.md",
-    "Notes/Representing Code.md",
     "Notes/Memory Safety.md",
     "Notes/Model Checking.md",
     "Notes/Process Synchronization.md",
@@ -259,7 +272,6 @@
     "Templates/Design Pattern Template.md",
     "Notes/Observer Pattern.md",
     "Notes/Dynamic Loading.md",
-    "Notes/Abstract Syntax Tree.md",
     "4913",
     "input.csv",
     "embedding.csv",

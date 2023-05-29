@@ -4,6 +4,7 @@ date: 2023-05-28
 lastmod: 2023-05-28
 ---
 # Rust
+- https://rust-unofficial.github.io/too-many-lists/
 ## Lifetimes
 Quite simply, a lifetime is the name of a region (~block/scope) of code somewhere in a program. That's it. When a reference is tagged with a lifetime, we're saying that it has to be valid for that *entire* region. Different things place requirements on how long a reference must and can be valid for. The entire lifetime system is in turn just a constraint-solving system that tries to minimize the region of every reference. If it successfully finds a set of lifetimes that satisfies all the constraints, your program compiles! Otherwise you get an error back saying that something didn't live long enough.
 ### Lifetime elision
@@ -50,3 +51,9 @@ fn borrow_mut(&self) -> RefMut<'_, T>;
 The rules for `borrow` and `borrow_mut` are exactly those of `&` and `&mut`: you can call `borrow` as many times as you want, but `borrow_mut` requires exclusivity.
 
 Rather than enforcing this statically, RefCell enforces them at runtime. If you break the rules, RefCell will just panic and crash the program. Why does it return these Ref and RefMut things? Well, they basically behave like `Rc`s but for borrowing. They also keep the RefCell borrowed until they go out of scope.
+## Foreign Function Interfaces (FFIs)
+The long and the short of it is that _every_ language is actually unsafe as soon as you allow calling into other languages, because you can just have C do arbitrarily bad things. Yes: Java, Python, Ruby, Haskell... everyone is wildly unsafe in the face of Foreign Function Interfaces (FFI).
+## Unsafe
+Rust carefully carves out a minimal surface area for unsafety. Note that all the other places we've worked with raw pointers has been _assigning_ them, or just observing whether they're null or not.
+
+If you never actually dereference a raw pointer _those are totally safe things to do_. You're just reading and writing an integer! The only time you can actually get into trouble with a raw pointer is if you actually dereference it. So Rust says _only_ that operation is unsafe, and everything else is totally safe.
