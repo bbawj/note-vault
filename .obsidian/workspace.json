@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/NuSMV.md",
                 "mode": "source",
                 "source": false
               }
@@ -74,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"Data ra",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/NuSMV.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/NuSMV.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Representing Code.md"
+                "file": "Notes/NuSMV.md"
               }
             }
           },
@@ -177,7 +177,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/NuSMV.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -242,26 +242,27 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "fd1e09f2e0845606",
+  "active": "eff96ca3e23b7885",
   "lastOpenFiles": [
+    "Notes/Software Model Checking.md",
+    "Notes/Model Checking.md",
+    "Notes/2460 Software Safety and Security.md",
+    "Notes/Formal Specification.md",
+    "_index.md",
+    "Notes/NuSMV.md",
     "Notes/Crafting Interpreters.md",
-    "Notes/Control Flow.md",
     "Notes/Representing Code.md",
+    "Notes/Control Flow.md",
     "Notes/String Interning.md",
     "Notes/Rust.md",
     "006 Tools.md",
-    "_index.md",
     "Notes/Tagged Unions.md",
     "Notes/Virtual Machine.md",
     "Notes/Compiling Expressions.md",
-    "Notes/Formal Specification.md",
-    "Notes/Software Model Checking.md",
-    "Notes/2460 Software Safety and Security.md",
     "Notes/Scanning.md",
     "Notes/Classes.md",
     "Notes/Functions.md",
     "Notes/Memory Safety.md",
-    "Notes/Model Checking.md",
     "Notes/Process Synchronization.md",
     "Notes/Deadlocks.md",
     "Pics/Software Model Checking 2023-04-29 15.44.45.excalidraw.md",
@@ -271,7 +272,6 @@
     "001 Software Engineering.md",
     "Templates/Design Pattern Template.md",
     "Notes/Observer Pattern.md",
-    "Notes/Dynamic Loading.md",
     "4913",
     "input.csv",
     "embedding.csv",

@@ -43,8 +43,9 @@ We can express these by combining [Propositional Logic](Notes/Propositional%20Lo
 ![](https://i.imgur.com/48C4UHK.png)
 Operators are defined on paths/traces of execution:
 ![](https://i.imgur.com/0FIVOBR.png)
-They can also be nested (only the second trace is true):
+They can also be nested:
 ![300](https://i.imgur.com/UHhxhC8.png)
+FG p: there exists a trace where eventually, p holds forever. Only the first trace can be proven to be true since we do not know the states of p for the 2nd trace.
 ### Computation Tree Logic
 Apply temporal logic not just on a single path but on many different possible branches which is needed for transition systems.
 ![](https://i.imgur.com/v0Cwu78.png)
