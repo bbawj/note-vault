@@ -60,7 +60,7 @@ We can find the solution by negative the property we want to hold, *reach the so
 - Timekeeping
 	- Time advances according to the slowest person who travels
 	- Define a time limit which the problem must be solved
-## Semaphore Model
+## Modelling Concurrent Programs
 ![](https://i.imgur.com/vA10931.png)
 
 ![](https://i.imgur.com/GQVfAPs.png)

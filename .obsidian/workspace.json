@@ -74,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"Data ra",
+                "query": "binary decision di",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -222,8 +222,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -242,14 +241,14 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "eff96ca3e23b7885",
+  "active": "1d9a810ca6d32960",
   "lastOpenFiles": [
-    "Notes/Software Model Checking.md",
     "Notes/Model Checking.md",
+    "Notes/NuSMV.md",
+    "Notes/Software Model Checking.md",
     "Notes/2460 Software Safety and Security.md",
     "Notes/Formal Specification.md",
     "_index.md",
-    "Notes/NuSMV.md",
     "Notes/Crafting Interpreters.md",
     "Notes/Representing Code.md",
     "Notes/Control Flow.md",
