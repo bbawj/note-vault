@@ -99,6 +99,33 @@ The implementation of the call method is as follows:
 1. Functions should encapsulate its parameters, meaning no code outside the function should be able to see them. Create a new environment with access to global environment.
 2. Bind the params to the values based in as arguments
 3. Execute the body of the function in a block
+### Call frames
+The compiler allocates stack slots for local variables. How should that work when the set of local variables in a program is distributed across multiple functions?
+
+We solved this above, by dynamically allocating memory for an environment each time a function was called or a block entered. In clox, we don’t want that kind of performance cost on every function call.
+#### Naive Static Option
+One option would be to keep them totally separate. Each function would get its own dedicated set of slots in the VM stack that it would own forever, even when the function isn’t being called. Each local variable in the entire program would have a bit of memory in the VM that it keeps to itself.
+#### Frame Pointers
+When a function is called, we don’t know where the top of the stack will be because it can be called from different contexts. But, wherever that top happens to be, we do know where all of the function’s local variables will be relative to that starting point. 
+```java
+fun first() {
+  var a = 1;
+  second();
+  var b = 2;
+  second();
+}
+
+fun second() {
+  var c = 3;
+  var d = 4;
+}
+
+first();
+```
+At the beginning of each function call, the VM records the location of the first slot where that function’s own locals begin. The instructions for working with local variables access them by a slot index relative to that, instead of relative to the bottom of the stack like they do today. At compile time, we calculate those relative slots. At runtime, we convert that relative slot to an absolute stack index by adding the function call’s starting slot.
+![](https://i.imgur.com/RX7qaQg.png)
+#### Return Addresses
+For each live function invocation—each call that hasn’t returned yet—we need to track where on the stack that function’s locals begin, and where the caller should resume. Again, thanks to recursion, there may be multiple return addresses for a single function, so this is a property of each invocation and not the function itself.
 ## Return Statements
 In Lox, the body of a function is a list of statements which don’t produce values, so we need dedicated syntax for emitting a result.
 ```

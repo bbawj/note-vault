@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Crafting Interpreters.md",
+                "file": "Notes/Virtual Machine.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Functions.md",
                 "mode": "source",
                 "source": false
               }
@@ -74,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "binary decision di",
+                "query": "spatial loca",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -91,12 +91,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 322.5
+    "width": 322.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/NuSMV.md"
+                "file": "Notes/Functions.md"
               }
             }
           },
@@ -177,7 +177,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/NuSMV.md",
+                "file": "Notes/Functions.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -243,24 +243,25 @@
   },
   "active": "1d9a810ca6d32960",
   "lastOpenFiles": [
-    "Notes/Model Checking.md",
+    "Notes/Virtual Machine.md",
+    "Notes/Virtual Memory.md",
+    "Notes/Crafting Interpreters.md",
+    "Notes/Representing Code.md",
+    "Notes/Compiling Expressions.md",
+    "Notes/Functions.md",
     "Notes/NuSMV.md",
+    "Notes/Model Checking.md",
     "Notes/Software Model Checking.md",
     "Notes/2460 Software Safety and Security.md",
     "Notes/Formal Specification.md",
     "_index.md",
-    "Notes/Crafting Interpreters.md",
-    "Notes/Representing Code.md",
     "Notes/Control Flow.md",
     "Notes/String Interning.md",
     "Notes/Rust.md",
     "006 Tools.md",
     "Notes/Tagged Unions.md",
-    "Notes/Virtual Machine.md",
-    "Notes/Compiling Expressions.md",
     "Notes/Scanning.md",
     "Notes/Classes.md",
-    "Notes/Functions.md",
     "Notes/Memory Safety.md",
     "Notes/Process Synchronization.md",
     "Notes/Deadlocks.md",
@@ -270,7 +271,6 @@
     "Pics/Pasted image 20230427234412.png",
     "001 Software Engineering.md",
     "Templates/Design Pattern Template.md",
-    "Notes/Observer Pattern.md",
     "4913",
     "input.csv",
     "embedding.csv",
