@@ -13,38 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Virtual Machine.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1d9a810ca6d32960",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Concurrency.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d44718048f617d38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Rust.md",
+                "file": "Notes/Garbage Collection.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -112,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Concurrency.md",
+                "file": "Notes/Garbage Collection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Concurrency.md",
+                "file": "Notes/Garbage Collection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Concurrency.md"
+                "file": "Notes/Garbage Collection.md"
               }
             }
           },
@@ -177,7 +152,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Concurrency.md",
+                "file": "Notes/Garbage Collection.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -241,11 +216,13 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "1d9a810ca6d32960",
+  "active": "54fd1a4e6ad68b67",
   "lastOpenFiles": [
-    "Notes/Functions.md",
-    "Notes/Concurrency.md",
     "Notes/Virtual Machine.md",
+    "Notes/Garbage Collection.md",
+    "Notes/Concurrency.md",
+    "Notes/Rust.md",
+    "Notes/Functions.md",
     "Notes/Virtual Memory.md",
     "Notes/Crafting Interpreters.md",
     "Notes/Representing Code.md",
@@ -258,7 +235,6 @@
     "_index.md",
     "Notes/Control Flow.md",
     "Notes/String Interning.md",
-    "Notes/Rust.md",
     "006 Tools.md",
     "Notes/Tagged Unions.md",
     "Notes/Scanning.md",
@@ -270,7 +246,6 @@
     "Notes/Visitor Pattern.md",
     "Pics/Software Model Checking 2023-04-29 15.44.45.excalidraw.svg",
     "Pics/Pasted image 20230427234412.png",
-    "001 Software Engineering.md",
     "4913",
     "input.csv",
     "embedding.csv",
