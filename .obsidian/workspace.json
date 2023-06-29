@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Garbage Collection.md",
+                "file": "2005 Operating Systems.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "spatial loca",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -87,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Garbage Collection.md",
+                "file": "2005 Operating Systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Garbage Collection.md",
+                "file": "2005 Operating Systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Garbage Collection.md"
+                "file": "2005 Operating Systems.md"
               }
             }
           },
@@ -152,7 +153,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Garbage Collection.md",
+                "file": "2005 Operating Systems.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -218,8 +219,8 @@
   },
   "active": "54fd1a4e6ad68b67",
   "lastOpenFiles": [
-    "Notes/Virtual Machine.md",
     "Notes/Garbage Collection.md",
+    "Notes/Virtual Machine.md",
     "Notes/Concurrency.md",
     "Notes/Rust.md",
     "Notes/Functions.md",

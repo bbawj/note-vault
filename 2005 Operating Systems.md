@@ -7,6 +7,14 @@ lastmod: 2022-11-21
 # Operating Systems
 #moc 
 Essentially a piece of code which controls and coordinates the use of hardware among various programs for various users.
+## The Boot Process
+When you turn on a computer, it begins executing *firmware code* that is stored in motherboard [ROM](https://en.wikipedia.org/wiki/Read-only_memory). This code performs a [power-on self-test](https://en.wikipedia.org/wiki/Power-on_self-test), detects available RAM, and pre-initializes the CPU and hardware. Afterwards, it looks for a bootable disk and starts booting the operating system kernel.
+### Boot Process Firmware
+On x86, there are two firmware standards: the “Basic Input/Output System“ (**[BIOS](https://en.wikipedia.org/wiki/BIOS)**) and the newer “Unified Extensible Firmware Interface” (**[UEFI](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)**). The BIOS standard is old and outdated, but simple and well-supported on any x86 machine since the 1980s. UEFI, in contrast, is more modern and has much more features, but is more complex to set up
+#### Bootloaders
+When you turn on a computer, it loads the BIOS from some special flash memory located on the motherboard. The BIOS runs self-test and initialization routines of the hardware, then it looks for bootable disks. If it finds one, control is transferred to its _bootloader_, which is a 512-byte portion of executable code stored at the disk’s beginning. Most bootloaders are larger than 512 bytes, so bootloaders are commonly split into a small first stage, which fits into 512 bytes, and a second stage, which is subsequently loaded by the first stage.
+
+The bootloader has to determine the location of the kernel image on the disk and load it into memory. It also needs to switch the CPU from the 16-bit real mode first to the 32-bit protected mode, and then to the 64-bit long mode, where 64-bit registers and the complete main memory are available. Its third job is to query certain information (such as a memory map) from the BIOS and pass it to the OS kernel.
 ## Types of OS
 1. Batch Systems: batch similar jobs which automatically transfers control from one job to another
 	- Only 1 job in memory at any time
