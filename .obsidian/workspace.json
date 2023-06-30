@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2005 Operating Systems.md",
+                "file": "Notes/Storage.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "EEPROM",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -71,8 +71,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5,
-    "collapsed": true
+    "width": 322.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -88,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2005 Operating Systems.md",
+                "file": "Notes/Storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2005 Operating Systems.md",
+                "file": "Notes/Storage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2005 Operating Systems.md"
+                "file": "Notes/Storage.md"
               }
             }
           },
@@ -141,7 +140,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "773c08e3cb822493",
@@ -153,7 +152,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "2005 Operating Systems.md",
+                "file": "Notes/Storage.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -217,8 +216,11 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "54fd1a4e6ad68b67",
+  "active": "eff96ca3e23b7885",
   "lastOpenFiles": [
+    "Notes/Memory Organisation.md",
+    "2005 Operating Systems.md",
+    "Notes/Main Memory.md",
     "Notes/Garbage Collection.md",
     "Notes/Virtual Machine.md",
     "Notes/Concurrency.md",
@@ -242,9 +244,6 @@
     "Notes/Classes.md",
     "Notes/Memory Safety.md",
     "Notes/Process Synchronization.md",
-    "Notes/Deadlocks.md",
-    "Pics/Software Model Checking 2023-04-29 15.44.45.excalidraw.md",
-    "Notes/Visitor Pattern.md",
     "Pics/Software Model Checking 2023-04-29 15.44.45.excalidraw.svg",
     "Pics/Pasted image 20230427234412.png",
     "4913",
