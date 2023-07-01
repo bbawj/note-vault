@@ -4,12 +4,7 @@ date: 2022-11-08
 lastmod: 2022-11-21
 ---
 # Interrupts
-An interrupt is a request for the processor to interrupt currently executing code so that the event can be processed in a timely manner. 
-
-> [!Traps]
-A trap is a CPU generated interrupt caused by a software error or a request:
-> - __unhandled exceptions in a program used to transfer control back to the [OS](2005%20Operating%20Systems.md) __ 
-> - user programs requesting execution of system calls which needs the OS
+An interrupt is a request for the processor to interrupt currently executing code so that the event can be processed in a timely manner. It usually refers to **hardware interrupts** triggered by, for example, USB controllers, which generate them on the basis of some event. Interrupts can also include [Exceptions](Notes/Exceptions.md), which are triggered by the CPU itself.
 ## Interrupt Service Routine
 ### Interrupt Handling
 1. [Context Switch](Notes/Context%20Switch.md) 

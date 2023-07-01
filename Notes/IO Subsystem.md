@@ -7,6 +7,10 @@ lastmod: 2022-11-21
 ![](https://i.imgur.com/5Y5N0mC.png)
 ## I/O Hardware
 The hardware communication between I/O devices and the CPU is done through the [signal chain subsystem](Notes/Signal%20Chain%20Subsystem.md).
+### Memory Mapped IO
+Memory-mapped I/O uses the same address space to address both main memory and I/O devices. The memory and registers of the I/O devices are mapped to address values, so a memory address may refer to either a portion of physical RAM or to memory and registers of the I/O device. For example, accessing the VGA text buffer through the memory address 0xb8000. This address is not mapped to RAM but to some memory on the VGA device.
+### Port Mapped IO
+Port-mapped I/O uses a separate I/O bus for communication. Each connected peripheral has one or more port numbers. To communicate with such an I/O port, there are special CPU instructions called in and out, which take a port number and a data byte
 ## Kernel I/O Subsystem
 - Device drivers are the only aspects which interface directly with the hardware.
 - This layering system allows devices to be added and removed without having to change the kernel
