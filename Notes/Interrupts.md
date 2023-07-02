@@ -5,6 +5,32 @@ lastmod: 2022-11-21
 ---
 # Interrupts
 An interrupt is a request for the processor to interrupt currently executing code so that the event can be processed in a timely manner. It usually refers to **hardware interrupts** triggered by, for example, USB controllers, which generate them on the basis of some event. Interrupts can also include [Exceptions](Notes/Exceptions.md), which are triggered by the CPU itself.
+## Interrupt Controller
+Connecting all hardware devices directly to the CPU is not possible. Instead, a separate _interrupt controller_ aggregates the interrupts from all devices and then notifies the CPU:
+```
+                                    ____________             _____
+               Timer ------------> |            |           |     |
+               Keyboard ---------> | Interrupt  |---------> | CPU |
+               Other Hardware ---> | Controller |           |_____|
+               Etc. -------------> |____________|
+
+```
+### 8259 Programmable Interrupt Controller (PIC)
+The 8259 has eight interrupt lines and several lines for communicating with the CPU. The typical systems back then were equipped with two instances of the 8259 PIC, one primary and one secondary PIC, connected to one of the interrupt lines of the primary:
+```
+                     ____________                          ____________
+Real Time Clock --> |            |   Timer -------------> |            |
+ACPI -------------> |            |   Keyboard-----------> |            |      _____
+Available --------> | Secondary  |----------------------> | Primary    |     |     |
+Available --------> | Interrupt  |   Serial Port 2 -----> | Interrupt  |---> | CPU |
+Mouse ------------> | Controller |   Serial Port 1 -----> | Controller |     |_____|
+Co-Processor -----> |            |   Parallel Port 2/3 -> |            |
+Primary ATA ------> |            |   Floppy disk -------> |            |
+Secondary ATA ----> |____________|   Parallel Port 1----> |____________|
+
+```
+
+This graphic shows the typical assignment of interrupt lines. We see that most of the 15 lines have a fixed mapping, e.g., line 4 of the secondary PIC is assigned to the mouse.
 ## Interrupt Service Routine
 ### Interrupt Handling
 1. [Context Switch](Notes/Context%20Switch.md) 

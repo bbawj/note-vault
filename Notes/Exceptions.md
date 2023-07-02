@@ -44,4 +44,17 @@ An interrupt stack frame:
 - **Pushing an error code** (for some exceptions): For some specific exceptions, such as page faults, the CPU pushes an error code, which describes the cause of the exception.
 - **Invoking the interrupt handler**: The CPU reads the address and the segment descriptor of the interrupt handler function from the corresponding field in the IDT. It then invokes this handler by loading the values into the `rip` and `cs` registers
 ## Double Faults
-A double fault is a special exception that occurs when the CPU fails to invoke an exception handler. For example, it occurs when a page fault is triggered but there is no page fault handler registered in the IDT. So it’s kind of similar to catch-all blocks in programming languages with exceptions, e.g., catch(...) in C++ or catch(Exception e) in Java or C#.
+A double fault is a special exception that occurs when the CPU fails to invoke an exception handler. For example, it occurs when a page fault is triggered but there is no page fault handler registered in the IDT. So it’s kind of similar to catch-all blocks in programming languages with exceptions.
+
+Only certain combinations of exceptions can trigger double faults:
+
+|First Exception|Second Exception|
+|---|---|
+|[Divide-by-zero](https://wiki.osdev.org/Exceptions#Division_Error),  <br>[Invalid TSS](https://wiki.osdev.org/Exceptions#Invalid_TSS),  <br>[Segment Not Present](https://wiki.osdev.org/Exceptions#Segment_Not_Present),  <br>[Stack-Segment Fault](https://wiki.osdev.org/Exceptions#Stack-Segment_Fault),  <br>[General Protection Fault](https://wiki.osdev.org/Exceptions#General_Protection_Fault)|[Invalid TSS](https://wiki.osdev.org/Exceptions#Invalid_TSS),  <br>[Segment Not Present](https://wiki.osdev.org/Exceptions#Segment_Not_Present),  <br>[Stack-Segment Fault](https://wiki.osdev.org/Exceptions#Stack-Segment_Fault),  <br>[General Protection Fault](https://wiki.osdev.org/Exceptions#General_Protection_Fault)|
+|[Page Fault](https://wiki.osdev.org/Exceptions#Page_Fault)|[Page Fault](https://wiki.osdev.org/Exceptions#Page_Fault),  <br>[Invalid TSS](https://wiki.osdev.org/Exceptions#Invalid_TSS),  <br>[Segment Not Present](https://wiki.osdev.org/Exceptions#Segment_Not_Present),  <br>[Stack-Segment Fault](https://wiki.osdev.org/Exceptions#Stack-Segment_Fault),  <br>[General Protection Fault](https://wiki.osdev.org/Exceptions#General_Protection_Fault)|
+A double fault must be handled properly, else some cases can easily transition into a triple fault causing a system reset. Kernel stack overflow is one of them.
+### Kernel Stack Overflow
+What happens if our kernel overflows its stack and the guard page is hit?
+- A guard page is a special memory page at the bottom of a stack that makes it possible to detect stack overflows. The page is not mapped to any physical frame, so accessing it causes a page fault instead of silently corrupting other memory. The bootloader sets up a guard page for our kernel stack, so a stack overflow causes a page fault.
+- When a page fault occurs, the CPU looks up the page fault handler in the IDT and tries to push the interrupt stack frame onto the stack. However, the current stack pointer still points to the non-present guard page. Thus, a second page fault occurs, which causes a double fault (according to the above table).
+- So the CPU tries to call the double fault handler now. However, on a double fault, the CPU tries to push the exception stack frame, too. The stack pointer still points to the guard page, so a third page fault occurs, which causes a triple fault and a system reboot. So our current double fault handler can’t avoid a triple fault in this case.

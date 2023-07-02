@@ -33,6 +33,20 @@ Do not partition the memory. Rather, the OS allocates the exact chunk of memory 
 *External fragmentation*: memory space between partitions (the holes) may be enough to satisfy a new request but is not contiguous and cannot be used. This can be solved by performing compaction, which shuffles memory contents to produce contiguous block of available memory.
 ### Dynamic Allocation Policies
 ![](https://i.imgur.com/QYCVh9D.png)
+### Problems
+In contiguous allocation, the entire address space of process memory is kept together. This causes a big chunk of "free space" that lies between the stack and heap of a process which is wasted *(internal fragmentation)*.
+![300](https://i.imgur.com/I1HB0Q6.png)
+## Segmentation (Non Contiguous Allocation)
+![](https://i.imgur.com/r7Z4FUg.png)
+### Addressing
+![](https://i.imgur.com/eTJ6naG.png)
+
+![](https://i.imgur.com/KECm1QL.png)
+>[!faq] Segmentation Fault
+>What if we try to refer to an illegal address? The hardware detects that the address is out of bounds, traps into the OS, likely leading to the termination of the offending process. That is called a segmentation fault.
+### Problems
+- *External fragmentation*: as processes leave the system, occupied segments become holes in the memory
+- Segmentation still isn’t flexible enough to support our fully generalized, sparse address space. For example, if we have a large but sparsely-used heap all in one logical segment, the entire heap must still reside in memory in order to be accessed. In other words, if our model of how the address space is being used doesn’t exactly match how the underlying segmentation has been designed to support it, segmentation doesn’t work very well
 ## Paging
 ^b8969e
 Allow process to be allocated physical memory whenever it is available. 
@@ -80,15 +94,6 @@ Hence, 10 bits to access 1 out of $2^{10}$ pages which itself contains 10 bits t
 
 ![](https://i.imgur.com/1syY6Pr.png)
 We gain in terms of memory, as we no longer have a page table size that is proportional to logical addressing space. We lose in terms of speed, as we need to search the page table rather than addressing it directly with a page index.
-## Non Contiguous Allocation (Segmentation)
-![](https://i.imgur.com/r7Z4FUg.png)
-### Addressing
-Similar logic as with a regular paging scheme:
-![](https://i.imgur.com/eTJ6naG.png)
-
-![](https://i.imgur.com/KECm1QL.png)
-### Fragmentation
-- *External fragmentation*: as processes leave the system, occupied segments become holes in the memory
 ## Practice Problems
 ![](https://i.imgur.com/YwvOJ6S.png)
 
