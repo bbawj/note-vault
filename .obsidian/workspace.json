@@ -56,7 +56,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -108,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5
+    "width": 322.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -124,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Interrupts.md",
+                "file": "Notes/Memory Organisation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Interrupts.md",
+                "file": "Notes/Memory Organisation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Interrupts.md"
+                "file": "Notes/Memory Organisation.md"
               }
             }
           },
@@ -189,7 +189,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Interrupts.md",
+                "file": "Notes/Memory Organisation.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -254,12 +254,13 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "f8ab4aea063d9cb0",
+  "active": "54fd1a4e6ad68b67",
   "lastOpenFiles": [
+    "Pics/Pasted image 20230704232302.png",
+    "Notes/Interrupts.md",
     "Notes/Context Switch.md",
     "Notes/Hardware Protection.md",
     "Notes/Exceptions.md",
-    "Notes/Interrupts.md",
     "Notes/Memory Organisation.md",
     "2005 Operating Systems.md",
     "Notes/Virtual Memory.md",
@@ -283,7 +284,6 @@
     "Notes/2460 Software Safety and Security.md",
     "Notes/Formal Specification.md",
     "_index.md",
-    "Notes/Control Flow.md",
     "Pics/Software Model Checking 2023-04-29 15.44.45.excalidraw.svg",
     "Pics/Pasted image 20230427234412.png",
     "4913",

@@ -2,5 +2,8 @@
   "accentColor": "",
   "cssTheme": "Minimal",
   "theme": "obsidian",
-  "baseFontSize": 15
+  "baseFontSize": 15,
+  "enabledCssSnippets": [
+    "png-bg"
+  ]
 }

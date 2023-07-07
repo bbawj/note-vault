@@ -4,6 +4,11 @@ date: 2022-11-08
 lastmod: 2022-11-21
 ---
 # Memory Organisation
+## Virtual Memory
+The idea behind virtual memory is to abstract away the memory addresses from the underlying physical storage device. Instead of directly accessing the storage device, a translation step is performed first. For segmentation, the translation step is to add the offset address of the active segment. Imagine a program accessing memory address 0x1234000 in a segment with an offset of 0x1111000: The address that is really accessed is 0x2345000.
+
+This allows both programs to run the same code and use the same virtual addresses without interfering with each other:
+![](https://i.imgur.com/env7uVA.png)
 ## Address Binding
 A program needs to be loaded into memory to run. The machine code that is generated needs to be mapped to memory addresses in the system.
 ![](https://i.imgur.com/zbwjCpb.png)
@@ -49,11 +54,11 @@ In contiguous allocation, the entire address space of process memory is kept tog
 - Segmentation still isn’t flexible enough to support our fully generalized, sparse address space. For example, if we have a large but sparsely-used heap all in one logical segment, the entire heap must still reside in memory in order to be accessed. In other words, if our model of how the address space is being used doesn’t exactly match how the underlying segmentation has been designed to support it, segmentation doesn’t work very well
 ## Paging
 ^b8969e
-Allow process to be allocated physical memory whenever it is available. 
 > [!Idea:]
 > 1. Divide the physical memory into fixed sized *frames*.
 > 2. Divide logical memory of the **process** into *pages* the same size as frames.
 > 3. Use a page table to map the logical memory to physical memory.
+![](https://os.phil-opp.com/paging-introduction/paging-fragmentation.svg)
 ### Fragmentation
 - Eliminating external fragmentation as every available physical memory space can be utilised. 
 - Internal fragmentation still possible as the last page may not use up the entire frame.
@@ -77,8 +82,9 @@ With TLB:
 Reentrant or code which never changes during execution can be shared among processes by having processes used the same pages.
 ![500x500](https://i.imgur.com/A6xWe1W.png)
 ### Multi-level Paging
-A page table can be large. Not efficient to have to fetch the entire page table for every memory LOAD/STUR instruction.
-![](https://i.imgur.com/7pH5hvu.png)
+> [!Idea]
+A page table can be large. Not efficient to have to fetch the entire page table for every memory LOAD/STUR instruction. ![](https://i.imgur.com/7pH5hvu.png)
+The multi-level table only allocates page-table space in proportion to the amount of address space you are using (a linear page table would require the whole thing to reside in memory to correctly perform address translation); thus it is generally compact and supports sparse address spaces. ![](https://i.imgur.com/ndkJ3sD.png)
 #### Paging the page table
 ![](https://i.imgur.com/Xllezzl.png)
 - Final level represents the physical memory space, 12 bits is needed for byte-addressing the 4KB memory. This leaves 20 bits for indexing pages.
@@ -86,6 +92,8 @@ A page table can be large. Not efficient to have to fetch the entire page table 
 - The root level represents the index to the 2nd level page: Since 1 block can store 4KB, to store information about the 4MB page table in 1 block will require $2^{20}\times4/2^{12}=2^{10}$ entries
 Hence, 10 bits to access 1 out of $2^{10}$ pages which itself contains 10 bits to access 1 out of $2^{10}$ pages. Total of $2^{20}$ pages.
 ![](https://i.imgur.com/dhOBFTt.png)
+> [!faq] Trade-offs
+On a TLB miss, two loads from memory will be required to get the right translation information from the page table (one for the page directory, and one for the PTE itself
 ### Inverted Page Table
 > [! Idea:]
 > Rather than each process having its own page table, we only keep a single table with 1 entry for each physical frame.
