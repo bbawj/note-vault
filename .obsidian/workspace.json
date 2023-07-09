@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "54fd1a4e6ad68b67",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Memory Organisation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f8ab4aea063d9cb0",
             "type": "leaf",
             "state": {
@@ -85,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "segmentation",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -102,8 +90,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -124,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Memory Organisation.md",
+                "file": "Notes/Interrupts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Memory Organisation.md",
+                "file": "Notes/Interrupts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Memory Organisation.md"
+                "file": "Notes/Interrupts.md"
               }
             }
           },
@@ -189,7 +176,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Memory Organisation.md",
+                "file": "Notes/Interrupts.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -254,14 +241,14 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "54fd1a4e6ad68b67",
+  "active": "3fae0f301918ac84",
   "lastOpenFiles": [
+    "Notes/Memory Organisation.md",
     "Pics/Pasted image 20230704232302.png",
     "Notes/Interrupts.md",
     "Notes/Context Switch.md",
     "Notes/Hardware Protection.md",
     "Notes/Exceptions.md",
-    "Notes/Memory Organisation.md",
     "2005 Operating Systems.md",
     "Notes/Virtual Memory.md",
     "Pics/Pasted image 20230701222154.png",
