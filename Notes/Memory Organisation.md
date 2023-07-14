@@ -1,7 +1,7 @@
 ---
 title: "Memory Organisation"
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-07-09
 ---
 # Memory Organisation
 ## Virtual Memory
@@ -102,6 +102,20 @@ On a TLB miss, two loads from memory will be required to get the right translati
 
 ![](https://i.imgur.com/1syY6Pr.png)
 We gain in terms of memory, as we no longer have a page table size that is proportional to logical addressing space. We lose in terms of speed, as we need to search the page table rather than addressing it directly with a page index.
+### Accessing Page Tables
+Most operating systems kernels run with paging enabled. This means that memory accesses in the kernel are inherently through virtual addresses. This is good, since programs could easily circumvent memory protection and access the memory of other programs otherwise. So the only way to access some physical address is through some virtual page that is mapped to the physical frame at address.
+#### Identity mapping
+This way, the physical addresses of page tables are also valid virtual addresses so that we can easily access the page tables of all levels
+![png](Pics/Pasted%20image%2020230709115655.png)
+However, it clutters the virtual address space and makes it more difficult to find continuous memory regions of larger sizes i.e. fragmentation.
+#### Fixed offset mapping
+We can **use a separate memory region for page table mappings**, for example, at 10 TiB:
+![png](Pics/Pasted%20image%2020230709224247.png)
+However, this means we still have to create a new mapping whenever we create a new page table.
+#### Map the complete physical memory
+This approach allows our kernel to access arbitrary physical memory, including page table frames of other address spaces. The reserved virtual memory range has the same size as before, with the difference that it no longer contains unmapped pages.
+![png](Pics/Pasted%20image%2020230709224610.png)
+However, additional page tables are needed for storing the mapping of the physical memory. These page tables need to be stored somewhere, so they use up a part of physical memory, which can be a problem on devices with a small amount of memory.
 ## Practice Problems
 ![](https://i.imgur.com/YwvOJ6S.png)
 
