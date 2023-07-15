@@ -41,7 +41,8 @@ The bootloader has to determine the location of the kernel image on the disk and
 10. [Virtualization](Notes/Virtualization.md)
 11. [Memory Organisation](Notes/Memory%20Organisation.md)
 12. [Virtual Memory](Notes/Virtual%20Memory.md)
-13. [File Systems](Notes/File%20Systems.md)
+13. [[Allocators]]
+14. [File Systems](Notes/File%20Systems.md)
 ## References
 ### Operating Systems Concepts
 Exercise solutions:

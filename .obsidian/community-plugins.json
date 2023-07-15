@@ -5,12 +5,12 @@
   "table-editor-obsidian",
   "obsidian-citation-plugin",
   "obsidian-excalidraw-plugin",
-  "obsidian-imgur-plugin",
   "obsidian-linter",
   "obsidian-minimal-settings",
   "obsidian-git",
   "obsidian-outliner",
   "templater-obsidian",
   "bbawj-semantic-search",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "obsidian-image-uploader"
 ]

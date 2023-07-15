@@ -38,6 +38,13 @@ When useful blocks are displaced due to placement policies. E.g. fully associati
 - Levels of cache
 	- Using multi-level cache will reduce the miss penalty
 ![](https://i.imgur.com/PKhDsDq.png)
+#### False sharing
+An issue arises when different cores have cached values which share the same cache line. The picture below depicts how 2 cores try to access different independent values (X and Y) that resides on the same cache line in L3 cache.
+![](https://i.imgur.com/5r29qAP.png)
+If X and Y are highly used variables
+
+- Writing to X invalidates the cache line in Core 2
+- Writing to Y invalidates the cache line in Core 1
 ### Measuring Impact with CPI
 $$
 \begin{align}
