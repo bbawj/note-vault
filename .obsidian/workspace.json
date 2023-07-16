@@ -20,18 +20,6 @@
             }
           },
           {
-            "id": "9113ebf41c2f5119",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Virtual Memory.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "07cc91683d8a6212",
             "type": "leaf",
             "state": {
@@ -44,7 +32,6 @@
             }
           }
         ],
-        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -113,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Allocators.md",
+                "file": "2005 Operating Systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Allocators.md",
+                "file": "2005 Operating Systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Allocators.md"
+                "file": "2005 Operating Systems.md"
               }
             }
           },
@@ -178,7 +165,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Allocators.md",
+                "file": "2005 Operating Systems.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -228,7 +215,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 319.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -243,10 +231,12 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "07cc91683d8a6212",
+  "active": "499d881ba6321d1f",
   "lastOpenFiles": [
-    "Notes/Virtual Memory.md",
     "Notes/Allocators.md",
+    "Pics/Pasted image 20230716224307.png",
+    "Pics/Pasted image 20230716171506.png",
+    "Notes/Virtual Memory.md",
     "Pics/Pasted image 20230715115218.png",
     "Pics/Pasted image 20230715114308.png",
     "Pics/Pasted image 20230715114021.png",
@@ -260,9 +250,7 @@
     "Notes/Memory Organisation.md",
     "Pics/Pasted image 20230709224610.png",
     "Pics/Pasted image 20230709224247.png",
-    "Pics/Pasted image 20230709115655.png",
     "Notes/Interrupts.md",
-    "Pics/Pasted image 20230704232302.png",
     "Notes/Hardware Protection.md",
     "Notes/IO Subsystem.md",
     "Notes/Signal Chain Subsystem.md",

@@ -1,8 +1,0 @@
-{
-  "apiEndpoint": "https://api.github.com/repos/bbawj/note-vault/contents/test.png",
-  "uploadHeader": "{\"Authorization\": \"Bearer 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\"}",
-  "uploadBody": "{\"content\": \"$FILE\", \"message\": \"upload image\"}",
-  "imageUrlPath": "content.html_url",
-  "maxWidth": 4096,
-  "enableResize": false
-}

@@ -30,5 +30,14 @@ A bump allocator cant effectively reuse freed memory regions.
 ![png](Pics/Pasted%20image%2020230715102700.png)
 There are a total of 5 unused memory regions, but the next pointer only gives us access to the last one. We could store all the unused regions in a constant sized array but we would not be able to know what size or how large it could get. We can't use dynamic data structures, because then our heap allocator would depend on itself.
 ## Linked List Allocator
+A linked list can be used to keep track of the freed areas of memory, hence the name, *free list*.
 ![png](Pics/Pasted%20image%2020230715110728.png)
-
+Freed blocks should be merged together, else it will result in increasing and increasing fragmentation:
+![](Pics/Pasted%20image%2020230716171506.png)
+### Pros and Cons
+- Able to reuse freed memory
+- Poorer performance: list length depends on the number of unused memory blocks, the performance can vary extremely for different programs. A program that only creates a couple of allocations will experience relatively fast allocation performance. For a program that fragments the heap with many allocations, however, the allocation performance will be very bad because the linked list will be very long and mostly contain very small blocks.
+## Fixed Size Block Allocator
+Instead of allocating exactly as much memory as requested, we define a small number of block sizes and round up each allocation to the next block size. For example, with block sizes of 16, 64, and 512 bytes, an allocation of 4 bytes would return a 16-byte block, an allocation of 48 bytes a 64-byte block.
+![](Pics/Pasted%20image%2020230716224307.png)
+Like the linked list allocator, we keep track of the unused memory by creating a linked list in the unused memory. However, instead of using a single list with different block sizes, we create a separate list for each size class.
