@@ -32,6 +32,7 @@
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -100,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2005 Operating Systems.md",
+                "file": "Notes/Allocators.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2005 Operating Systems.md",
+                "file": "Notes/Allocators.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2005 Operating Systems.md"
+                "file": "Notes/Allocators.md"
               }
             }
           },
@@ -165,7 +166,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "2005 Operating Systems.md",
+                "file": "Notes/Allocators.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -231,8 +232,9 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "499d881ba6321d1f",
+  "active": "07cc91683d8a6212",
   "lastOpenFiles": [
+    "2005 Operating Systems.md",
     "Notes/Allocators.md",
     "Pics/Pasted image 20230716224307.png",
     "Pics/Pasted image 20230716171506.png",
@@ -243,7 +245,6 @@
     "Pics/Pasted image 20230715110728.png",
     "Pics/Pasted image 20230715102700.png",
     "Pics/Pasted image 20230715101712.png",
-    "2005 Operating Systems.md",
     "Notes/Exceptions.md",
     "Notes/Cache.md",
     "Notes/Context Switch.md",

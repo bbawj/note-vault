@@ -41,3 +41,11 @@ Freed blocks should be merged together, else it will result in increasing and in
 Instead of allocating exactly as much memory as requested, we define a small number of block sizes and round up each allocation to the next block size. For example, with block sizes of 16, 64, and 512 bytes, an allocation of 4 bytes would return a 16-byte block, an allocation of 48 bytes a 64-byte block.
 ![](Pics/Pasted%20image%2020230716224307.png)
 Like the linked list allocator, we keep track of the unused memory by creating a linked list in the unused memory. However, instead of using a single list with different block sizes, we create a separate list for each size class.
+
+The property that each region in the list is the same size makes for some efficient allocations:
+1. Round up the requested allocation size to the next block size. For example, when an allocation of 12 bytes is requested, we would choose the block size of 16 in the above example.
+2. Retrieve the head pointer for the list, e.g., for block size 16, we need to use `head_16`.
+3. Remove the first block from the list and return it.
+Most notably, we can always return the first element of the list and no longer need to traverse the full list. Thus, allocations are much faster than with the linked list allocator. Deallocations also work the same way, by rounding up the freed size and adding the region to the head of the list, we avoid traversing the entire list.
+### Fallback Allocator
+A fallback allocator like a linked list allocator for allocation sizes which are rare, can reduce memory waste. Since only very few allocations of that size are expected, the linked list would stay small and the (de)allocations would still be reasonably fast.
