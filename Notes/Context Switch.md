@@ -4,20 +4,8 @@ date: 2022-11-08
 lastmod: 2022-11-21
 ---
 # Context Switch
-OS preserves the state of the CPU by storing registers and the Program Counter
+OS preserves the state of the CPU by backing up the whole state of the task, including the call stack, storing registers and the program counter.
+
 __Context switch time is overhead__: note that there is time spent where both processes are idle
 ![](https://i.imgur.com/7cFAtio.png)
-## Interrupt Stack Table (IST) and Task State Segment (TSS)
-The 64-bit TSS has the following format:
-
-|Field|Type|
-|---|---|
-|(reserved)|`u32`|
-|Privilege Stack Table|`[u64; 3]`|
-|(reserved)|`u64`|
-|Interrupt Stack Table|`[u64; 7]`|
-|(reserved)|`u64`|
-|(reserved)|`u16`|
-|I/O Map Base Address|`u16`|
-
-The _Privilege Stack Table_ is used by the CPU when the privilege level changes. For example, if an exception occurs while the CPU is in user mode (privilege level 3), the CPU normally switch to kernel mode (privilege level 0) before invoking the exception handler.
+As the call stack can be vary large, the OS typically sets up a separate call stack for each task instead of having to back up the entire call stack content on each task switch. Such a task with its own call stack is a [thread](Notes/Threads.md).

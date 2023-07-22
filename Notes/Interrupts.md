@@ -40,3 +40,17 @@ This graphic shows the typical assignment of interrupt lines. We see that most o
 The ISR is a very short routine so as to not suspend the main program for too long. This usually means no usage of loops.
 - Allows for efficient use of CPU as it does not need to monitor I/O device status
 - More hardware is required between I/O and processor to interface with each other
+## Interrupt Stack Table (IST) and Task State Segment (TSS)
+The 64-bit TSS has the following format:
+
+|Field|Type|
+|---|---|
+|(reserved)|`u32`|
+|Privilege Stack Table|`[u64; 3]`|
+|(reserved)|`u64`|
+|Interrupt Stack Table|`[u64; 7]`|
+|(reserved)|`u64`|
+|(reserved)|`u16`|
+|I/O Map Base Address|`u16`|
+
+The _Privilege Stack Table_ is used by the CPU when the privilege level changes. For example, if an exception occurs while the CPU is in user mode (privilege level 3), the CPU normally switch to kernel mode (privilege level 0) before invoking the exception handler.

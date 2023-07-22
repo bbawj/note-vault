@@ -32,17 +32,18 @@ The bootloader has to determine the location of the kernel image on the disk and
 1. [IO Subsystem](Notes/IO%20Subsystem.md)
 2. [Direct Memory Access](Notes/Direct%20Memory%20Access.md)
 3. [Interrupts](Notes/Interrupts.md)
-4. [Hardware Protection](Notes/Hardware%20Protection.md)
-5. Handle [Processes](Notes/Processes.md)
-6. [Process scheduling](Notes/Process%20scheduling.md)
-7. [Process Synchronization](Notes/Process%20Synchronization.md)
-8. [Deadlocks](Notes/Deadlocks.md)
-9. [Real Time Operating Systems](Notes/Real%20Time%20Operating%20Systems.md)
-10. [Virtualization](Notes/Virtualization.md)
-11. [Memory Organisation](Notes/Memory%20Organisation.md)
-12. [Virtual Memory](Notes/Virtual%20Memory.md)
-13. [[Allocators]]
-14. [File Systems](Notes/File%20Systems.md)
+4. [[Multitasking]]
+5. [Hardware Protection](Notes/Hardware%20Protection.md)
+6. Handle [Processes](Notes/Processes.md)
+7. [Process scheduling](Notes/Process%20scheduling.md)
+8. [Process Synchronization](Notes/Process%20Synchronization.md)
+9. [Deadlocks](Notes/Deadlocks.md)
+10. [Real Time Operating Systems](Notes/Real%20Time%20Operating%20Systems.md)
+11. [Virtualization](Notes/Virtualization.md)
+12. [Memory Organisation](Notes/Memory%20Organisation.md)
+13. [Virtual Memory](Notes/Virtual%20Memory.md)
+14. [[Allocators]]
+15. [File Systems](Notes/File%20Systems.md)
 ## References
 ### Operating Systems Concepts
 Exercise solutions:
