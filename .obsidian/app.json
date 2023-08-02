@@ -1,7 +1,5 @@
 {
-  "spellcheckLanguages": [
-    "en-GB"
-  ],
+  "spellcheckLanguages": null,
   "vimMode": true,
   "newLinkFormat": "absolute",
   "newFileLocation": "folder",

@@ -245,6 +245,8 @@
   },
   "active": "07cc91683d8a6212",
   "lastOpenFiles": [
+    "embedding.csv",
+    "input.csv",
     "Notes/Asynchronous Programming.md",
     "Notes/Multitasking.md",
     "Notes/Interrupts.md",
@@ -280,9 +282,6 @@
     "Notes/Crafting Interpreters.md",
     "Notes/Representing Code.md",
     "Notes/Compiling Expressions.md",
-    "Notes/NuSMV.md",
-    "4913",
-    "input.csv",
-    "embedding.csv"
+    "4913"
   ]
 }
