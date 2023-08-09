@@ -5,5 +5,7 @@
   "baseFontSize": 15,
   "enabledCssSnippets": [
     "png-bg"
-  ]
+  ],
+  "textFontFamily": "Iosevka Comfy",
+  "monospaceFontFamily": "IosevkaTerm Nerd Font Mono"
 }
