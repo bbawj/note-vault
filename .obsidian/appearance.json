@@ -7,5 +7,6 @@
     "png-bg"
   ],
   "textFontFamily": "Iosevka Comfy",
-  "monospaceFontFamily": "IosevkaTerm Nerd Font Mono"
+  "monospaceFontFamily": "IosevkaTerm Nerd Font Mono",
+  "interfaceFontFamily": "Iosevka Comfy"
 }
