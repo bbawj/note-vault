@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1c58fa9782b5ccb8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/FYP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -66,8 +79,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -88,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/FYP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/FYP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Representing Code.md"
+                "file": "Notes/FYP.md"
               }
             }
           },
@@ -153,7 +165,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/FYP.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -214,11 +226,16 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false,
+      "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "dd4f3dffa094610b",
+  "active": "1c58fa9782b5ccb8",
   "lastOpenFiles": [
+    "Pics/Pasted image 20230823225409.png",
+    "Notes/Representing Code.md",
+    "Notes/FYP.md",
     "Notes/Crafting Interpreters.md",
     "2005 Operating Systems.md",
     "embedding.csv",
@@ -254,8 +271,6 @@
     "Notes/Concurrency.md",
     "Notes/Rust.md",
     "Notes/Functions.md",
-    "Notes/Representing Code.md",
-    "Notes/Compiling Expressions.md",
     "4913"
   ]
 }

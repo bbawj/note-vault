@@ -1,6 +1,5 @@
 [
   "obsidian-sample-plugin",
-  "obsidian-vimrc-support",
   "obsidian-semantic-search",
   "table-editor-obsidian",
   "obsidian-citation-plugin",
@@ -12,5 +11,6 @@
   "templater-obsidian",
   "bbawj-semantic-search",
   "obsidian-style-settings",
-  "obsidian-imgur-plugin"
+  "obsidian-imgur-plugin",
+  "obsidian-vimrc-support"
 ]

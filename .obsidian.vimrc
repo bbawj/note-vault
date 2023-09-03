@@ -4,8 +4,8 @@ imap kj <Esc>
 nmap j gj
 nmap k gk
 " Navigate logical lines with J & K
-noremap J j
-noremap K k
+noremap <C-j> j
+noremap <C-k> k
 
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
