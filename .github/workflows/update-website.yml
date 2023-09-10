@@ -1,0 +1,11 @@
+name: update-website
+on: push
+jobs:
+  repo-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/repository-dispatch@v2.1.2
+        with:
+          token: ${{ secrets.PAT }}
+          repository: bbawj/site
+          event-type: update-website
