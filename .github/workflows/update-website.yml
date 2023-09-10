@@ -1,0 +1,9 @@
+name: update-website
+on: push
+jobs:
+  repo-dispatch:
+    uses: peter-evans/repository-dispatch@v2
+    with:
+      token: ${{ secrets.PAT }}
+      repository: bbawj/site
+      event-type: update-website
