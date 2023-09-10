@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Representing Code.md",
+                "file": "Notes/Union Find.md",
                 "mode": "source",
                 "source": false
               }
@@ -32,7 +32,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Virtual Networks.md",
+                "file": "Notes/Union Find.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Virtual Networks.md",
+                "file": "Notes/Union Find.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Virtual Networks.md"
+                "file": "Notes/Union Find.md"
               }
             }
           },
@@ -164,7 +163,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Virtual Networks.md",
+                "file": "Notes/Union Find.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -230,7 +229,7 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "fe933518a090ab44",
+  "active": "dd4f3dffa094610b",
   "lastOpenFiles": [
     "Notes/Representing Code.md",
     "Notes/Virtual Networks.md",
