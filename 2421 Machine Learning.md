@@ -15,6 +15,8 @@ A subfield of [AI](3005%20AI.md) focused on using algorithms trained on data to 
 - [[Clustering]]
 - [[Ensemble Learning]]
 - [[Dimensionality Reduction]]
+## Practical Introduction in C
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=e54R2ODJA66ITVJm&amp;list=PLpM-Dvs8t0VZPZKggcql-MmjaBdZKeDMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Training and validation
 Training a machine learning model involves the use of data. However, we need to test the effectiveness of the model, this is called validation. Hence we need to split the data into training and testing sets.
 ### Bias vs Variance
