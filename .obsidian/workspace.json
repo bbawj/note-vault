@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "dbc6e98e8464eb72",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Other Vulnerabilities.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -100,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Other Vulnerabilities.md",
+                "file": "Notes/2460 Software Safety and Security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Other Vulnerabilities.md",
+                "file": "Notes/2460 Software Safety and Security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Other Vulnerabilities.md"
+                "file": "Notes/2460 Software Safety and Security.md"
               }
             }
           },
@@ -175,7 +162,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Other Vulnerabilities.md",
+                "file": "Notes/2460 Software Safety and Security.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -240,16 +227,16 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "dbc6e98e8464eb72",
+  "active": "dd4f3dffa094610b",
   "lastOpenFiles": [
+    "Notes/Other Vulnerabilities.md",
+    "Notes/2460 Software Safety and Security.md",
     "Pics/Pasted image 20230918103805.png",
     "Pics/Pasted image 20230918103559.png",
     "Pics/Pasted image 20230918103527.png",
     "Pics/Pasted image 20230918101506.png",
     "Pics/Pasted image 20230918101437.png",
     "Pics/Pasted image 20230918101352.png",
-    "Notes/2460 Software Safety and Security.md",
-    "Notes/Other Vulnerabilities.md",
     "Notes/Memory Safety.md",
     "2421 Machine Learning.md",
     "Pics/Pasted image 20230911011702.png",
@@ -273,7 +260,6 @@
     "Notes/Processes.md",
     "Notes/Process scheduling.md",
     "Notes/Allocators.md",
-    "Pics/Pasted image 20230716224307.png",
     "Notes/Virtual Memory.md",
     "Notes/Exceptions.md",
     "Notes/Cache.md",
