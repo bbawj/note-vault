@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/OS Security.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "syntax tree",
+                "query": "permissio",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -87,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/OS Security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/OS Security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md"
+                "file": "Notes/OS Security.md"
               }
             }
           },
@@ -162,7 +163,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/OS Security.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -212,7 +213,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 319.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,43 +231,44 @@
   },
   "active": "dd4f3dffa094610b",
   "lastOpenFiles": [
-    "Notes/Other Vulnerabilities.md",
-    "Notes/2460 Software Safety and Security.md",
-    "Pics/Pasted image 20230918103805.png",
-    "Pics/Pasted image 20230918103559.png",
-    "Pics/Pasted image 20230918103527.png",
-    "Pics/Pasted image 20230918101506.png",
-    "Pics/Pasted image 20230918101437.png",
-    "Pics/Pasted image 20230918101352.png",
+    "Pics/Pasted image 20230921142335.png",
+    "Pics/Pasted image 20230921141520.png",
+    "Pics/Pasted image 20230921141434.png",
+    "Pics/Pasted image 20230921140143.png",
+    "Pics/Pasted image 20230921140026.png",
+    "Pics/Pasted image 20230921135811.png",
+    "Pics/Pasted image 20230921135210.png",
+    "2005 Operating Systems.md",
+    "Notes/Hardware Protection.md",
+    "Notes/OS Security.md",
+    "Pics/Pasted image 20230921121212.png",
     "Notes/Memory Safety.md",
+    "Notes/File Systems.md",
+    "Pics/Pasted image 20230921004246.png",
+    "Pics/Pasted image 20230921003943.png",
+    "Pics/Pasted image 20230921003100.png",
+    "Notes/2460 Software Safety and Security.md",
+    "Notes/Safety and Liveliness.md",
+    "Notes/Other Vulnerabilities.md",
     "2421 Machine Learning.md",
-    "Pics/Pasted image 20230911011702.png",
-    "Pics/Pasted image 20230911011103.png",
     "Notes/Union Find.md",
     "Notes/Virtual Networks.md",
     "Notes/Neural Networks.md",
     "Notes/Representing Code.md",
     "008 Networking.md",
     "Notes/FYP.md",
-    "Pics/Pasted image 20230823225409.png",
     "Notes/Crafting Interpreters.md",
-    "2005 Operating Systems.md",
     "embedding.csv",
     "input.csv",
     "Notes/Asynchronous Programming.md",
     "Notes/Multitasking.md",
     "Notes/Interrupts.md",
     "Notes/Context Switch.md",
-    "Pics/Pasted image 20230721233556.png",
     "Notes/Processes.md",
     "Notes/Process scheduling.md",
     "Notes/Allocators.md",
     "Notes/Virtual Memory.md",
     "Notes/Exceptions.md",
-    "Notes/Cache.md",
-    "Notes/Memory Organisation.md",
-    "Notes/Hardware Protection.md",
-    "Notes/IO Subsystem.md",
     "4913"
   ]
 }
