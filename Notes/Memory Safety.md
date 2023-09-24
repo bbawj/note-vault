@@ -68,7 +68,11 @@ A GNU C compiler extension that protects the return address by separating the re
 OS randomly arranges address space of key data areas for each program such as the base, stack, heap and library pointers, which makes guessing malicious program address harder.
 ![](Pics/Pasted%20image%2020230921003943.png)
 #### Non-executable Memory
+Executable memory regions allow attackers to inject a binary payload
+For example, a simple way to obtaining shell access:
+![](Pics/Pasted%20image%2020230911011702.png)
 Mark all writable memory locations as non-executable. Some examples are ExecShield in Linux.
+Code reuse attacks make use of already loaded functions, for example overwriting the return address to libc `execve` with `/bin/sh` as an argument.
 ![](Pics/Pasted%20image%2020230921004246.png)
 #### Shadow Stack
 Keep a copy of the stack in memory. Compare the actual and shadow stack to see if the return address has been changed.
@@ -77,8 +81,6 @@ ARM Memory Tagging Extension (MTE):
 - Every memory pointer and user memory region has a 4 bit-tag. These tags must match when reading from the pointer. Else, a hardware exception is raised.
 
 Hardware can support an attribute in the Page Table Entry to control if the page is executable.
-### A simple way to obtaining shell access
-![](Pics/Pasted%20image%2020230911011702.png)
 ## Memory Leaks
 A serious issue for long running programs.
 
@@ -94,3 +96,6 @@ These tools use different inputs to attempt to find one which can cause a memory
 - Unit testing: able to model specific input sequences but difficult to cover many inpits
 - Random testing: automatically generate many inputs but can still result in shallow coverage if the specific input format is not followed (by generating alot of noise that is not relevant to the program).
 - Fuzz testing: generates many *slightly invalid* inputs based on format of valid examples. 
+	- Mutation based: explore as many states as possible by changing inputs randomly, possibly guided by heuristics from an initial corpus of data. These are simple to set up but have low coverage.
+	- Generative: use specification of input format (RFC etc.) into a generative procedure to make use of domain-specific knowledge but requires more effort
+	- Coverage guided: use fuzzing to create new test cases. Test and measure code coverage and use the feedback to craft new inputs for uncovered code. This is good for finding new program states.

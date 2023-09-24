@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/OS Security.md",
+                "file": "Notes/Memory Safety.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bc63f57a229abbb8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Other Vulnerabilities.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "permissio",
+                "query": "fuzz",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -88,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/OS Security.md",
+                "file": "Notes/Memory Safety.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/OS Security.md",
+                "file": "Notes/Memory Safety.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/OS Security.md"
+                "file": "Notes/Memory Safety.md"
               }
             }
           },
@@ -163,7 +175,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/OS Security.md",
+                "file": "Notes/Memory Safety.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -231,25 +243,24 @@
   },
   "active": "dd4f3dffa094610b",
   "lastOpenFiles": [
-    "Pics/Pasted image 20230921142335.png",
-    "Pics/Pasted image 20230921141520.png",
-    "Pics/Pasted image 20230921141434.png",
-    "Pics/Pasted image 20230921140143.png",
-    "Pics/Pasted image 20230921140026.png",
-    "Pics/Pasted image 20230921135811.png",
-    "Pics/Pasted image 20230921135210.png",
+    "Notes/Other Vulnerabilities.md",
+    "Pics/Pasted image 20230922224126.png",
+    "Notes/Memory Safety.md",
+    "Notes/2460 Software Safety and Security.md",
+    "Pics/Pasted image 20230922213612.png",
+    "Notes/OS Security.md",
+    "Pics/Pasted image 20230922005743.png",
+    "Pics/Pasted image 20230922005643.png",
+    "Pics/Pasted image 20230922005621.png",
+    "Pics/Pasted image 20230922004554.png",
+    "Pics/Pasted image 20230922004109.png",
+    "Pics/Pasted image 20230922003158.png",
+    "Pics/Pasted image 20230922002830.png",
+    "Pics/Pasted image 20230922002352.png",
     "2005 Operating Systems.md",
     "Notes/Hardware Protection.md",
-    "Notes/OS Security.md",
-    "Pics/Pasted image 20230921121212.png",
-    "Notes/Memory Safety.md",
     "Notes/File Systems.md",
-    "Pics/Pasted image 20230921004246.png",
-    "Pics/Pasted image 20230921003943.png",
-    "Pics/Pasted image 20230921003100.png",
-    "Notes/2460 Software Safety and Security.md",
     "Notes/Safety and Liveliness.md",
-    "Notes/Other Vulnerabilities.md",
     "2421 Machine Learning.md",
     "Notes/Union Find.md",
     "Notes/Virtual Networks.md",
