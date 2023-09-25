@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Memory Safety.md",
+                "file": "Notes/OS Security.md",
                 "mode": "source",
                 "source": false
               }
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Memory Safety.md",
+                "file": "Notes/OS Security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Memory Safety.md",
+                "file": "Notes/OS Security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Memory Safety.md"
+                "file": "Notes/OS Security.md"
               }
             }
           },
@@ -175,7 +175,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Memory Safety.md",
+                "file": "Notes/OS Security.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -243,12 +243,15 @@
   },
   "active": "dd4f3dffa094610b",
   "lastOpenFiles": [
-    "Notes/Other Vulnerabilities.md",
-    "Pics/Pasted image 20230922224126.png",
-    "Notes/Memory Safety.md",
-    "Notes/2460 Software Safety and Security.md",
-    "Pics/Pasted image 20230922213612.png",
+    "Pics/Pasted image 20230925215919.png",
+    "Pics/Pasted image 20230925214938.png",
+    "Notes/File Systems.md",
     "Notes/OS Security.md",
+    "Notes/2460 Software Safety and Security.md",
+    "Notes/Other Vulnerabilities.md",
+    "Notes/Memory Safety.md",
+    "Pics/Pasted image 20230922224126.png",
+    "Pics/Pasted image 20230922213612.png",
     "Pics/Pasted image 20230922005743.png",
     "Pics/Pasted image 20230922005643.png",
     "Pics/Pasted image 20230922005621.png",
@@ -256,10 +259,8 @@
     "Pics/Pasted image 20230922004109.png",
     "Pics/Pasted image 20230922003158.png",
     "Pics/Pasted image 20230922002830.png",
-    "Pics/Pasted image 20230922002352.png",
     "2005 Operating Systems.md",
     "Notes/Hardware Protection.md",
-    "Notes/File Systems.md",
     "Notes/Safety and Liveliness.md",
     "2421 Machine Learning.md",
     "Notes/Union Find.md",

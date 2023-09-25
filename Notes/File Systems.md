@@ -2,7 +2,7 @@
 title: "File Systems"
 tags: [question]
 date: 2022-11-08
-lastmod: 2022-11-21
+lastmod: 2023-09-25
 ---
 # File Systems
 ## File
@@ -15,6 +15,11 @@ A file is an unstructured sequence of bytes. Each byte is individually addressab
 - Owner: Permissions used by the assigned owner of the file or directory
 - Group: Permissions used by members of the group that owns the file or directory
 - Other: Permissions used by all users other than the file owner, and members of the group that owns the file or the directory
+Adjust permission:
+- Users can change the permissions:
+	- `chmod 754 filename`
+	- `chmod u+wrx,g+rx,g-w,o+r,o-wx filename`
+-  root can change the ownerships: `chown user:group filename`
 ### Data Structures
 #### File Control Block
 ![400](https://i.imgur.com/xKpBYnL.png)

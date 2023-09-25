@@ -3,10 +3,21 @@ title: OS Security
 date: 2023-09-21
 ---
 ![](Pics/Pasted%20image%2020230921121212.png)
-# Users & Access Control
+# Security Protection Stages
+![](Pics/Pasted%20image%2020230925214938.png)
+- Identification & Auth: comparing input credentials with stored ones
+## Users & Access Control
+Principle of least privilege
+- users  should only have access to resources needed to perform the desired tasks
+Privilege separation
+- split a system into different components each with the least privilege for its task
+- prevents any attacker from taking over the entire system
+
 A system can have many accounts. 16 bit UIDs are used to identify accounts, e.g. root(0), bin(1). An attacker managing to get root user status effectively takes over the entire system.
+### Security Policy
+[File permissions](Notes/File%20Systems.md#Protection) are used to control access. They are split into subjects (the user, program, process etc.) , object (file, memory) and operation (read/write/execute).
 ![](Pics/Pasted%20image%2020230921135811.png)
-## Groups
+### Groups
 ![](Pics/Pasted%20image%2020230921135210.png)
 ## Process  Controlled Invocation
 Processes are assigned 2 types of user and group IDs.
@@ -22,6 +33,8 @@ Malware that obtains root privileges. It originally referred to a set of malicio
 ![](Pics/Pasted%20image%2020230921141434.png)
 #### Hijacking [Interrupt Stack Table (IST)](Notes/Interrupts.md#Interrupt%20Stack%20Table%20(IST)%20and%20Task%20State%20Segment%20(TSS))
 ![](Pics/Pasted%20image%2020230921142335.png)
+## Logging
+![](Pics/Pasted%20image%2020230925215919.png)
 # Confinement
 The OS isolates applications in the system. If one is malicious, it prevents the rest of the system from being harmed.
 [Virtualization](Notes/Virtualization.md) achieves this
