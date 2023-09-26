@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/OS Security.md",
+                "file": "Notes/Memory Safety.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fuzz",
+                "query": "\"stack guard\"",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -83,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5,
-    "collapsed": true
+    "width": 322.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -100,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/OS Security.md",
+                "file": "Notes/Memory Safety.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/OS Security.md",
+                "file": "Notes/Memory Safety.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/OS Security.md"
+                "file": "Notes/Memory Safety.md"
               }
             }
           },
@@ -175,7 +174,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/OS Security.md",
+                "file": "Notes/Memory Safety.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -243,11 +242,12 @@
   },
   "active": "dd4f3dffa094610b",
   "lastOpenFiles": [
+    "Notes/OS Security.md",
+    "Notes/2460 Software Safety and Security.md",
+    "Notes/Virtualization.md",
     "Pics/Pasted image 20230925215919.png",
     "Pics/Pasted image 20230925214938.png",
     "Notes/File Systems.md",
-    "Notes/OS Security.md",
-    "Notes/2460 Software Safety and Security.md",
     "Notes/Other Vulnerabilities.md",
     "Notes/Memory Safety.md",
     "Pics/Pasted image 20230922224126.png",
@@ -258,7 +258,6 @@
     "Pics/Pasted image 20230922004554.png",
     "Pics/Pasted image 20230922004109.png",
     "Pics/Pasted image 20230922003158.png",
-    "Pics/Pasted image 20230922002830.png",
     "2005 Operating Systems.md",
     "Notes/Hardware Protection.md",
     "Notes/Safety and Liveliness.md",
