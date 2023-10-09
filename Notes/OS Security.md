@@ -93,3 +93,5 @@ The TPM can guarantee that privileged software (like the OS), is not malicious a
 With SEV, the TCB can be reduced to just the hardware. The hypervisor does not need to be trusted.
 ![](Pics/Pasted%20image%2020230922005643.png)
 ![](Pics/Pasted%20image%2020230922005743.png)
+Use cases:
+To provide increased security against malicious actors gaining access to a device’s content, the PIN and fingerprint functionalities used to unlock the Android device must be secured. Privileged and secure access to peripherals (like the fingerprint sensor) is provided by the TEE.

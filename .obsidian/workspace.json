@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "bc63f57a229abbb8",
+            "id": "a19b8ca8daecf9e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Other Vulnerabilities.md",
+                "file": "Notes/OS Security.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"stack guard\"",
+                "query": "assurance",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -78,12 +78,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 322.5
+    "width": 322.5,
+    "collapsed": true
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -219,8 +219,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -242,14 +241,19 @@
   },
   "active": "dd4f3dffa094610b",
   "lastOpenFiles": [
-    "Notes/OS Security.md",
     "Notes/2460 Software Safety and Security.md",
+    "Notes/OS Security.md",
+    "Notes/Memory Safety.md",
+    "Notes/me.md",
+    "Notes/Functions.md",
+    "Notes/Crafting Interpreters.md",
+    "Notes/Programming Language Design.md",
+    "Notes/Other Vulnerabilities.md",
+    "Pics/Pasted image 20230926224147.png",
     "Notes/Virtualization.md",
     "Pics/Pasted image 20230925215919.png",
     "Pics/Pasted image 20230925214938.png",
     "Notes/File Systems.md",
-    "Notes/Other Vulnerabilities.md",
-    "Notes/Memory Safety.md",
     "Pics/Pasted image 20230922224126.png",
     "Pics/Pasted image 20230922213612.png",
     "Pics/Pasted image 20230922005743.png",
@@ -257,7 +261,6 @@
     "Pics/Pasted image 20230922005621.png",
     "Pics/Pasted image 20230922004554.png",
     "Pics/Pasted image 20230922004109.png",
-    "Pics/Pasted image 20230922003158.png",
     "2005 Operating Systems.md",
     "Notes/Hardware Protection.md",
     "Notes/Safety and Liveliness.md",
@@ -268,7 +271,6 @@
     "Notes/Representing Code.md",
     "008 Networking.md",
     "Notes/FYP.md",
-    "Notes/Crafting Interpreters.md",
     "embedding.csv",
     "input.csv",
     "Notes/Asynchronous Programming.md",
@@ -277,9 +279,6 @@
     "Notes/Context Switch.md",
     "Notes/Processes.md",
     "Notes/Process scheduling.md",
-    "Notes/Allocators.md",
-    "Notes/Virtual Memory.md",
-    "Notes/Exceptions.md",
     "4913"
   ]
 }
