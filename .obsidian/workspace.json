@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blog/fork(), calloc() and Copy-on-Write.md",
+                "file": "Notes/Other Vulnerabilities.md",
                 "mode": "source",
                 "source": false
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blog/fork(), calloc() and Copy-on-Write.md",
+                "file": "Notes/Other Vulnerabilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Blog/fork(), calloc() and Copy-on-Write.md",
+                "file": "Notes/Other Vulnerabilities.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Blog/fork(), calloc() and Copy-on-Write.md"
+                "file": "Notes/Other Vulnerabilities.md"
               }
             }
           },
@@ -162,7 +162,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Blog/fork(), calloc() and Copy-on-Write.md",
+                "file": "Notes/Other Vulnerabilities.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -228,10 +228,10 @@
   },
   "active": "a19b8ca8daecf9e0",
   "lastOpenFiles": [
+    "Blog/fork(), calloc() and Copy-on-Write.md",
     "Pics/Pasted image 20231108204838.png",
     "Pics/Pasted image 20231108204443.png",
     "Notes/Virtual Memory.md",
-    "Blog/fork(), calloc() and Copy-on-Write.md",
     "2005 Operating Systems.md",
     "Notes/2460 Software Safety and Security.md",
     "Pics/Pasted image 20231108163843.png",
@@ -252,7 +252,6 @@
     "Pics/Pasted image 20230922213612.png",
     "Pics/Pasted image 20230922005743.png",
     "Pics/Pasted image 20230922005643.png",
-    "Pics/Pasted image 20230922005621.png",
     "Notes/Hardware Protection.md",
     "Notes/Safety and Liveliness.md",
     "2421 Machine Learning.md",
