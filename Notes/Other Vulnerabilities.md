@@ -41,7 +41,7 @@ Within the attacker's request, this comment would be URL-encoded as:
 `comment=%3Cscript%3E%2F*%2BBad%2Bstuff%2Bhere...%2B*%2F%3C%2Fscript%3E
 
 Any user who visits the blog post will now receive the following within the application's response:
-`<p><script>Bad stuff here...</script></p>`
+`<p><script>Bad stuff here</script></p>`
 #### Reflected
 Reflected cross-site scripting (or XSS) arises when an application receives data in an HTTP request and includes that data within the immediate response in an unsafe way.
 
@@ -51,10 +51,10 @@ The application echoes the supplied search term in the response to this URL:
 `<p>You searched for: gift</p>`
 
 Assuming the application doesn't perform any other processing of the data, an attacker can construct an attack like this:
-`https://insecure-website.com/search?term=<script>/Bad+stuff+here...</script>
+`https://insecure-website.com/search?term=<script>/Bad+stuff+here</script>
 
 This URL results in the following response:
-`<p>You searched for: <script>Bad stuff here...</script></p>`
+`<p>You searched for: <script>Bad stuff here</script></p>`
 ## Examples
 ```c
 void send_mail(char* body, char* title) {  
