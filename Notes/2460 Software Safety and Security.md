@@ -60,3 +60,33 @@ An attack which is based on extra information that can be gathered because of th
 - Timing attack:  based on measuring how much time various computations (such as, say, comparing an attacker's given password with the victim's unknown one) take to perform.
 # Types of malware:
 ![](Pics/Pasted%20image%2020230922213612.png)
+## Case Study (SingHealth)
+- The crown jewels of the SingHealth network is the electronic patient medical records stored in the SCM database, an medical record software solution.
+- Users access the SCM through Citrix servers
+![](Pics/Pasted%20image%2020231108163843.png)
+### Key events
+1. Attackers gain access into network by infecting front end workstations. They then laid dormant for 4 months before starting lateral movement, compromising many endpoints, servers and administrator accounts
+2. Attacker remotely connected to Citrix servers and began ex-filtrating patient records undetected.
+	- Used a customized Remote Access Trojan to enable remote shell access to download and upload malicious files. This could not be detected by standard anti-malware solutions
+	- Publicly available hacking tool allowed for persistent presence of the account even if the password has been changed
+3. Suspicious queries were noticed but were reported to IHiS senior management only 1 month later.
+	- No controls to detect and block bulk queries. Database activity monitoring was not implemented.
+#### Why
+1. IHiS staff did not have adequate levels of cyber security awareness, training and resources.
+2. Key staff in IHiS failed to take appropriate effective and timely action to prevent the data ex-filtration
+3. There were a number of vulnerabilities and weaknesses in the network which could have been remedied before the attack.
+	- Remote access was not regulated with firewalls. Unnecessary open connections between servers and database were allowed.
+	- Internet connectivity was not needed but increased attack surface.
+	- 2FA could be bypassed
+	- Vulnerabilities in Outlook mail software were not patched. 
+	- Inactive accounts were not removed immediately
+4. Although cyber defences will never be impregnable, there were opportunities to reduce the success of the attacker.
+#### Recommendations
+1. Enhance security structure and readiness. Cyber security must be viewed as a risk management issue rather than just a technical one.
+2. Cyber stack must be reviewed to assess if its adequate. Gaps in cyber stack must be found by comparing with existing security technologies.
+3. Staff awareness must be improved through increasing knowledge.
+4. Enhance security checks especially on C2 systems. Vulnerability assessments, certification of vendor products and pen-testing must be conducted regularly.
+5. Privileged administrator accounts must be subject to tighter control and monitoring. 2FA, passphrases, password policies must be implemented and enforced.
+6. Incident response process must be improved with predefined modes of communication.
+7. Partnership with industry leaders in cyber security
+8. 
