@@ -41,7 +41,7 @@ Within the attacker's request, this comment would be URL-encoded as:
 `comment=%3Cscript%3E%2F*%2BBad%2Bstuff%2Bhere...%2B*%2F%3C%2Fscript%3E
 
 Any user who visits the blog post will now receive the following within the application's response:
-`<p><script>/* Bad stuff here... */</script></p>`
+`<p><script>Bad stuff here...</script></p>`
 #### Reflected
 Reflected cross-site scripting (or XSS) arises when an application receives data in an HTTP request and includes that data within the immediate response in an unsafe way.
 
