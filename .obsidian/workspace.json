@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Memory Safety.md",
+                "file": "Notes/Statistics.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "assurance",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -78,12 +78,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 322.5,
-    "collapsed": true
+    "width": 322.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Memory Safety.md",
+                "file": "Notes/Statistics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Memory Safety.md",
+                "file": "Notes/Statistics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Memory Safety.md"
+                "file": "Notes/Statistics.md"
               }
             }
           },
@@ -174,7 +174,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Memory Safety.md",
+                "file": "Notes/Statistics.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -241,9 +241,9 @@
   },
   "active": "dd4f3dffa094610b",
   "lastOpenFiles": [
+    "Notes/Memory Safety.md",
     "Notes/2460 Software Safety and Security.md",
     "Notes/OS Security.md",
-    "Notes/Memory Safety.md",
     "Notes/me.md",
     "Notes/Functions.md",
     "Notes/Crafting Interpreters.md",
