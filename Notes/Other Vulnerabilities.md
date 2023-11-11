@@ -1,6 +1,7 @@
 ---
 title: "Other Vulnerabilities"
 date: 2023-09-18
+lastmod: 2023-11-09
 ---
 # Other Vulnerabilities
 ## Format Strings
@@ -51,7 +52,7 @@ The application echoes the supplied search term in the response to this URL:
 `<p>You searched for: gift</p>`
 
 Assuming the application doesn't perform any other processing of the data, an attacker can construct an attack like this:
-`https://insecure-website.com/search?term=<script>/Bad+stuff+here</script>
+`https://insecure-website.com/search?term=<script>/Bad+stuff+here</script>`
 
 This URL results in the following response:
 `<p>You searched for: <script>Bad stuff here</script></p>`

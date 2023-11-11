@@ -45,7 +45,47 @@ An example: phishing email – a malicious email with malware as the attachment
 - Availability: prevent withholding of information, resources should always be available (DDOS attacks)
 - Accountability: actions of an entity can be traced and identified
 - Non-repudiation: unforgeable evidence that specific actions occur
-- Authenticity: ensure the communicated entity is the correct entity.
+#### Authenticity
+Ensure the communicated entity is the correct entity.
+##### Something you know
+   - Weak passwords tend to include common names, dictionary words which are easy to guess and crack. Key loggers can also figure out complex passwords if a system is already compromised
+##### Something you have
+One Time Password (OTP) systems create a new password each time a user logs in. 
+A SecurID card is such a system. A server knows the algorithm that the card uses, and can verify the password entered by the user. Modern systems integrate OTP into cell phones.
+
+**Smart Cards**
+Information is stored in the card's memory, only accessible to the on board microprocessor. The microprocessor runs software which can authenticate a user. Tamper resistance prevents unauthorised access.
+How it works:
+- Smart card issues a challenge to a reader
+- User is then required to enter a PIN, allowing the reader to compute a response
+- If the card receives the correct response, the user is authenticated
+Limitations:
+- the smart card reader needs to be trusted
+- an attacker can set up a rogue reader, recording user's PIN in the process
+- if the attacker obtains the physical card, he will be able to bypass authentication
+
+ATM Cards
+Contains a magnetic stripe that stores user account number data. This data is used as part of the authentication process for anyone using the ATM. The card is not tamper-resistant and anyone with a reader is able to access the information.
+
+#### Something you are
+Bio metrics
+- Palm scan: measures the size of hand and fingers, and curves
+- Iris scan
+- Retina scan: infrared light is shot into a user's eyes and the pattern of retinal blood vessels is read to create a signature
+- Fingerprint
+- Voice
+- Face
+- Signature
+Limitations:
+- False positives + negatives: impersonation
+- Varying social acceptance: personal and private data needs to be stored
+- Key management issues: unable to revoke a bio metric key, as a user cannot change it even if it has been compromised by an attacker.
+
+Combining different strategies is more effective.
+##### Authentication on the Internet
+- Client authentication: the server verifies that the client is legitimate.
+- Server authentication: the client verifies that the server is legitimate. Ecommerce sites perform server authentication right before the user makes a purchase, to ensure personal details are not sent to a spoofed web server.
+- Mutual authentication: both
 ### Security Strategies:
 - Prevention
 - Detection
