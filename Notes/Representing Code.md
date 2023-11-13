@@ -396,7 +396,7 @@ When we enter a new block scope, we need to preserve variables defined in outer 
 - Define a fresh environment for each block containing only the variables defined in that scope. 
 - When we exit the block, we discard its environment and restore the previous one.
 - Chain the environments together. Each environment has a reference to the environment of the immediately enclosing scope. When we look up a variable, we walk that chain from innermost out until we find the variable. 
-```java {3}
+```java
 class Environment {
   final Environment enclosing;
 

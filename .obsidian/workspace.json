@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/Cryptography.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -87,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/Cryptography.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/Cryptography.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md"
+                "file": "Notes/Cryptography.md"
               }
             }
           },
@@ -162,7 +163,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/2460 Software Safety and Security.md",
+                "file": "Notes/Cryptography.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -229,14 +230,25 @@
   },
   "active": "8dc81556a9a9defd",
   "lastOpenFiles": [
+    "Notes/Authentication.md",
+    "Notes/2460 Software Safety and Security.md",
+    "Notes/Cryptography.md",
+    "Pics/Pasted image 20231113200255.png",
+    "Pics/Pasted image 20231113180754.png",
+    "Notes/secu.md",
+    "Pics/Pasted image 20231113152552.png",
+    "Pics/Pasted image 20231113143056.png",
+    "Pics/Pasted image 20231113124548.png",
+    "Pics/Pasted image 20231113124448.png",
+    "Pics/Pasted image 20231113124429.png",
+    "Pics/Pasted image 20231112111803.png",
+    "Pics/Pasted image 20231112111325.png",
+    "Pics/Pasted image 20231112110847.png",
+    "Notes/Representing Code.md",
     "Notes/Other Vulnerabilities.md",
     "Blog/fork(), calloc() and Copy-on-Write.md",
-    "Pics/Pasted image 20231108204838.png",
-    "Pics/Pasted image 20231108204443.png",
     "Notes/Virtual Memory.md",
     "2005 Operating Systems.md",
-    "Notes/2460 Software Safety and Security.md",
-    "Pics/Pasted image 20231108163843.png",
     "Notes/OS Security.md",
     "Notes/Statistics.md",
     "Notes/Memory Safety.md",
@@ -244,28 +256,17 @@
     "Notes/Functions.md",
     "Notes/Crafting Interpreters.md",
     "Notes/Programming Language Design.md",
-    "Pics/Pasted image 20230926224147.png",
     "Notes/Virtualization.md",
-    "Pics/Pasted image 20230925215919.png",
-    "Pics/Pasted image 20230925214938.png",
     "Notes/File Systems.md",
-    "Pics/Pasted image 20230922224126.png",
-    "Pics/Pasted image 20230922213612.png",
-    "Pics/Pasted image 20230922005743.png",
-    "Pics/Pasted image 20230922005643.png",
     "Notes/Hardware Protection.md",
     "Notes/Safety and Liveliness.md",
     "2421 Machine Learning.md",
     "Notes/Union Find.md",
     "Notes/Virtual Networks.md",
     "Notes/Neural Networks.md",
-    "Notes/Representing Code.md",
     "008 Networking.md",
-    "Notes/FYP.md",
     "embedding.csv",
     "input.csv",
-    "Notes/Asynchronous Programming.md",
-    "Notes/Multitasking.md",
     "4913"
   ]
 }

@@ -12,6 +12,7 @@ lastmod: 2023-04-11
 - [[Software Model Checking]]
 - [[Memory Safety]]
 - [[Other Vulnerabilities]]
+- [[Authentication]]
 
 [Safety](Notes/Safety%20and%20Liveliness.md): condition of being protected from harm
 Security: degree of protection from harm
@@ -40,52 +41,12 @@ An example: phishing email – a malicious email with malware as the attachment
 - Adversarial capabilities: running malicious code in your computer.
 - Security properties: protect the computer system such that the malware cannot steal the sensitive data, or tamper with other processes.
 ### Security properties
+- [Authenticity](Notes/Authentication.md)
 - Confidentiality: prevent disclosure of information
 - Integrity: prevent modification
 - Availability: prevent withholding of information, resources should always be available (DDOS attacks)
 - Accountability: actions of an entity can be traced and identified
 - Non-repudiation: unforgeable evidence that specific actions occur
-#### Authenticity
-Ensure the communicated entity is the correct entity.
-##### Something you know
-   - Weak passwords tend to include common names, dictionary words which are easy to guess and crack. Key loggers can also figure out complex passwords if a system is already compromised
-##### Something you have
-One Time Password (OTP) systems create a new password each time a user logs in. 
-A SecurID card is such a system. A server knows the algorithm that the card uses, and can verify the password entered by the user. Modern systems integrate OTP into cell phones.
-
-**Smart Cards**
-Information is stored in the card's memory, only accessible to the on board microprocessor. The microprocessor runs software which can authenticate a user. Tamper resistance prevents unauthorised access.
-How it works:
-- Smart card issues a challenge to a reader
-- User is then required to enter a PIN, allowing the reader to compute a response
-- If the card receives the correct response, the user is authenticated
-Limitations:
-- the smart card reader needs to be trusted
-- an attacker can set up a rogue reader, recording user's PIN in the process
-- if the attacker obtains the physical card, he will be able to bypass authentication
-
-ATM Cards
-Contains a magnetic stripe that stores user account number data. This data is used as part of the authentication process for anyone using the ATM. The card is not tamper-resistant and anyone with a reader is able to access the information.
-
-#### Something you are
-Bio metrics
-- Palm scan: measures the size of hand and fingers, and curves
-- Iris scan
-- Retina scan: infrared light is shot into a user's eyes and the pattern of retinal blood vessels is read to create a signature
-- Fingerprint
-- Voice
-- Face
-- Signature
-Limitations:
-- False positives + negatives: impersonation
-- Varying social acceptance: personal and private data needs to be stored
-- Key management issues: unable to revoke a bio metric key, as a user cannot change it even if it has been compromised by an attacker.
-
-Combining different strategies is more effective.
-##### Authentication on the Internet
-- Client authentication: the server verifies that the client is legitimate.
-- Server authentication: the client verifies that the server is legitimate. Ecommerce sites perform server authentication right before the user makes a purchase, to ensure personal details are not sent to a spoofed web server.
-- Mutual authentication: both
 ### Security Strategies:
 - Prevention
 - Detection
@@ -100,6 +61,15 @@ An attack which is based on extra information that can be gathered because of th
 - Timing attack:  based on measuring how much time various computations (such as, say, comparing an attacker's given password with the victim's unknown one) take to perform.
 # Types of malware:
 ![](Pics/Pasted%20image%2020230922213612.png)
+## Cyber Kill Chain
+7 steps developed by Lockheed Martin which identifies what adversaries must complete in order to achieve their objectives starting from reconnaissance to data exfiltration.
+1. Reconnaissance: harvesting email addresses etc.
+2. Weaponization: coupling exploit with backdoor into deliverable payload
+3. Delivery: delivering payload via email, USB etc.
+4. Exploitation: exploit a vulnerability to execute code on victim system
+5. Installation: install malware on the asset
+6. Command and Control (C2): command channel for remote manipulation
+7. Actions on objectives: accomplish goal
 ## Case Study (SingHealth)
 - The crown jewels of the SingHealth network is the electronic patient medical records stored in the SCM database, an medical record software solution.
 - Users access the SCM through Citrix servers
@@ -107,7 +77,7 @@ An attack which is based on extra information that can be gathered because of th
 ### Key events
 1. Attackers gain access into network by infecting front end workstations. They then laid dormant for 4 months before starting lateral movement, compromising many endpoints, servers and administrator accounts
 2. Attacker remotely connected to Citrix servers and began ex-filtrating patient records undetected.
-	- Used a customized Remote Access Trojan to enable remote shell access to download and upload malicious files. This could not be detected by standard anti-malware solutions
+	- Used a customised Remote Access Trojan to enable remote shell access to download and upload malicious files. This could not be detected by standard anti-malware solutions
 	- Publicly available hacking tool allowed for persistent presence of the account even if the password has been changed
 3. Suspicious queries were noticed but were reported to IHiS senior management only 1 month later.
 	- No controls to detect and block bulk queries. Database activity monitoring was not implemented.
@@ -120,7 +90,12 @@ An attack which is based on extra information that can be gathered because of th
 	- 2FA could be bypassed
 	- Vulnerabilities in Outlook mail software were not patched. 
 	- Inactive accounts were not removed immediately
-4. Although cyber defences will never be impregnable, there were opportunities to reduce the success of the attacker.
+4. Attacker was a skilled and sophisticated actor
+	- Employed advance tools, techniques and procedures
+	- Suite of advanced and customised malware
+	- Persistent, having established multiple footholds and backdoors
+	- Extensive C2 network
+5. Although cyber defences will never be impregnable, there were opportunities to reduce the success of the attacker.
 #### Recommendations
 1. Enhance security structure and readiness. Cyber security must be viewed as a risk management issue rather than just a technical one.
 2. Cyber stack must be reviewed to assess if its adequate. Gaps in cyber stack must be found by comparing with existing security technologies.
