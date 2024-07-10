@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Cryptography.md",
+                "file": "_index.md",
                 "mode": "source",
                 "source": false
               }
@@ -88,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Cryptography.md",
+                "file": "_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Cryptography.md",
+                "file": "_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/Cryptography.md"
+                "file": "_index.md"
               }
             }
           },
@@ -163,7 +163,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Cryptography.md",
+                "file": "_index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -230,9 +230,9 @@
   },
   "active": "8dc81556a9a9defd",
   "lastOpenFiles": [
+    "Notes/Cryptography.md",
     "Notes/Authentication.md",
     "Notes/2460 Software Safety and Security.md",
-    "Notes/Cryptography.md",
     "Pics/Pasted image 20231113200255.png",
     "Pics/Pasted image 20231113180754.png",
     "Notes/secu.md",
