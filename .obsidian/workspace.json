@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_index.md",
+                "file": "Brag Doc.md",
                 "mode": "source",
                 "source": false
               }
@@ -88,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_index.md",
+                "file": "Brag Doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_index.md",
+                "file": "Brag Doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_index.md"
+                "file": "Brag Doc.md"
               }
             }
           },
@@ -163,7 +163,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "_index.md",
+                "file": "Brag Doc.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -229,6 +229,13 @@
   },
   "active": "8dc81556a9a9defd",
   "lastOpenFiles": [
+    "Pics/Pasted image 20240710210030.png",
+    "Pics/Pasted image 20240710205831.png",
+    "Pics/Pasted image 20240710204853.png",
+    "Pics/Pasted image 20240710204746.png",
+    "Pics/Pasted image 20240710204343.png",
+    "Pics/Pasted image 20240710203008.png",
+    "_index.md",
     "Notes/Cryptography.md",
     "Notes/Authentication.md",
     "Notes/2460 Software Safety and Security.md",
@@ -238,11 +245,6 @@
     "Pics/Pasted image 20231113152552.png",
     "Pics/Pasted image 20231113143056.png",
     "Pics/Pasted image 20231113124548.png",
-    "Pics/Pasted image 20231113124448.png",
-    "Pics/Pasted image 20231113124429.png",
-    "Pics/Pasted image 20231112111803.png",
-    "Pics/Pasted image 20231112111325.png",
-    "Pics/Pasted image 20231112110847.png",
     "Notes/Representing Code.md",
     "Notes/Other Vulnerabilities.md",
     "Blog/fork(), calloc() and Copy-on-Write.md",
@@ -263,7 +265,6 @@
     "Notes/Union Find.md",
     "Notes/Virtual Networks.md",
     "Notes/Neural Networks.md",
-    "008 Networking.md",
     "embedding.csv",
     "input.csv",
     "4913"
