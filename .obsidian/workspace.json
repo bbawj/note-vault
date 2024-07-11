@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d574208ab59cc9ec",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
+              }
+            }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -146,7 +157,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -227,7 +240,7 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "8dc81556a9a9defd",
+  "active": "d574208ab59cc9ec",
   "lastOpenFiles": [
     "Pics/Pasted image 20240710210030.png",
     "Pics/Pasted image 20240710205831.png",
