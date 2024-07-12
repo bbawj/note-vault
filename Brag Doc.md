@@ -1,7 +1,7 @@
 ---
 title: "Brag Doc"
 date: 2022-11-07
-lastmod: 2024-07-10
+lastmod: 2024-07-12
 ---
 # Brag Doc
 As learnt from https://jvns.ca/blog/brag-documents/
@@ -26,5 +26,17 @@ Project: Lead development of Android EV charging payment application
  - Debugged and fixed an OOM issue in a recursive network call:![](Pics/Pasted%20image%2020240710205831.png)
  - Goal: easier debugging of events. Refactored our charging session logic into a state machine:![](Pics/Pasted%20image%2020240710210030.png)
 - Debugged and fixed an issue with external HTTP library, increasing stability in poor network conditions (such as in basement carparks):![](Pics/Pasted%20image%2020240710203008.png)
-
-
+## HPE
+Improved diagnostic daemon features
+- Install utility shell script for interfacing with the rasdaemon database when hhmd starts. Use script to enable DDR error count and add PCIE error count test for lightyear
+- Enable eMMC bus width test and add hhm_get_emmc_bus_drive_strength and associated tests
+- Include HPE Switchtec library for use to perform PCIe switch device id and firmware version checks as well as scratchpad R/W tests
+- Add I2C PSU tests 
+- Add FPGA scratchpad rw test of the alternate MM
+- Add unit tests increasing code line coverage by 40%
+Integrate Fan daemon features
+- Add functions to check emc230x fan and controller configs to support testing fan controller misconfiguration recovery.
+- Implement EEPROM reads for new device ![](Pics/Pasted%20image%2020240712170311.png)
+Debugged and fixed OOB which was causing temperature daemon to fail: ![](Pics/Pasted%20image%2020240712172006.png)
+Goal: improve debugging speed for LED![](Pics/Pasted%20image%2020240712172148.png)
+Goal: optimize powerd. Profile time taken for main loop and interrupt thread , finding out that the time taken to complete the interrupt service was 9ms. Using a semaphore to signal to the main thread to handle the interrupt instead saved interrupt handler time to 2ms. ![](Pics/Pasted%20image%2020240712172721.png)
