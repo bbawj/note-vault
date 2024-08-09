@@ -30,7 +30,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -225,7 +224,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 319.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,8 +240,12 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "d574208ab59cc9ec",
+  "active": "8dc81556a9a9defd",
   "lastOpenFiles": [
+    "Pics/Pasted image 20240712172721.png",
+    "Pics/Pasted image 20240712172148.png",
+    "Pics/Pasted image 20240712172006.png",
+    "Pics/Pasted image 20240712170311.png",
     "Pics/Pasted image 20240710210030.png",
     "Pics/Pasted image 20240710205831.png",
     "Pics/Pasted image 20240710204853.png",
@@ -253,11 +257,7 @@
     "Notes/Authentication.md",
     "Notes/2460 Software Safety and Security.md",
     "Pics/Pasted image 20231113200255.png",
-    "Pics/Pasted image 20231113180754.png",
     "Notes/secu.md",
-    "Pics/Pasted image 20231113152552.png",
-    "Pics/Pasted image 20231113143056.png",
-    "Pics/Pasted image 20231113124548.png",
     "Notes/Representing Code.md",
     "Notes/Other Vulnerabilities.md",
     "Blog/fork(), calloc() and Copy-on-Write.md",
