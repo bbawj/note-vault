@@ -20,16 +20,16 @@ map <A-p> :pasteinto
 " Go back and forward with Ctrl+O and Ctrl+I
 " (make sure to remove default Obsidian shortcuts for these to work)
 exmap back obcommand app:go-back
-nmap <C-o> :back
+nmap <C-o> :back<CR>
 exmap forward obcommand app:go-forward
-nmap <C-i> :forward
+nmap <C-i> :forward<CR>
 
 exmap tabnext obcommand cycle-through-panes:cycle-through-panes
-nmap gt :tabnext
+nmap gt :tabnext<CR>
 exmap tabprev obcommand cycle-through-panes:cycle-through-panes-reverse
-nmap gT :tabprev
+nmap gT :tabprev<CR>
 
 exmap findfiles obcommand switcher:open
-nmap ff :findfiles
+nmap ff :findfiles<CR>
 exmap grepfiles obcommand global-search:open
-nmap fg :grepfiles
+nmap fg :grepfiles<CR>

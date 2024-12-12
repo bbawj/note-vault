@@ -6,11 +6,11 @@
   "obsidian-excalidraw-plugin",
   "obsidian-linter",
   "obsidian-minimal-settings",
-  "obsidian-git",
   "obsidian-outliner",
   "templater-obsidian",
   "obsidian-style-settings",
   "obsidian-imgur-plugin",
+  "bbawj-semantic-search",
   "obsidian-vimrc-support",
-  "bbawj-semantic-search"
+  "obsidian-git"
 ]

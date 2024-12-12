@@ -4,29 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a30520e23e2ae3f6",
+        "id": "60027720d381b591",
         "type": "tabs",
         "children": [
           {
-            "id": "8dc81556a9a9defd",
+            "id": "70d14b9a2d7ea229",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Brag Doc.md",
+                "file": "Notes/PHY.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "d574208ab59cc9ec",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
+              },
+              "icon": "lucide-file",
+              "title": "PHY"
             }
           }
         ],
@@ -50,7 +42,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -59,13 +53,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "CSMA",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -73,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ],
@@ -81,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5,
-    "collapsed": true
+    "width": 322.5
   },
   "right": {
     "id": "4a86c425f8755884",
@@ -98,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brag Doc.md",
+                "file": "Notes/PHY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +103,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for PHY"
             }
           },
           {
@@ -115,10 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brag Doc.md",
+                "file": "Notes/802.3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 802.3"
             }
           },
           {
@@ -129,7 +130,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -138,16 +141,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Brag Doc.md"
-              }
-            }
-          },
-          {
-            "id": "9a801a92cdfc9a12",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
+                "file": "Notes/PHY.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of PHY"
             }
           },
           {
@@ -159,7 +156,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ],
@@ -175,7 +174,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Brag Doc.md",
+                "file": "Notes/PHY.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -209,7 +208,9 @@
                   "scale": 0.7132754626224438,
                   "close": true
                 }
-              }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of PHY"
             }
           },
           {
@@ -217,15 +218,16 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 319.5,
-    "collapsed": true
+    "width": 319.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,23 +242,35 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "8dc81556a9a9defd",
+  "active": "571384a1070fc886",
   "lastOpenFiles": [
-    "Pics/Pasted image 20240712172721.png",
-    "Pics/Pasted image 20240712172148.png",
-    "Pics/Pasted image 20240712172006.png",
-    "Pics/Pasted image 20240712170311.png",
-    "Pics/Pasted image 20240710210030.png",
-    "Pics/Pasted image 20240710205831.png",
-    "Pics/Pasted image 20240710204853.png",
-    "Pics/Pasted image 20240710204746.png",
-    "Pics/Pasted image 20240710204343.png",
-    "Pics/Pasted image 20240710203008.png",
+    "Notes/802.3.md",
+    "Notes/PHY.md",
+    "Pics/Pasted image 20241210141716.png",
+    "Pics/Pasted image 20241210140003.png",
+    "Pics/Pasted image 20241210135051.png",
+    "Pics/Pasted image 20241210133733.png",
+    "Pics/Pasted image 20241210133151.png",
+    "Pics/Pasted image 20241210132620.png",
+    "Pics/Pasted image 20241210132510.png",
+    "Pics/Pasted image 20241210132109.png",
+    "Notes/PAM.md",
+    "CSMA/CSMA-CD.md",
+    "Pics/Pasted image 20241204143211.png",
+    "Pics/Pasted image 20241204142926.png",
+    "Notes/Link Layer.md",
+    "CSMA",
+    "Notes/Wireless Networks.md",
+    "Notes/Reed-Solomon.md",
+    "Pics/802.3 2024-11-11 16.29.15.excalidraw.md",
+    "Excalidraw/Drawing 2024-11-11 16.28.46.excalidraw.md",
+    "Notes/().md",
+    "Automotive Networks.md",
+    "Brag Doc.md",
     "_index.md",
     "Notes/Cryptography.md",
     "Notes/Authentication.md",
     "Notes/2460 Software Safety and Security.md",
-    "Pics/Pasted image 20231113200255.png",
     "Notes/secu.md",
     "Notes/Representing Code.md",
     "Notes/Other Vulnerabilities.md",
@@ -266,18 +280,6 @@
     "Notes/OS Security.md",
     "Notes/Statistics.md",
     "Notes/Memory Safety.md",
-    "Notes/me.md",
-    "Notes/Functions.md",
-    "Notes/Crafting Interpreters.md",
-    "Notes/Programming Language Design.md",
-    "Notes/Virtualization.md",
-    "Notes/File Systems.md",
-    "Notes/Hardware Protection.md",
-    "Notes/Safety and Liveliness.md",
-    "2421 Machine Learning.md",
-    "Notes/Union Find.md",
-    "Notes/Virtual Networks.md",
-    "Notes/Neural Networks.md",
     "embedding.csv",
     "input.csv",
     "4913"

@@ -19,17 +19,9 @@ Partition the broadcast channel's bandwidth among nodes sharing the channel.
 - **Frequency-division multiplexing** (FDM): splits up bandwidth into available frequencies. Each node takes 1 frequency for transmission
 Problem: what if only 1 node wants to transmit something? For a link bandwidth R, it is capped at R/N bps.
 - **Code division multiple access** (CDMA): assign each node a unique code used to encode the data. Each node can transmit simultaneously and the receiver can use the code to determine the sender. 
+### [CSMA/CSMA-CD](CSMA/CSMA-CD.md)
 ### Random Access Protocols
 Each node transmit at full rate, when a collision occurs, independently choose a random delay before retransmission. Probable for the node to *sneak* in its packet.
-#### Carrier Sense Multiple Access Collision Detection (CSMA/CD)
-Rather than independently making a decision:
-- Carrier sensing (listen before speaking): node listens to the channel before transmitting and waits until it is quiet before transmission
-- Collision detection (stop talking if someone else begins talking): node listens to the channel while transmitting and stops if there is interference.
-![](https://i.imgur.com/6ebTVjn.png)
-### Taking turns
-Each node take turns to transmit some data.
-- Polling: a master node polls each node in a round robin fashion to tell them when and how much they can transmit.
-- Token passing: each node passes a token to another in a fixed order.
 ## Link layer addressing
 The link layer requires its own addresses (MAC address) in order to forward datagrams to the correct network adapter. Each MAC address is unique no matter the location, unlike [IP addresses](Notes/Internet%20Protocol.md#Addressing) which change depending on the network the host is connected to.
 
@@ -47,6 +39,7 @@ ARP can only be used to obtain MAC addresses of IP addresses on the same subnet.
 2. Router deconstructs the datagram (because its own MAC address was found), and forwards the datagram to the MAC address of the final destination IP address (obtained with ARP) using its forwarding table.
 ## Link Layer Protocols
 ### Ethernet
+Defined by the [802.3](Notes/802.3.md) standard.
 - Unreliable: ethernet drops frames which do not pass the CRC check without sending any acknowledgements. The layer above implements reliability while Ethernet transmits unawares of whether it is a retransmission or not.
 - Connectionless: no handshaking required
 An ethernet frame: 
