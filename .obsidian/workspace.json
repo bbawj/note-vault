@@ -160,9 +160,19 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "64c786b0ba497057",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       },
       {
         "id": "773c08e3cb822493",
@@ -242,7 +252,7 @@
       "bbawj-semantic-search:Semantic Search": false
     }
   },
-  "active": "571384a1070fc886",
+  "active": "70d14b9a2d7ea229",
   "lastOpenFiles": [
     "Notes/802.3.md",
     "Notes/PHY.md",
